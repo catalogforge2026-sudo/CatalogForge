@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/bardemo/menu-bar-demo",
     "clientKey": "bardemo",
-    "generatedAt": "2026-01-23T23:18:24.761Z",
+    "generatedAt": "2026-01-23T23:53:59.318Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -35,7 +35,7 @@
       "itemsPerRow": 3,
       "themeSlug": "mixology",
       "themeMode": "dark",
-      "themePalette": "gold",
+      "themePalette": "neon",
       "themeLayout": "bar",
       "locale": "es-MX"
     }
@@ -69,9 +69,9 @@
       }
     },
     "mode": "dark",
-    "palette": "gold",
+    "palette": "neon",
     "layout": "bar",
-    "classes": "theme-mixology mode-dark layout-bar palette-gold"
+    "classes": "theme-mixology mode-dark layout-bar palette-neon"
   },
   "sections": [
     {
@@ -143,7 +143,13 @@
           "hasImage": false,
           "hasGallery": false
         }
-      ]
+      ],
+      "frameStyle": "none",
+      "promoText": null,
+      "promoBadge": null,
+      "showItemImages": false,
+      "hasPromo": false,
+      "sectionClasses": "frame-none"
     },
     {
       "id": 7,
@@ -214,7 +220,13 @@
           "hasImage": false,
           "hasGallery": false
         }
-      ]
+      ],
+      "frameStyle": "none",
+      "promoText": null,
+      "promoBadge": null,
+      "showItemImages": false,
+      "hasPromo": false,
+      "sectionClasses": "frame-none"
     },
     {
       "id": 8,
@@ -285,7 +297,13 @@
           "hasImage": false,
           "hasGallery": false
         }
-      ]
+      ],
+      "frameStyle": "none",
+      "promoText": null,
+      "promoBadge": null,
+      "showItemImages": false,
+      "hasPromo": false,
+      "sectionClasses": "frame-none"
     },
     {
       "id": 9,
@@ -356,7 +374,13 @@
           "hasImage": false,
           "hasGallery": false
         }
-      ]
+      ],
+      "frameStyle": "none",
+      "promoText": null,
+      "promoBadge": null,
+      "showItemImages": false,
+      "hasPromo": false,
+      "sectionClasses": "frame-none"
     },
     {
       "id": 10,
@@ -427,7 +451,13 @@
           "hasImage": false,
           "hasGallery": false
         }
-      ]
+      ],
+      "frameStyle": "none",
+      "promoText": null,
+      "promoBadge": null,
+      "showItemImages": false,
+      "hasPromo": false,
+      "sectionClasses": "frame-none"
     },
     {
       "id": 11,
@@ -478,12 +508,18 @@
           "hasImage": false,
           "hasGallery": false
         }
-      ]
+      ],
+      "frameStyle": "none",
+      "promoText": null,
+      "promoBadge": null,
+      "showItemImages": false,
+      "hasPromo": false,
+      "sectionClasses": "frame-none"
     }
   ],
   "buildInfo": {
-    "version": "20260123-201824",
-    "timestamp": "2026-01-23T23:18:24.764Z",
+    "version": "20260123-205359",
+    "timestamp": "2026-01-23T23:53:59.321Z",
     "generator": "SCG v1.0.0"
   }
 }
