@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/demo123/food-menu",
     "clientKey": "demo123",
-    "generatedAt": "2026-01-23T15:37:49.099Z",
+    "generatedAt": "2026-01-23T16:36:37.207Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -517,8 +517,8 @@
     }
   ],
   "buildInfo": {
-    "version": "20260123-123749",
-    "timestamp": "2026-01-23T15:37:49.124Z",
+    "version": "20260123-133637",
+    "timestamp": "2026-01-23T16:36:37.257Z",
     "generator": "SCG v1.0.0"
   }
 }

@@ -325,6 +325,14 @@ a {
 
 .footer-link:hover { color: var(--primary-color); }
 
+.footer-address {
+  display: block;
+  width: 100%;
+  margin-top: var(--spacing-xs);
+  font-size: var(--font-size-xs);
+  opacity: 0.8;
+}
+
 .footer-cta { margin-top: var(--spacing-xs); }
 
 .footer-powered {

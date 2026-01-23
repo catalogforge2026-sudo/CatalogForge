@@ -1,14 +1,2 @@
-/* Generated theme variables for gastro (light/warm) */
-:root {
-
-}
-
-/* Higher specificity for theme classes */
-.theme-gastro.mode-light.palette-warm,
-body.theme-gastro.mode-light.palette-warm {
-
-}
-
-body {
-  /* Theme: gastro, Palette: warm, Mode: light */
-}
+/* Theme: gastro, Mode: light, Palette: warm */
+/* Custom overrides: none - using theme defaults from main.css */
