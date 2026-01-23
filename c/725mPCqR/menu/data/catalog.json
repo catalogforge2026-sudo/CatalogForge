@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "title": "Menu - Keisi",
+    "description": "",
+    "image": null,
+    "url": "/c/725mPCqR/menu",
+    "clientKey": "725mPCqR",
+    "generatedAt": "2026-01-23T14:54:35.149Z",
+    "generator": "CatalogForge"
+  },
+  "client": {
+    "name": "Keisi",
+    "slug": "keisi",
+    "logo": null,
+    "email": "vg4329276@gmail.com",
+    "phone": null,
+    "address": null,
+    "website": null,
+    "socialLinks": {}
+  },
+  "catalog": {
+    "id": 2,
+    "name": "Menu",
+    "slug": "menu",
+    "description": null,
+    "type": "Restaurante",
+    "typeSlug": "restaurant",
+    "config": {
+      "showPrices": true,
+      "showAllergens": true,
+      "showCalories": false,
+      "currency": "ARS",
+      "priceFormat": "$ {price}",
+      "layout": "list",
+      "groupBySection": true,
+      "themeLayout": "compact"
+    }
+  },
+  "theme": {
+    "name": "Gastro",
+    "slug": "gastro",
+    "styles": {
+      "primaryColor": "#c2410c",
+      "secondaryColor": "#78716c",
+      "backgroundColor": "#fffbeb",
+      "textColor": "#292524",
+      "accentColor": "#ca8a04",
+      "fontFamily": "Source Sans 3, sans-serif",
+      "fontDisplay": "Playfair Display, serif",
+      "borderRadius": "16px",
+      "cardShadow": "0 2px 12px rgba(0,0,0,0.08)",
+      "category": "food",
+      "idealFor": [
+        "restaurantes",
+        "bares",
+        "cafés",
+        "food trucks",
+        "delivery"
+      ],
+      "icon": "🍽️",
+      "variants": {
+        "modes": [
+          "light",
+          "dark"
+        ],
+        "palettes": [
+          "warm",
+          "earth",
+          "modern"
+        ]
+      }
+    },
+    "mode": "light",
+    "palette": "default",
+    "layout": "compact",
+    "classes": "theme-gastro mode-light layout-compact"
+  },
+  "sections": [
+    {
+      "id": 2,
+      "name": "Plato Principal",
+      "slug": "plato-principal",
+      "description": null,
+      "icon": null,
+      "image": null,
+      "itemCount": 1,
+      "items": [
+        {
+          "id": 4,
+          "name": "arroz",
+          "slug": "arroz",
+          "description": null,
+          "price": "$ 100",
+          "priceRaw": 100,
+          "priceLabel": null,
+          "currency": "ARS",
+          "image": "http://localhost:3001/uploads/1769148926857-ykxq15xoc.png",
+          "thumbnail": "http://localhost:3001/uploads/1769148926857-ykxq15xoc.png",
+          "gallery": [],
+          "isFeatured": false,
+          "tags": [],
+          "sku": null,
+          "customFields": {},
+          "hasPrice": true,
+          "hasImage": true,
+          "hasGallery": false
+        }
+      ]
+    }
+  ],
+  "buildInfo": {
+    "version": "20260123-115435",
+    "timestamp": "2026-01-23T14:54:35.149Z",
+    "generator": "SCG v1.0.0"
+  }
+}

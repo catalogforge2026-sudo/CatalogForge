@@ -1,0 +1,786 @@
+/* ============================================
+   GASTRO THEME v3.0 - Menú Gastronómico Profesional
+   
+   Variantes de Layout:
+   - .layout-classic  → Elegante, imágenes grandes
+   - .layout-compact  → Denso, imágenes pequeñas
+   - .layout-qr       → Ultra optimizado para móvil/QR
+   ============================================ */
+
+/* ============================================
+   BASE VARIABLES - Shared across all layouts
+   ============================================ */
+:root {
+  /* Typography */
+  --font-family: 'Source Sans 3', 'Inter', system-ui, sans-serif;
+  --font-family-display: 'Playfair Display', Georgia, serif;
+  --line-height: 1.45;
+  
+  /* Colors - Warm palette (default) */
+  --primary-color: #c2410c;
+  --primary-hover: #9a3412;
+  --primary-contrast: #ffffff;
+  --accent-color: #d97706;
+  
+  --bg-color: #faf7f2;
+  --text-color: #44403c;
+  --text-muted: #78716c;
+  
+  --card-bg: #ffffff;
+  --card-border: none;
+  --card-shadow: 0 1px 3px rgba(120, 80, 40, 0.06);
+  --card-hover-shadow: 0 4px 12px rgba(120, 80, 40, 0.1);
+  --card-radius: 6px;
+  
+  /* Layout Base */
+  --container-width: 900px;
+  --container-padding: 1rem;
+  --section-spacing: 1.5rem;
+  
+  /* Header - Compact by default */
+  --header-bg: #c2410c;
+  --header-padding: 0.875rem 1rem;
+  --header-title-size: 1.25rem;
+  --logo-height: 36px;
+  
+  /* Navigation */
+  --nav-bg: #fef3c7;
+  --nav-hover-bg: #c2410c;
+  --nav-hover-color: #ffffff;
+  --nav-radius: 4px;
+  --nav-padding: 0.375rem 0.75rem;
+  
+  /* Sections */
+  --section-title-size: 1.125rem;
+  --section-title-weight: 600;
+  
+  /* Footer - Usa el color primario del tema */
+  --footer-bg: #c2410c;
+  --footer-text: #ffffff;
+  --footer-link: rgba(255,255,255,0.85);
+  --footer-link-hover: #ffffff;
+  --footer-muted: rgba(255,255,255,0.6);
+  --footer-padding: 1.25rem;
+  
+  /* Tags */
+  --tag-bg: #fef3c7;
+  --tag-color: #92400e;
+  --tag-radius: 2px;
+  
+  /* Image placeholder */
+  --image-placeholder-bg: #f5f0e8;
+}
+
+/* ============================================
+   LAYOUT: CLASSIC
+   Elegante con imágenes destacadas
+   ============================================ */
+.layout-classic {
+  --grid-gap: 1rem;
+  --grid-min: 240px;
+  --card-padding: 0.875rem;
+  --main-padding: 1.25rem;
+  --image-aspect: 4/3;
+  --item-name-size: 1rem;
+  --price-size: 1rem;
+  --price-weight: 700;
+}
+
+/* ============================================
+   LAYOUT: COMPACT
+   Estilo magazine con texto e imagen alternados
+   ============================================ */
+.layout-compact {
+  --grid-gap: 0;
+  --grid-min: 100%;
+  --card-padding: 1.5rem 0;
+  --main-padding: 2rem;
+  --image-aspect: 1/1;
+  --item-name-size: 1.75rem;
+  --price-size: 1rem;
+  --price-weight: 600;
+  --section-spacing: 2rem;
+  --container-width: 700px;
+  --footer-bg: var(--primary-color);
+}
+
+/* ============================================
+   LAYOUT: QR
+   Ultra optimizado para móvil y escaneo QR
+   ============================================ */
+.layout-qr {
+  --grid-gap: 0.5rem;
+  --grid-min: 100%;
+  --card-padding: 0.5rem 0.625rem;
+  --main-padding: 0.75rem;
+  --image-aspect: 1/1;
+  --item-name-size: 0.9375rem;
+  --price-size: 0.9375rem;
+  --price-weight: 700;
+  --section-spacing: 1rem;
+  --container-width: 480px;
+  --header-padding: 0.625rem 0.875rem;
+  --header-title-size: 1.125rem;
+  --section-title-size: 1rem;
+  --nav-padding: 0.25rem 0.5rem;
+}
+
+/* ============================================
+   HEADER STYLES
+   ============================================ */
+.site-header {
+  color: #ffffff;
+  text-align: center;
+}
+
+.header-container {
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.header-title {
+  font-family: var(--font-family-display);
+  color: #ffffff;
+  margin: 0;
+}
+
+.header-tagline {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.8125rem;
+  margin: 0;
+}
+
+.header-logo-text {
+  font-family: var(--font-family-display);
+  color: #ffffff;
+}
+
+.social-link {
+  color: rgba(255,255,255,0.8);
+}
+
+.social-link:hover {
+  color: #ffffff;
+}
+
+/* ============================================
+   NAVIGATION - Compact pills
+   ============================================ */
+.section-nav {
+  margin-bottom: 1rem;
+  padding: 0 0.25rem;
+}
+
+.section-nav ul {
+  gap: 0.375rem;
+}
+
+.section-nav a {
+  padding: var(--nav-padding);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-radius: var(--nav-radius);
+}
+
+.nav-count {
+  display: none; /* Ocultar conteo para más limpieza */
+}
+
+/* ============================================
+   SECTION STYLES
+   ============================================ */
+.catalog-section {
+  margin-bottom: var(--section-spacing);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 0.875rem;
+}
+
+.section-title {
+  font-family: var(--font-family-display);
+  font-size: var(--section-title-size);
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: var(--primary-color);
+  margin: 0.375rem auto 0;
+}
+
+.section-description {
+  font-size: 0.8125rem;
+  margin-top: 0.25rem;
+}
+
+/* ============================================
+   GRID LAYOUTS
+   ============================================ */
+.items-grid {
+  display: grid;
+  gap: var(--grid-gap);
+}
+
+/* Classic: 2 columns on tablet+, 1 on mobile */
+.layout-classic .items-grid {
+  grid-template-columns: repeat(auto-fill, minmax(var(--grid-min), 1fr));
+}
+
+/* Compact: 1 columna en móvil, estilo magazine */
+.layout-compact .items-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* QR: Always 1 column, list style */
+.layout-qr .items-grid {
+  grid-template-columns: 1fr;
+}
+
+/* ============================================
+   CARD STYLES - CLASSIC
+   ============================================ */
+.layout-classic .item-card {
+  border-radius: var(--card-radius);
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.layout-classic .item-card:hover {
+  border-bottom-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.layout-classic .item-image {
+  aspect-ratio: var(--image-aspect);
+}
+
+.layout-classic .item-content {
+  padding: var(--card-padding);
+}
+
+.layout-classic .item-name {
+  font-family: var(--font-family-display);
+  font-size: var(--item-name-size);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.layout-classic .item-description {
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  -webkit-line-clamp: 2;
+}
+
+.layout-classic .price-amount {
+  font-size: var(--price-size);
+  font-weight: var(--price-weight);
+  color: var(--primary-color);
+}
+
+/* ============================================
+   CARD STYLES - COMPACT
+   Estilo magazine: 2 columnas, texto e imagen alternados
+   Similar a menú de restaurante profesional
+   ============================================ */
+.layout-compact .items-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 2.5rem;
+  padding: 1rem 0;
+}
+
+.layout-compact .item-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 1rem;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  border: none;
+}
+
+.layout-compact .item-card:hover {
+  transform: none;
+  background: transparent;
+}
+
+/* Items impares: texto izquierda, imagen derecha */
+.layout-compact .item-card:nth-child(odd) .item-content {
+  text-align: left;
+  order: 1;
+}
+
+.layout-compact .item-card:nth-child(odd) .item-image {
+  order: 2;
+}
+
+/* Items pares: imagen izquierda, texto derecha */
+.layout-compact .item-card:nth-child(even) .item-image {
+  order: 1;
+}
+
+.layout-compact .item-card:nth-child(even) .item-content {
+  text-align: right;
+  order: 2;
+}
+
+/* Imagen circular grande */
+.layout-compact .item-image {
+  width: 120px;
+  height: 120px;
+  min-width: 120px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.layout-compact .item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Contenido del item */
+.layout-compact .item-content {
+  flex: 1;
+  padding: 0.25rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  min-width: 0;
+}
+
+/* Nombre del plato - Grande y destacado */
+.layout-compact .item-name {
+  font-family: var(--font-family-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* Precio - Pequeño arriba del nombre */
+.layout-compact .item-footer {
+  order: -1;
+  margin: 0 0 0.125rem 0;
+  padding: 0;
+}
+
+.layout-compact .price-amount {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: none;
+  padding: 0;
+}
+
+/* Descripción */
+.layout-compact .item-description {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  margin-top: 0.25rem;
+}
+
+.layout-compact .item-tags {
+  display: none;
+}
+
+/* Items sin imagen en compact */
+.layout-compact .item-card.no-image {
+  grid-template-columns: 1fr;
+}
+
+.layout-compact .item-card.no-image .item-content {
+  text-align: left;
+}
+
+.layout-compact .item-card:nth-child(even).no-image .item-content {
+  text-align: left;
+}
+
+/* ============================================
+   CARD STYLES - QR (Ultra Compact)
+   Lista horizontal optimizada
+   ============================================ */
+.layout-qr .item-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--card-padding);
+  gap: 0.625rem;
+  border-radius: 4px;
+  background: var(--card-bg);
+  box-shadow: none;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.layout-qr .item-card:last-child {
+  border-bottom: none;
+}
+
+.layout-qr .item-card:hover {
+  transform: none;
+  background: rgba(0,0,0,0.02);
+}
+
+/* Imagen pequeña circular o cuadrada */
+.layout-qr .item-image {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.layout-qr .item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Sin imagen: ocultar el contenedor */
+.layout-qr .item-card:not(:has(.item-image img)) .item-image {
+  display: none;
+}
+
+.layout-qr .item-content {
+  flex: 1;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.layout-qr .item-name {
+  font-family: var(--font-family-display);
+  font-size: var(--item-name-size);
+  font-weight: 600;
+  line-height: 1.2;
+  flex: 1;
+  min-width: 0;
+}
+
+.layout-qr .item-description {
+  display: none; /* Ocultar descripción en QR */
+}
+
+.layout-qr .item-tags {
+  display: none;
+}
+
+.layout-qr .item-footer {
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.layout-qr .price-amount {
+  font-size: var(--price-size);
+  font-weight: var(--price-weight);
+  color: var(--primary-color);
+  background: none;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.layout-qr .price-label {
+  display: none;
+}
+
+/* ============================================
+   ITEMS SIN IMAGEN
+   ============================================ */
+/* Classic sin imagen */
+.layout-classic .item-card:not(:has(.item-image img)) .item-image {
+  display: none;
+}
+
+/* Compact sin imagen: más espacio para texto */
+.layout-compact .item-card:not(:has(.item-image img)) {
+  padding-left: 0.875rem;
+}
+
+.layout-compact .item-card:not(:has(.item-image img)) .item-image {
+  display: none;
+}
+
+/* ============================================
+   FOOTER STYLES
+   ============================================ */
+.site-footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text, #ffffff);
+  padding: var(--footer-padding);
+}
+
+.footer-container {
+  gap: 0.375rem;
+}
+
+.footer-name {
+  font-family: var(--font-family-display);
+  font-size: 0.9375rem;
+  color: var(--footer-text, #ffffff);
+}
+
+.footer-contact {
+  color: var(--footer-link, rgba(255,255,255,0.85));
+  font-size: 0.8125rem;
+}
+
+.footer-contact a:hover {
+  color: var(--footer-link-hover, #ffffff);
+}
+
+.footer-powered {
+  color: var(--footer-muted, rgba(255,255,255,0.6));
+  font-size: 0.6875rem;
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+/* Tablet */
+@media (min-width: 768px) {
+  .layout-classic .items-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Compact: 2 columnas en tablet - estilo magazine */
+  .layout-compact .items-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 2rem;
+  }
+  
+  .layout-compact .item-card {
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  
+  .layout-compact .item-image {
+    width: 90px;
+    height: 90px;
+    min-width: 90px;
+  }
+  
+  .layout-compact .item-card {
+    grid-template-columns: 1fr 90px;
+  }
+  
+  .layout-compact .item-card:nth-child(even) {
+    grid-template-columns: 90px 1fr;
+  }
+  
+  .layout-compact .item-name {
+    font-size: 1.125rem;
+  }
+  
+  .layout-qr .items-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .layout-qr .item-card {
+    border-bottom: none;
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .layout-classic .items-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Compact: mantener 2 columnas en desktop para mejor legibilidad */
+  .layout-compact .items-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 3rem;
+  }
+  
+  .layout-compact .item-image {
+    width: 110px;
+    height: 110px;
+    min-width: 110px;
+  }
+  
+  .layout-compact .item-card {
+    grid-template-columns: 1fr 110px;
+    padding: 1.5rem 0;
+  }
+  
+  .layout-compact .item-card:nth-child(even) {
+    grid-template-columns: 110px 1fr;
+  }
+  
+  .layout-compact .item-name {
+    font-size: 1.375rem;
+  }
+  
+  .layout-compact .item-description {
+    font-size: 0.8125rem;
+  }
+  
+  .layout-qr .items-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile específico */
+@media (max-width: 640px) {
+  :root {
+    --container-padding: 1rem;
+  }
+  
+  .layout-classic .items-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .layout-compact .items-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .layout-compact .item-card {
+    padding: 0;
+    gap: 0.875rem;
+  }
+  
+  /* En móvil: siempre texto izquierda, imagen derecha */
+  .layout-compact .item-card .item-content {
+    text-align: left !important;
+    order: 1 !important;
+  }
+  
+  .layout-compact .item-card .item-image {
+    order: 2 !important;
+  }
+  
+  .layout-compact .item-image {
+    width: 90px;
+    height: 90px;
+    min-width: 90px;
+  }
+  
+  .layout-compact .item-name {
+    font-size: 1.125rem;
+  }
+  
+  .layout-qr .item-image {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+  }
+  
+  .section-nav ul {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 0.25rem;
+  }
+}
+
+/* ============================================
+   SECCIONES SECUNDARIAS (Bebidas, Postres)
+   Formato lista sin imágenes
+   ============================================ */
+.section-list-mode .items-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.section-list-mode .item-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  border-bottom: 1px dotted rgba(0,0,0,0.1);
+}
+
+.section-list-mode .item-card:last-child {
+  border-bottom: none;
+}
+
+.section-list-mode .item-image {
+  display: none;
+}
+
+.section-list-mode .item-content {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+}
+
+.section-list-mode .item-name {
+  font-size: 0.9375rem;
+}
+
+.section-list-mode .item-description {
+  display: none;
+}
+
+.section-list-mode .item-tags {
+  display: none;
+}
+
+.section-list-mode .item-footer {
+  margin: 0;
+  padding: 0;
+}
+
+.section-list-mode .price-amount {
+  font-size: 0.9375rem;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Featured items */
+.item-card.is-featured {
+  border: 2px solid var(--accent-color);
+}
+
+.layout-qr .item-card.is-featured {
+  background: rgba(217, 119, 6, 0.05);
+}

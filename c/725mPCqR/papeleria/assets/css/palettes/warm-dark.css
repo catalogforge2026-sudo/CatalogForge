@@ -1,0 +1,76 @@
+/* Gastro - Warm Dark Palette */
+:root {
+  /* Primary Colors */
+  --color-primary: #f97316;
+  --color-primary-hover: #fb923c;
+  --color-primary-rgb: 249, 115, 22;
+  --color-accent: #fbbf24;
+  
+  /* Backgrounds */
+  --bg-primary: #1c1917;
+  --bg-secondary: #292524;
+  --bg-tertiary: #44403c;
+  --card-bg: #292524;
+  
+  /* Text */
+  --text-primary: #fafaf9;
+  --text-secondary: #d6d3d1;
+  --text-muted: #a8a29e;
+  
+  /* Borders */
+  --border-color: #44403c;
+  
+  /* Header */
+  --header-bg: #292524;
+  --header-text: #fafaf9;
+  
+  /* Footer - Usa el color primario en dark */
+  --footer-bg: #f97316;
+  --footer-text: #ffffff;
+  --footer-link: rgba(255,255,255,0.85);
+  --footer-link-hover: #ffffff;
+  --footer-muted: rgba(255,255,255,0.6);
+  
+  /* Card overrides for dark */
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --card-hover-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  
+  /* Image placeholder */
+  --image-placeholder-bg: #44403c;
+}
+
+/* Dark mode specific overrides */
+.palette-warm-dark .site-header {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.palette-warm-dark .section-title::after {
+  background: var(--color-primary);
+}
+
+.palette-warm-dark .item-card {
+  border: 1px solid var(--border-color);
+}
+
+.palette-warm-dark .item-card:hover {
+  border-color: var(--color-primary);
+}
+
+.palette-warm-dark .section-nav a {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+}
+
+.palette-warm-dark .section-nav a:hover {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.palette-warm-dark .price-amount {
+  color: var(--color-primary);
+}
+
+.palette-warm-dark .tag {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+}
