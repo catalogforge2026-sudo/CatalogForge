@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/demo123/food-menu",
     "clientKey": "demo123",
-    "generatedAt": "2026-01-23T16:36:37.207Z",
+    "generatedAt": "2026-01-23T16:57:36.335Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -39,7 +39,7 @@
       "themeSlug": "gastro",
       "themePalette": "warm",
       "themeMode": "light",
-      "themeLayout": "qr"
+      "themeLayout": "compact"
     }
   },
   "theme": {
@@ -78,8 +78,8 @@
     },
     "mode": "light",
     "palette": "warm",
-    "layout": "qr",
-    "classes": "theme-gastro mode-light layout-qr palette-warm"
+    "layout": "compact",
+    "classes": "theme-gastro mode-light layout-compact palette-warm"
   },
   "sections": [
     {
@@ -517,8 +517,8 @@
     }
   ],
   "buildInfo": {
-    "version": "20260123-133637",
-    "timestamp": "2026-01-23T16:36:37.257Z",
+    "version": "20260123-135736",
+    "timestamp": "2026-01-23T16:57:36.337Z",
     "generator": "SCG v1.0.0"
   }
 }
