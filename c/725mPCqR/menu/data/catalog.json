@@ -5,16 +5,16 @@
     "image": null,
     "url": "/c/725mPCqR/menu",
     "clientKey": "725mPCqR",
-    "generatedAt": "2026-01-23T14:54:35.149Z",
+    "generatedAt": "2026-01-24T18:30:05.870Z",
     "generator": "CatalogForge"
   },
   "client": {
-    "name": "Keisi",
+    "name": "Roman Design",
     "slug": "keisi",
     "logo": null,
-    "email": "vg4329276@gmail.com",
-    "phone": null,
-    "address": null,
+    "email": "romandesign81@gmail.com",
+    "phone": "+54 11 5903 3756",
+    "address": "Segurola 2324",
     "website": null,
     "socialLinks": {}
   },
@@ -33,47 +33,44 @@
       "priceFormat": "$ {price}",
       "layout": "list",
       "groupBySection": true,
-      "themeLayout": "compact"
+      "themeLayout": "compact",
+      "themeSlug": "mixology",
+      "themePalette": "neon",
+      "themeMode": "dark"
     }
   },
   "theme": {
-    "name": "Gastro",
-    "slug": "gastro",
+    "name": "Mixology",
+    "slug": "mixology",
     "styles": {
-      "primaryColor": "#c2410c",
-      "secondaryColor": "#78716c",
-      "backgroundColor": "#fffbeb",
-      "textColor": "#292524",
-      "accentColor": "#ca8a04",
-      "fontFamily": "Source Sans 3, sans-serif",
-      "fontDisplay": "Playfair Display, serif",
-      "borderRadius": "16px",
-      "cardShadow": "0 2px 12px rgba(0,0,0,0.08)",
+      "primaryColor": "#d4a574",
+      "secondaryColor": "#8b7355",
+      "backgroundColor": "#0a0a0a",
+      "textColor": "#f5f5f5",
+      "accentColor": "#ffd700",
       "category": "food",
-      "idealFor": [
-        "restaurantes",
-        "bares",
-        "cafés",
-        "food trucks",
-        "delivery"
-      ],
-      "icon": "🍽️",
+      "icon": "🍸",
       "variants": {
         "modes": [
-          "light",
           "dark"
         ],
         "palettes": [
-          "warm",
-          "earth",
-          "modern"
+          "gold",
+          "copper",
+          "neon",
+          "amber"
+        ],
+        "layouts": [
+          "bar",
+          "lounge",
+          "menu"
         ]
       }
     },
-    "mode": "light",
-    "palette": "default",
+    "mode": "dark",
+    "palette": "neon",
     "layout": "compact",
-    "classes": "theme-gastro mode-light layout-compact"
+    "classes": "theme-mixology mode-dark layout-compact palette-neon"
   },
   "sections": [
     {
@@ -101,16 +98,37 @@
           "tags": [],
           "sku": null,
           "customFields": {},
+          "variants": [],
           "hasPrice": true,
           "hasImage": true,
-          "hasGallery": false
+          "hasGallery": false,
+          "hasVariants": false
         }
-      ]
+      ],
+      "frameStyle": "chalk",
+      "promoText": null,
+      "promoBadge": null,
+      "showItemImages": false,
+      "hasPromo": false,
+      "sectionClasses": ""
     }
   ],
+  "promotions": [],
+  "cart": {
+    "enabled": false,
+    "buttonText": "Agregar",
+    "whatsappMessage": "Hola! Quiero hacer el siguiente pedido:"
+  },
+  "searchFilter": {
+    "enabled": false,
+    "searchEnabled": false,
+    "filterEnabled": false,
+    "placeholder": "Buscar productos..."
+  },
+  "totalItems": 1,
   "buildInfo": {
-    "version": "20260123-115435",
-    "timestamp": "2026-01-23T14:54:35.149Z",
+    "version": "20260124-153005",
+    "timestamp": "2026-01-24T18:30:05.870Z",
     "generator": "SCG v1.0.0"
   }
 }
