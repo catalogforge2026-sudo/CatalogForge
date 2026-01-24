@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/bardemo/menu-bar-demo",
     "clientKey": "bardemo",
-    "generatedAt": "2026-01-24T03:44:57.277Z",
+    "generatedAt": "2026-01-24T03:48:30.739Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -556,8 +556,8 @@
     }
   ],
   "buildInfo": {
-    "version": "20260124-004457",
-    "timestamp": "2026-01-24T03:44:57.278Z",
+    "version": "20260124-004830",
+    "timestamp": "2026-01-24T03:48:30.742Z",
     "generator": "SCG v1.0.0"
   }
 }
