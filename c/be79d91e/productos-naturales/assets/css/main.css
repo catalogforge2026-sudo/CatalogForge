@@ -1,0 +1,517 @@
+/* ============================================
+   ORGANIC THEME - Natural & Artisanal
+   Estilo: Tienda orgánica, productos naturales
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Typography */
+  --font-family: 'Lato', system-ui, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --line-height: 1.6;
+  
+  /* Colors - Natural earth tones */
+  --primary-color: #6b7c4c;
+  --primary-hover: #5a6940;
+  --primary-contrast: #ffffff;
+  --accent-color: #8fa66b;
+  
+  --bg-color: #f8f5f0;
+  --text-color: #3d3d3d;
+  --text-muted: #6b6b6b;
+  
+  --card-bg: #ffffff;
+  --card-border: 1px solid rgba(107, 124, 76, 0.15);
+  --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --card-hover-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --card-hover-border: 1px solid rgba(107, 124, 76, 0.3);
+  --card-radius: 12px;
+  --card-padding: 0;
+  
+  /* Layout */
+  --container-width: 1200px;
+  --container-padding: 1rem;
+  --grid-gap: 1.25rem;
+  --grid-min: 200px;
+  --section-spacing: 2.5rem;
+  --main-padding: 1rem;
+  
+  /* Header */
+  --header-bg: linear-gradient(135deg, #6b8e4e 0%, #4a7c59 50%, #3d6b4f 100%);
+  --header-border: none;
+  --header-padding: 2rem 1.5rem;
+  --header-direction: column;
+  --header-align: center;
+  --header-title-size: 2.5rem;
+  --header-title-weight: 600;
+  --logo-height: 60px;
+  
+  /* Navigation */
+  --nav-bg: rgba(255, 255, 255, 0.15);
+  --nav-hover-bg: rgba(255, 255, 255, 0.25);
+  --nav-hover-color: #ffffff;
+  --nav-radius: 20px;
+  
+  /* Sections */
+  --section-title-size: 1.5rem;
+  --section-title-weight: 600;
+  --section-header-align: flex-start;
+  
+  /* Items */
+  --item-name-size: 1rem;
+  --item-name-weight: 600;
+  --price-size: 1.125rem;
+  --price-weight: 700;
+  --price-color: #3d3d3d;
+  
+  /* Image */
+  --image-aspect: 1/1;
+  --image-fit: cover;
+  
+  /* Buttons */
+  --btn-radius: 20px;
+  --btn-padding: 0.5rem 1.25rem;
+  --btn-border: none;
+  
+  /* Footer */
+  --footer-bg: #f8f5f0;
+  --footer-border: 1px solid rgba(107, 124, 76, 0.2);
+  --footer-padding: 2rem;
+  
+  /* Tags */
+  --tag-bg: rgba(107, 124, 76, 0.1);
+  --tag-color: #6b7c4c;
+  --tag-radius: 15px;
+  
+  /* Image placeholder */
+  --image-placeholder-bg: #e8e4dc;
+}
+
+/* ============================================
+   BODY & BACKGROUND
+   ============================================ */
+body {
+  background-color: var(--bg-color);
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236b7c4c' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ============================================
+   HEADER - Green gradient with decorative elements
+   ============================================ */
+.site-header {
+  background: var(--header-bg);
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 30px 30px;
+}
+
+.site-header::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23a8d86e' d='M50 10c-5 15-20 25-35 30 15 5 30 15 35 30 5-15 20-25 35-30-15-5-30-15-35-30z'/%3E%3Cpath fill='%2390c456' d='M50 20c-3 10-13 17-23 20 10 3 20 10 23 20 3-10 13-17 23-20-10-3-20-10-23-20z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+}
+
+.header-container {
+  position: relative;
+  z-index: 1;
+  padding-top: 70px;
+}
+
+.header-title {
+  font-family: var(--font-display);
+  color: #ffffff;
+  font-size: var(--header-title-size);
+  font-weight: var(--header-title-weight);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.02em;
+}
+
+.site-header .header-subtitle {
+  color: #ffffff !important;
+  font-size: 1.25rem;
+  margin-top: 0.75rem;
+  font-weight: 400;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.05em;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.header-logo {
+  filter: brightness(0) invert(1);
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+.catalog-section {
+  margin-bottom: var(--section-spacing);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding: 0 0.5rem;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--section-title-size);
+  font-weight: var(--section-title-weight);
+  color: var(--text-color);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-title::before,
+.section-title::after {
+  content: '';
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(107, 124, 76, 0.4), transparent);
+  flex: 1;
+  min-width: 30px;
+}
+
+.section-title::before {
+  background: linear-gradient(90deg, transparent, rgba(107, 124, 76, 0.4));
+}
+
+.section-title::after {
+  background: linear-gradient(90deg, rgba(107, 124, 76, 0.4), transparent);
+}
+
+/* Ver todos button */
+.section-header .btn-link {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  border: 1px solid rgba(107, 124, 76, 0.3);
+  padding: 0.375rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.section-header .btn-link:hover {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* ============================================
+   GRID - Horizontal scroll on mobile, 4 cols desktop
+   ============================================ */
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--grid-gap);
+}
+
+@media (min-width: 640px) {
+  .grid-auto {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-auto {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ============================================
+   ITEM CARDS
+   ============================================ */
+.item-card {
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  border: var(--card-border);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-card:hover {
+  box-shadow: var(--card-hover-shadow);
+  transform: translateY(-4px);
+}
+
+/* Image */
+.item-image-container {
+  position: relative;
+  aspect-ratio: var(--image-aspect);
+  overflow: hidden;
+  background: var(--image-placeholder-bg);
+}
+
+.item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: var(--image-fit);
+  transition: transform 0.4s ease;
+}
+
+.item-card:hover .item-image {
+  transform: scale(1.05);
+}
+
+/* Content */
+.item-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
+}
+
+.item-name {
+  font-family: var(--font-family);
+  font-size: var(--item-name-size);
+  font-weight: var(--item-name-weight);
+  color: var(--text-color);
+  margin-bottom: 0.375rem;
+  line-height: 1.3;
+}
+
+.item-price {
+  margin-bottom: 0.5rem;
+}
+
+.price-amount {
+  font-size: var(--price-size);
+  font-weight: var(--price-weight);
+  color: var(--price-color);
+}
+
+.item-description {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}
+
+/* Button */
+.item-footer {
+  margin-top: auto;
+  padding: 0 1rem 1rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--primary-contrast);
+  padding: var(--btn-padding);
+  border-radius: var(--btn-radius);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   TAGS
+   ============================================ */
+.item-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.tag {
+  background: var(--tag-bg);
+  color: var(--tag-color);
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--tag-radius);
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer {
+  background: var(--footer-bg);
+  border-top: var(--footer-border);
+  padding: var(--footer-padding);
+  text-align: center;
+}
+
+.footer-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.footer-contact {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.footer-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: var(--primary-color);
+}
+
+.footer-powered {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  margin-top: 1rem;
+  opacity: 0.7;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+.nav-container {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.nav-link {
+  background: var(--nav-bg);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: var(--nav-radius);
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: var(--nav-hover-bg);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 640px) {
+  :root {
+    --header-title-size: 1.75rem;
+    --section-title-size: 1.25rem;
+    --grid-gap: 0.75rem;
+  }
+  
+  .site-header::before {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .header-container {
+    padding-top: 50px;
+  }
+  
+  .item-content {
+    padding: 0.75rem;
+  }
+  
+  .item-footer {
+    padding: 0 0.75rem 0.75rem;
+  }
+}
+
+/* ============================================
+   VARIANTS SUPPORT
+   ============================================ */
+.item-variants {
+  margin-top: 0.5rem;
+}
+
+.variant-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 0;
+  font-size: 0.8rem;
+  border-bottom: 1px dashed rgba(107, 124, 76, 0.2);
+}
+
+.variant-item:last-child {
+  border-bottom: none;
+}
+
+.variant-name {
+  color: var(--text-muted);
+}
+
+.variant-price {
+  color: var(--price-color);
+  font-weight: 600;
+}
+
+/* ============================================
+   NO IMAGE CARD
+   ============================================ */
+.item-card.no-image .item-content {
+  padding: 1.25rem;
+}
+
+.item-card.no-image .item-image-container {
+  display: none;
+}
+
+/* ============================================
+   FEATURED ITEMS
+   ============================================ */
+.item-card.is-featured {
+  border: 2px solid var(--primary-color);
+}
+
+.item-card.is-featured::before {
+  content: '⭐';
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: var(--primary-color);
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  z-index: 1;
+}
