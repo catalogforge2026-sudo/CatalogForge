@@ -330,20 +330,26 @@ body {
 }
 
 .section-title {
-  font-family: var(--font-display);
+  font-family: var(--font-accent);
   font-size: var(--section-title-size);
   font-weight: var(--section-title-weight);
-  color: var(--text-color);
+  color: var(--primary-color);
+  font-style: italic;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 20px rgba(212, 165, 116, 0.3);
   position: relative;
   display: inline-block;
 }
 
 .section-title::before,
 .section-title::after {
-  content: '—';
+  content: '✦';
   color: var(--primary-color);
-  margin: 0 1rem;
-  opacity: 0.5;
+  margin: 0 0.75rem;
+  opacity: 0.6;
+  font-size: 0.5em;
+  vertical-align: middle;
+  font-style: normal;
 }
 
 .section-description {

@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/d40d8307/servicios-de-belleza",
     "clientKey": "d40d8307",
-    "generatedAt": "2026-01-24T21:46:49.844Z",
+    "generatedAt": "2026-01-24T22:44:25.001Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -31,7 +31,10 @@
       "currency": "ARS",
       "priceFormat": "Desde $ {price}",
       "layout": "cards",
-      "showContactButton": true
+      "showContactButton": true,
+      "themeSlug": "beauty",
+      "themePalette": "gold",
+      "themeMode": "light"
     }
   },
   "theme": {
@@ -69,9 +72,9 @@
       }
     },
     "mode": "light",
-    "palette": "default",
+    "palette": "gold",
     "layout": "classic",
-    "classes": "theme-beauty mode-light layout-classic palette-default"
+    "classes": "theme-beauty mode-light layout-classic palette-gold"
   },
   "sections": [
     {
@@ -163,7 +166,7 @@
       "name": "Uñas Acrílicas",
       "slug": "unas-acrilicas",
       "description": null,
-      "icon": "💅",
+      "icon": null,
       "iconUrl": "uploads/1769289542676-7ujoo761y.png",
       "image": null,
       "itemCount": 2,
@@ -225,7 +228,7 @@
       "name": "Cejas y Pestañas",
       "slug": "cejas-y-pestanas",
       "description": null,
-      "icon": "👁️",
+      "icon": null,
       "iconUrl": "uploads/1769289554454-6eru18b1r.png",
       "image": null,
       "itemCount": 2,
@@ -287,7 +290,7 @@
       "name": "Tratamientos Capilares",
       "slug": "tratamientos-capilares",
       "description": null,
-      "icon": "💆",
+      "icon": null,
       "iconUrl": "uploads/1769290032822-oigsnkub1.png",
       "image": null,
       "itemCount": 2,
@@ -349,7 +352,7 @@
       "name": "Masajes y Spa",
       "slug": "masajes-y-spa",
       "description": null,
-      "icon": "🧖",
+      "icon": null,
       "iconUrl": "uploads/1769289578922-5izyxhvp1.png",
       "image": null,
       "itemCount": 2,
@@ -411,7 +414,7 @@
       "name": "Depilación",
       "slug": "depilacion",
       "description": null,
-      "icon": "✨",
+      "icon": null,
       "iconUrl": "uploads/1769290040697-ujlodrh2u.png",
       "image": null,
       "itemCount": 1,
@@ -461,8 +464,8 @@
   },
   "totalItems": 12,
   "buildInfo": {
-    "version": "20260124-184649",
-    "timestamp": "2026-01-24T21:46:49.846Z",
+    "version": "20260124-194424",
+    "timestamp": "2026-01-24T22:44:25.004Z",
     "generator": "SCG v1.0.0"
   }
 }
