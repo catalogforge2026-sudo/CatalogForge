@@ -1,0 +1,32 @@
+/* Social Theme - Gradient Palette */
+/* Gradientes modernos y llamativos */
+
+:root {
+  --primary-color: #6366f1;
+  --primary-hover: #4f46e5;
+  --primary-contrast: #ffffff;
+  --accent-color: #06b6d4;
+  
+  --bg-color: #f0f9ff;
+  --text-color: #1e293b;
+  --text-muted: #64748b;
+  
+  --card-bg: #ffffff;
+  --card-border: 1px solid rgba(99, 102, 241, 0.1);
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --card-hover-shadow: 0 8px 30px rgba(99, 102, 241, 0.25);
+  
+  --glow-color: rgba(99, 102, 241, 0.5);
+  --glow-color-accent: rgba(6, 182, 212, 0.4);
+  
+  --header-bg: linear-gradient(135deg, #6366f1 0%, #06b6d4 50%, #10b981 100%);
+  
+  --nav-bg: #ffffff;
+  --nav-hover-bg: #6366f1;
+  --nav-hover-color: #ffffff;
+  
+  --price-color: #6366f1;
+  
+  --tag-bg: #e0e7ff;
+  --tag-color: #4338ca;
+}

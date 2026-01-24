@@ -1,0 +1,589 @@
+{
+  "meta": {
+    "title": "Papeleria - Keisi",
+    "description": "",
+    "image": null,
+    "url": "/c/725mPCqR/papeleria",
+    "clientKey": "725mPCqR",
+    "generatedAt": "2026-01-24T17:36:29.476Z",
+    "generator": "CatalogForge"
+  },
+  "client": {
+    "name": "Keisi",
+    "slug": "keisi",
+    "logo": null,
+    "email": "vg4329276@gmail.com",
+    "phone": null,
+    "address": null,
+    "website": null,
+    "socialLinks": {}
+  },
+  "catalog": {
+    "id": 1,
+    "name": "Papeleria",
+    "slug": "papeleria",
+    "description": null,
+    "type": "Productos",
+    "typeSlug": "products",
+    "config": {
+      "showPrices": true,
+      "showSku": false,
+      "showStock": false,
+      "currency": "ARS",
+      "priceFormat": "$ {price}",
+      "layout": "grid",
+      "itemsPerRow": 3,
+      "themeLayout": "compact",
+      "themeMode": "light",
+      "themeSlug": "social",
+      "themePalette": "pastel"
+    }
+  },
+  "theme": {
+    "name": "Social",
+    "slug": "social",
+    "styles": {
+      "primaryColor": "#ec4899",
+      "secondaryColor": "#8b5cf6",
+      "backgroundColor": "#ffffff",
+      "textColor": "#18181b",
+      "accentColor": "#f472b6",
+      "fontFamily": "Inter, sans-serif",
+      "borderRadius": "16px",
+      "cardShadow": "0 4px 12px rgba(0,0,0,0.1)",
+      "category": "social",
+      "idealFor": [
+        "Instagram",
+        "WhatsApp",
+        "link en bio",
+        "QR codes"
+      ],
+      "icon": "📱",
+      "variants": {
+        "modes": [
+          "light",
+          "dark"
+        ],
+        "palettes": [
+          "vibrant",
+          "pastel",
+          "mono"
+        ]
+      },
+      "features": [
+        "verticalCards",
+        "largeCTA",
+        "quickScroll"
+      ]
+    },
+    "mode": "light",
+    "palette": "pastel",
+    "layout": "compact",
+    "classes": "theme-social mode-light layout-compact palette-pastel"
+  },
+  "sections": [
+    {
+      "id": 1,
+      "name": "Tarjetas",
+      "slug": "tarjetas",
+      "description": "Tarjetas Personalizadas",
+      "icon": null,
+      "image": null,
+      "itemCount": 3,
+      "items": [
+        {
+          "id": 1,
+          "name": "120 Tarjetas personales",
+          "slug": "120-tarjetas-personales",
+          "description": "Tarjetas Personalizadas en opalina",
+          "price": "$ 13.000",
+          "priceRaw": 13000,
+          "priceLabel": null,
+          "currency": "ARS",
+          "image": null,
+          "thumbnail": null,
+          "gallery": [],
+          "isFeatured": false,
+          "tags": [],
+          "sku": null,
+          "customFields": {},
+          "variants": [],
+          "hasPrice": true,
+          "hasImage": false,
+          "hasGallery": false,
+          "hasVariants": false
+        },
+        {
+          "id": 42,
+          "name": "Tarjeta de Agradecimiento 11x8cm",
+          "slug": "tarjeta-de-agradecimiento-11x8cm",
+          "description": "Tarjeta personalizada de agradecimiento",
+          "price": null,
+          "priceRaw": null,
+          "priceLabel": null,
+          "currency": "ARS",
+          "image": "uploads/1769269858756-rx0djw5es.png",
+          "thumbnail": "uploads/1769269858756-rx0djw5es.png",
+          "gallery": [],
+          "isFeatured": false,
+          "tags": [],
+          "sku": null,
+          "customFields": {},
+          "variants": [
+            {
+              "id": 1,
+              "name": "100 unidades",
+              "price": "$ 25.000",
+              "priceRaw": 25000,
+              "priceLabel": "por pack",
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            },
+            {
+              "id": 2,
+              "name": "50 unidades",
+              "price": "$ 15.000",
+              "priceRaw": 15000,
+              "priceLabel": "por pack",
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            }
+          ],
+          "hasPrice": true,
+          "hasImage": true,
+          "hasGallery": false,
+          "hasVariants": true
+        },
+        {
+          "id": 44,
+          "name": "Tarjeta Doble Faz 9x5cm",
+          "slug": "tarjeta-doble-faz-9x5",
+          "description": " Tarjetas de presentación profesionales impresas a doble cara. Tamaño estándar 9x5cm, perfectas para networking y eventos. Material: papel opalina chambril de 240g mate, acabado elegante y resistente. Diseño personalizado incluido.",
+          "price": "$ 12.870",
+          "priceRaw": 12870,
+          "priceLabel": null,
+          "currency": "ARS",
+          "image": "uploads/1769273569703-xrz7k59o9.png",
+          "thumbnail": "uploads/1769273569703-xrz7k59o9.png",
+          "gallery": [],
+          "isFeatured": false,
+          "tags": [],
+          "sku": null,
+          "customFields": {},
+          "variants": [
+            {
+              "id": 3,
+              "name": "100 unidades",
+              "price": "$ 12.870",
+              "priceRaw": 12870,
+              "priceLabel": null,
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            },
+            {
+              "id": 4,
+              "name": "200 unidades",
+              "price": "$ 24.000",
+              "priceRaw": 24000,
+              "priceLabel": null,
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            },
+            {
+              "id": 5,
+              "name": "300 unidades",
+              "price": "$ 34.320",
+              "priceRaw": 34320,
+              "priceLabel": null,
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            },
+            {
+              "id": 6,
+              "name": "400 unidades",
+              "price": "$ 41.200",
+              "priceRaw": 41200,
+              "priceLabel": null,
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            },
+            {
+              "id": 7,
+              "name": "500 unidades",
+              "price": "$ 47.190",
+              "priceRaw": 47190,
+              "priceLabel": null,
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            },
+            {
+              "id": 8,
+              "name": "1000 unidades",
+              "price": "$ 68.640",
+              "priceRaw": 68640,
+              "priceLabel": null,
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            }
+          ],
+          "hasPrice": true,
+          "hasImage": true,
+          "hasGallery": false,
+          "hasVariants": true
+        }
+      ],
+      "frameStyle": "chalk",
+      "promoText": null,
+      "promoBadge": null,
+      "showItemImages": true,
+      "hasPromo": false,
+      "sectionClasses": "show-images"
+    },
+    {
+      "id": 13,
+      "name": "Volantes",
+      "slug": "volantes",
+      "description": "Volantes publicitarios impresos en alta calidad",
+      "icon": "",
+      "image": null,
+      "itemCount": 2,
+      "items": [
+        {
+          "id": 45,
+          "name": "Volantes a Color 10x15cm",
+          "slug": "volantes-color-10x15",
+          "description": "🎨 Volantes publicitarios impresos a todo color en papel couche de alta calidad. Tamaño 10x15cm, ideales para promociones, eventos y publicidad. Impresión full color ambas caras disponible.",
+          "price": "$ 4.500",
+          "priceRaw": 4500,
+          "priceLabel": null,
+          "currency": "ARS",
+          "image": null,
+          "thumbnail": null,
+          "gallery": [],
+          "isFeatured": false,
+          "tags": [],
+          "sku": null,
+          "customFields": {},
+          "variants": [
+            {
+              "id": 9,
+              "name": "100 unidades",
+              "price": "$ 4.500",
+              "priceRaw": 4500,
+              "priceLabel": null,
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            },
+            {
+              "id": 10,
+              "name": "500 unidades",
+              "price": "$ 18.000",
+              "priceRaw": 18000,
+              "priceLabel": null,
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            },
+            {
+              "id": 11,
+              "name": "1000 unidades",
+              "price": "$ 32.000",
+              "priceRaw": 32000,
+              "priceLabel": null,
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            },
+            {
+              "id": 12,
+              "name": "5000 unidades",
+              "price": "$ 130.000",
+              "priceRaw": 130000,
+              "priceLabel": null,
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            }
+          ],
+          "hasPrice": true,
+          "hasImage": false,
+          "hasGallery": false,
+          "hasVariants": true
+        },
+        {
+          "id": 46,
+          "name": "Volantes B/N 10x15cm",
+          "slug": "volantes-byn-10x15",
+          "description": " Volantes publicitarios impresos en blanco y negro. Tamaño 10x15cm, opcion economica para distribucion masiva. Papel bond de calidad.",
+          "price": "$ 2.500",
+          "priceRaw": 2500,
+          "priceLabel": null,
+          "currency": "ARS",
+          "image": null,
+          "thumbnail": null,
+          "gallery": [],
+          "isFeatured": false,
+          "tags": [],
+          "sku": null,
+          "customFields": {},
+          "variants": [
+            {
+              "id": 13,
+              "name": "100 unidades",
+              "price": "$ 2.500",
+              "priceRaw": 2500,
+              "priceLabel": null,
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            },
+            {
+              "id": 14,
+              "name": "500 unidades",
+              "price": "$ 10.000",
+              "priceRaw": 10000,
+              "priceLabel": null,
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            },
+            {
+              "id": 15,
+              "name": "1000 unidades",
+              "price": "$ 18.000",
+              "priceRaw": 18000,
+              "priceLabel": null,
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            }
+          ],
+          "hasPrice": true,
+          "hasImage": false,
+          "hasGallery": false,
+          "hasVariants": true
+        }
+      ],
+      "frameStyle": "chalk",
+      "promoText": null,
+      "promoBadge": null,
+      "showItemImages": false,
+      "hasPromo": false,
+      "sectionClasses": ""
+    },
+    {
+      "id": 12,
+      "name": "Stickers",
+      "slug": "stickers",
+      "description": "Stickers personalizados para eventos y decoración",
+      "icon": "🎨",
+      "image": null,
+      "itemCount": 3,
+      "items": [
+        {
+          "id": 43,
+          "name": "Stickers para eventos Plancha A4",
+          "slug": "stickers-eventos-a4",
+          "description": "🎉 Stickers Personalizados para Cumpleaños 🎉 Diseñamos stickers personalizados con el nombre, edad y temática que más te guste. Son ideales para decorar sorpresas, souvenirs, bolsitas, invitaciones o cualquier detalle de tu evento.",
+          "price": "$ 3.500",
+          "priceRaw": 3500,
+          "priceLabel": null,
+          "currency": "ARS",
+          "image": "uploads/1769272551996-6y5zlmucr.png",
+          "thumbnail": "uploads/1769272551996-6y5zlmucr.png",
+          "gallery": [],
+          "isFeatured": false,
+          "tags": [],
+          "sku": null,
+          "customFields": {},
+          "variants": [],
+          "hasPrice": true,
+          "hasImage": true,
+          "hasGallery": false,
+          "hasVariants": false
+        },
+        {
+          "id": 47,
+          "name": "Stickers Troquelado",
+          "slug": "stickers-troquelado",
+          "description": " Stickers troquelados personalizados con corte a medida. Ideales para branding, packaging, decoraci�n y eventos. Impresi�n full color en vinilo de alta calidad con acabado resistente.",
+          "price": null,
+          "priceRaw": null,
+          "priceLabel": "Desde .500",
+          "currency": "ARS",
+          "image": null,
+          "thumbnail": null,
+          "gallery": [],
+          "isFeatured": false,
+          "tags": [],
+          "sku": null,
+          "customFields": {},
+          "variants": [
+            {
+              "id": 16,
+              "name": "135 stickers de 3x3cm",
+              "price": "$ 7.500",
+              "priceRaw": 7500,
+              "priceLabel": null,
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            },
+            {
+              "id": 17,
+              "name": "95 stickers de 4x4cm",
+              "price": "$ 7.500",
+              "priceRaw": 7500,
+              "priceLabel": null,
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            },
+            {
+              "id": 18,
+              "name": "96 stickers de 5x5cm",
+              "price": "$ 11.000",
+              "priceRaw": 11000,
+              "priceLabel": null,
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            },
+            {
+              "id": 19,
+              "name": "96 stickers de 6x6cm",
+              "price": "$ 16.200",
+              "priceRaw": 16200,
+              "priceLabel": null,
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            },
+            {
+              "id": 20,
+              "name": "48 stickers de 4x4cm",
+              "price": "$ 4.500",
+              "priceRaw": 4500,
+              "priceLabel": null,
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            },
+            {
+              "id": 21,
+              "name": "68 stickers de 3x3cm",
+              "price": "$ 4.500",
+              "priceRaw": 4500,
+              "priceLabel": null,
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            },
+            {
+              "id": 22,
+              "name": "48 stickers de 5x5cm",
+              "price": "$ 6.000",
+              "priceRaw": 6000,
+              "priceLabel": null,
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            },
+            {
+              "id": 23,
+              "name": "48 stickers de 6x6cm",
+              "price": "$ 10.300",
+              "priceRaw": 10300,
+              "priceLabel": null,
+              "sku": null,
+              "stock": null,
+              "image": null,
+              "isAvailable": true
+            }
+          ],
+          "hasPrice": true,
+          "hasImage": false,
+          "hasGallery": false,
+          "hasVariants": true
+        },
+        {
+          "id": 48,
+          "name": "PLANCHA DE STICKER ",
+          "slug": "plancha-de-sticker",
+          "description": "Plancha de stickers adhesiva tamaño A4 TROQUELADOS listo para USAR.",
+          "price": "$ 2.500",
+          "priceRaw": 2500,
+          "priceLabel": null,
+          "currency": "ARS",
+          "image": null,
+          "thumbnail": null,
+          "gallery": [],
+          "isFeatured": false,
+          "tags": [],
+          "sku": null,
+          "customFields": {},
+          "variants": [],
+          "hasPrice": true,
+          "hasImage": false,
+          "hasGallery": false,
+          "hasVariants": false
+        }
+      ],
+      "frameStyle": "chalk",
+      "promoText": null,
+      "promoBadge": null,
+      "showItemImages": true,
+      "hasPromo": false,
+      "sectionClasses": "show-images"
+    }
+  ],
+  "promotions": [],
+  "cart": {
+    "enabled": true,
+    "buttonText": "Agregar",
+    "whatsappMessage": "Hola! Quiero hacer el siguiente pedido:"
+  },
+  "searchFilter": {
+    "enabled": true,
+    "searchEnabled": true,
+    "filterEnabled": true,
+    "placeholder": "Buscar productos..."
+  },
+  "totalItems": 8,
+  "buildInfo": {
+    "version": "20260124-143629",
+    "timestamp": "2026-01-24T17:36:29.478Z",
+    "generator": "SCG v1.0.0"
+  }
+}
