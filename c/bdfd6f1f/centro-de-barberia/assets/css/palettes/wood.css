@@ -1,0 +1,45 @@
+/* Barber Theme - Wood & Leather Palette */
+/* Marrón cálido estilo barbería clásica */
+
+:root {
+  --primary-color: #c4956a;
+  --primary-hover: #d4a574;
+  --primary-contrast: #1a1410;
+  --accent-color: #a67c52;
+  
+  --bg-color: #1a1410;
+  --bg-secondary: #2a1f1a;
+  --bg-tertiary: #3a2f28;
+  --text-color: #f5f0eb;
+  --text-muted: rgba(245, 240, 235, 0.7);
+  
+  --card-bg: rgba(42, 31, 26, 0.95);
+  --card-border: 1px solid rgba(196, 149, 106, 0.25);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --card-hover-shadow: 0 8px 30px rgba(196, 149, 106, 0.2);
+  
+  --tag-bg: rgba(196, 149, 106, 0.15);
+  --tag-color: var(--primary-color);
+  
+  --footer-bg: #150f0a;
+  --footer-border: 3px solid var(--primary-color);
+  
+  --nav-card-bg: rgba(42, 31, 26, 0.9);
+  --nav-card-border: rgba(196, 149, 106, 0.3);
+  
+  --image-placeholder-bg: #2a1f1a;
+}
+
+body {
+  background-image: 
+    radial-gradient(ellipse at top, rgba(196, 149, 106, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(166, 124, 82, 0.03) 0%, transparent 50%);
+}
+
+.site-header::after {
+  color: var(--primary-color);
+}
+
+.site-footer::before {
+  color: var(--primary-color);
+}
