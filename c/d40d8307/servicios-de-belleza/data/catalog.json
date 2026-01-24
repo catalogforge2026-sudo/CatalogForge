@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/d40d8307/servicios-de-belleza",
     "clientKey": "d40d8307",
-    "generatedAt": "2026-01-24T21:39:32.858Z",
+    "generatedAt": "2026-01-24T21:46:49.844Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -461,8 +461,8 @@
   },
   "totalItems": 12,
   "buildInfo": {
-    "version": "20260124-183932",
-    "timestamp": "2026-01-24T21:39:32.860Z",
+    "version": "20260124-184649",
+    "timestamp": "2026-01-24T21:46:49.846Z",
     "generator": "SCG v1.0.0"
   }
 }
