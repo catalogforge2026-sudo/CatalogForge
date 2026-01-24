@@ -1,26 +1,26 @@
 {
   "meta": {
-    "title": "Papeleria - Keisi",
+    "title": "Papeleria Creativa - Keisi",
     "description": "",
     "image": null,
     "url": "/c/725mPCqR/papeleria",
     "clientKey": "725mPCqR",
-    "generatedAt": "2026-01-24T17:36:29.476Z",
+    "generatedAt": "2026-01-24T17:42:53.421Z",
     "generator": "CatalogForge"
   },
   "client": {
     "name": "Keisi",
     "slug": "keisi",
     "logo": null,
-    "email": "vg4329276@gmail.com",
-    "phone": null,
-    "address": null,
+    "email": "romandesign81@gmail.com",
+    "phone": "+54 11 5903 3756",
+    "address": "Segurola 2324",
     "website": null,
     "socialLinks": {}
   },
   "catalog": {
     "id": 1,
-    "name": "Papeleria",
+    "name": "Papeleria Creativa",
     "slug": "papeleria",
     "description": null,
     "type": "Productos",
@@ -582,8 +582,8 @@
   },
   "totalItems": 8,
   "buildInfo": {
-    "version": "20260124-143629",
-    "timestamp": "2026-01-24T17:36:29.478Z",
+    "version": "20260124-144253",
+    "timestamp": "2026-01-24T17:42:53.425Z",
     "generator": "SCG v1.0.0"
   }
 }
