@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/bardemo/menu-bar-demo",
     "clientKey": "bardemo",
-    "generatedAt": "2026-01-24T15:01:31.904Z",
+    "generatedAt": "2026-01-24T15:05:22.067Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -13,8 +13,8 @@
     "slug": "bar-demo",
     "logo": null,
     "email": "info@bardemo.com",
-    "phone": "+54 11 1234-5678",
-    "address": null,
+    "phone": "+54 11 5903 3756",
+    "address": "",
     "website": null,
     "socialLinks": {}
   },
@@ -561,8 +561,8 @@
     "whatsappMessage": "Hola! Quiero hacer el siguiente pedido:"
   },
   "buildInfo": {
-    "version": "20260124-120131",
-    "timestamp": "2026-01-24T15:01:31.906Z",
+    "version": "20260124-120522",
+    "timestamp": "2026-01-24T15:05:22.068Z",
     "generator": "SCG v1.0.0"
   }
 }
