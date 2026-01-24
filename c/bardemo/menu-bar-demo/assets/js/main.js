@@ -193,15 +193,21 @@ function initPromotionsCarousel() {
   }
   
   // Update carousel position
-  function goToSlide(index) {
+  function goToSlide(index, instant = false) {
     const maxIndex = getMaxIndex();
     currentIndex = Math.max(0, Math.min(index, maxIndex));
     
     if (window.innerWidth < 600) {
-      // Mobile: scroll snap behavior
+      // Mobile: scroll within track only (not the whole page)
       const card = cards[currentIndex];
-      if (card) {
-        card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      if (card && track) {
+        const cardWidth = card.offsetWidth + 12; // width + gap
+        const scrollPosition = currentIndex * cardWidth;
+        // Use instant scroll for loop transitions to avoid visual glitches
+        track.scrollTo({ 
+          left: scrollPosition, 
+          behavior: instant ? 'instant' : 'smooth' 
+        });
       }
     } else {
       // Desktop: transform
@@ -225,7 +231,7 @@ function initPromotionsCarousel() {
   function nextSlide() {
     const maxIndex = getMaxIndex();
     if (currentIndex >= maxIndex) {
-      goToSlide(0); // Loop back
+      goToSlide(0, true); // Loop back instantly to avoid scroll glitch
     } else {
       goToSlide(currentIndex + 1);
     }
@@ -234,7 +240,7 @@ function initPromotionsCarousel() {
   // Previous slide
   function prevSlide() {
     if (currentIndex <= 0) {
-      goToSlide(getMaxIndex()); // Loop to end
+      goToSlide(getMaxIndex(), true); // Loop to end instantly
     } else {
       goToSlide(currentIndex - 1);
     }
@@ -243,7 +249,8 @@ function initPromotionsCarousel() {
   // Start autoplay
   function startAutoplay() {
     stopAutoplay();
-    if (cards.length > getVisibleCards()) {
+    // Disable autoplay on mobile to prevent scroll issues
+    if (window.innerWidth >= 600 && cards.length > getVisibleCards()) {
       autoplayInterval = setInterval(nextSlide, autoplayDelay);
     }
   }

@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/bardemo/menu-bar-demo",
     "clientKey": "bardemo",
-    "generatedAt": "2026-01-24T03:48:30.739Z",
+    "generatedAt": "2026-01-24T03:54:07.878Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -35,7 +35,7 @@
       "itemsPerRow": 3,
       "themeSlug": "mixology",
       "themeMode": "dark",
-      "themePalette": "neon",
+      "themePalette": "gold",
       "themeLayout": "bar",
       "locale": "es-MX"
     }
@@ -69,9 +69,9 @@
       }
     },
     "mode": "dark",
-    "palette": "neon",
+    "palette": "gold",
     "layout": "bar",
-    "classes": "theme-mixology mode-dark layout-bar palette-neon"
+    "classes": "theme-mixology mode-dark layout-bar palette-gold"
   },
   "sections": [
     {
@@ -556,8 +556,8 @@
     }
   ],
   "buildInfo": {
-    "version": "20260124-004830",
-    "timestamp": "2026-01-24T03:48:30.742Z",
+    "version": "20260124-005407",
+    "timestamp": "2026-01-24T03:54:07.880Z",
     "generator": "SCG v1.0.0"
   }
 }
