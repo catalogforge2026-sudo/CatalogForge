@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/725mPCqR/papeleria",
     "clientKey": "725mPCqR",
-    "generatedAt": "2026-01-24T17:59:59.072Z",
+    "generatedAt": "2026-01-24T18:02:16.069Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -582,8 +582,8 @@
   },
   "totalItems": 8,
   "buildInfo": {
-    "version": "20260124-145959",
-    "timestamp": "2026-01-24T17:59:59.077Z",
+    "version": "20260124-150216",
+    "timestamp": "2026-01-24T18:02:16.071Z",
     "generator": "SCG v1.0.0"
   }
 }
