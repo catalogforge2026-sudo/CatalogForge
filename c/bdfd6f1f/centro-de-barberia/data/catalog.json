@@ -5,7 +5,7 @@
     "image": "http://localhost:3001/uploads/1769297161466-zzg8jp3sb.png",
     "url": "/c/bdfd6f1f/centro-de-barberia",
     "clientKey": "bdfd6f1f",
-    "generatedAt": "2026-01-24T23:31:13.034Z",
+    "generatedAt": "2026-01-24T23:31:50.142Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -414,9 +414,9 @@
   ],
   "promotions": [],
   "cart": {
-    "enabled": false,
+    "enabled": true,
     "buttonText": "Agregar",
-    "whatsappMessage": "Hola! Quiero hacer el siguiente pedido:"
+    "whatsappMessage": "Hola! Quiero hacer el siguiente servicio:"
   },
   "searchFilter": {
     "enabled": true,
@@ -426,8 +426,8 @@
   },
   "totalItems": 14,
   "buildInfo": {
-    "version": "20260124-203113",
-    "timestamp": "2026-01-24T23:31:13.036Z",
+    "version": "20260124-203150",
+    "timestamp": "2026-01-24T23:31:50.143Z",
     "generator": "SCG v1.0.0"
   }
 }
