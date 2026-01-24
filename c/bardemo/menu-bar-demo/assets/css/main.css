@@ -989,12 +989,14 @@ body::after {
 /* Mobile: 1 card visible, full carousel */
 @media (max-width: 599px) {
   .carousel-viewport {
-    margin: 0 -1rem;
-    padding: 0 1rem;
-    overflow: visible;
+    margin: 0 -0.5rem;
+    padding: 0 0.5rem;
+    overflow: hidden;
   }
   
   .carousel-track {
+    display: flex !important;
+    flex-direction: row !important;
     gap: 12px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -1009,34 +1011,107 @@ body::after {
   }
   
   .promo-card {
-    flex: 0 0 90%;
-    min-width: 280px;
-    max-width: none;
+    flex: 0 0 calc(100% - 1rem) !important;
+    min-width: 280px !important;
+    max-width: none !important;
     scroll-snap-align: center;
+    border-radius: 10px;
+    /* Borde brillante visible en móvil */
+    border: 2px solid var(--primary-color) !important;
+    box-shadow: 
+      0 0 20px color-mix(in srgb, var(--primary-color) 40%, transparent),
+      0 0 40px color-mix(in srgb, var(--primary-color) 20%, transparent),
+      inset 0 0 20px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  .promo-card::before {
+    border-radius: 10px;
+    opacity: 1 !important;
+    padding: 2px;
+    background: linear-gradient(135deg, 
+      var(--primary-color) 0%, 
+      transparent 30%,
+      transparent 70%,
+      var(--primary-color) 100%
+    ) !important;
   }
   
   .promo-card:hover {
     transform: none;
   }
   
+  /* Glow siempre visible en móvil */
+  .promo-card .promo-card-glow {
+    opacity: 0.25 !important;
+    filter: blur(20px);
+  }
+  
+  /* IMPORTANTE: Mantener layout horizontal en móvil */
   .promo-card-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
     min-height: 120px;
   }
   
   .promo-card-text {
-    padding: 0.875rem 1rem;
+    flex: 1 1 auto !important;
+    padding: 0.75rem 1rem;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   
   .promo-card-badge {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    margin-bottom: 0.35rem;
+    box-shadow: 0 0 15px var(--primary-color);
   }
   
   .promo-card-title {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+    text-shadow: 
+      0 0 15px var(--primary-color),
+      0 0 30px color-mix(in srgb, var(--primary-color) 30%, transparent);
   }
   
+  .promo-card-subtitle {
+    font-size: 0.7rem;
+    margin-bottom: 0.15rem;
+  }
+  
+  .promo-card-meta {
+    font-size: 0.65rem;
+    text-shadow: 0 0 10px var(--primary-color);
+  }
+  
+  .promo-card-desc {
+    font-size: 0.6rem;
+    margin-top: 0.3rem;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+  
+  /* Imagen a la derecha en móvil */
   .promo-card-visual {
-    flex: 0 0 110px;
+    flex: 0 0 110px !important;
+    min-width: 110px !important;
+    max-width: 110px !important;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .promo-card-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .promo-card-visual::after {
+    background: linear-gradient(to right, var(--promo-bg, #0d0d0d) 0%, transparent 40%);
   }
   
   .carousel-controls {
@@ -1047,6 +1122,17 @@ body::after {
     width: 32px;
     height: 32px;
     font-size: 1.1rem;
+    box-shadow: 0 0 15px color-mix(in srgb, var(--primary-color) 40%, transparent);
+  }
+  
+  .carousel-dot {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .carousel-dot.active {
+    width: 20px;
+    box-shadow: 0 0 12px var(--primary-color);
   }
 }
 
