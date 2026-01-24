@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/bardemo/menu-bar-demo",
     "clientKey": "bardemo",
-    "generatedAt": "2026-01-24T04:05:51.849Z",
+    "generatedAt": "2026-01-24T15:01:31.904Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -555,9 +555,14 @@
       "isActive": true
     }
   ],
+  "cart": {
+    "enabled": true,
+    "buttonText": "Agregar",
+    "whatsappMessage": "Hola! Quiero hacer el siguiente pedido:"
+  },
   "buildInfo": {
-    "version": "20260124-010551",
-    "timestamp": "2026-01-24T04:05:51.850Z",
+    "version": "20260124-120131",
+    "timestamp": "2026-01-24T15:01:31.906Z",
     "generator": "SCG v1.0.0"
   }
 }
