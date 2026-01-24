@@ -2,16 +2,16 @@
   "meta": {
     "title": "Centro de Barbería - Centro de Barbería Demo",
     "description": "Servicios profesionales de barbería y cuidado masculino",
-    "image": "http://localhost:3001/uploads/1769297161466-zzg8jp3sb.png",
+    "image": null,
     "url": "/c/bdfd6f1f/centro-de-barberia",
     "clientKey": "bdfd6f1f",
-    "generatedAt": "2026-01-24T23:31:50.142Z",
+    "generatedAt": "2026-01-24T23:49:47.730Z",
     "generator": "CatalogForge"
   },
   "client": {
     "name": "Centro de Barbería",
     "slug": "centro-barberia-demo",
-    "logo": "http://localhost:3001/uploads/1769297161466-zzg8jp3sb.png",
+    "logo": null,
     "email": "barberia@demo.com",
     "phone": "+54 11 5555-8888",
     "address": "",
@@ -426,8 +426,8 @@
   },
   "totalItems": 14,
   "buildInfo": {
-    "version": "20260124-203150",
-    "timestamp": "2026-01-24T23:31:50.143Z",
+    "version": "20260124-204947",
+    "timestamp": "2026-01-24T23:49:47.732Z",
     "generator": "SCG v1.0.0"
   }
 }
