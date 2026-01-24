@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/be79d91e/productos-naturales",
     "clientKey": "be79d91e",
-    "generatedAt": "2026-01-24T19:43:06.135Z",
+    "generatedAt": "2026-01-24T19:47:59.970Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -340,8 +340,8 @@
   },
   "totalItems": 9,
   "buildInfo": {
-    "version": "20260124-164306",
-    "timestamp": "2026-01-24T19:43:06.136Z",
+    "version": "20260124-164759",
+    "timestamp": "2026-01-24T19:47:59.972Z",
     "generator": "SCG v1.0.0"
   }
 }
