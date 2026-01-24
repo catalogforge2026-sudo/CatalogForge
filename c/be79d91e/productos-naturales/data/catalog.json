@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/be79d91e/productos-naturales",
     "clientKey": "be79d91e",
-    "generatedAt": "2026-01-24T19:52:04.268Z",
+    "generatedAt": "2026-01-24T19:55:11.592Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -34,7 +34,7 @@
       "layout": "grid",
       "itemsPerRow": 3,
       "themeSlug": "organic",
-      "themePalette": "earth",
+      "themePalette": "green",
       "themeMode": "light",
       "themeLayout": "grid"
     }
@@ -71,9 +71,9 @@
       }
     },
     "mode": "light",
-    "palette": "earth",
+    "palette": "green",
     "layout": "grid",
-    "classes": "theme-organic mode-light layout-grid palette-earth"
+    "classes": "theme-organic mode-light layout-grid palette-green"
   },
   "sections": [
     {
@@ -340,8 +340,8 @@
   },
   "totalItems": 9,
   "buildInfo": {
-    "version": "20260124-165204",
-    "timestamp": "2026-01-24T19:52:04.269Z",
+    "version": "20260124-165511",
+    "timestamp": "2026-01-24T19:55:11.594Z",
     "generator": "SCG v1.0.0"
   }
 }
