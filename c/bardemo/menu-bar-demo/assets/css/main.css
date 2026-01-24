@@ -678,3 +678,403 @@ body::after {
 .catalog-section:nth-child(4) { animation-delay: 0.2s; }
 .catalog-section:nth-child(5) { animation-delay: 0.25s; }
 .catalog-section:nth-child(6) { animation-delay: 0.3s; }
+
+/* ============================================
+   PROMOTIONS CAROUSEL - Theme Glow Style
+   Uses theme's --primary-color for glow effects
+   ============================================ */
+.promotions-carousel {
+  margin-bottom: var(--section-spacing);
+  position: relative;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  will-change: transform;
+}
+
+/* Promo Card - Layout horizontal con glow del tema */
+.promo-card {
+  flex: 0 0 calc(50% - 8px);
+  min-width: 320px;
+  max-width: 450px;
+  background: var(--promo-bg, #0d0d0d);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              box-shadow 0.4s ease;
+}
+
+/* Borde brillante con color del tema */
+.promo-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(135deg, 
+    var(--primary-color) 0%, 
+    transparent 40%,
+    transparent 60%,
+    var(--primary-color) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.6;
+  transition: opacity 0.4s ease;
+}
+
+/* Glow effect layer - usa color del tema */
+.promo-card-glow {
+  position: absolute;
+  inset: -3px;
+  border-radius: 15px;
+  background: var(--primary-color);
+  opacity: 0;
+  filter: blur(15px);
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Hover: más brillo */
+.promo-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 40px color-mix(in srgb, var(--primary-color) 25%, transparent);
+}
+
+.promo-card:hover::before {
+  opacity: 1;
+}
+
+.promo-card:hover .promo-card-glow {
+  opacity: 0.35;
+}
+
+/* Active/Click: efecto flotación máximo */
+.promo-card:active,
+.promo-card.floating {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.5),
+    0 0 60px color-mix(in srgb, var(--primary-color) 40%, transparent);
+}
+
+.promo-card:active::before,
+.promo-card.floating::before {
+  opacity: 1;
+  background: linear-gradient(135deg, 
+    var(--primary-color) 0%, 
+    rgba(255, 255, 255, 0.5) 50%,
+    var(--primary-color) 100%
+  );
+}
+
+.promo-card:active .promo-card-glow,
+.promo-card.floating .promo-card-glow {
+  opacity: 0.6;
+}
+
+/* Inner layout: texto izquierda, imagen derecha */
+.promo-card-inner {
+  display: flex;
+  align-items: stretch;
+  min-height: 140px;
+}
+
+/* Texto */
+.promo-card-text {
+  flex: 1;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.promo-card-badge {
+  display: inline-block;
+  align-self: flex-start;
+  background: var(--primary-color);
+  color: #000;
+  font-family: var(--font-family);
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 0 20px var(--primary-color);
+}
+
+.promo-card-title {
+  font-family: var(--font-family-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.3rem;
+  line-height: 1.2;
+  text-shadow: 
+    0 0 15px var(--primary-color),
+    0 0 30px color-mix(in srgb, var(--primary-color) 30%, transparent);
+  transition: text-shadow 0.3s ease;
+}
+
+.promo-card:hover .promo-card-title {
+  text-shadow: 
+    0 0 20px var(--primary-color),
+    0 0 40px var(--primary-color),
+    0 0 60px color-mix(in srgb, var(--primary-color) 40%, transparent);
+}
+
+.promo-card-subtitle {
+  font-family: var(--font-family);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.promo-card-meta {
+  font-family: var(--font-family);
+  font-size: 0.75rem;
+  color: var(--primary-color);
+  margin: 0;
+  text-shadow: 0 0 10px var(--primary-color);
+}
+
+.promo-card-desc {
+  font-family: var(--font-family);
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0.5rem 0 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Imagen */
+.promo-card-visual {
+  flex: 0 0 140px;
+  position: relative;
+  overflow: hidden;
+}
+
+.promo-card-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.promo-card:hover .promo-card-visual img {
+  transform: scale(1.1);
+  filter: brightness(1.1) saturate(1.1);
+}
+
+/* Gradient overlay en imagen */
+.promo-card-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--promo-bg, #0d0d0d) 0%, transparent 30%);
+  pointer-events: none;
+}
+
+/* Carousel Controls */
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.carousel-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  box-shadow: 0 0 15px color-mix(in srgb, var(--primary-color) 30%, transparent);
+}
+
+.carousel-btn:hover {
+  background: var(--primary-color);
+  color: #000;
+  box-shadow: 0 0 25px var(--primary-color);
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.carousel-dot.active {
+  background: var(--primary-color);
+  width: 24px;
+  border-radius: 4px;
+  box-shadow: 0 0 15px var(--primary-color);
+}
+
+.carousel-dot:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Desktop: 2 cards visible */
+@media (min-width: 900px) {
+  .promo-card {
+    flex: 0 0 calc(50% - 8px);
+  }
+  
+  .promotions-carousel[data-promo-count="1"] .carousel-track {
+    justify-content: center;
+  }
+  
+  .promotions-carousel[data-promo-count="1"] .carousel-controls,
+  .promotions-carousel[data-promo-count="2"] .carousel-controls {
+    display: none;
+  }
+}
+
+/* Tablet: 1.5 cards visible */
+@media (min-width: 600px) and (max-width: 899px) {
+  .promo-card {
+    flex: 0 0 calc(70% - 8px);
+    max-width: 400px;
+  }
+  
+  .promotions-carousel[data-promo-count="1"] .carousel-controls {
+    display: none;
+  }
+}
+
+/* Mobile: 1 card visible, full carousel */
+@media (max-width: 599px) {
+  .carousel-viewport {
+    margin: 0 -1rem;
+    padding: 0 1rem;
+    overflow: visible;
+  }
+  
+  .carousel-track {
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0.5rem 0;
+  }
+  
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .promo-card {
+    flex: 0 0 90%;
+    min-width: 280px;
+    max-width: none;
+    scroll-snap-align: center;
+  }
+  
+  .promo-card:hover {
+    transform: none;
+  }
+  
+  .promo-card-inner {
+    min-height: 120px;
+  }
+  
+  .promo-card-text {
+    padding: 0.875rem 1rem;
+  }
+  
+  .promo-card-badge {
+    font-size: 0.8rem;
+  }
+  
+  .promo-card-title {
+    font-size: 1rem;
+  }
+  
+  .promo-card-visual {
+    flex: 0 0 110px;
+  }
+  
+  .carousel-controls {
+    margin-top: 0.75rem;
+  }
+  
+  .carousel-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Layout bar - carousel spans full width */
+@media (min-width: 768px) {
+  .layout-bar .promotions-carousel {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Animation */
+.promo-card {
+  animation: fadeInGlow 0.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInGlow {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.promo-card:nth-child(1) { animation-delay: 0.1s; }
+.promo-card:nth-child(2) { animation-delay: 0.2s; }
+.promo-card:nth-child(3) { animation-delay: 0.3s; }
+.promo-card:nth-child(4) { animation-delay: 0.4s; }

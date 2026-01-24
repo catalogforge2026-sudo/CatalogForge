@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/bardemo/menu-bar-demo",
     "clientKey": "bardemo",
-    "generatedAt": "2026-01-24T01:11:49.780Z",
+    "generatedAt": "2026-01-24T03:36:49.812Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -144,12 +144,12 @@
           "hasGallery": false
         }
       ],
-      "frameStyle": "none",
+      "frameStyle": "chalk",
       "promoText": null,
       "promoBadge": null,
       "showItemImages": false,
       "hasPromo": false,
-      "sectionClasses": "frame-none"
+      "sectionClasses": ""
     },
     {
       "id": 7,
@@ -221,12 +221,12 @@
           "hasGallery": false
         }
       ],
-      "frameStyle": "none",
+      "frameStyle": "chalk",
       "promoText": null,
       "promoBadge": null,
       "showItemImages": false,
       "hasPromo": false,
-      "sectionClasses": "frame-none"
+      "sectionClasses": ""
     },
     {
       "id": 8,
@@ -298,12 +298,12 @@
           "hasGallery": false
         }
       ],
-      "frameStyle": "none",
+      "frameStyle": "chalk",
       "promoText": null,
       "promoBadge": null,
       "showItemImages": false,
       "hasPromo": false,
-      "sectionClasses": "frame-none"
+      "sectionClasses": ""
     },
     {
       "id": 9,
@@ -375,12 +375,12 @@
           "hasGallery": false
         }
       ],
-      "frameStyle": "none",
+      "frameStyle": "chalk",
       "promoText": null,
       "promoBadge": null,
       "showItemImages": false,
       "hasPromo": false,
-      "sectionClasses": "frame-none"
+      "sectionClasses": ""
     },
     {
       "id": 10,
@@ -452,12 +452,12 @@
           "hasGallery": false
         }
       ],
-      "frameStyle": "none",
+      "frameStyle": "chalk",
       "promoText": null,
       "promoBadge": null,
       "showItemImages": false,
       "hasPromo": false,
-      "sectionClasses": "frame-none"
+      "sectionClasses": ""
     },
     {
       "id": 11,
@@ -509,17 +509,55 @@
           "hasGallery": false
         }
       ],
-      "frameStyle": "none",
-      "promoText": null,
+      "frameStyle": "chalk",
+      "promoText": "2x1",
       "promoBadge": null,
-      "showItemImages": false,
-      "hasPromo": false,
-      "sectionClasses": "frame-none"
+      "showItemImages": true,
+      "hasPromo": true,
+      "sectionClasses": "show-images has-promo"
+    }
+  ],
+  "promotions": [
+    {
+      "id": 1,
+      "title": "HAPPY HOUR",
+      "offerText": "2 X 1",
+      "offerSubtitle": "EN TRAGOS",
+      "schedule": "18 a 20:30 hs",
+      "days": "Lunes a Viernes",
+      "description": "Sangría - Gin Tonic - Caipiriña - Fernet",
+      "terms": "",
+      "ctaText": "",
+      "ctaPhone": "0984 590 059",
+      "ctaLink": "",
+      "imageUrl": "/uploads/1769225766892-ejl83l3uj.png",
+      "backgroundColor": "#1a1a1a",
+      "accentColor": "#f59e0b",
+      "style": "banner",
+      "isActive": true
+    },
+    {
+      "id": 3,
+      "title": "PROMO CHOPP",
+      "offerText": "3 X 30 MIL",
+      "offerSubtitle": "CHOPP 330CC MUNICH",
+      "schedule": "18 a 22 hs",
+      "days": "Todos los días",
+      "description": "Cerveza tirada artesanal",
+      "terms": "",
+      "ctaText": "",
+      "ctaPhone": "",
+      "ctaLink": "",
+      "imageUrl": "/uploads/1769225774939-5kc4u84ib.jpeg",
+      "backgroundColor": "#1a1a1a",
+      "accentColor": "#d4a574",
+      "style": "card",
+      "isActive": true
     }
   ],
   "buildInfo": {
-    "version": "20260123-221149",
-    "timestamp": "2026-01-24T01:11:49.782Z",
+    "version": "20260124-003649",
+    "timestamp": "2026-01-24T03:36:49.814Z",
     "generator": "SCG v1.0.0"
   }
 }

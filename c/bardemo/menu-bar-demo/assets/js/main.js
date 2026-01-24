@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Section type detection
   initSectionTypes();
+  
+  // Promotions carousel
+  initPromotionsCarousel();
 });
 
 /**
@@ -124,6 +127,226 @@ function initSectionTypes() {
       section.classList.add('section-drinks');
     } else if (isFood || !isDrinks) {
       section.classList.add('section-food');
+    }
+  });
+}
+
+/**
+ * Promotions Carousel with Autoplay & Glow Effects
+ * Horizontal cards with neon glow borders
+ */
+function initPromotionsCarousel() {
+  const carousel = document.querySelector('.promotions-carousel');
+  if (!carousel) return;
+  
+  const track = carousel.querySelector('.carousel-track');
+  const cards = carousel.querySelectorAll('.promo-card');
+  const dots = carousel.querySelectorAll('.carousel-dot');
+  const prevBtn = carousel.querySelector('.carousel-prev');
+  const nextBtn = carousel.querySelector('.carousel-next');
+  
+  if (cards.length === 0) return;
+  
+  let currentIndex = 0;
+  let autoplayInterval = null;
+  const autoplayDelay = parseInt(carousel.dataset.autoplay) || 5000;
+  
+  // Add floating effect on click
+  cards.forEach(card => {
+    card.addEventListener('click', function(e) {
+      // Don't trigger if clicking a link
+      if (e.target.tagName === 'A') return;
+      
+      // Add floating class
+      this.classList.add('floating');
+      
+      // Remove after animation
+      setTimeout(() => {
+        this.classList.remove('floating');
+      }, 600);
+    });
+    
+    // Touch feedback for mobile
+    card.addEventListener('touchstart', function() {
+      this.classList.add('floating');
+    }, { passive: true });
+    
+    card.addEventListener('touchend', function() {
+      setTimeout(() => {
+        this.classList.remove('floating');
+      }, 300);
+    }, { passive: true });
+  });
+  
+  // Calculate visible cards based on screen size
+  function getVisibleCards() {
+    const width = window.innerWidth;
+    if (width < 600) return 1;
+    if (width < 900) return 1;
+    return Math.min(2, cards.length);
+  }
+  
+  // Get max index based on visible cards
+  function getMaxIndex() {
+    const visible = getVisibleCards();
+    return Math.max(0, cards.length - visible);
+  }
+  
+  // Update carousel position
+  function goToSlide(index) {
+    const maxIndex = getMaxIndex();
+    currentIndex = Math.max(0, Math.min(index, maxIndex));
+    
+    if (window.innerWidth < 600) {
+      // Mobile: scroll snap behavior
+      const card = cards[currentIndex];
+      if (card) {
+        card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
+    } else {
+      // Desktop: transform
+      const cardWidth = cards[0].offsetWidth;
+      const gap = 16; // gap from CSS
+      const offset = currentIndex * (cardWidth + gap);
+      track.style.transform = `translateX(-${offset}px)`;
+    }
+    
+    updateDots();
+  }
+  
+  // Update active dot
+  function updateDots() {
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentIndex);
+    });
+  }
+  
+  // Next slide
+  function nextSlide() {
+    const maxIndex = getMaxIndex();
+    if (currentIndex >= maxIndex) {
+      goToSlide(0); // Loop back
+    } else {
+      goToSlide(currentIndex + 1);
+    }
+  }
+  
+  // Previous slide
+  function prevSlide() {
+    if (currentIndex <= 0) {
+      goToSlide(getMaxIndex()); // Loop to end
+    } else {
+      goToSlide(currentIndex - 1);
+    }
+  }
+  
+  // Start autoplay
+  function startAutoplay() {
+    stopAutoplay();
+    if (cards.length > getVisibleCards()) {
+      autoplayInterval = setInterval(nextSlide, autoplayDelay);
+    }
+  }
+  
+  // Stop autoplay
+  function stopAutoplay() {
+    if (autoplayInterval) {
+      clearInterval(autoplayInterval);
+      autoplayInterval = null;
+    }
+  }
+  
+  // Event listeners for dots
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      goToSlide(i);
+      startAutoplay(); // Reset autoplay
+    });
+  });
+  
+  // Event listeners for buttons
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      startAutoplay();
+    });
+  }
+  
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      startAutoplay();
+    });
+  }
+  
+  // Pause on hover (desktop)
+  carousel.addEventListener('mouseenter', stopAutoplay);
+  carousel.addEventListener('mouseleave', startAutoplay);
+  
+  // Touch support for mobile swipe
+  let touchStartX = 0;
+  let touchEndX = 0;
+  
+  track.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    stopAutoplay();
+  }, { passive: true });
+  
+  track.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+    startAutoplay();
+  }, { passive: true });
+  
+  function handleSwipe() {
+    const diff = touchStartX - touchEndX;
+    const threshold = 50;
+    
+    if (Math.abs(diff) > threshold) {
+      if (diff > 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+    }
+  }
+  
+  // Mobile scroll detection for dots update
+  if (window.innerWidth < 600) {
+    let scrollTimeout;
+    track.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        const scrollLeft = track.scrollLeft;
+        const cardWidth = cards[0].offsetWidth + 12; // width + gap
+        const newIndex = Math.round(scrollLeft / cardWidth);
+        if (newIndex !== currentIndex && newIndex >= 0 && newIndex < cards.length) {
+          currentIndex = newIndex;
+          updateDots();
+        }
+      }, 100);
+    }, { passive: true });
+  }
+  
+  // Handle resize
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      goToSlide(Math.min(currentIndex, getMaxIndex()));
+      startAutoplay();
+    }, 200);
+  });
+  
+  // Start autoplay
+  startAutoplay();
+  
+  // Pause when page is not visible
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopAutoplay();
+    } else {
+      startAutoplay();
     }
   });
 }
