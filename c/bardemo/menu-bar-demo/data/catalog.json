@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/bardemo/menu-bar-demo",
     "clientKey": "bardemo",
-    "generatedAt": "2026-01-24T03:54:07.878Z",
+    "generatedAt": "2026-01-24T04:01:50.969Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -510,11 +510,11 @@
         }
       ],
       "frameStyle": "chalk",
-      "promoText": "2x1",
+      "promoText": null,
       "promoBadge": null,
       "showItemImages": true,
-      "hasPromo": true,
-      "sectionClasses": "show-images has-promo"
+      "hasPromo": false,
+      "sectionClasses": "show-images"
     }
   ],
   "promotions": [
@@ -556,8 +556,8 @@
     }
   ],
   "buildInfo": {
-    "version": "20260124-005407",
-    "timestamp": "2026-01-24T03:54:07.880Z",
+    "version": "20260124-010150",
+    "timestamp": "2026-01-24T04:01:50.971Z",
     "generator": "SCG v1.0.0"
   }
 }
