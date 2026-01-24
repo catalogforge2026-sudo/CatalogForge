@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/bardemo/menu-bar-demo",
     "clientKey": "bardemo",
-    "generatedAt": "2026-01-24T03:36:49.812Z",
+    "generatedAt": "2026-01-24T03:40:21.054Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -530,7 +530,7 @@
       "ctaText": "",
       "ctaPhone": "0984 590 059",
       "ctaLink": "",
-      "imageUrl": "/uploads/1769225766892-ejl83l3uj.png",
+      "imageUrl": "uploads/1769225766892-ejl83l3uj.png",
       "backgroundColor": "#1a1a1a",
       "accentColor": "#f59e0b",
       "style": "banner",
@@ -548,7 +548,7 @@
       "ctaText": "",
       "ctaPhone": "",
       "ctaLink": "",
-      "imageUrl": "/uploads/1769225774939-5kc4u84ib.jpeg",
+      "imageUrl": "uploads/1769225774939-5kc4u84ib.jpeg",
       "backgroundColor": "#1a1a1a",
       "accentColor": "#d4a574",
       "style": "card",
@@ -556,8 +556,8 @@
     }
   ],
   "buildInfo": {
-    "version": "20260124-003649",
-    "timestamp": "2026-01-24T03:36:49.814Z",
+    "version": "20260124-004021",
+    "timestamp": "2026-01-24T03:40:21.081Z",
     "generator": "SCG v1.0.0"
   }
 }
