@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/be79d91e/productos-naturales",
     "clientKey": "be79d91e",
-    "generatedAt": "2026-01-24T19:36:43.570Z",
+    "generatedAt": "2026-01-24T19:43:06.135Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -138,8 +138,8 @@
           "priceRaw": 1500,
           "priceLabel": null,
           "currency": "ARS",
-          "image": "https://images.unsplash.com/photo-1550411294-875e9b6d5c6e?w=400&h=400&fit=crop",
-          "thumbnail": "https://images.unsplash.com/photo-1550411294-875e9b6d5c6e?w=400&h=400&fit=crop",
+          "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&h=400&fit=crop",
+          "thumbnail": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&h=400&fit=crop",
           "gallery": [],
           "isFeatured": false,
           "tags": [],
@@ -340,8 +340,8 @@
   },
   "totalItems": 9,
   "buildInfo": {
-    "version": "20260124-163643",
-    "timestamp": "2026-01-24T19:36:43.571Z",
+    "version": "20260124-164306",
+    "timestamp": "2026-01-24T19:43:06.136Z",
     "generator": "SCG v1.0.0"
   }
 }
