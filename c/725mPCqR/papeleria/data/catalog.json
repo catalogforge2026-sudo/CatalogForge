@@ -5,11 +5,11 @@
     "image": null,
     "url": "/c/725mPCqR/papeleria",
     "clientKey": "725mPCqR",
-    "generatedAt": "2026-01-24T17:42:53.421Z",
+    "generatedAt": "2026-01-24T17:59:59.072Z",
     "generator": "CatalogForge"
   },
   "client": {
-    "name": "Keisi",
+    "name": "Roman Design",
     "slug": "keisi",
     "logo": null,
     "email": "romandesign81@gmail.com",
@@ -100,8 +100,8 @@
           "priceRaw": 13000,
           "priceLabel": null,
           "currency": "ARS",
-          "image": null,
-          "thumbnail": null,
+          "image": "uploads/1769277535535-2aprp1fzm.jpeg",
+          "thumbnail": "uploads/1769277535535-2aprp1fzm.jpeg",
           "gallery": [],
           "isFeatured": false,
           "tags": [],
@@ -109,7 +109,7 @@
           "customFields": {},
           "variants": [],
           "hasPrice": true,
-          "hasImage": false,
+          "hasImage": true,
           "hasGallery": false,
           "hasVariants": false
         },
@@ -167,8 +167,8 @@
           "priceRaw": 12870,
           "priceLabel": null,
           "currency": "ARS",
-          "image": "uploads/1769273569703-xrz7k59o9.png",
-          "thumbnail": "uploads/1769273569703-xrz7k59o9.png",
+          "image": "uploads/1769277549005-i5w7dankg.jpeg",
+          "thumbnail": "uploads/1769277549005-i5w7dankg.jpeg",
           "gallery": [],
           "isFeatured": false,
           "tags": [],
@@ -273,8 +273,8 @@
           "priceRaw": 4500,
           "priceLabel": null,
           "currency": "ARS",
-          "image": null,
-          "thumbnail": null,
+          "image": "uploads/1769277562951-2r40djlyr.jpeg",
+          "thumbnail": "uploads/1769277562951-2r40djlyr.jpeg",
           "gallery": [],
           "isFeatured": false,
           "tags": [],
@@ -327,7 +327,7 @@
             }
           ],
           "hasPrice": true,
-          "hasImage": false,
+          "hasImage": true,
           "hasGallery": false,
           "hasVariants": true
         },
@@ -582,8 +582,8 @@
   },
   "totalItems": 8,
   "buildInfo": {
-    "version": "20260124-144253",
-    "timestamp": "2026-01-24T17:42:53.425Z",
+    "version": "20260124-145959",
+    "timestamp": "2026-01-24T17:59:59.077Z",
     "generator": "SCG v1.0.0"
   }
 }
