@@ -5,7 +5,7 @@
     "image": "uploads/1769304904287-95yxmnrda.png",
     "url": "/c/carnic01/ofertas-semanales",
     "clientKey": "carnic01",
-    "generatedAt": "2026-01-25T02:27:35.127Z",
+    "generatedAt": "2026-01-25T02:28:42.681Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -657,8 +657,8 @@
           "priceRaw": 9500,
           "priceLabel": "Kg",
           "currency": "ARS",
-          "image": "https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=400&q=80",
-          "thumbnail": "https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=400&q=80",
+          "image": "uploads/1769308096857-5rgoy1pt8.jpeg",
+          "thumbnail": "uploads/1769308096857-5rgoy1pt8.jpeg",
           "gallery": [],
           "isFeatured": false,
           "tags": [],
@@ -778,8 +778,8 @@
   },
   "totalItems": 26,
   "buildInfo": {
-    "version": "20260124-232735",
-    "timestamp": "2026-01-25T02:27:35.135Z",
+    "version": "20260124-232842",
+    "timestamp": "2026-01-25T02:28:42.692Z",
     "generator": "SCG v1.0.0"
   }
 }
