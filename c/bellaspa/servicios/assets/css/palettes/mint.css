@@ -1,0 +1,52 @@
+/* Spa Theme - Mint Palette */
+/* Estilo menta fresco y relajante */
+
+:root {
+  --primary-color: #26a69a;
+  --primary-hover: #00897b;
+  --accent-color: #80cbc4;
+  
+  --bg-color: linear-gradient(180deg, #e0f2f1 0%, #b2dfdb 50%, #e0f2f1 100%);
+  --text-color: #1a4a46;
+  --text-muted: #5d8a85;
+  
+  --card-bg: rgba(255, 255, 255, 0.88);
+  --card-border: 2px solid rgba(38, 166, 154, 0.2);
+  --card-shadow: 0 8px 32px rgba(38, 166, 154, 0.12);
+  
+  --header-bg: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 50%, #80cbc4 100%);
+  --footer-bg: linear-gradient(135deg, #26a69a 0%, #00897b 100%);
+  --footer-text: #ffffff;
+  
+  --logo-shadow: drop-shadow(0 10px 30px rgba(38, 166, 154, 0.4)) drop-shadow(0 5px 15px rgba(0, 0, 0, 0.15)) drop-shadow(0 0 20px rgba(128, 203, 196, 0.3));
+  --logo-shadow-hover: drop-shadow(0 20px 40px rgba(38, 166, 154, 0.5)) drop-shadow(0 10px 25px rgba(0, 0, 0, 0.2)) drop-shadow(0 0 30px rgba(128, 203, 196, 0.4));
+  
+  --cart-bar-bg: linear-gradient(135deg, #26a69a 0%, #00897b 100%);
+  --cart-bar-text: #ffffff;
+  --cart-btn-bg: rgba(255, 255, 255, 0.2);
+  --cart-btn-border: rgba(255, 255, 255, 0.3);
+  --cart-btn-hover: rgba(255, 255, 255, 0.3);
+}
+
+/* Override button gradient */
+.item-add-cart {
+  background: linear-gradient(135deg, rgba(38, 166, 154, 0.1) 0%, rgba(128, 203, 196, 0.15) 100%) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.item-add-cart:hover {
+  background: linear-gradient(135deg, #26a69a 0%, #80cbc4 100%) !important;
+}
+
+.social-link {
+  background: linear-gradient(135deg, #26a69a 0%, #80cbc4 100%) !important;
+}
+
+.section-nav a:hover,
+.section-nav a.active {
+  background: linear-gradient(135deg, #26a69a 0%, #80cbc4 100%) !important;
+}
+
+.item-card .badge-featured {
+  background: linear-gradient(135deg, #26a69a 0%, #80cbc4 100%) !important;
+}
