@@ -1,0 +1,19 @@
+/* Stream Theme - Purple Palette */
+:root {
+  --primary-color: #8b5cf6;
+  --primary-hover: #7c3aed;
+  --primary-contrast: #ffffff;
+  --accent-color: #ec4899;
+  
+  --header-bg: #2e1065;
+  --footer-bg: #2e1065;
+  
+  --card-hover-shadow: 0 12px 32px rgba(139,92,246,0.2), 0 0 0 2px rgba(139,92,246,0.15);
+  --card-hover-border: rgba(139,92,246,0.4);
+  
+  --price-color: #8b5cf6;
+  --tag-bg: rgba(139,92,246,0.1);
+  --tag-color: #8b5cf6;
+  --badge-bg: #ec4899;
+  --badge-color: #ffffff;
+}

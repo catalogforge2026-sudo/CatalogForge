@@ -1,0 +1,90 @@
+/* Stream Theme - Silver Palette */
+/* Plata metalizada con blanco */
+:root {
+  --primary-color: #6b7280;
+  --primary-hover: #4b5563;
+  --primary-contrast: #ffffff;
+  --accent-color: #a1a1aa;
+  
+  /* Fondo blanco/gris muy claro */
+  --bg-color: #ffffff;
+  --bg-secondary: #f4f4f5;
+  --bg-tertiary: #e4e4e7;
+  --card-bg: #ffffff;
+  --text-color: #27272a;
+  --text-muted: #71717a;
+  --text-secondary: #52525b;
+  
+  --card-border: 1px solid #e4e4e7;
+  --card-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  --card-hover-shadow: 0 12px 32px rgba(107,114,128,0.15), 0 0 0 2px rgba(107,114,128,0.1);
+  --card-hover-border: rgba(107,114,128,0.3);
+  
+  --price-color: #4b5563;
+  --tag-bg: rgba(107,114,128,0.1);
+  --tag-color: #4b5563;
+  --badge-bg: #6b7280;
+  --badge-color: #ffffff;
+  
+  /* Navegación plata */
+  --nav-bg: #e4e4e7;
+  --nav-hover-bg: #6b7280;
+  --nav-hover-color: #ffffff;
+  --nav-active-bg: #6b7280;
+  
+  /* Header y footer con degradado plata metalizado */
+  --header-bg: #52525b;
+  --footer-bg: #52525b;
+}
+
+/* Header con degradado plata metalizado */
+.site-header {
+  background: linear-gradient(135deg, #71717a 0%, #52525b 50%, #3f3f46 100%) !important;
+}
+
+/* Footer con degradado plata */
+.site-footer {
+  background: linear-gradient(135deg, #3f3f46 0%, #52525b 50%, #71717a 100%) !important;
+}
+
+/* Navegación con estilo metálico */
+.section-nav {
+  background: linear-gradient(180deg, #f4f4f5 0%, #e4e4e7 100%) !important;
+  border-bottom: 1px solid #d4d4d8 !important;
+}
+
+.section-nav a {
+  background: linear-gradient(135deg, #71717a 0%, #52525b 100%) !important;
+  color: #ffffff !important;
+}
+
+.section-nav a:hover,
+.section-nav a.active {
+  background: linear-gradient(135deg, #52525b 0%, #3f3f46 100%) !important;
+  color: #ffffff !important;
+}
+
+/* Cards con borde sutil metálico */
+.item-card {
+  border: 1px solid #e4e4e7 !important;
+}
+
+.item-card:hover {
+  border-color: #a1a1aa !important;
+}
+
+/* Buscador */
+.header-search .search-input {
+  background: rgba(255,255,255,0.15) !important;
+  border-color: rgba(255,255,255,0.3) !important;
+}
+
+.header-search .search-input:focus {
+  background: rgba(255,255,255,0.2) !important;
+  border-color: rgba(255,255,255,0.5) !important;
+}
+
+/* Cart floating bar */
+.cart-floating-bar {
+  background: linear-gradient(135deg, #52525b 0%, #3f3f46 100%) !important;
+}

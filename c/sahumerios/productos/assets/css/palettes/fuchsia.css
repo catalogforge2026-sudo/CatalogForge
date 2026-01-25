@@ -1,0 +1,105 @@
+/* Stream Theme - Fuchsia Palette */
+/* Fucsia con rosa claro */
+:root {
+  --primary-color: #d946ef;
+  --primary-hover: #c026d3;
+  --primary-contrast: #ffffff;
+  --accent-color: #f472b6;
+  
+  /* Fondo rosa muy claro */
+  --bg-color: #ffffff;
+  --bg-secondary: #fdf4ff;
+  --bg-tertiary: #fae8ff;
+  --card-bg: #ffffff;
+  --text-color: #4a044e;
+  --text-muted: #86198f;
+  --text-secondary: #701a75;
+  
+  --card-border: 1px solid #f5d0fe;
+  --card-shadow: 0 2px 8px rgba(217,70,239,0.1);
+  --card-hover-shadow: 0 12px 32px rgba(217,70,239,0.25), 0 0 0 2px rgba(217,70,239,0.15);
+  --card-hover-border: rgba(217,70,239,0.4);
+  
+  --price-color: #c026d3;
+  --tag-bg: rgba(217,70,239,0.1);
+  --tag-color: #c026d3;
+  --badge-bg: #f472b6;
+  --badge-color: #ffffff;
+  
+  /* Navegación fucsia */
+  --nav-bg: #fae8ff;
+  --nav-hover-bg: #d946ef;
+  --nav-hover-color: #ffffff;
+  --nav-active-bg: #d946ef;
+  
+  /* Header y footer fucsia */
+  --header-bg: #86198f;
+  --footer-bg: #86198f;
+}
+
+/* Header con degradado fucsia/rosa */
+.site-header {
+  background: linear-gradient(135deg, #f472b6 0%, #d946ef 40%, #c026d3 70%, #86198f 100%) !important;
+}
+
+/* Footer con degradado fucsia */
+.site-footer {
+  background: linear-gradient(135deg, #86198f 0%, #a21caf 50%, #c026d3 100%) !important;
+}
+
+/* Navegación con fondo rosa claro */
+.section-nav {
+  background: linear-gradient(180deg, #fdf4ff 0%, #fae8ff 100%) !important;
+  border-bottom: 1px solid #f5d0fe !important;
+}
+
+.section-nav a {
+  background: #d946ef !important;
+  color: #ffffff !important;
+}
+
+.section-nav a:hover,
+.section-nav a.active {
+  background: #c026d3 !important;
+  color: #ffffff !important;
+}
+
+/* Intro con tinte rosa */
+.catalog-intro {
+  background: linear-gradient(180deg, #fae8ff 0%, #ffffff 100%) !important;
+}
+
+.catalog-intro p {
+  color: #701a75 !important;
+}
+
+/* Buscador */
+.header-search .search-input {
+  background: rgba(255,255,255,0.2) !important;
+  border-color: rgba(255,255,255,0.4) !important;
+  color: #ffffff !important;
+}
+
+.header-search .search-input:focus {
+  background: rgba(255,255,255,0.25) !important;
+  border-color: #f472b6 !important;
+  box-shadow: 0 0 0 3px rgba(244,114,182,0.3) !important;
+}
+
+.header-search .search-input::placeholder {
+  color: rgba(255,255,255,0.7) !important;
+}
+
+/* Cart floating bar fucsia */
+.cart-floating-bar {
+  background: linear-gradient(135deg, #d946ef 0%, #86198f 100%) !important;
+}
+
+.cart-fab {
+  background: #d946ef !important;
+  color: #ffffff !important;
+}
+
+.cart-fab:hover {
+  background: #c026d3 !important;
+}
