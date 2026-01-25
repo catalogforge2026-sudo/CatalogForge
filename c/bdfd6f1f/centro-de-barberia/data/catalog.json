@@ -5,7 +5,7 @@
     "image": "uploads/1769297161466-zzg8jp3sb.png",
     "url": "/c/bdfd6f1f/centro-de-barberia",
     "clientKey": "bdfd6f1f",
-    "generatedAt": "2026-01-25T00:02:53.298Z",
+    "generatedAt": "2026-01-25T00:18:58.864Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -55,7 +55,7 @@
       "slug": "corte-estilo",
       "description": "Corte, fade y peinados",
       "icon": null,
-      "iconUrl": "uploads/1769296364272-hnehdwdfg.png",
+      "iconUrl": "uploads/1769300066030-hx31sibws.png",
       "image": "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80",
       "itemCount": 6,
       "items": [
@@ -311,7 +311,7 @@
       "slug": "cuidado-de-barba",
       "description": "Diseño, perfilado y arreglo",
       "icon": null,
-      "iconUrl": null,
+      "iconUrl": "uploads/1769300256314-79wiz9onv.png",
       "image": "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80",
       "itemCount": 4,
       "items": [
@@ -426,8 +426,8 @@
   },
   "totalItems": 14,
   "buildInfo": {
-    "version": "20260124-210253",
-    "timestamp": "2026-01-25T00:02:53.300Z",
+    "version": "20260124-211858",
+    "timestamp": "2026-01-25T00:18:58.869Z",
     "generator": "SCG v1.0.0"
   }
 }
