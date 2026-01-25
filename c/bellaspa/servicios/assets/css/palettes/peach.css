@@ -1,0 +1,39 @@
+/* Spa Theme - Peach Palette (Durazno/Coral) */
+
+:root {
+  --primary-color: #f97316;
+  --primary-hover: #ea580c;
+  --accent-color: #fb923c;
+  
+  --bg-color: #fff7ed;
+  --text-color: #7c2d12;
+  --text-muted: #c2410c;
+  
+  --card-bg: rgba(255, 255, 255, 0.9);
+  
+  --header-bg: linear-gradient(135deg, #ffedd5 0%, #fed7aa 50%, #fdba74 100%);
+  --footer-bg: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+}
+
+/* Override button gradient */
+.item-add-cart {
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(251, 146, 60, 0.15) 100%) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.item-add-cart:hover {
+  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%) !important;
+}
+
+.social-link {
+  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%) !important;
+}
+
+.section-nav a:hover,
+.section-nav a.active {
+  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%) !important;
+}
+
+.item-card .badge-featured {
+  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%) !important;
+}

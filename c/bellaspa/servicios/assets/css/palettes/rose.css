@@ -1,0 +1,16 @@
+/* Spa Theme - Rose Palette (Rosa más intenso) */
+
+:root {
+  --primary-color: #db2777;
+  --primary-hover: #be185d;
+  --accent-color: #f472b6;
+  
+  --bg-color: #fdf2f8;
+  --text-color: #831843;
+  --text-muted: #9d174d;
+  
+  --card-bg: rgba(255, 255, 255, 0.9);
+  
+  --header-bg: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 50%, #f9a8d4 100%);
+  --footer-bg: linear-gradient(135deg, #fbcfe8 0%, #f9a8d4 100%);
+}

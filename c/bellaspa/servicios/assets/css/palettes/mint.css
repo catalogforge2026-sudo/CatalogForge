@@ -1,0 +1,18 @@
+/* Spa Theme - Mint Palette */
+/* Estilo menta fresco y relajante */
+
+:root {
+  --primary-color: #26a69a;
+  --primary-hover: #00897b;
+  --accent-color: #80cbc4;
+  
+  --bg-color: linear-gradient(180deg, #e0f2f1 0%, #b2dfdb 50%, #e0f2f1 100%);
+  --text-color: #1a4a46;
+  --text-muted: #5d8a85;
+  
+  --card-bg: rgba(255, 255, 255, 0.88);
+  --card-border: 2px solid rgba(38, 166, 154, 0.2);
+  --card-shadow: 0 8px 32px rgba(38, 166, 154, 0.12);
+  
+  --footer-bg: rgba(26, 74, 70, 0.95);
+}

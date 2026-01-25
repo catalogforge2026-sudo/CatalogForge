@@ -1,0 +1,16 @@
+/* Spa Theme - Blush Palette (Rosa pastel principal) */
+
+:root {
+  --primary-color: #e91e8c;
+  --primary-hover: #d81b7a;
+  --accent-color: #ff69b4;
+  
+  --bg-color: #fdf2f8;
+  --text-color: #4a1942;
+  --text-muted: #8b5a8b;
+  
+  --card-bg: rgba(255, 255, 255, 0.85);
+  
+  --header-bg: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 50%, #f48fb1 100%);
+  --footer-bg: linear-gradient(135deg, #f8bbd9 0%, #f48fb1 100%);
+}
