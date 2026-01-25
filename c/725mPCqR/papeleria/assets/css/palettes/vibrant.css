@@ -1,0 +1,32 @@
+/* Social Theme - Vibrant Palette */
+/* Colores vibrantes y llamativos */
+
+:root {
+  --primary-color: #ec4899;
+  --primary-hover: #db2777;
+  --primary-contrast: #ffffff;
+  --accent-color: #8b5cf6;
+  
+  --bg-color: #faf5ff;
+  --text-color: #1f2937;
+  --text-muted: #6b7280;
+  
+  --card-bg: #ffffff;
+  --card-border: 1px solid rgba(236, 72, 153, 0.1);
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --card-hover-shadow: 0 8px 30px rgba(236, 72, 153, 0.25);
+  
+  --glow-color: rgba(236, 72, 153, 0.5);
+  --glow-color-accent: rgba(139, 92, 246, 0.4);
+  
+  --header-bg: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+  
+  --nav-bg: #ffffff;
+  --nav-hover-bg: #ec4899;
+  --nav-hover-color: #ffffff;
+  
+  --price-color: #ec4899;
+  
+  --tag-bg: #fce7f3;
+  --tag-color: #be185d;
+}

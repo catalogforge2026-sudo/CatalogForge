@@ -1,0 +1,33 @@
+/* Gastro - Modern Palette (Light) */
+:root {
+  /* Primary Colors */
+  --color-primary: #0f766e;
+  --color-primary-hover: #115e59;
+  --color-primary-rgb: 15, 118, 110;
+  --color-accent: #f59e0b;
+  
+  /* Backgrounds */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f0fdfa;
+  --bg-tertiary: #ccfbf1;
+  --card-bg: #ffffff;
+  
+  /* Text */
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  
+  /* Borders */
+  --border-color: #e2e8f0;
+  
+  /* Header */
+  --header-bg: #0f766e;
+  --header-text: #ffffff;
+  
+  /* Footer - Usa el color primario */
+  --footer-bg: #0f766e;
+  --footer-text: #ffffff;
+  --footer-link: rgba(255,255,255,0.85);
+  --footer-link-hover: #ffffff;
+  --footer-muted: rgba(255,255,255,0.6);
+}

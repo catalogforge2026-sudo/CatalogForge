@@ -1,0 +1,37 @@
+/* Beauty Theme - Gold Luxury Palette */
+/* Elegante negro con acentos dorados */
+
+:root {
+  --primary-color: #d4a574;
+  --primary-hover: #c4956a;
+  --primary-contrast: #1a1a1a;
+  --accent-color: #e8c4a0;
+  
+  --bg-color: #0d0d0d;
+  --bg-secondary: #1a1a1a;
+  --text-color: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.7);
+  
+  --card-bg: rgba(26, 26, 26, 0.9);
+  --card-border: 1px solid rgba(212, 165, 116, 0.2);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --card-hover-shadow: 0 8px 30px rgba(212, 165, 116, 0.15);
+  
+  --tag-bg: rgba(212, 165, 116, 0.15);
+  --tag-color: var(--primary-color);
+  
+  --footer-bg: #0d0d0d;
+  --footer-border: 1px solid rgba(212, 165, 116, 0.2);
+  
+  --image-placeholder-bg: #2a2a2a;
+  
+  /* Navigation cards */
+  --nav-card-bg: rgba(26, 26, 26, 0.8);
+  --nav-card-border: rgba(212, 165, 116, 0.25);
+}
+
+body {
+  background-image: 
+    radial-gradient(ellipse at top, rgba(212, 165, 116, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom, rgba(212, 165, 116, 0.03) 0%, transparent 50%);
+}

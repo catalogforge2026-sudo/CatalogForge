@@ -1,0 +1,9 @@
+/* Organic Theme - Sage Palette */
+:root {
+  --primary-color: #7d8b6a;
+  --primary-hover: #6a7859;
+  --accent-color: #9aa888;
+  --header-bg: linear-gradient(135deg, #8a9a78 0%, #6d7d5c 50%, #5a6b4a 100%);
+  --tag-bg: rgba(125, 139, 106, 0.1);
+  --tag-color: #7d8b6a;
+}

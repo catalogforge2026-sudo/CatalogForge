@@ -1,0 +1,6 @@
+[user]
+    name = catalogforge2026-sudo
+    email = TU_EMAIL_DE_ESTA_CUENTA@ejemplo.com
+
+[credential]
+    helper = manager

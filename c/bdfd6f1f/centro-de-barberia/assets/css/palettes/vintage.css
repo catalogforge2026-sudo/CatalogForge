@@ -1,0 +1,50 @@
+/* Barber Theme - Vintage Brown Palette */
+/* Tonos marrones y cuero vintage - estilo retro */
+
+:root {
+  --primary-color: #a67c52;
+  --primary-hover: #c49a6c;
+  --primary-contrast: #1a1510;
+  --accent-color: #d4a574;
+  
+  --bg-color: #1a1510;
+  --bg-secondary: #2a1f1a;
+  --bg-tertiary: #3a2f28;
+  --text-color: #f5ebe0;
+  --text-muted: rgba(245, 235, 224, 0.7);
+  
+  --card-bg: rgba(42, 31, 26, 0.95);
+  --card-border: 1px solid rgba(166, 124, 82, 0.3);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --card-hover-shadow: 0 8px 30px rgba(166, 124, 82, 0.2);
+  
+  --tag-bg: rgba(166, 124, 82, 0.2);
+  --tag-color: var(--primary-color);
+  
+  --footer-bg: #1a1510;
+  --footer-border: 1px solid rgba(166, 124, 82, 0.3);
+  
+  --image-placeholder-bg: #2a1f1a;
+  
+  --nav-card-bg: rgba(42, 31, 26, 0.9);
+  --nav-card-border: rgba(166, 124, 82, 0.35);
+}
+
+body {
+  background-image: 
+    radial-gradient(ellipse at top center, rgba(166, 124, 82, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom center, rgba(166, 124, 82, 0.03) 0%, transparent 50%);
+}
+
+/* Ajustes específicos para vintage */
+.site-header::before {
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--primary-color) 20%, 
+    var(--primary-color) 80%, 
+    transparent 100%);
+}
+
+.header-brand::after {
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}

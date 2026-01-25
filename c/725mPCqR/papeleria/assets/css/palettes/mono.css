@@ -1,0 +1,32 @@
+/* Social Theme - Mono Palette */
+/* Elegante monocromático en grises */
+
+:root {
+  --primary-color: #374151;
+  --primary-hover: #1f2937;
+  --primary-contrast: #ffffff;
+  --accent-color: #6b7280;
+  
+  --bg-color: #f9fafb;
+  --text-color: #111827;
+  --text-muted: #6b7280;
+  
+  --card-bg: #ffffff;
+  --card-border: 1px solid rgba(55, 65, 81, 0.1);
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --card-hover-shadow: 0 8px 30px rgba(55, 65, 81, 0.15);
+  
+  --glow-color: rgba(55, 65, 81, 0.3);
+  --glow-color-accent: rgba(107, 114, 128, 0.2);
+  
+  --header-bg: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+  
+  --nav-bg: #ffffff;
+  --nav-hover-bg: #374151;
+  --nav-hover-color: #ffffff;
+  
+  --price-color: #059669;
+  
+  --tag-bg: #f3f4f6;
+  --tag-color: #374151;
+}

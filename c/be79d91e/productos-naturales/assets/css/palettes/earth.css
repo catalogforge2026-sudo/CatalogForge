@@ -1,0 +1,9 @@
+/* Organic Theme - Earth Palette */
+:root {
+  --primary-color: #8b7355;
+  --primary-hover: #6d5a44;
+  --accent-color: #a89076;
+  --header-bg: linear-gradient(135deg, #9c8b7a 0%, #7a6b5a 50%, #5d4e3f 100%);
+  --tag-bg: rgba(139, 115, 85, 0.1);
+  --tag-color: #8b7355;
+}

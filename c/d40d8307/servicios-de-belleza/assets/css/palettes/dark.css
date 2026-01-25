@@ -1,0 +1,115 @@
+/* Beauty Theme - Dark Glam Palette */
+/* Negro intenso con detalles brillantes */
+
+:root {
+  --primary-color: #ffffff;
+  --primary-hover: #e0e0e0;
+  --primary-contrast: #000000;
+  --accent-color: #b8860b;
+  
+  --bg-color: #000000;
+  --bg-secondary: #0a0a0a;
+  --text-color: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.6);
+  
+  --card-bg: rgba(15, 15, 15, 0.95);
+  --card-border: 1px solid rgba(255, 255, 255, 0.1);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  --card-hover-shadow: 0 8px 30px rgba(255, 255, 255, 0.05);
+  
+  --tag-bg: rgba(255, 255, 255, 0.1);
+  --tag-color: #ffffff;
+  
+  --footer-bg: #000000;
+  --footer-border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  --image-placeholder-bg: #1a1a1a;
+  
+  --header-bg: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+  
+  --btn-border: 1px solid rgba(255, 255, 255, 0.3);
+  
+  /* Navigation cards */
+  --nav-card-bg: rgba(15, 15, 15, 0.9);
+  --nav-card-border: rgba(255, 255, 255, 0.15);
+}
+
+body {
+  background-image: 
+    radial-gradient(ellipse at top center, rgba(184, 134, 11, 0.08) 0%, transparent 40%),
+    radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+}
+
+.header-title {
+  color: #ffffff !important;
+  text-shadow: 0 0 30px rgba(184, 134, 11, 0.3) !important;
+}
+
+.site-header::after {
+  color: #b8860b !important;
+}
+
+.section-title::before,
+.section-title::after {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.item-card:hover {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.btn-primary {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.btn-primary:hover {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+.footer-name {
+  color: #ffffff !important;
+}
+
+.site-footer::before {
+  color: #b8860b !important;
+  background: #000000 !important;
+}
+
+.price-amount {
+  color: #b8860b !important;
+}
+
+.variant-price {
+  color: #b8860b !important;
+}
+
+.variant-item {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+/* Navigation cards for dark theme */
+.section-nav a {
+  background: var(--nav-card-bg) !important;
+  border-color: var(--nav-card-border) !important;
+}
+
+.section-nav a::before {
+  background: linear-gradient(135deg, rgba(184, 134, 11, 0.1) 0%, transparent 50%) !important;
+}
+
+.section-nav a:hover {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 8px 25px rgba(184, 134, 11, 0.1) !important;
+}
+
+.section-nav .nav-text {
+  color: #ffffff !important;
+}
+
+.section-nav a:hover .nav-text {
+  color: #b8860b !important;
+  text-shadow: 0 0 10px rgba(184, 134, 11, 0.4) !important;
+}

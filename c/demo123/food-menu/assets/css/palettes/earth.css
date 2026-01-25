@@ -1,0 +1,33 @@
+/* Gastro - Earth Palette (Light) */
+:root {
+  /* Primary Colors */
+  --color-primary: #854d0e;
+  --color-primary-hover: #713f12;
+  --color-primary-rgb: 133, 77, 14;
+  --color-accent: #b45309;
+  
+  /* Backgrounds */
+  --bg-primary: #faf5f0;
+  --bg-secondary: #f5ebe0;
+  --bg-tertiary: #e8dcc8;
+  --card-bg: #ffffff;
+  
+  /* Text */
+  --text-primary: #1c1917;
+  --text-secondary: #57534e;
+  --text-muted: #a8a29e;
+  
+  /* Borders */
+  --border-color: #d6d3d1;
+  
+  /* Header */
+  --header-bg: #854d0e;
+  --header-text: #ffffff;
+  
+  /* Footer - Usa el color primario */
+  --footer-bg: #854d0e;
+  --footer-text: #ffffff;
+  --footer-link: rgba(255,255,255,0.85);
+  --footer-link-hover: #ffffff;
+  --footer-muted: rgba(255,255,255,0.6);
+}
