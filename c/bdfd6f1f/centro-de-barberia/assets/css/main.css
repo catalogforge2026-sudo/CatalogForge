@@ -782,22 +782,6 @@ body {
   border: 2px solid var(--primary-color);
 }
 
-.item-card.is-featured::after {
-  content: '★ DESTACADO';
-  position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  background: var(--primary-color);
-  color: var(--primary-contrast);
-  font-family: var(--font-accent);
-  font-size: 0.6rem;
-  font-weight: 600;
-  padding: 0.25rem 0.5rem;
-  border-radius: 2px;
-  z-index: 5;
-  letter-spacing: 0.05em;
-}
-
 /* ============================================
    SEARCH & FILTER OVERRIDES
    ============================================ */
