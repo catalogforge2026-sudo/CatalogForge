@@ -1,0 +1,54 @@
+/* Bold - Market Palette (Verdulería/Mercado) */
+:root {
+  /* Primary Colors - Verde fresco */
+  --primary-color: #16a34a;
+  --primary-hover: #15803d;
+  --primary-contrast: #ffffff;
+  --accent-color: #fbbf24;
+  
+  /* Backgrounds */
+  --bg-color: #f0fdf4;
+  --card-bg: #ffffff;
+  
+  /* Text */
+  --text-color: #1a1a1a;
+  --text-muted: #666666;
+  
+  /* Header - Gradiente verde */
+  --header-bg: linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #166534 100%);
+  
+  /* Footer */
+  --footer-bg: #14532d;
+  
+  /* Price - Verde destacado */
+  --price-color: #16a34a;
+  
+  /* Tags/Badges */
+  --tag-bg: #fbbf24;
+  --tag-color: #1a1a1a;
+  
+  /* Unit badge (Kg, Unidad) */
+  --unit-badge-bg: #fbbf24;
+  --unit-badge-color: #1a1a1a;
+  
+  /* Card styling */
+  --card-border: 1px solid #e5e5e5;
+  --card-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  --card-hover-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  --card-hover-border: 1px solid #16a34a;
+  --card-radius: 8px;
+  
+  /* Nav */
+  --nav-bg: #fbbf24;
+  --nav-hover-bg: #16a34a;
+  --nav-hover-color: #ffffff;
+}
+
+/* Header gradient override */
+.site-header {
+  background: var(--header-bg) !important;
+}
+
+.site-header::before {
+  display: none;
+}

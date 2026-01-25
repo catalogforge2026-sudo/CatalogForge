@@ -1,0 +1,60 @@
+/* Bold - Neon Palette (Dark) */
+:root {
+  /* Primary Colors */
+  --primary-color: #22d3ee;
+  --primary-hover: #06b6d4;
+  --primary-contrast: #0f0f0f;
+  --accent-color: #f0abfc;
+  
+  /* Backgrounds */
+  --bg-color: #0f0f0f;
+  --card-bg: #1a1a1a;
+  
+  /* Text */
+  --text-color: #ffffff;
+  --text-muted: #a3a3a3;
+  
+  /* Header */
+  --header-bg: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
+  
+  /* Footer */
+  --footer-bg: #0a0a0a;
+  
+  /* Price */
+  --price-color: #22d3ee;
+  
+  /* Tags/Badges */
+  --tag-bg: #f0abfc;
+  --tag-color: #0f0f0f;
+  
+  /* Unit badge */
+  --unit-badge-bg: #22d3ee;
+  --unit-badge-color: #0f0f0f;
+  
+  /* Card */
+  --card-border: 2px solid #22d3ee;
+  --card-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
+  --card-hover-shadow: 0 0 30px rgba(34, 211, 238, 0.5);
+  --card-hover-border: 2px solid #f0abfc;
+  
+  /* Nav */
+  --nav-bg: #22d3ee;
+  --nav-hover-bg: #f0abfc;
+  --nav-hover-color: #0f0f0f;
+}
+
+.site-header {
+  background: var(--header-bg) !important;
+}
+
+.site-header::before {
+  display: none;
+}
+
+.header-title {
+  text-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
+}
+
+.site-footer {
+  color: #ffffff;
+}

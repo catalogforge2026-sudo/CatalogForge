@@ -1,0 +1,38 @@
+/* Bold - Red Palette (Default) */
+:root {
+  /* Primary Colors */
+  --primary-color: #ef4444;
+  --primary-hover: #dc2626;
+  --primary-contrast: #ffffff;
+  --accent-color: #fbbf24;
+  
+  /* Backgrounds */
+  --bg-color: #fef2f2;
+  --card-bg: #ffffff;
+  
+  /* Text */
+  --text-color: #0f0f0f;
+  --text-muted: #525252;
+  
+  /* Header */
+  --header-bg: #ef4444;
+  
+  /* Footer */
+  --footer-bg: #0f0f0f;
+  
+  /* Price */
+  --price-color: #ef4444;
+  
+  /* Tags/Badges */
+  --tag-bg: #fbbf24;
+  --tag-color: #0f0f0f;
+  
+  /* Unit badge */
+  --unit-badge-bg: #fbbf24;
+  --unit-badge-color: #0f0f0f;
+  
+  /* Nav */
+  --nav-bg: #fbbf24;
+  --nav-hover-bg: #0f0f0f;
+  --nav-hover-color: #ffffff;
+}

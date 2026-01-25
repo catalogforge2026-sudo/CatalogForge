@@ -1,0 +1,54 @@
+/* Bold - Deli Palette (Fiambrería/Rotisería) */
+:root {
+  /* Primary Colors - Naranja cálido */
+  --primary-color: #d97706;
+  --primary-hover: #b45309;
+  --primary-contrast: #ffffff;
+  --accent-color: #fbbf24;
+  
+  /* Backgrounds */
+  --bg-color: #fffbeb;
+  --card-bg: #ffffff;
+  
+  /* Text */
+  --text-color: #1a1a1a;
+  --text-muted: #666666;
+  
+  /* Header - Gradiente naranja/marrón */
+  --header-bg: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #92400e 100%);
+  
+  /* Footer */
+  --footer-bg: #292524;
+  
+  /* Price - Naranja destacado */
+  --price-color: #d97706;
+  
+  /* Tags/Badges */
+  --tag-bg: #fbbf24;
+  --tag-color: #1a1a1a;
+  
+  /* Unit badge (Kg, Unidad) */
+  --unit-badge-bg: #fbbf24;
+  --unit-badge-color: #1a1a1a;
+  
+  /* Card styling for deli */
+  --card-border: 1px solid #e5e5e5;
+  --card-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  --card-hover-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  --card-hover-border: 1px solid #d97706;
+  --card-radius: 8px;
+  
+  /* Nav */
+  --nav-bg: #fbbf24;
+  --nav-hover-bg: #d97706;
+  --nav-hover-color: #ffffff;
+}
+
+/* Header gradient override */
+.site-header {
+  background: var(--header-bg) !important;
+}
+
+.site-header::before {
+  display: none;
+}

@@ -1,0 +1,38 @@
+/* Bold - Electric Palette */
+:root {
+  /* Primary Colors */
+  --primary-color: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-contrast: #ffffff;
+  --accent-color: #fbbf24;
+  
+  /* Backgrounds */
+  --bg-color: #eff6ff;
+  --card-bg: #ffffff;
+  
+  /* Text */
+  --text-color: #0f0f0f;
+  --text-muted: #525252;
+  
+  /* Header */
+  --header-bg: #3b82f6;
+  
+  /* Footer */
+  --footer-bg: #1e3a8a;
+  
+  /* Price */
+  --price-color: #2563eb;
+  
+  /* Tags/Badges */
+  --tag-bg: #fbbf24;
+  --tag-color: #0f0f0f;
+  
+  /* Unit badge */
+  --unit-badge-bg: #fbbf24;
+  --unit-badge-color: #0f0f0f;
+  
+  /* Nav */
+  --nav-bg: #fbbf24;
+  --nav-hover-bg: #1e3a8a;
+  --nav-hover-color: #ffffff;
+}

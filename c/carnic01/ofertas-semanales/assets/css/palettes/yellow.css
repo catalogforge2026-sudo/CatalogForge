@@ -1,0 +1,47 @@
+/* Bold - Yellow Palette */
+:root {
+  /* Primary Colors */
+  --primary-color: #eab308;
+  --primary-hover: #ca8a04;
+  --primary-contrast: #0f0f0f;
+  --accent-color: #ef4444;
+  
+  /* Backgrounds */
+  --bg-color: #fefce8;
+  --card-bg: #ffffff;
+  
+  /* Text */
+  --text-color: #0f0f0f;
+  --text-muted: #525252;
+  
+  /* Header */
+  --header-bg: #eab308;
+  
+  /* Footer */
+  --footer-bg: #0f0f0f;
+  
+  /* Price */
+  --price-color: #ca8a04;
+  
+  /* Tags/Badges */
+  --tag-bg: #ef4444;
+  --tag-color: #ffffff;
+  
+  /* Unit badge */
+  --unit-badge-bg: #ef4444;
+  --unit-badge-color: #ffffff;
+  
+  /* Nav */
+  --nav-bg: #ef4444;
+  --nav-hover-bg: #0f0f0f;
+  --nav-hover-color: #ffffff;
+}
+
+.site-header {
+  color: #0f0f0f;
+}
+
+.header-title {
+  color: #0f0f0f;
+  text-shadow: 2px 2px 0 rgba(255,255,255,0.3);
+}
