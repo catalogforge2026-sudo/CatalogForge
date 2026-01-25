@@ -5,7 +5,7 @@
     "image": "uploads/1769312696454-pp3h10d6q.png",
     "url": "/c/bellaspa/servicios",
     "clientKey": "bellaspa",
-    "generatedAt": "2026-01-25T04:39:18.038Z",
+    "generatedAt": "2026-01-25T04:44:16.976Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -262,8 +262,8 @@
   },
   "totalItems": 6,
   "buildInfo": {
-    "version": "20260125-013918",
-    "timestamp": "2026-01-25T04:39:18.040Z",
+    "version": "20260125-014416",
+    "timestamp": "2026-01-25T04:44:16.978Z",
     "generator": "SCG v1.0.0"
   }
 }
