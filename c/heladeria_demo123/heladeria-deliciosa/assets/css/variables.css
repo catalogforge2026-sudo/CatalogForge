@@ -1,0 +1,20 @@
+/* Generated theme variables for icecream (light/bubblegum) */
+:root {
+  --primary-color: #e91e8c;
+  --secondary-color: #00bcd4;
+  --background-color: #f5f9fc;
+  --text-color: #2d3748;
+  --accent-color: #ff69b4;
+  --font-family: Quicksand, Poppins, sans-serif;
+}
+
+/* Higher specificity for theme classes */
+.theme-icecream.mode-light.palette-bubblegum,
+body.theme-icecream.mode-light.palette-bubblegum {
+  --primary-color: #e91e8c;
+  --secondary-color: #00bcd4;
+  --background-color: #f5f9fc;
+  --text-color: #2d3748;
+  --accent-color: #ff69b4;
+  --font-family: Quicksand, Poppins, sans-serif;
+}

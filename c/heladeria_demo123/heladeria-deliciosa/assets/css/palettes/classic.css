@@ -1,0 +1,42 @@
+/* Ice Cream Theme - Classic Palette */
+/* Estilo clásico: chocolate, vainilla, fresa */
+
+:root {
+  --primary-color: #d32f2f;
+  --primary-hover: #c62828;
+  --secondary-color: #8d6e63;
+  --accent-color: #ffcdd2;
+  
+  --bg-color: #fef9f3;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #efebe9;
+  
+  --text-color: #3e2723;
+  --text-muted: #6d4c41;
+  
+  --header-bg: linear-gradient(135deg, #d32f2f 0%, #8d6e63 100%);
+  --header-text: #ffffff;
+  
+  --footer-bg: #3e2723;
+  --footer-text: #ffffff;
+  
+  --ribbon-bg: #d32f2f;
+  --ribbon-color: #ffffff;
+  
+  --price-color: #c62828;
+  --tag-bg: rgba(211, 47, 47, 0.1);
+  --tag-color: #c62828;
+}
+
+.section-nav a:hover .nav-icon,
+.section-nav a.active .nav-icon {
+  background: linear-gradient(135deg, #d32f2f 0%, #ef5350 100%);
+}
+
+.item-card .item-add-cart {
+  background: linear-gradient(135deg, #d32f2f 0%, #8d6e63 100%);
+}
+
+.cart-fab {
+  background: linear-gradient(135deg, #d32f2f 0%, #8d6e63 100%);
+}

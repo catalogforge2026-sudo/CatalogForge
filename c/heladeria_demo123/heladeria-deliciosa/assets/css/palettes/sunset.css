@@ -1,0 +1,42 @@
+/* Ice Cream Theme - Sunset Palette */
+/* Tonos cálidos: naranja, mango, durazno */
+
+:root {
+  --primary-color: #ff6f00;
+  --primary-hover: #e65100;
+  --secondary-color: #ff9800;
+  --accent-color: #ffcc80;
+  
+  --bg-color: #fff8e1;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #ffecb3;
+  
+  --text-color: #e65100;
+  --text-muted: #ff8f00;
+  
+  --header-bg: linear-gradient(135deg, #ff6f00 0%, #ffca28 100%);
+  --header-text: #ffffff;
+  
+  --footer-bg: #bf360c;
+  --footer-text: #ffffff;
+  
+  --ribbon-bg: #ff6f00;
+  --ribbon-color: #ffffff;
+  
+  --price-color: #e65100;
+  --tag-bg: rgba(255, 111, 0, 0.12);
+  --tag-color: #e65100;
+}
+
+.section-nav a:hover .nav-icon,
+.section-nav a.active .nav-icon {
+  background: linear-gradient(135deg, #ff6f00 0%, #ffca28 100%);
+}
+
+.item-card .item-add-cart {
+  background: linear-gradient(135deg, #ff6f00 0%, #ff9800 100%);
+}
+
+.cart-fab {
+  background: linear-gradient(135deg, #ff6f00 0%, #ffca28 100%);
+}

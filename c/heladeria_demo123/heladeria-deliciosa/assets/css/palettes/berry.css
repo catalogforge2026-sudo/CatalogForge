@@ -1,0 +1,42 @@
+/* Ice Cream Theme - Berry Palette */
+/* Tonos frutales: frambuesa, mora, arándano */
+
+:root {
+  --primary-color: #9c27b0;
+  --primary-hover: #7b1fa2;
+  --secondary-color: #e91e63;
+  --accent-color: #ce93d8;
+  
+  --bg-color: #faf5fc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f3e5f5;
+  
+  --text-color: #4a148c;
+  --text-muted: #7c4dff;
+  
+  --header-bg: linear-gradient(135deg, #9c27b0 0%, #e91e63 100%);
+  --header-text: #ffffff;
+  
+  --footer-bg: #4a148c;
+  --footer-text: #ffffff;
+  
+  --ribbon-bg: #e91e63;
+  --ribbon-color: #ffffff;
+  
+  --price-color: #9c27b0;
+  --tag-bg: rgba(156, 39, 176, 0.1);
+  --tag-color: #9c27b0;
+}
+
+.section-nav a:hover .nav-icon,
+.section-nav a.active .nav-icon {
+  background: linear-gradient(135deg, #9c27b0 0%, #ce93d8 100%);
+}
+
+.item-card .item-add-cart {
+  background: linear-gradient(135deg, #9c27b0 0%, #e91e63 100%);
+}
+
+.cart-fab {
+  background: linear-gradient(135deg, #9c27b0 0%, #e91e63 100%);
+}
