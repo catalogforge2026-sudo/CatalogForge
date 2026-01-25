@@ -1,4 +1,5 @@
 /* Bold - Deli Palette (Fiambrería/Rotisería) */
+
 :root {
   /* Primary Colors - Naranja cálido */
   --primary-color: #d97706;
@@ -20,28 +21,26 @@
   /* Footer */
   --footer-bg: #292524;
   
-  /* Price - Naranja destacado */
-  --price-color: #d97706;
-  
-  /* Tags/Badges */
-  --tag-bg: #fbbf24;
-  --tag-color: #1a1a1a;
+  /* Price badge */
+  --price-badge-bg: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
   
   /* Unit badge (Kg, Unidad) */
-  --unit-badge-bg: #fbbf24;
+  --unit-badge-bg: linear-gradient(135deg, #fcd34d 0%, #f59e0b 100%);
   --unit-badge-color: #1a1a1a;
   
-  /* Card styling for deli */
-  --card-border: 1px solid #e5e5e5;
-  --card-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  --card-hover-shadow: 0 4px 16px rgba(0,0,0,0.12);
-  --card-hover-border: 1px solid #d97706;
-  --card-radius: 8px;
+  /* Featured badge */
+  --featured-badge-bg: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  --featured-badge-color: #ffffff;
   
-  /* Nav */
-  --nav-bg: #fbbf24;
-  --nav-hover-bg: #d97706;
-  --nav-hover-color: #ffffff;
+  /* Navigation ring gradient */
+  --nav-ring-gradient: linear-gradient(135deg, #fbbf24 0%, #f59e0b 30%, #d97706 70%, #92400e 100%);
+  --nav-text-bg: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  --nav-text-color: #ffffff;
+  --nav-text-hover-bg: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  --nav-text-hover-color: #1a1a1a;
+  
+  /* Cart button */
+  --cart-btn-bg: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
 }
 
 /* Header gradient override */

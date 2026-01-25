@@ -5,7 +5,7 @@
     "image": "uploads/1769304904287-95yxmnrda.png",
     "url": "/c/carnic01/ofertas-semanales",
     "clientKey": "carnic01",
-    "generatedAt": "2026-01-25T01:47:35.102Z",
+    "generatedAt": "2026-01-25T02:22:33.738Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -601,7 +601,7 @@
       "description": "Fiambres y embutidos",
       "icon": "🧀",
       "iconUrl": null,
-      "image": "https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=200&h=200&fit=crop",
+      "image": "uploads/1769306354693-dnj7wjxe1.jpeg",
       "itemCount": 6,
       "items": [
         {
@@ -778,8 +778,8 @@
   },
   "totalItems": 26,
   "buildInfo": {
-    "version": "20260124-224735",
-    "timestamp": "2026-01-25T01:47:35.110Z",
+    "version": "20260124-232233",
+    "timestamp": "2026-01-25T02:22:33.749Z",
     "generator": "SCG v1.0.0"
   }
 }

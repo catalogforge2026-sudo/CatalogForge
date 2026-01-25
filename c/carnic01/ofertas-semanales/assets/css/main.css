@@ -139,10 +139,6 @@
   transition: all 0.15s ease;
 }
 
-.item-card:hover {
-  transform: translate(-3px, -3px);
-}
-
 /* Price huge */
 .price-amount {
   font-family: var(--font-family-display);
@@ -162,7 +158,6 @@
 .section-nav a {
   font-weight: 700;
   text-transform: uppercase;
-  border: 2px solid #0f0f0f;
 }
 
 /* Button CTA */
@@ -192,46 +187,394 @@
   letter-spacing: 2px;
 }
 
-/* Desktop: 4 columns */
-@media (min-width: 1024px) {
+/* ============================================
+   ESTILOS ESTRUCTURALES PARA TODAS LAS PALETAS
+   ============================================ */
+
+/* Header - Logo arriba del nombre del negocio */
+.header-brand {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  gap: 0.75rem !important;
+}
+
+.header-logo-wrapper {
+  order: -1 !important;
+}
+
+.header-logo {
+  height: 100px !important;
+  width: auto !important;
+  max-height: 120px !important;
+  object-fit: contain !important;
+}
+
+.header-text {
+  text-align: center !important;
+}
+
+.header-subtitle {
+  text-align: center !important;
+}
+
+/* Grid 3 columnas */
+.grid-auto {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1.5rem !important;
+  padding: 1rem;
+}
+
+@media (max-width: 900px) {
   .grid-auto {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
-/* ============================================
-   BUTCHER/DELI MODE - Carnicería/Fiambrería
-   ============================================ */
+@media (max-width: 500px) {
+  .grid-auto {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Desktop: 4 columns override */
+@media (min-width: 1024px) {
+  .grid-auto {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+/* Cards - Estilo flyer centrado */
+.item-card {
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--card-bg, #ffffff);
+  position: relative;
+  border-bottom: 2px solid #eee !important;
+  padding-bottom: 1.5rem;
+}
+
+.item-card:hover {
+  transform: none !important;
+  background: #fafafa;
+}
+
+/* Imagen del producto */
+.item-card .item-image {
+  width: 100%;
+  max-width: 200px;
+  height: 180px;
+  border-radius: 0;
+  overflow: hidden;
+  background: transparent;
+  margin-bottom: 0.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.item-card .item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto zoom en imagen */
+.item-card .item-image:hover img,
+.item-card .item-image:active img {
+  transform: scale(1.08);
+}
+
+/* Badge Destacado */
+.item-card .badge-featured {
+  display: block !important;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--featured-badge-bg, linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%));
+  color: var(--featured-badge-color, #fff);
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  border: 2px solid #fff;
+  white-space: nowrap;
+}
+
+/* Contenido de la card */
+.item-card .item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  width: 100%;
+}
+
+.item-card .item-name {
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+.item-card .item-description,
+.item-card .expand-indicator,
+.item-card .item-tags {
+  display: none !important;
+}
+
+/* Footer de la card */
+.item-card .item-footer {
+  margin-top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Precio con badge */
+.item-card .item-price {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.item-card .price-amount {
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: #ffffff !important;
+  line-height: 1;
+  background: var(--price-badge-bg, linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%));
+  padding: 0.5rem 1.25rem 0.5rem 0.75rem;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
 
 /* Unit badge (Kg, Unidad, etc.) */
 .item-card .price-label {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--unit-badge-bg, #fbbf24);
-  color: var(--unit-badge-color, #1a1a1a);
-  font-family: var(--font-family-display);
-  font-size: 0.875rem;
-  font-weight: 700;
-  padding: 0.25rem 0.625rem;
-  border-radius: 50px;
-  margin-left: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* Large price display for butcher style */
-.item-price {
+  position: absolute;
+  right: -14px;
+  bottom: -10px;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  justify-content: center;
+  min-width: 42px;
+  height: 42px;
+  padding: 0 4px;
+  background: var(--unit-badge-bg, linear-gradient(135deg, #fcd34d 0%, #f59e0b 100%));
+  color: var(--unit-badge-color, #1a1a1a);
+  font-family: 'Arial', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 800;
+  border-radius: 50%;
+  text-transform: uppercase;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  z-index: 2;
+  border: 3px solid #ffffff;
 }
 
-.item-price .price-amount {
-  font-size: var(--price-size, 1.5rem);
-  color: var(--price-color, #ef4444);
+/* Botón Agregar al Carrito - Círculo compacto */
+.item-add-cart {
+  width: 42px !important;
+  height: 42px !important;
+  min-width: 42px !important;
+  max-width: 42px !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  background: var(--cart-btn-bg, linear-gradient(135deg, #22c55e 0%, #16a34a 100%)) !important;
+  border: 3px solid #fff !important;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0 !important;
+  font-size: 0 !important;
+  color: transparent !important;
+  overflow: hidden !important;
+  margin-left: 0.75rem !important;
+  text-indent: -9999px !important;
 }
+
+.item-add-cart:hover {
+  transform: scale(1.15) !important;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.5) !important;
+}
+
+.item-add-cart svg {
+  width: 22px !important;
+  height: 22px !important;
+  color: #fff !important;
+  flex-shrink: 0 !important;
+}
+
+/* Secciones */
+.catalog-section {
+  border-bottom: 4px solid var(--primary-color);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  color: var(--text-color, #1a1a1a);
+  font-size: 1.75rem;
+  font-family: 'Impact', 'Arial Black', sans-serif;
+}
+
+.section-description {
+  color: var(--text-muted, #666);
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   NAVEGACIÓN ESTILO INSTAGRAM STORIES
+   ============================================ */
+.section-nav {
+  margin: 1.5rem 0 2rem;
+  padding: 0 0.5rem;
+}
+
+.section-nav ul {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  padding: 1rem 0.5rem;
+  justify-content: center;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.section-nav ul::-webkit-scrollbar {
+  display: none;
+}
+
+.section-nav li {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  position: relative;
+  border-radius: 0 !important;
+}
+
+/* Círculo con borde degradado (el "ring" de Instagram) */
+.section-nav a::before {
+  content: '' !important;
+  display: block !important;
+  width: 100px !important;
+  height: 100px !important;
+  border-radius: 50% !important;
+  background: var(--nav-ring-gradient, linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 50%, var(--primary-hover) 100%)) !important;
+  padding: 4px !important;
+  box-sizing: border-box !important;
+}
+
+/* Círculo interior con la imagen de la sección */
+.section-nav a::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 4px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 92px !important;
+  height: 92px !important;
+  border-radius: 50% !important;
+  background-color: #f5f5f5 !important;
+  background-image: var(--section-image, none) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  border: 3px solid #fff !important;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1) !important;
+}
+
+/* Texto del nombre de sección */
+.section-nav .nav-text {
+  display: block;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+  margin-top: 0.5rem;
+  background: var(--nav-text-bg, linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%));
+  color: var(--nav-text-color, #fff);
+  padding: 0.4rem 0.6rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+/* Ocultar icono emoji cuando hay imagen */
+.section-nav a[data-has-image="true"] .nav-icon {
+  display: none;
+}
+
+/* Mostrar icono si NO hay imagen */
+.section-nav a:not([data-has-image="true"]) .nav-icon {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  z-index: 2;
+}
+
+/* Ocultar elementos no necesarios */
+.section-nav .nav-description,
+.section-nav .nav-button,
+.section-nav .nav-icon-img {
+  display: none !important;
+}
+
+/* Hover effect */
+.section-nav a:hover::before {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.section-nav a:hover .nav-text {
+  background: var(--nav-text-hover-bg, var(--accent-color));
+  color: var(--nav-text-hover-color, #1a1a1a);
+}
+
+/* ============================================
+   BUTCHER/DELI MODE - Estilos adicionales
+   ============================================ */
 
 /* Product image - cutout style (transparent bg) */
 .item-card.cutout-image .item-image {
@@ -342,738 +685,4 @@
   padding: 0.125rem 0.5rem;
   border-radius: 4px;
   margin-left: 0.5rem;
-}
-
-/* ============================================
-   ESTILOS ESTRUCTURALES PARA TODAS LAS PALETAS
-   ============================================ */
-
-/* Header - Logo arriba del nombre del negocio */
-.header-brand {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  text-align: center !important;
-  gap: 0.75rem !important;
-}
-
-.header-logo-wrapper {
-  order: -1 !important;
-}
-
-.header-logo {
-  height: 100px !important;
-  width: auto !important;
-  max-height: 120px !important;
-  object-fit: contain !important;
-}
-
-.header-text {
-  text-align: center !important;
-}
-
-.header-subtitle {
-  text-align: center !important;
-}
-
-/* Grid 3 columnas */
-.grid-auto {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 1.5rem !important;
-  padding: 1rem;
-}
-@media (max-width: 900px) {
-  .grid-auto {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-}
-@media (max-width: 500px) {
-  .grid-auto {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-/* Cards - Estilo flyer */
-.item-card {
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background: var(--card-bg, #ffffff);
-  position: relative;
-  border-bottom: 2px solid #eee !important;
-  padding-bottom: 1.5rem;
-}
-.item-card:hover {
-  transform: none !important;
-  background: #fafafa;
-}
-
-/* Imagen del producto */
-.item-card .item-image {
-  width: 100%;
-  max-width: 200px;
-  height: 180px;
-  border-radius: 0;
-  overflow: hidden;
-  background: transparent;
-  margin-bottom: 0.5rem;
-  position: relative;
-  cursor: pointer;
-}
-.item-card .item-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-.item-card .item-image:hover img,
-.item-card .item-image:active img {
-  transform: scale(1.08);
-}
-
-/* Badge Destacado */
-.item-card .badge-featured {
-  display: block !important;
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--featured-badge-bg, linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%));
-  color: var(--featured-badge-color, #fff);
-  font-family: 'Impact', 'Arial Black', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 700;
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-  z-index: 10;
-  border: 2px solid #fff;
-  white-space: nowrap;
-}
-
-/* Contenido de la card */
-.item-card .item-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 0;
-  width: 100%;
-}
-.item-card .item-name {
-  font-family: 'Impact', 'Arial Black', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 900;
-  color: var(--primary-color);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.5rem;
-  line-height: 1.1;
-}
-.item-card .item-description,
-.item-card .expand-indicator,
-.item-card .item-tags {
-  display: none !important;
-}
-
-/* Footer de la card */
-.item-card .item-footer {
-  margin-top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Precio con badge */
-.item-card .item-price {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-}
-.item-card .price-amount {
-  font-family: 'Impact', 'Arial Black', sans-serif;
-  font-size: 1.75rem;
-  font-weight: 900;
-  color: #ffffff !important;
-  line-height: 1;
-  background: var(--price-badge-bg, linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%));
-  padding: 0.5rem 1.25rem 0.5rem 0.75rem;
-  border-radius: 8px;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
-}
-.item-card .price-label {
-  position: absolute;
-  right: -14px;
-  bottom: -10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 42px;
-  height: 42px;
-  padding: 0 4px;
-  background: var(--unit-badge-bg, linear-gradient(135deg, #fcd34d 0%, #f59e0b 100%));
-  color: var(--unit-badge-color, #1a1a1a);
-  font-family: 'Arial', sans-serif;
-  font-size: 0.65rem;
-  font-weight: 800;
-  border-radius: 50%;
-  text-transform: uppercase;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-  z-index: 2;
-  border: 3px solid #ffffff;
-}
-
-/* Botón Agregar al Carrito - Círculo compacto */
-.item-add-cart {
-  width: 42px !important;
-  height: 42px !important;
-  min-width: 42px !important;
-  max-width: 42px !important;
-  padding: 0 !important;
-  border-radius: 50% !important;
-  background: var(--cart-btn-bg, linear-gradient(135deg, #22c55e 0%, #16a34a 100%)) !important;
-  border: 3px solid #fff !important;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.25) !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 0 !important;
-  font-size: 0 !important;
-  color: transparent !important;
-  overflow: hidden !important;
-  margin-left: 0.75rem !important;
-  text-indent: -9999px !important;
-}
-.item-add-cart:hover {
-  transform: scale(1.15) !important;
-  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.5) !important;
-}
-.item-add-cart svg {
-  width: 22px !important;
-  height: 22px !important;
-  color: #fff !important;
-  flex-shrink: 0 !important;
-}
-
-/* Secciones */
-.catalog-section {
-  border-bottom: 4px solid var(--primary-color);
-  padding-bottom: 1.5rem;
-  margin-bottom: 2rem;
-}
-.section-header {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.section-title {
-  color: var(--text-color, #1a1a1a);
-  font-size: 1.75rem;
-  font-family: 'Impact', 'Arial Black', sans-serif;
-}
-.section-description {
-  color: var(--text-muted, #666);
-  font-size: 0.9rem;
-}
-
-/* ============================================
-   NAVEGACIÓN ESTILO INSTAGRAM STORIES
-   ============================================ */
-.section-nav {
-  margin: 1.5rem 0 2rem;
-  padding: 0 0.5rem;
-}
-
-.section-nav ul {
-  display: flex;
-  gap: 2rem;
-  overflow-x: auto;
-  padding: 1rem 0.5rem;
-  justify-content: center;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.section-nav ul::-webkit-scrollbar {
-  display: none;
-}
-
-.section-nav li {
-  flex: 0 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.section-nav a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  border: none !important;
-  background: transparent !important;
-  padding: 0;
-  position: relative;
-}
-
-/* Círculo con borde degradado (el "ring" de Instagram) */
-.section-nav a::before {
-  content: '';
-  display: block;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: var(--nav-ring-gradient, linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 100%));
-  padding: 4px;
-  box-sizing: border-box;
-}
-
-/* Círculo interior con la imagen de la sección */
-.section-nav a::after {
-  content: '';
-  position: absolute;
-  top: 4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 92px;
-  height: 92px;
-  border-radius: 50%;
-  background-color: #f5f5f5;
-  background-image: var(--section-image, none);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border: 3px solid #fff;
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
-}
-
-/* Texto del nombre de sección */
-.section-nav .nav-text {
-  display: block;
-  font-family: 'Arial', sans-serif;
-  font-size: 0.6rem;
-  font-weight: 700;
-  text-align: center;
-  line-height: 1.2;
-  margin-top: 0.5rem;
-  background: var(--nav-text-bg, linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%));
-  color: var(--nav-text-color, #fff);
-  padding: 0.4rem 0.6rem;
-  border-radius: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.2px;
-  white-space: nowrap;
-}
-
-/* Ocultar icono emoji cuando hay imagen */
-.section-nav a[data-has-image="true"] .nav-icon {
-  display: none;
-}
-
-/* Mostrar icono si NO hay imagen */
-.section-nav a:not([data-has-image="true"]) .nav-icon {
-  position: absolute;
-  top: 28px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2.5rem;
-  z-index: 2;
-}
-
-/* Ocultar elementos no necesarios */
-.section-nav .nav-description,
-.section-nav .nav-button,
-.section-nav .nav-icon-img {
-  display: none !important;
-}
-
-/* Hover effect */
-.section-nav a:hover::before {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.section-nav a:hover .nav-text {
-  background: var(--nav-text-hover-bg, linear-gradient(135deg, var(--accent-color) 0%, var(--accent-color) 100%));
-  color: var(--nav-text-hover-color, #1a1a1a);
-}
-
-/* ============================================
-   BOLD THEME - ESTILOS COMPARTIDOS
-   Estructura y layout para todas las paletas
-   ============================================ */
-
-/* Header - Logo arriba del nombre */
-.header-brand {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  text-align: center !important;
-  gap: 0.75rem !important;
-}
-
-.header-logo-wrapper {
-  order: -1 !important;
-}
-
-.header-logo {
-  height: 100px !important;
-  width: auto !important;
-  max-height: 120px !important;
-  object-fit: contain !important;
-}
-
-.header-text {
-  text-align: center !important;
-}
-
-.header-subtitle {
-  text-align: center !important;
-}
-
-/* Grid 3 columnas */
-.grid-auto {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 1.5rem !important;
-  padding: 1rem;
-}
-
-@media (max-width: 900px) {
-  .grid-auto {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-}
-
-@media (max-width: 500px) {
-  .grid-auto {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-/* Cards - Estilo centrado */
-.item-card {
-  border: none;
-  box-shadow: none;
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background: var(--card-bg, #ffffff);
-  position: relative;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 1.5rem;
-}
-
-.item-card:hover {
-  transform: none;
-  background: #fafafa;
-}
-
-.item-card .item-image {
-  width: 100%;
-  max-width: 200px;
-  height: 180px;
-  border-radius: 0;
-  overflow: hidden;
-  background: transparent;
-  margin-bottom: 0.5rem;
-  position: relative;
-  cursor: pointer;
-}
-
-.item-card .item-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-/* Efecto zoom en imagen */
-.item-card .item-image:hover img,
-.item-card .item-image:active img {
-  transform: scale(1.08);
-}
-
-/* Badge Destacado */
-.item-card .badge-featured {
-  display: block !important;
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--featured-badge-bg, linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%));
-  color: #fff;
-  font-family: 'Impact', 'Arial Black', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 700;
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-  z-index: 10;
-  border: 2px solid #fff;
-  white-space: nowrap;
-}
-
-.item-card .item-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 0;
-  width: 100%;
-}
-
-.item-card .item-name {
-  font-family: 'Impact', 'Arial Black', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 900;
-  color: var(--primary-color);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.5rem;
-  line-height: 1.1;
-}
-
-.item-card .item-description,
-.item-card .expand-indicator,
-.item-card .item-tags {
-  display: none !important;
-}
-
-.item-card .item-footer {
-  margin-top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.item-card .item-price {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-}
-
-.item-card .price-amount {
-  font-family: 'Impact', 'Arial Black', sans-serif;
-  font-size: 1.75rem;
-  font-weight: 900;
-  color: #ffffff;
-  line-height: 1;
-  background: var(--price-badge-bg, linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%));
-  padding: 0.5rem 1.25rem 0.5rem 0.75rem;
-  border-radius: 8px;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
-}
-
-.item-card .price-label {
-  position: absolute;
-  right: -14px;
-  bottom: -10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 42px;
-  height: 42px;
-  padding: 0 4px;
-  background: var(--unit-badge-bg, linear-gradient(135deg, #fcd34d 0%, #f59e0b 100%));
-  color: var(--unit-badge-color, #1a1a1a);
-  font-family: 'Arial', sans-serif;
-  font-size: 0.65rem;
-  font-weight: 800;
-  border-radius: 50%;
-  text-transform: uppercase;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-  z-index: 2;
-  border: 3px solid #ffffff;
-}
-
-/* Botón Agregar al Carrito - Círculo */
-.item-add-cart {
-  width: 42px !important;
-  height: 42px !important;
-  min-width: 42px !important;
-  max-width: 42px !important;
-  padding: 0 !important;
-  border-radius: 50% !important;
-  background: var(--cart-btn-bg, linear-gradient(135deg, #22c55e 0%, #16a34a 100%)) !important;
-  border: 3px solid #fff !important;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.25) !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 0 !important;
-  font-size: 0 !important;
-  color: transparent !important;
-  overflow: hidden !important;
-  margin-left: 0.75rem !important;
-  text-indent: -9999px !important;
-}
-
-.item-add-cart:hover {
-  transform: scale(1.15) !important;
-  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.5) !important;
-}
-
-.item-add-cart svg {
-  width: 22px !important;
-  height: 22px !important;
-  color: #fff !important;
-  flex-shrink: 0 !important;
-}
-
-/* Secciones */
-.catalog-section {
-  border-bottom: 4px solid var(--primary-color);
-  padding-bottom: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.section-header {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.section-title {
-  color: var(--text-color, #1a1a1a);
-  font-size: 1.75rem;
-  font-family: 'Impact', 'Arial Black', sans-serif;
-}
-
-.section-description {
-  color: var(--text-muted, #666);
-  font-size: 0.9rem;
-}
-
-/* ============================================
-   NAVEGACIÓN ESTILO INSTAGRAM STORIES
-   ============================================ */
-.section-nav {
-  margin: 1.5rem 0 2rem;
-  padding: 0 0.5rem;
-}
-
-.section-nav ul {
-  display: flex;
-  gap: 2rem;
-  overflow-x: auto;
-  padding: 1rem 0.5rem;
-  justify-content: center;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.section-nav ul::-webkit-scrollbar {
-  display: none;
-}
-
-.section-nav li {
-  flex: 0 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.section-nav a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  border: none;
-  background: transparent !important;
-  padding: 0;
-  position: relative;
-}
-
-/* Círculo con borde degradado (ring de Instagram) */
-.section-nav a::before {
-  content: '';
-  display: block;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: var(--nav-ring-bg, linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 50%, var(--primary-hover) 100%));
-  padding: 4px;
-  box-sizing: border-box;
-}
-
-/* Círculo interior con imagen de sección */
-.section-nav a::after {
-  content: '';
-  position: absolute;
-  top: 4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 92px;
-  height: 92px;
-  border-radius: 50%;
-  background-color: #f5f5f5;
-  background-image: var(--section-image, none);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border: 3px solid #fff;
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
-}
-
-/* Texto del nombre de sección */
-.section-nav .nav-text {
-  display: block;
-  font-family: 'Arial', sans-serif;
-  font-size: 0.6rem;
-  font-weight: 700;
-  text-align: center;
-  line-height: 1.2;
-  margin-top: 0.5rem;
-  background: var(--nav-text-bg, linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%));
-  color: #fff;
-  padding: 0.4rem 0.6rem;
-  border-radius: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.2px;
-  white-space: nowrap;
-}
-
-/* Ocultar icono emoji cuando hay imagen */
-.section-nav a[data-has-image="true"] .nav-icon {
-  display: none;
-}
-
-/* Mostrar icono si NO hay imagen */
-.section-nav a:not([data-has-image="true"]) .nav-icon {
-  position: absolute;
-  top: 28px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2.5rem;
-  z-index: 2;
-}
-
-/* Ocultar elementos no necesarios */
-.section-nav .nav-description,
-.section-nav .nav-button,
-.section-nav .nav-icon-img {
-  display: none !important;
-}
-
-/* Hover en navegación */
-.section-nav a:hover::before {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.section-nav a:hover .nav-text {
-  background: var(--nav-text-hover-bg, var(--accent-color));
-  color: var(--nav-text-hover-color, #1a1a1a);
 }
