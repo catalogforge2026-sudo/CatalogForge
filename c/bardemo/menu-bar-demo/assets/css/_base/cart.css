@@ -6,7 +6,8 @@
 /* ============================================
    ADD TO CART BUTTON
    ============================================ */
-.item-add-cart {
+.item-add-cart,
+.promo-add-cart {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -24,19 +25,46 @@
   letter-spacing: 0.02em;
 }
 
-.item-add-cart:hover {
+.item-add-cart:hover,
+.promo-add-cart:hover {
   background: var(--primary-hover, var(--primary-color));
   transform: scale(1.05);
   box-shadow: 0 4px 15px color-mix(in srgb, var(--primary-color) 40%, transparent);
 }
 
-.item-add-cart:active {
+.item-add-cart:active,
+.promo-add-cart:active {
   transform: scale(0.98);
 }
 
-.item-add-cart svg {
+.item-add-cart svg,
+.promo-add-cart svg {
   width: 16px;
   height: 16px;
+}
+
+/* Promo card footer with price and cart button */
+.promo-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.promo-card-price {
+  font-family: var(--font-family-accent, var(--font-family));
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--promo-accent, var(--primary-color));
+}
+
+.promo-card-price small {
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 0.8;
 }
 
 /* ============================================
@@ -81,11 +109,11 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(135deg, 
+  background: var(--cart-bar-bg, linear-gradient(135deg, 
     color-mix(in srgb, var(--primary-color) 90%, #000) 0%,
     var(--primary-color) 100%
-  );
-  color: #000;
+  ));
+  color: var(--cart-bar-text, #fff);
   padding: 0.6rem 1rem;
   display: flex;
   align-items: center;
@@ -150,16 +178,19 @@ body.cart-bar-visible {
 
 .cart-floating-text {
   font-family: var(--font-family, system-ui);
+  color: var(--cart-bar-text, #fff);
 }
 
 .cart-floating-count {
   font-size: 0.75rem;
   font-weight: 500;
+  color: var(--cart-bar-text, #fff);
 }
 
 .cart-floating-total {
   font-size: 1rem;
   font-weight: 700;
+  color: var(--cart-bar-text, #fff);
 }
 
 .cart-floating-btn {
@@ -167,9 +198,9 @@ body.cart-bar-visible {
   align-items: center;
   gap: 0.4rem;
   padding: 0.5rem 1rem;
-  background: rgba(0, 0, 0, 0.2);
-  color: #000;
-  border: 2px solid rgba(0, 0, 0, 0.3);
+  background: var(--cart-btn-bg, rgba(255, 255, 255, 0.2));
+  color: var(--cart-bar-text, #fff);
+  border: 2px solid var(--cart-btn-border, rgba(255, 255, 255, 0.3));
   border-radius: 8px;
   font-family: var(--font-family, system-ui);
   font-size: 0.8rem;
@@ -179,7 +210,7 @@ body.cart-bar-visible {
 }
 
 .cart-floating-btn:hover {
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--cart-btn-hover, rgba(255, 255, 255, 0.3));
 }
 
 .cart-floating-btn svg {
@@ -211,7 +242,7 @@ body.cart-bar-visible {
   bottom: 0;
   left: 0;
   right: 0;
-  max-height: 80vh;
+  max-height: 90vh;
   background: var(--card-bg, #1a1a1a);
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
@@ -220,7 +251,10 @@ body.cart-bar-visible {
   transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: env(safe-area-inset-bottom, 20px);
 }
 
 .cart-modal-overlay.open .cart-modal {
@@ -308,11 +342,11 @@ body.cart-bar-visible {
 
 /* Modal Body - Items List */
 .cart-modal-body {
-  flex: 1;
+  flex: 0 0 auto;
   overflow-y: auto;
   padding: 0.5rem 0.85rem;
-  max-height: 30vh;
-  min-height: 90px;
+  max-height: 25vh;
+  min-height: 60px;
 }
 
 .cart-empty {
@@ -445,6 +479,7 @@ body.cart-bar-visible {
   padding: 0.5rem 0.85rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(0, 0, 0, 0.2);
+  flex: 0 0 auto;
 }
 
 .cart-summary-row {
@@ -474,7 +509,9 @@ body.cart-bar-visible {
    ============================================ */
 .cart-form {
   padding: 0.6rem 0.85rem;
+  padding-bottom: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  flex: 0 0 auto;
 }
 
 .cart-form-title {
@@ -524,6 +561,89 @@ body.cart-bar-visible {
   border-color: #ff3b30;
 }
 
+/* Dynamic form fields */
+.cart-form-label {
+  display: block;
+  font-family: var(--font-family, system-ui);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-color, #fff);
+  margin-bottom: 0.3rem;
+  opacity: 0.9;
+}
+
+.cart-form-textarea {
+  resize: vertical;
+  min-height: 50px;
+}
+
+.cart-form-select {
+  appearance: none;
+  background-color: rgba(255, 255, 255, 0.08);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2rem;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Selected value uses primary color for visibility */
+.cart-form-select:not([value=""]):not(:invalid) {
+  color: var(--primary-color, #fff);
+}
+
+.cart-form-select option {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 0.5rem;
+  font-weight: 500;
+}
+
+/* Delivery row in summary */
+.cart-summary-delivery {
+  color: var(--text-muted, #aaa);
+  font-size: 0.7rem;
+}
+
+.cart-summary-delivery .cart-delivery-value {
+  color: var(--primary-color);
+}
+
+/* Checkbox field */
+.cart-form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.cart-form-checkbox label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-family: var(--font-family, system-ui);
+  font-size: 0.8rem;
+  color: var(--text-color, #fff);
+  line-height: 1.4;
+}
+
+.cart-form-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--primary-color);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.cart-form-checkbox input[type="checkbox"].error {
+  outline: 2px solid #ff3b30;
+  outline-offset: 1px;
+}
+
 /* Submit Button */
 .cart-submit {
   width: 100%;
@@ -542,6 +662,8 @@ body.cart-bar-visible {
   gap: 0.5rem;
   transition: all 0.3s ease;
   margin-top: 0.6rem;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
 }
 
 .cart-submit:hover {
@@ -589,4 +711,407 @@ body.cart-bar-visible {
   .cart-floating-bar.visible {
     transform: translateX(-50%) translateY(0);
   }
+}
+
+
+/* ============================================
+   VARIANT SELECTOR
+   ============================================ */
+.item-variants {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.variant-select {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: var(--text-color, #fff);
+  font-family: var(--font-family, system-ui);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2rem;
+}
+
+.variant-select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary-color) 20%, transparent);
+}
+
+.variant-select option {
+  background: var(--card-bg, #1a1a1a);
+  color: var(--text-color, #fff);
+  padding: 0.5rem;
+}
+
+.variant-select option:disabled {
+  color: var(--text-muted, #666);
+}
+
+.variant-price {
+  text-align: right;
+}
+
+.variant-price .price-amount {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Variant add button - disabled state */
+.variant-add-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.variant-add-btn:disabled:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Item card with variants */
+.item-card.has-variants .item-footer {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
+/* Light theme adjustments */
+.mode-light .variant-select {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.15);
+  color: var(--text-color, #333);
+}
+
+.mode-light .variant-select option {
+  background: #fff;
+  color: #333;
+}
+
+
+/* ============================================
+   LIGHT/DARK MODE ADJUSTMENTS FOR FORM
+   ============================================ */
+
+/* Light mode - form inputs and selects */
+.mode-light .cart-form-input,
+.mode-light .cart-form-select {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.15);
+  color: #333;
+}
+
+.mode-light .cart-form-input::placeholder {
+  color: #666;
+}
+
+.mode-light .cart-form-select option {
+  background: #fff;
+  color: #333;
+}
+
+.mode-light .cart-form-label {
+  color: #333;
+}
+
+/* Dark mode - ensure selects match inputs with high visibility text */
+.mode-dark .cart-form-select,
+.cart-form-select {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.15);
+  color: var(--primary-color, #f0c040) !important;
+  font-weight: 600;
+}
+
+/* Options in dropdown - dark background with white text */
+.mode-dark .cart-form-select option,
+.cart-form-select option {
+  background: #1a1a1a !important;
+  color: #ffffff !important;
+  padding: 0.75rem 0.5rem;
+  font-weight: 500;
+}
+
+/* Checked/selected option highlight */
+.cart-form-select option:checked {
+  background: linear-gradient(0deg, var(--primary-color, #f0c040) 0%, var(--primary-color, #f0c040) 100%) !important;
+  color: #000 !important;
+  font-weight: 600;
+}
+
+/* Focus state */
+.cart-form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary-color) 25%, transparent);
+}
+
+
+/* ============================================
+   CUSTOMIZATION MODAL (Ingredientes)
+   ============================================ */
+.customization-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  z-index: 10003;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.customization-modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.customization-modal {
+  background: var(--card-bg, #1a1a1a);
+  border-radius: 16px;
+  max-width: 360px;
+  width: 100%;
+  max-height: 80vh;
+  overflow: hidden;
+  transform: scale(0.9) translateY(20px);
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.customization-modal-overlay.open .customization-modal {
+  transform: scale(1) translateY(0);
+}
+
+.customization-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.customization-modal-title {
+  font-family: var(--font-family-display, var(--font-family, system-ui));
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-color, #fff);
+  margin: 0;
+}
+
+.customization-modal-close {
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  color: var(--text-color, #fff);
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.customization-modal-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.customization-modal-body {
+  padding: 1rem 1.25rem;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.customization-modal-subtitle {
+  font-family: var(--font-family, system-ui);
+  font-size: 0.85rem;
+  color: var(--text-muted, #888);
+  margin: 0 0 1rem 0;
+}
+
+.customization-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.customization-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.customization-option:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.customization-option input[type="checkbox"] {
+  display: none;
+}
+
+.customization-checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.customization-option input[type="checkbox"]:checked + .customization-checkbox {
+  background: var(--primary-color);
+}
+
+.customization-option input[type="checkbox"]:checked + .customization-checkbox::after {
+  content: '✓';
+  color: #000;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.customization-option input[type="checkbox"]:not(:checked) + .customization-checkbox {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.customization-option input[type="checkbox"]:not(:checked) + .customization-checkbox::after {
+  content: '✕';
+  color: #ff6b6b;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.customization-name {
+  font-family: var(--font-family, system-ui);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-color, #fff);
+}
+
+.customization-option input[type="checkbox"]:not(:checked) ~ .customization-name {
+  text-decoration: line-through;
+  color: var(--text-muted, #888);
+}
+
+.customization-modal-footer {
+  padding: 1rem 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.customization-confirm-btn {
+  width: 100%;
+  padding: 0.85rem;
+  background: var(--primary-color);
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--font-family, system-ui);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.customization-confirm-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px color-mix(in srgb, var(--primary-color) 40%, transparent);
+}
+
+.customization-confirm-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Cart item exclusions */
+.cart-item-exclusions {
+  font-size: 0.65rem;
+  color: #ff6b6b;
+  margin-top: 0.15rem;
+  font-weight: 500;
+}
+
+/* Light mode adjustments */
+.mode-light .customization-modal {
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.mode-light .customization-modal-header {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.mode-light .customization-modal-close {
+  background: rgba(0, 0, 0, 0.05);
+  color: #333;
+}
+
+.mode-light .customization-modal-close:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.mode-light .customization-modal-title {
+  color: #333;
+}
+
+.mode-light .customization-modal-subtitle {
+  color: #666;
+}
+
+.mode-light .customization-option {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.mode-light .customization-option:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.mode-light .customization-name {
+  color: #333;
+}
+
+.mode-light .customization-option input[type="checkbox"]:not(:checked) ~ .customization-name {
+  color: #999;
+}
+
+.mode-light .customization-option input[type="checkbox"]:not(:checked) + .customization-checkbox {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.mode-light .customization-modal-footer {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.mode-light .customization-confirm-btn {
+  color: #000;
 }
