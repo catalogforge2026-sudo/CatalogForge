@@ -245,6 +245,11 @@ body.font-casero .header-text {
 body.font-casero .header-text {
   cursor: pointer;
   transition: transform 0.3s ease, filter 0.3s ease;
+  /* Quitar el highlight azul en móviles */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 body.font-casero .header-text:hover,
