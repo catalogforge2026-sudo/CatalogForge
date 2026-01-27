@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "title": "Mateo \"Todo Casero\" - Mateo Racedo",
+    "description": "“el que sabe comer bien, sabe esperar” reapertura 2026 por eso volvimos",
+    "image": null,
+    "url": "/c/mN9dwKS_/mateo-todo-casero",
+    "clientKey": "mN9dwKS_",
+    "generatedAt": "2026-01-27T19:28:55.959Z",
+    "generator": "CatalogForge"
+  },
+  "client": {
+    "name": "Mateo Todo Casero",
+    "slug": "mateo-racedo",
+    "logo": null,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "website": null,
+    "socialLinks": {}
+  },
+  "catalog": {
+    "id": 16,
+    "name": "Mateo \"Todo Casero\"",
+    "slug": "mateo-todo-casero",
+    "description": "“el que sabe comer bien, sabe esperar” reapertura 2026 por eso volvimos",
+    "type": "Restaurante",
+    "typeSlug": "restaurant",
+    "config": {
+      "showPrices": true,
+      "showAllergens": true,
+      "showCalories": false,
+      "currency": "ARS",
+      "priceFormat": "$ {price}",
+      "layout": "list",
+      "groupBySection": true
+    }
+  },
+  "theme": {
+    "name": "Mixology",
+    "slug": "mixology",
+    "styles": {
+      "primaryColor": "#d4a574",
+      "secondaryColor": "#8b7355",
+      "backgroundColor": "#0a0a0a",
+      "textColor": "#f5f5f5",
+      "accentColor": "#ffd700",
+      "category": "food",
+      "icon": "🍸",
+      "variants": {
+        "modes": [
+          "dark"
+        ],
+        "palettes": [
+          "gold",
+          "copper",
+          "neon",
+          "amber"
+        ],
+        "layouts": [
+          "bar",
+          "lounge",
+          "menu"
+        ]
+      }
+    },
+    "mode": "light",
+    "palette": "gold",
+    "layout": "classic",
+    "classes": "theme-mixology mode-light layout-classic palette-gold"
+  },
+  "sections": [
+    {
+      "id": 62,
+      "name": "Hamburguesas",
+      "slug": "hamburguesas",
+      "description": "",
+      "icon": null,
+      "iconUrl": null,
+      "image": null,
+      "imageUrl": null,
+      "itemCount": 0,
+      "items": [],
+      "frameStyle": "chalk",
+      "promoText": null,
+      "promoBadge": null,
+      "showItemImages": false,
+      "hasPromo": false,
+      "hasImage": false,
+      "sectionClasses": ""
+    }
+  ],
+  "promotions": [],
+  "cart": {
+    "enabled": false,
+    "buttonText": "Agregar",
+    "whatsappMessage": "Hola! Quiero hacer el siguiente pedido:",
+    "formConfig": {}
+  },
+  "searchFilter": {
+    "enabled": false,
+    "searchEnabled": false,
+    "filterEnabled": false,
+    "placeholder": "Buscar productos..."
+  },
+  "totalItems": 0,
+  "buildInfo": {
+    "version": "20260127-162855",
+    "timestamp": "2026-01-27T19:28:55.959Z",
+    "generator": "SCG v1.0.0"
+  }
+}
