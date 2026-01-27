@@ -469,13 +469,29 @@ body.font-casero .header-tagline {
 /* Responsive para preset casero */
 @media (max-width: 480px) {
   body.font-casero .header-text {
-    min-width: 120px;
-    max-width: 180px;
-    padding: 0.4rem 1rem;
+    min-width: 200px;
+    max-width: 280px;
+    padding: 0.5rem 1.2rem;
   }
   
   body.font-casero .header-subtitle {
-    font-size: clamp(0.85rem, 3.5vw, 1.1rem) !important;
+    font-size: clamp(1rem, 4vw, 1.3rem) !important;
+  }
+  
+  body.font-casero .header-text::before,
+  body.font-casero .header-text::after {
+    font-size: 1rem !important;
+  }
+  
+  /* Asegurar mismo tamaño para ambas líneas en móvil */
+  body.font-casero .header-subtitle .casero-line-1,
+  body.font-casero .header-subtitle .casero-line-2 {
+    font-size: 1em;
+  }
+  
+  /* Efecto touch más visible en móvil */
+  body.font-casero .header-text:active {
+    transform: scale(1.05);
   }
 }
 
