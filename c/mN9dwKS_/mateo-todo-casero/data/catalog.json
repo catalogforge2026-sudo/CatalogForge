@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/mN9dwKS_/mateo-todo-casero",
     "clientKey": "mN9dwKS_",
-    "generatedAt": "2026-01-27T22:18:54.654Z",
+    "generatedAt": "2026-01-27T22:26:07.536Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -105,9 +105,14 @@
   },
   "totalItems": 0,
   "buildInfo": {
-    "version": "20260127-191854",
-    "timestamp": "2026-01-27T22:18:54.655Z",
+    "version": "20260127-192607",
+    "timestamp": "2026-01-27T22:26:07.536Z",
     "generator": "SCG v1.0.0"
+  },
+  "branding": {
+    "footerText": "Hecho por Catalog Forge",
+    "footerPhone": "5491150192474",
+    "footerPhoneDisplay": "11 5019-2474"
   },
   "fontUrls": [
     "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap",
@@ -116,5 +121,6 @@
   "fontStyles": {
     "heading": "'Spirax', Georgia, serif",
     "body": "'Montserrat', system-ui, sans-serif"
-  }
+  },
+  "globalSettings": {}
 }
