@@ -17,7 +17,8 @@
    ============================================ */
 :root {
   --font-family: 'Montserrat', system-ui, sans-serif;
-  --font-family-display: 'Cinzel', Georgia, serif;
+  --font-family-heading: 'Cinzel', Georgia, serif;
+  --font-family-display: var(--font-family-heading); /* Alias for backwards compatibility */
   --font-family-accent: 'Cormorant Garamond', Georgia, serif;
   
   --primary-color: #d4a853;
@@ -193,6 +194,289 @@ body {
   color: var(--text-muted);
   letter-spacing: 0.08em;
   margin-top: 0.5rem;
+}
+
+/* ============================================
+   PRESET CASERO - Estilo logo neón ovalado
+   ============================================ */
+body.font-casero .header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.5rem;
+  border: 2px solid #f5c842;
+  border-radius: 50%;
+  aspect-ratio: 2.2 / 1;
+  min-width: 180px;
+  max-width: 280px;
+  position: relative;
+  background: transparent;
+  /* Efecto neón intenso */
+  box-shadow: 
+    0 0 5px #f5c842,
+    0 0 10px #f5c842,
+    0 0 20px #f5c842,
+    0 0 40px rgba(245, 200, 66, 0.5),
+    inset 0 0 10px rgba(245, 200, 66, 0.15);
+  animation: neonBorderPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes neonBorderPulse {
+  from {
+    box-shadow: 
+      0 0 5px #f5c842,
+      0 0 10px #f5c842,
+      0 0 20px #f5c842,
+      0 0 40px rgba(245, 200, 66, 0.5),
+      inset 0 0 10px rgba(245, 200, 66, 0.15);
+  }
+  to {
+    box-shadow: 
+      0 0 8px #f5c842,
+      0 0 15px #f5c842,
+      0 0 30px #f5c842,
+      0 0 60px rgba(245, 200, 66, 0.7),
+      inset 0 0 15px rgba(245, 200, 66, 0.2);
+  }
+}
+
+/* Efecto hover/touch - Neón se enciende con más intensidad */
+body.font-casero .header-text {
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+body.font-casero .header-text:hover,
+body.font-casero .header-text:active {
+  animation: neonFlicker 0.15s ease-in-out, neonBorderGlow 0.5s ease-out forwards;
+  transform: scale(1.03);
+}
+
+body.font-casero .header-text:hover .header-subtitle,
+body.font-casero .header-text:active .header-subtitle {
+  animation: neonTextGlow 0.5s ease-out forwards;
+}
+
+/* Animación de parpadeo tipo neón */
+@keyframes neonFlicker {
+  0%, 100% { opacity: 1; }
+  10% { opacity: 0.8; }
+  20% { opacity: 1; }
+  30% { opacity: 0.9; }
+  40% { opacity: 1; }
+}
+
+/* Brillo intenso del borde al hover */
+@keyframes neonBorderGlow {
+  0% {
+    box-shadow: 
+      0 0 5px #f5c842,
+      0 0 10px #f5c842,
+      0 0 20px #f5c842,
+      0 0 40px rgba(245, 200, 66, 0.5),
+      inset 0 0 10px rgba(245, 200, 66, 0.15);
+  }
+  100% {
+    box-shadow: 
+      0 0 10px #f5c842,
+      0 0 20px #f5c842,
+      0 0 40px #f5c842,
+      0 0 80px rgba(245, 200, 66, 0.8),
+      0 0 120px rgba(245, 200, 66, 0.5),
+      inset 0 0 25px rgba(245, 200, 66, 0.3);
+  }
+}
+
+/* Brillo intenso del texto al hover */
+@keyframes neonTextGlow {
+  0% {
+    text-shadow: 
+      0 0 5px #f5c842,
+      0 0 10px #f5c842,
+      0 0 20px #f5c842,
+      0 0 40px rgba(245, 200, 66, 0.6);
+  }
+  100% {
+    text-shadow: 
+      0 0 10px #fff,
+      0 0 20px #f5c842,
+      0 0 40px #f5c842,
+      0 0 60px #f5c842,
+      0 0 80px rgba(245, 200, 66, 0.8);
+    color: #fff;
+  }
+}
+
+/* Puntos decorativos a los lados */
+body.font-casero .header-text::before {
+  content: '•';
+  position: absolute;
+  font-size: 1.2rem;
+  color: #f5c842;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-shadow: 
+    0 0 5px #f5c842,
+    0 0 10px #f5c842,
+    0 0 20px #f5c842;
+}
+
+/* Punto derecho */
+body.font-casero .header-text::after {
+  content: '•' !important;
+  position: absolute !important;
+  font-size: 1.2rem !important;
+  color: #f5c842 !important;
+  right: 5% !important;
+  left: auto !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: auto !important;
+  height: auto !important;
+  background: none !important;
+  border: none !important;
+  text-shadow: 
+    0 0 5px #f5c842,
+    0 0 10px #f5c842,
+    0 0 20px #f5c842 !important;
+  letter-spacing: normal !important;
+  opacity: 1 !important;
+}
+
+body.font-casero .header-subtitle {
+  font-family: var(--font-family-display) !important;
+  font-size: clamp(1.1rem, 4vw, 1.5rem) !important;
+  font-weight: 400 !important;
+  color: #f5c842 !important;
+  text-transform: none !important;
+  letter-spacing: 0.02em;
+  text-align: center;
+  line-height: 1.15;
+  padding: 0 !important;
+  position: relative;
+  /* Efecto neón en texto */
+  text-shadow: 
+    0 0 5px #f5c842,
+    0 0 10px #f5c842,
+    0 0 20px #f5c842,
+    0 0 40px rgba(245, 200, 66, 0.6);
+  animation: neonTextPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes neonTextPulse {
+  from {
+    text-shadow: 
+      0 0 5px #f5c842,
+      0 0 10px #f5c842,
+      0 0 20px #f5c842,
+      0 0 40px rgba(245, 200, 66, 0.6);
+  }
+  to {
+    text-shadow: 
+      0 0 8px #f5c842,
+      0 0 15px #f5c842,
+      0 0 30px #f5c842,
+      0 0 50px rgba(245, 200, 66, 0.8);
+  }
+}
+
+/* Efecto flicker de neón al pasar el mouse */
+@keyframes neonFlicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow: 
+      0 0 5px #f5c842,
+      0 0 10px #f5c842,
+      0 0 20px #f5c842,
+      0 0 40px #f5c842,
+      0 0 80px #f5c842;
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+    opacity: 0.8;
+  }
+}
+
+@keyframes neonBorderFlicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    box-shadow: 
+      0 0 5px #f5c842,
+      0 0 10px #f5c842,
+      0 0 20px #f5c842,
+      0 0 40px #f5c842,
+      0 0 80px rgba(245, 200, 66, 0.8),
+      inset 0 0 15px rgba(245, 200, 66, 0.3);
+    border-color: #f5c842;
+  }
+  20%, 24%, 55% {
+    box-shadow: 
+      0 0 2px #f5c842,
+      0 0 5px rgba(245, 200, 66, 0.3),
+      inset 0 0 5px rgba(245, 200, 66, 0.1);
+    border-color: rgba(245, 200, 66, 0.5);
+  }
+}
+
+/* Hover en desktop - efecto flicker */
+body.font-casero .header-text:hover {
+  animation: neonBorderFlicker 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+body.font-casero .header-text:hover .header-subtitle {
+  animation: neonFlicker 0.8s ease-in-out;
+}
+
+/* Clase para activar flicker via JS (touch en móvil) */
+body.font-casero .header-text.neon-flicker {
+  animation: neonBorderFlicker 0.8s ease-in-out;
+}
+
+body.font-casero .header-text.neon-flicker .header-subtitle {
+  animation: neonFlicker 0.8s ease-in-out;
+}
+
+/* Ocultar las líneas decorativas laterales del título */
+body.font-casero .header-subtitle::before,
+body.font-casero .header-subtitle::after {
+  display: none !important;
+}
+
+/* Estilo para el nombre dividido en dos líneas */
+body.font-casero .header-subtitle .casero-line-1 {
+  display: block;
+  font-size: 1em;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.05em;
+  text-transform: uppercase;
+}
+
+body.font-casero .header-subtitle .casero-line-2 {
+  display: block;
+  font-size: 1em;
+  text-transform: none;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+/* Ocultar tagline en casero para mantener compacto */
+body.font-casero .header-tagline {
+  display: none;
+}
+
+/* Responsive para preset casero */
+@media (max-width: 480px) {
+  body.font-casero .header-text {
+    min-width: 120px;
+    max-width: 180px;
+    padding: 0.4rem 1rem;
+  }
+  
+  body.font-casero .header-subtitle {
+    font-size: clamp(0.85rem, 3.5vw, 1.1rem) !important;
+  }
 }
 
 /* ============================================

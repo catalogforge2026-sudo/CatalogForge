@@ -1,11 +1,11 @@
 {
   "meta": {
     "title": "Mateo \"Todo Casero\" - Mateo Racedo",
-    "description": "“el que sabe comer bien, sabe esperar” reapertura 2026 por eso volvimos",
+    "description": "“El que sabe comer bien, sabe esperar también”\nReapertura 2026… por eso volvimos!",
     "image": null,
     "url": "/c/mN9dwKS_/mateo-todo-casero",
     "clientKey": "mN9dwKS_",
-    "generatedAt": "2026-01-27T19:28:55.959Z",
+    "generatedAt": "2026-01-27T21:37:29.384Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -22,7 +22,7 @@
     "id": 16,
     "name": "Mateo \"Todo Casero\"",
     "slug": "mateo-todo-casero",
-    "description": "“el que sabe comer bien, sabe esperar” reapertura 2026 por eso volvimos",
+    "description": "“El que sabe comer bien, sabe esperar también”\nReapertura 2026… por eso volvimos!",
     "type": "Restaurante",
     "typeSlug": "restaurant",
     "config": {
@@ -32,7 +32,8 @@
       "currency": "ARS",
       "priceFormat": "$ {price}",
       "layout": "list",
-      "groupBySection": true
+      "groupBySection": true,
+      "fontPreset": "casero"
     }
   },
   "theme": {
@@ -66,7 +67,7 @@
     "mode": "light",
     "palette": "gold",
     "layout": "classic",
-    "classes": "theme-mixology mode-light layout-classic palette-gold"
+    "classes": "theme-mixology mode-light layout-classic palette-gold font-casero"
   },
   "sections": [
     {
@@ -104,8 +105,16 @@
   },
   "totalItems": 0,
   "buildInfo": {
-    "version": "20260127-162855",
-    "timestamp": "2026-01-27T19:28:55.959Z",
+    "version": "20260127-183729",
+    "timestamp": "2026-01-27T21:37:29.384Z",
     "generator": "SCG v1.0.0"
+  },
+  "fontUrls": [
+    "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap",
+    "https://fonts.googleapis.com/css2?family=Spirax&display=swap"
+  ],
+  "fontStyles": {
+    "heading": "'Spirax', Georgia, serif",
+    "body": "'Montserrat', system-ui, sans-serif"
   }
 }
