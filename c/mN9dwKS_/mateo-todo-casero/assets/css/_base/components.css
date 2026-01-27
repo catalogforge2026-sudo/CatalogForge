@@ -609,7 +609,7 @@ body:not(.theme-mixology):not(.theme-gastro) .catalog-section.frame-gold::after 
   margin-top: var(--spacing-sm);
   font-size: var(--font-size-xs);
   color: var(--text-muted, #64748b);
-  opacity: 0.5;
+  opacity: 0.65;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -618,7 +618,7 @@ body:not(.theme-mixology):not(.theme-gastro) .catalog-section.frame-gold::after 
 
 .footer-contact-info {
   display: block;
-  font-size: 0.65rem;
+  font-size: 0.7rem;
 }
 
 .footer-contact-link {

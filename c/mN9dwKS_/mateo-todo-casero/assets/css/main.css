@@ -1004,8 +1004,8 @@ body::after {
 }
 
 .footer-powered {
-  font-size: 0.625rem;
-  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.35);
 }
 
 /* ============================================
