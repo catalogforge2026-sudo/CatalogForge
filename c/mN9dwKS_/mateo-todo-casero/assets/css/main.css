@@ -245,11 +245,33 @@ body.font-casero .header-text {
 body.font-casero .header-text {
   cursor: pointer;
   transition: transform 0.3s ease, filter 0.3s ease;
-  /* Quitar el highlight azul en móviles */
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  user-select: none;
+}
+
+/* Quitar highlight azul en TODOS los elementos del header para móvil */
+body.font-casero .site-header,
+body.font-casero .site-header *,
+body.font-casero .header-container,
+body.font-casero .header-container *,
+body.font-casero .header-brand,
+body.font-casero .header-brand *,
+body.font-casero .header-text,
+body.font-casero .header-text *,
+body.font-casero .header-subtitle,
+body.font-casero .header-subtitle * {
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  user-select: none !important;
+  outline: none !important;
+  -webkit-focus-ring-color: transparent !important;
+}
+
+body.font-casero .header-text:focus,
+body.font-casero .header-text:focus-visible,
+body.font-casero .header-subtitle:focus,
+body.font-casero .header-subtitle:focus-visible {
+  outline: none !important;
+  box-shadow: none;
 }
 
 body.font-casero .header-text:hover,
