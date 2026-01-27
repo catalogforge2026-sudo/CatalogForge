@@ -1,11 +1,11 @@
 {
   "meta": {
     "title": "Mateo \"Todo Casero\" - Mateo Racedo",
-    "description": "“El que sabe comer bien, sabe esperar también”\n\nReapertura 2026… por eso volvimos!",
+    "description": "•Desde 2009•\n\n“El que sabe comer bien, sabe esperar también”\nReapertura 2026… por eso volvimos!",
     "image": null,
     "url": "/c/mN9dwKS_/mateo-todo-casero",
     "clientKey": "mN9dwKS_",
-    "generatedAt": "2026-01-27T22:03:21.152Z",
+    "generatedAt": "2026-01-27T22:12:36.512Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -22,7 +22,7 @@
     "id": 16,
     "name": "Mateo \"Todo Casero\"",
     "slug": "mateo-todo-casero",
-    "description": "“El que sabe comer bien, sabe esperar también”\n\nReapertura 2026… por eso volvimos!",
+    "description": "•Desde 2009•\n\n“El que sabe comer bien, sabe esperar también”\nReapertura 2026… por eso volvimos!",
     "type": "Restaurante",
     "typeSlug": "restaurant",
     "config": {
@@ -105,8 +105,8 @@
   },
   "totalItems": 0,
   "buildInfo": {
-    "version": "20260127-190321",
-    "timestamp": "2026-01-27T22:03:21.152Z",
+    "version": "20260127-191236",
+    "timestamp": "2026-01-27T22:12:36.512Z",
     "generator": "SCG v1.0.0"
   },
   "fontUrls": [
