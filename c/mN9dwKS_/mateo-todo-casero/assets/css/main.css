@@ -542,6 +542,11 @@ body.font-casero .header-tagline {
   font-style: italic;
   color: var(--text-muted);
   font-size: 0.9rem;
+  white-space: pre-line !important;
+}
+
+.catalog-intro p {
+  white-space: pre-line !important;
 }
 
 .section-nav {
