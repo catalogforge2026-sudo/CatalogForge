@@ -5,11 +5,11 @@
     "image": null,
     "url": "/c/mN9dwKS_/mateo-todo-casero",
     "clientKey": "mN9dwKS_",
-    "generatedAt": "2026-01-27T22:31:53.400Z",
+    "generatedAt": "2026-01-28T05:20:15.790Z",
     "generator": "CatalogForge"
   },
   "client": {
-    "name": "Mateo Todo Casero",
+    "name": "Mateo •Todo Casero•",
     "slug": "mateo-racedo",
     "logo": null,
     "email": "",
@@ -33,7 +33,14 @@
       "priceFormat": "$ {price}",
       "layout": "list",
       "groupBySection": true,
-      "fontPreset": "casero"
+      "fontPreset": "custom",
+      "customFonts": {
+        "catalogTitle": "Curlz MT",
+        "sectionTitle": "Playfair Display",
+        "itemName": "Montserrat",
+        "body": "Montserrat"
+      },
+      "basePreset": "divertido"
     }
   },
   "theme": {
@@ -67,7 +74,7 @@
     "mode": "light",
     "palette": "gold",
     "layout": "classic",
-    "classes": "theme-mixology mode-light layout-classic palette-gold font-casero"
+    "classes": "theme-mixology mode-light layout-classic palette-gold font-divertido"
   },
   "sections": [
     {
@@ -105,8 +112,8 @@
   },
   "totalItems": 0,
   "buildInfo": {
-    "version": "20260127-193153",
-    "timestamp": "2026-01-27T22:31:53.400Z",
+    "version": "20260128-022015",
+    "timestamp": "2026-01-28T05:20:15.790Z",
     "generator": "SCG v1.0.0"
   },
   "branding": {
@@ -115,12 +122,15 @@
     "footerPhoneDisplay": "11 5019-2474"
   },
   "fontUrls": [
-    "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap",
-    "https://fonts.googleapis.com/css2?family=Spirax&display=swap"
+    "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap",
+    "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
   ],
   "fontStyles": {
-    "heading": "'Spirax', Georgia, serif",
-    "body": "'Montserrat', system-ui, sans-serif"
+    "heading": "'Curlz MT', fantasy",
+    "body": "'Montserrat', Georgia, serif",
+    "catalogTitle": "'Curlz MT', fantasy",
+    "sectionTitle": "'Playfair Display', system-ui, sans-serif",
+    "itemName": "'Montserrat', system-ui, sans-serif"
   },
   "globalSettings": {}
 }

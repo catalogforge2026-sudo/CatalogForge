@@ -12,6 +12,14 @@
    ============================================ */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
 
+/* Curlz MT - Fuente del sistema Windows */
+@font-face {
+  font-family: 'Curlz MT';
+  src: local('Curlz MT');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* ============================================
    BASE VARIABLES - Override base theme
    ============================================ */
@@ -20,6 +28,11 @@
   --font-family-heading: 'Cinzel', Georgia, serif;
   --font-family-display: var(--font-family-heading); /* Alias for backwards compatibility */
   --font-family-accent: 'Cormorant Garamond', Georgia, serif;
+  
+  /* Granular font system - defaults to heading for backwards compatibility */
+  --font-family-catalog-title: var(--font-family-heading);
+  --font-family-section-title: var(--font-family-accent);
+  --font-family-item-name: var(--font-family);
   
   --primary-color: #d4a853;
   --primary-hover: #e8c068;
@@ -137,7 +150,7 @@ body {
 
 /* Subtítulo (nombre del catálogo) - mostrar como título principal en Mixology */
 .header-subtitle {
-  font-family: var(--font-family-display) !important;
+  font-family: var(--font-family-catalog-title) !important;
   font-size: clamp(2.5rem, 10vw, 4.5rem) !important;
   font-weight: 600 !important;
   color: #f5e6c8 !important;
@@ -637,7 +650,7 @@ body.font-casero .header-tagline {
 
 /* Título de sección - más pequeño, cursivo dorado */
 .section-content .section-title {
-  font-family: var(--font-family-accent);
+  font-family: var(--font-family-section-title);
   font-size: 1.1rem;
   font-weight: 600;
   font-style: italic;
@@ -671,7 +684,7 @@ body.font-casero .header-tagline {
 }
 
 .item-row .item-name {
-  font-family: var(--font-family);
+  font-family: var(--font-family-item-name);
   font-size: 0.875rem;
   font-weight: 400;
   color: var(--text-color);
@@ -705,7 +718,7 @@ body.font-casero .header-tagline {
 }
 
 .catalog-section:not(.has-image) .section-title {
-  font-family: var(--font-family-accent);
+  font-family: var(--font-family-section-title);
   font-size: 1rem;
   font-weight: 600;
   font-style: italic;
@@ -749,7 +762,7 @@ body.font-casero .header-tagline {
 }
 
 .catalog-section:not(.has-image):not(.show-images) .item-card .item-name {
-  font-family: var(--font-family);
+  font-family: var(--font-family-item-name);
   font-size: 0.875rem;
   font-weight: 400;
   color: var(--text-color);
@@ -828,7 +841,7 @@ body.font-casero .header-tagline {
 }
 
 .catalog-section.show-images .item-card .item-name {
-  font-family: var(--font-family-accent);
+  font-family: var(--font-family-item-name);
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--text-gold);
@@ -1650,3 +1663,209 @@ body::after {
 .promo-card:nth-child(2) { animation-delay: 0.2s; }
 .promo-card:nth-child(3) { animation-delay: 0.3s; }
 .promo-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* ============================================
+   PRESET DIVERTIDO - Estilo logo neón ovalado con Curlz MT
+   ============================================ */
+body.font-divertido .header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 2rem;
+  border: 2px solid #f5c842;
+  border-radius: 50%;
+  aspect-ratio: 2.2 / 1;
+  min-width: 220px;
+  max-width: 340px;
+  position: relative;
+  background: transparent;
+  /* Efecto neón intenso */
+  box-shadow: 
+    0 0 5px #f5c842,
+    0 0 10px #f5c842,
+    0 0 20px #f5c842,
+    0 0 40px rgba(245, 200, 66, 0.5),
+    inset 0 0 10px rgba(245, 200, 66, 0.15);
+  animation: neonBorderPulse 2s ease-in-out infinite alternate;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Quitar highlight azul en TODOS los elementos del header para móvil */
+body.font-divertido .site-header,
+body.font-divertido .site-header *,
+body.font-divertido .header-container,
+body.font-divertido .header-container *,
+body.font-divertido .header-brand,
+body.font-divertido .header-brand *,
+body.font-divertido .header-text,
+body.font-divertido .header-text *,
+body.font-divertido .header-subtitle,
+body.font-divertido .header-subtitle * {
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  user-select: none !important;
+  outline: none !important;
+  -webkit-focus-ring-color: transparent !important;
+}
+
+body.font-divertido .header-text:focus,
+body.font-divertido .header-text:focus-visible,
+body.font-divertido .header-subtitle:focus,
+body.font-divertido .header-subtitle:focus-visible {
+  outline: none !important;
+  box-shadow: none;
+}
+
+body.font-divertido .header-text:hover,
+body.font-divertido .header-text:active {
+  animation: neonFlicker 0.15s ease-in-out, neonBorderGlow 0.5s ease-out forwards;
+  transform: scale(1.03);
+}
+
+body.font-divertido .header-text:hover .header-subtitle,
+body.font-divertido .header-text:active .header-subtitle {
+  animation: neonTextGlow 0.5s ease-out forwards;
+}
+
+/* Puntos decorativos a los lados */
+body.font-divertido .header-text::before {
+  content: '•';
+  position: absolute;
+  font-size: 1.2rem;
+  color: #f5c842;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-shadow: 
+    0 0 5px #f5c842,
+    0 0 10px #f5c842,
+    0 0 20px #f5c842;
+}
+
+/* Punto derecho */
+body.font-divertido .header-text::after {
+  content: '•' !important;
+  position: absolute !important;
+  font-size: 1.2rem !important;
+  color: #f5c842 !important;
+  right: 5% !important;
+  left: auto !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: auto !important;
+  height: auto !important;
+  background: none !important;
+  border: none !important;
+  text-shadow: 
+    0 0 5px #f5c842,
+    0 0 10px #f5c842,
+    0 0 20px #f5c842 !important;
+  letter-spacing: normal !important;
+  opacity: 1 !important;
+}
+
+body.font-divertido .header-subtitle {
+  font-family: 'Curlz MT', fantasy !important;
+  font-size: clamp(1.6rem, 6vw, 2.2rem) !important;
+  font-weight: 400 !important;
+  color: #f5c842 !important;
+  text-transform: none !important;
+  letter-spacing: 0.02em;
+  text-align: center;
+  line-height: 1.15;
+  padding: 0 !important;
+  position: relative;
+  /* Efecto neón en texto */
+  text-shadow: 
+    0 0 5px #f5c842,
+    0 0 10px #f5c842,
+    0 0 20px #f5c842,
+    0 0 40px rgba(245, 200, 66, 0.6);
+  animation: neonTextPulse 2s ease-in-out infinite alternate;
+}
+
+/* Hover en desktop - efecto flicker */
+body.font-divertido .header-text:hover {
+  animation: neonBorderFlicker 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+body.font-divertido .header-text:hover .header-subtitle {
+  animation: neonFlicker 0.8s ease-in-out;
+}
+
+/* Clase para activar flicker via JS (touch en móvil) */
+body.font-divertido .header-text.neon-flicker {
+  animation: neonBorderFlicker 0.8s ease-in-out;
+}
+
+body.font-divertido .header-text.neon-flicker .header-subtitle {
+  animation: neonFlicker 0.8s ease-in-out;
+}
+
+/* Ocultar las líneas decorativas laterales del título */
+body.font-divertido .header-subtitle::before,
+body.font-divertido .header-subtitle::after {
+  display: none !important;
+}
+
+/* Estilo para el nombre dividido en dos líneas */
+body.font-divertido .header-subtitle .casero-line-1 {
+  display: block;
+  font-size: 1em;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.05em;
+  text-transform: uppercase;
+}
+
+body.font-divertido .header-subtitle .casero-line-2 {
+  display: block;
+  font-size: 1em;
+  text-transform: none;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+/* Ocultar tagline en divertido para mantener compacto */
+body.font-divertido .header-tagline {
+  display: none;
+}
+
+/* 
+ * NOTA: Las fuentes de section-title e item-name ahora se controlan
+ * a través del sistema granular de fuentes (--font-family-section-title, --font-family-item-name)
+ * definido en el fontPreset del theme.json. Ya no se necesitan overrides aquí.
+ */
+
+/* Responsive para preset divertido */
+@media (max-width: 480px) {
+  body.font-divertido .header-text {
+    min-width: 220px;
+    max-width: 320px;
+    padding: 0.6rem 1.5rem;
+  }
+  
+  body.font-divertido .header-subtitle {
+    font-size: clamp(1.2rem, 5vw, 1.6rem) !important;
+  }
+  
+  body.font-divertido .header-text::before,
+  body.font-divertido .header-text::after {
+    font-size: 1.1rem !important;
+  }
+  
+  /* Asegurar mismo tamaño para ambas líneas en móvil */
+  body.font-divertido .header-subtitle .casero-line-1,
+  body.font-divertido .header-subtitle .casero-line-2 {
+    font-size: 1em;
+  }
+  
+  /* Efecto touch más visible en móvil */
+  body.font-divertido .header-text:active {
+    transform: scale(1.05);
+  }
+}
+
