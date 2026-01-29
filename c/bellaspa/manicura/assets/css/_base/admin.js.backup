@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Admin Panel for Appointments Management
  * Firebase-powered appointment management
  */
@@ -17,7 +17,6 @@
   var pricesLoaded = false;
   var appointmentConfig = { mode: 'individual', resources: [] };
   var selectedResourceFilter = null;
-  var selectedStatusFilter = null;
   var loadingScreen = document.getElementById('loading-screen');
   var loginScreen = document.getElementById('login-screen');
   var dashboard = document.getElementById('admin-dashboard');
@@ -40,9 +39,7 @@
       return true;
     } catch (error) { console.error('Error initializing Firebase:', error); hideLoading(); showError('Error al conectar con Firebase'); return false; }
   }
-
   function hideLoading() { if (loadingScreen) loadingScreen.style.display = 'none'; }
-
   function loadFirebasePrices() {
     return new Promise(function(resolve) {
       if (!db || !CATALOG_KEY || pricesLoaded) { resolve(); return; }
@@ -63,14 +60,12 @@
         }).catch(function(error) { console.error('Error loading Firebase prices:', error); resolve(); });
     });
   }
-
   function formatServicePrice(price) {
     if (price === null || price === undefined) return '';
     var numPrice = parseFloat(price);
     if (isNaN(numPrice)) return String(price);
     return '$' + numPrice.toLocaleString('es-AR');
   }
-
   function updateServiceDropdown() {
     var serviceSelect = document.getElementById('slot-service');
     if (!serviceSelect) return;
@@ -78,6 +73,7 @@
     SERVICES.forEach(function(s) { html += '<option value="' + s.id + '">' + s.name + ' - ' + s.price + '</option>'; });
     serviceSelect.innerHTML = html;
   }
+
   function handleAuthStateChange(user) {
     currentUser = user;
     hideLoading();
@@ -90,7 +86,6 @@
       });
     } else { loginScreen.style.display = 'flex'; dashboard.style.display = 'none'; }
   }
-
   function handleLogin(e) {
     e.preventDefault();
     var email = loginForm.email.value;
@@ -111,11 +106,9 @@
         submitBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg> Iniciar Sesion';
       });
   }
-
   function handleLogout() { auth.signOut().catch(function(error) { console.error('Logout error:', error); }); }
   function showError(message) { loginError.textContent = message; loginError.style.display = 'block'; }
   function hideError() { loginError.style.display = 'none'; }
-
   function loadAppointmentConfig() {
     return new Promise(function(resolve) {
       if (!db || !CATALOG_KEY) { resolve(); return; }
@@ -123,12 +116,10 @@
         .then(function(doc) {
           if (doc.exists && doc.data().config) appointmentConfig = doc.data().config;
           updateResourceFilter();
-          updateStatusFilter();
           resolve();
         }).catch(function(error) { console.error('Error loading config:', error); resolve(); });
     });
   }
-
   function updateResourceFilter() {
     var existingFilter = document.getElementById('resource-filter-container');
     if (existingFilter) existingFilter.remove();
@@ -148,32 +139,6 @@
     document.getElementById('resource-filter').addEventListener('change', function(e) { selectedResourceFilter = e.target.value || null; loadAppointments(); });
   }
 
-  function updateStatusFilter() {
-    var existingFilter = document.getElementById('status-filter-container');
-    if (existingFilter) existingFilter.remove();
-    var calendarNav = document.querySelector('.admin-calendar-nav');
-    if (!calendarNav) return;
-    var statusOptions = [
-      { value: '', label: 'Todos los estados' },
-      { value: 'available', label: 'Disponible' },
-      { value: 'booked', label: 'Reservado' },
-      { value: 'blocked', label: 'Bloqueado' },
-      { value: 'completed', label: 'Completado' },
-      { value: 'cancelled', label: 'Cancelado' }
-    ];
-    var options = '';
-    statusOptions.forEach(function(opt) {
-      var selected = selectedStatusFilter === opt.value ? 'selected' : '';
-      if (!selectedStatusFilter && opt.value === '') selected = 'selected';
-      options += '<option value="' + opt.value + '" ' + selected + '>' + opt.label + '</option>';
-    });
-    var filterContainer = document.createElement('div');
-    filterContainer.id = 'status-filter-container';
-    filterContainer.style.cssText = 'display:inline-flex;align-items:center;margin-left:0.75rem;';
-    filterContainer.innerHTML = '<select id="status-filter" style="padding:0.5rem 0.75rem;border:2px solid #fde68a;border-radius:0.5rem;font-size:0.875rem;font-weight:500;background:white;color:#d97706;cursor:pointer;">' + options + '</select>';
-    calendarNav.appendChild(filterContainer);
-    document.getElementById('status-filter').addEventListener('change', function(e) { selectedStatusFilter = e.target.value || null; loadAppointments(); });
-  }
   function loadAppointments() {
     if (!db || !CATALOG_KEY) return;
     var dateStr = formatDate(currentDate);
@@ -188,13 +153,6 @@
       }
       var slots = [];
       snapshot.forEach(function(doc) { slots.push(Object.assign({ id: doc.id }, doc.data())); });
-      if (selectedStatusFilter) {
-        slots = slots.filter(function(slot) { return slot.status === selectedStatusFilter; });
-      }
-      if (slots.length === 0) {
-        appointmentsList.innerHTML = '<div class="empty-state"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg><p>No hay turnos con este estado</p></div>';
-        return;
-      }
       slots.sort(function(a, b) { return (a.time || '').localeCompare(b.time || ''); });
       var html = '';
       slots.forEach(function(slot) { html += renderAppointmentItem(slot); });
@@ -203,14 +161,12 @@
       appointmentsList.querySelectorAll('.delete-btn').forEach(function(btn) { btn.addEventListener('click', function() { deleteSlot(btn.dataset.id); }); });
     }).catch(function(error) { console.error('Error loading appointments:', error); appointmentsList.innerHTML = '<div class="empty-state"><p>Error al cargar turnos</p></div>'; });
   }
-
   function renderAppointmentItem(slot) {
     var statusLabels = { available: 'Disponible', booked: 'Reservado', blocked: 'Bloqueado', completed: 'Completado', cancelled: 'Cancelado' };
     var resourceBadge = slot.resourceName ? '<span style="background:#e0e7ff;color:#4338ca;padding:0.125rem 0.5rem;border-radius:1rem;font-size:0.6875rem;font-weight:600;margin-left:0.5rem;">' + slot.resourceName + '</span>' : '';
     var clientInfo = slot.clientName ? '<div class="appointment-client">' + slot.clientName + (slot.clientPhone ? ' - ' + slot.clientPhone : '') + '</div>' : '';
     return '<div class="appointment-item" data-id="' + slot.id + '"><div class="appointment-time">' + slot.time + '</div><div class="appointment-info"><div class="appointment-service">' + (slot.serviceName || 'Sin servicio') + resourceBadge + '</div>' + clientInfo + '</div><span class="appointment-status ' + slot.status + '">' + (statusLabels[slot.status] || slot.status) + '</span><div class="appointment-actions"><button class="edit-btn" data-id="' + slot.id + '" title="Editar"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button><button class="delete-btn delete" data-id="' + slot.id + '" title="Eliminar"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></button></div></div>';
   }
-
   function loadStats() {
     if (!db || !CATALOG_KEY) return;
     var today = formatDate(new Date());
@@ -227,10 +183,8 @@
       if (statPending) statPending.textContent = allSlots.filter(function(s) { return s.date >= today && s.status === 'booked'; }).length;
     }).catch(function(error) { console.error('Error loading stats:', error); });
   }
-
   function navigateDate(delta) { currentDate.setDate(currentDate.getDate() + delta); loadAppointments(); }
   function goToToday() { currentDate = new Date(); loadAppointments(); }
-
   function updateDateDisplay() {
     var today = new Date(); today.setHours(0, 0, 0, 0);
     var current = new Date(currentDate); current.setHours(0, 0, 0, 0);
@@ -239,15 +193,14 @@
     if (current.getTime() === today.getTime()) text = 'Hoy - ' + text;
     currentDateEl.textContent = text.charAt(0).toUpperCase() + text.slice(1);
   }
-
   function formatDate(date) { return date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0'); }
+
   function openAddModal() {
     editingSlotId = null;
     document.getElementById('slot-modal-title').textContent = 'Agregar Turno';
     slotForm.reset();
     slotModal.style.display = 'flex';
   }
-
   function openEditModal(slotId) {
     editingSlotId = slotId;
     document.getElementById('slot-modal-title').textContent = 'Editar Turno';
@@ -264,9 +217,7 @@
       slotModal.style.display = 'flex';
     }).catch(function(error) { console.error('Error loading slot:', error); alert('Error al cargar el turno'); });
   }
-
   function closeModal() { slotModal.style.display = 'none'; editingSlotId = null; }
-
   function handleSlotSubmit(e) {
     e.preventDefault();
     var submitBtn = slotForm.querySelector('button[type="submit"]');
@@ -279,18 +230,11 @@
     var originalText = submitBtn.innerHTML;
     submitBtn.innerHTML = 'Guardando...';
     var service = SERVICES.find(function(s) { return s.id == formData.get('serviceId'); });
-    var resource = null;
-    if (appointmentConfig.mode === 'multi-resource' && appointmentConfig.resources) {
-      var resourceId = formData.get('resourceId');
-      resource = appointmentConfig.resources.find(function(r) { return r.id === resourceId; });
-    }
     var slotData = {
       date: dateStr, time: time,
       serviceId: formData.get('serviceId') || null,
       serviceName: service ? service.name : null,
       servicePrice: service ? service.price : null,
-      resourceId: resource ? resource.id : null,
-      resourceName: resource ? resource.name : null,
       clientName: formData.get('clientName') || null,
       clientPhone: formData.get('clientPhone') || null,
       notes: formData.get('notes') || null,
@@ -321,13 +265,13 @@
         else alert('Error al guardar el turno');
       }).finally(function() { submitBtn.disabled = false; submitBtn.innerHTML = originalText; });
   }
-
   function deleteSlot(slotId) {
     if (!confirm('Estas seguro de eliminar este turno?')) return;
     db.collection('turnos').doc(CATALOG_KEY).collection('slots').doc(slotId).delete()
       .then(function() { loadAppointments(); loadStats(); })
       .catch(function(error) { console.error('Error deleting slot:', error); alert('Error al eliminar el turno'); });
   }
+
   function openConfigModal() {
     var existing = document.getElementById('config-modal');
     if (existing) existing.remove();
@@ -374,12 +318,11 @@
       submitBtn.textContent = 'Guardando...';
       appointmentConfig.mode = modeSelect.value;
       db.collection('turnos').doc(CATALOG_KEY).set({ catalogKey: CATALOG_KEY, config: appointmentConfig, updatedAt: new Date().toISOString() }, { merge: true })
-        .then(function() { modal.remove(); updateResourceFilter(); updateStatusFilter(); loadAppointments(); alert('Configuracion guardada'); })
+        .then(function() { modal.remove(); updateResourceFilter(); loadAppointments(); alert('Configuracion guardada'); })
         .catch(function(error) { alert('Error al guardar: ' + error.message); })
         .finally(function() { submitBtn.disabled = false; submitBtn.textContent = 'Guardar'; });
     };
   }
-
   function refreshResourcesList(modal) {
     var list = modal.querySelector('#resources-list');
     if (appointmentConfig.resources && appointmentConfig.resources.length > 0) {
@@ -387,6 +330,7 @@
       list.querySelectorAll('.remove-resource').forEach(function(btn) { btn.onclick = function() { appointmentConfig.resources.splice(parseInt(btn.dataset.index), 1); refreshResourcesList(modal); }; });
     } else { list.innerHTML = '<p style="color:#6b7280;font-size:0.875rem;text-align:center;padding:1rem;">No hay recursos configurados</p>'; }
   }
+
   function openBatchModal() {
     var existing = document.getElementById('batch-modal');
     if (existing) existing.remove();
@@ -440,7 +384,6 @@
         .finally(function() { submitBtn.disabled = false; submitBtn.textContent = 'Generar'; });
     };
   }
-
   document.addEventListener('DOMContentLoaded', function() {
     if (!initFirebase()) return;
     if (loginForm) loginForm.addEventListener('submit', handleLogin);
