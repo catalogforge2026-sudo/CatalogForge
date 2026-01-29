@@ -640,26 +640,32 @@
     font-size: 0.9rem;
   }
   
-  /* Stack buttons vertically on mobile */
+  /* Buttons as icons in a row on mobile */
   .appointments-actions {
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: row !important;
+    justify-content: center;
     gap: 0.5rem;
     width: 100%;
   }
   
   .appointments-actions .btn-primary,
   .appointments-actions .btn-secondary {
-    width: 100% !important;
-    padding: 0.75rem 1rem !important;
-    justify-content: center;
-    font-size: 0.875rem;
+    width: auto !important;
+    padding: 0.75rem !important;
+    min-width: 48px;
+    height: 48px;
   }
   
   .appointments-actions .btn-primary svg,
   .appointments-actions .btn-secondary svg {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Hide button text on mobile */
+  .appointments-actions .btn-text {
+    display: none;
   }
   
   .appointment-item {
@@ -766,8 +772,13 @@
   }
   
   .modal-body input[type="time"] {
-    padding: 0.35rem 0.5rem;
+    padding: 0.3rem 0.4rem;
     font-size: 0.8rem;
+    height: 36px;
+  }
+  
+  .modal-body select {
+    height: 36px;
   }
   
   .modal-body textarea {
