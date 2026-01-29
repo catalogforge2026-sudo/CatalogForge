@@ -1,0 +1,121 @@
+/* Beauty Theme - Minimal Chic Palette */
+/* Limpio y moderno en blanco */
+
+:root {
+  --primary-color: #2d2d2d;
+  --primary-hover: #1a1a1a;
+  --primary-contrast: #ffffff;
+  --accent-color: #4a4a4a;
+  
+  --bg-color: #ffffff;
+  --bg-secondary: #f8f8f8;
+  --text-color: #1a1a1a;
+  --text-muted: #666666;
+  --text-light: #999999;
+  
+  --card-bg: #ffffff;
+  --card-border: 1px solid #e5e5e5;
+  --card-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+  --card-hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  
+  --nav-bg: #f5f5f5;
+  --nav-hover-bg: #2d2d2d;
+  --nav-hover-color: #ffffff;
+  
+  --tag-bg: #f0f0f0;
+  --tag-color: #4a4a4a;
+  
+  --footer-bg: #f8f8f8;
+  --footer-border: 1px solid #e5e5e5;
+  
+  --price-color: #1a1a1a;
+  --image-placeholder-bg: #f5f5f5;
+  
+  --header-bg: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  background-image: none;
+}
+
+/* Clean header */
+.site-header {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.site-header::before {
+  display: none;
+}
+
+.site-header::after {
+  color: #cccccc;
+}
+
+.header-title {
+  color: var(--text-color);
+  text-shadow: none;
+  font-style: normal;
+  letter-spacing: 0.05em;
+}
+
+.site-header .header-subtitle {
+  color: var(--text-muted) !important;
+}
+
+.header-brand::after {
+  background: #e5e5e5;
+}
+
+/* Clean cards */
+.item-card {
+  border-radius: 8px;
+}
+
+.item-image-container::after {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 60%);
+}
+
+.item-name {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.item-content {
+  color: #ffffff;
+}
+
+.price-amount {
+  color: #ffffff;
+}
+
+/* Clean sections */
+.section-title {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.section-title::before,
+.section-title::after {
+  color: #cccccc;
+}
+
+/* Clean buttons */
+.btn-primary {
+  background: var(--primary-color);
+  color: var(--primary-contrast);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+/* Clean footer */
+.site-footer::before {
+  background: #e5e5e5;
+}
+
+.footer-name {
+  color: var(--text-color);
+  font-style: normal;
+}
