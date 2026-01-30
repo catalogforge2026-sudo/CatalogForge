@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/mN9dwKS_/mateo-todo-casero",
     "clientKey": "mN9dwKS_",
-    "generatedAt": "2026-01-30T19:15:54.136Z",
+    "generatedAt": "2026-01-30T20:04:56.165Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -3113,7 +3113,70 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
-          "customizationGroups": [],
+          "customizationGroups": [
+            {
+              "id": 12,
+              "name": "Guarnicion",
+              "selectionType": "exactly",
+              "minSelections": 1,
+              "maxSelections": 1,
+              "isRequired": true,
+              "dependsOnOptionId": null,
+              "options": [
+                {
+                  "id": 112,
+                  "name": "Papas fritas",
+                  "type": "add",
+                  "price": 0,
+                  "priceFormatted": null,
+                  "isDefault": false
+                },
+                {
+                  "id": 113,
+                  "name": "Ensalada",
+                  "type": "add",
+                  "price": 0,
+                  "priceFormatted": null,
+                  "isDefault": false
+                }
+              ]
+            },
+            {
+              "id": 15,
+              "name": "Verduras de ensalada",
+              "selectionType": "exactly",
+              "minSelections": 2,
+              "maxSelections": 2,
+              "isRequired": true,
+              "dependsOnOptionId": 113,
+              "options": [
+                {
+                  "id": 117,
+                  "name": "Lechuga",
+                  "type": "add",
+                  "price": 0,
+                  "priceFormatted": null,
+                  "isDefault": false
+                },
+                {
+                  "id": 118,
+                  "name": "Tomate",
+                  "type": "add",
+                  "price": 0,
+                  "priceFormatted": null,
+                  "isDefault": false
+                },
+                {
+                  "id": 119,
+                  "name": "Zanahoria",
+                  "type": "add",
+                  "price": 0,
+                  "priceFormatted": null,
+                  "isDefault": false
+                }
+              ]
+            }
+          ],
           "minVariantPrice": null,
           "minVariantPriceFormatted": null,
           "hasPrice": true,
@@ -3122,7 +3185,7 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": true
         },
         {
           "id": 264,
@@ -3227,7 +3290,78 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
-          "customizationGroups": [],
+          "customizationGroups": [
+            {
+              "id": 13,
+              "name": "Guarnicion",
+              "selectionType": "exactly",
+              "minSelections": 1,
+              "maxSelections": 1,
+              "isRequired": true,
+              "dependsOnOptionId": null,
+              "options": [
+                {
+                  "id": 114,
+                  "name": "Papas fritas",
+                  "type": "add",
+                  "price": 0,
+                  "priceFormatted": null,
+                  "isDefault": false
+                },
+                {
+                  "id": 115,
+                  "name": "Ensalada",
+                  "type": "add",
+                  "price": 0,
+                  "priceFormatted": null,
+                  "isDefault": false
+                }
+              ]
+            },
+            {
+              "id": 16,
+              "name": "Verduras de ensalada",
+              "selectionType": "exactly",
+              "minSelections": 2,
+              "maxSelections": 2,
+              "isRequired": true,
+              "dependsOnOptionId": 115,
+              "options": [
+                {
+                  "id": 120,
+                  "name": "Lechuga",
+                  "type": "add",
+                  "price": 0,
+                  "priceFormatted": null,
+                  "isDefault": false
+                },
+                {
+                  "id": 121,
+                  "name": "Tomate",
+                  "type": "add",
+                  "price": 0,
+                  "priceFormatted": null,
+                  "isDefault": false
+                },
+                {
+                  "id": 122,
+                  "name": "Zanahoria",
+                  "type": "add",
+                  "price": 0,
+                  "priceFormatted": null,
+                  "isDefault": false
+                },
+                {
+                  "id": 123,
+                  "name": "Zanahoria",
+                  "type": "add",
+                  "price": 0,
+                  "priceFormatted": null,
+                  "isDefault": false
+                }
+              ]
+            }
+          ],
           "minVariantPrice": null,
           "minVariantPriceFormatted": null,
           "hasPrice": true,
@@ -3236,7 +3370,7 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": true
         },
         {
           "id": 267,
@@ -3346,8 +3480,8 @@
   "totalItems": 44,
   "navButtonText": "Ver productos",
   "buildInfo": {
-    "version": "20260130-161554",
-    "timestamp": "2026-01-30T19:15:54.154Z",
+    "version": "20260130-170456",
+    "timestamp": "2026-01-30T20:04:56.177Z",
     "generator": "SCG v1.0.0"
   },
   "branding": {
