@@ -542,7 +542,7 @@ body.cart-bar-visible {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 6px;
-  color: var(--text-color, #fff);
+  color: #ffffff !important;
   font-family: var(--font-family, system-ui);
   font-size: 0.8rem;
   transition: all 0.3s ease;
