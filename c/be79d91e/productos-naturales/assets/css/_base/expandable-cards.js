@@ -45,11 +45,16 @@
       return;
     }
 
-    // Find all item cards - make ALL cards expandable
+    // Find all item cards - make cards expandable (except no-image items)
     const cards = document.querySelectorAll('.item-card');
     
     cards.forEach(card => {
-      // Mark all cards as expandable
+      // Skip items without image - they show as price list, no expansion
+      if (card.classList.contains('no-image')) {
+        return;
+      }
+      
+      // Mark cards with images as expandable
       card.classList.add('expandable');
       
       // Add click handler to card content (not buttons)

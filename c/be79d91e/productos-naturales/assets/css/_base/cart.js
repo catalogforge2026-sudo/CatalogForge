@@ -246,10 +246,25 @@
           <button class="customization-modal-close">&times;</button>
         </div>
         <div class="customization-modal-body">
-          <p class="customization-modal-subtitle">Deseleccioná lo que no querés:</p>
-          <div class="customization-options"></div>
+          <div class="customization-section customization-variant-section" style="display:none;">
+            <p class="customization-modal-subtitle">🍽️ Elegí tu opción:</p>
+            <div class="customization-options customization-variant-options"></div>
+          </div>
+          <div class="customization-section customization-remove-section" style="display:none;">
+            <p class="customization-modal-subtitle">🥗 Deseleccioná lo que no querés:</p>
+            <div class="customization-options customization-remove-options"></div>
+          </div>
+          <div class="customization-section customization-add-section" style="display:none;">
+            <p class="customization-modal-subtitle">➕ Agregá extras:</p>
+            <div class="customization-options customization-add-options"></div>
+          </div>
         </div>
         <div class="customization-modal-footer">
+          <div class="customization-price-summary">
+            <span class="customization-base-price"></span>
+            <span class="customization-addons-price" style="display:none;"></span>
+            <span class="customization-total-price"></span>
+          </div>
           <button class="customization-confirm-btn">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
@@ -270,6 +285,100 @@
     customizationModal.querySelector('.customization-confirm-btn').addEventListener('click', confirmCustomization);
   }
 
+  // Open variant selection modal (for no-image items with variants)
+  function openVariantSelectionModal(itemData) {
+    pendingItem = { 
+      ...itemData, 
+      variants: itemData.variants || [],
+      customizations: itemData.customizations || [],
+      selectedVariant: null
+    };
+    
+    // Update modal title
+    customizationModal.querySelector('.customization-modal-title').textContent = itemData.name;
+    
+    // Render variant options as radio buttons
+    const variantSection = customizationModal.querySelector('.customization-variant-section');
+    const variantContainer = customizationModal.querySelector('.customization-variant-options');
+    
+    if (itemData.variants && itemData.variants.length > 0) {
+      variantSection.style.display = 'block';
+      variantContainer.innerHTML = itemData.variants.map((v, i) => `
+        <label class="customization-option customization-variant">
+          <input type="radio" name="variant" value="${v.id}" data-name="${v.name}" data-price="${v.price}" data-price-text="${v.priceText}" ${i === 0 ? 'checked' : ''}>
+          <span class="customization-checkbox"></span>
+          <span class="customization-name">${v.name}</span>
+          <span class="customization-price">${v.priceText}</span>
+        </label>
+      `).join('');
+      
+      // Set initial selected variant
+      pendingItem.selectedVariant = itemData.variants[0];
+      
+      // Add change listeners
+      variantContainer.querySelectorAll('input[type="radio"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+          pendingItem.selectedVariant = {
+            id: this.value,
+            name: this.dataset.name,
+            price: parseFloat(this.dataset.price),
+            priceText: this.dataset.priceText
+          };
+          updateCustomizationPrice();
+        });
+      });
+    } else {
+      variantSection.style.display = 'none';
+      variantContainer.innerHTML = '';
+    }
+    
+    // Render customizations (remove items)
+    const removeItems = (itemData.customizations || []).filter(c => c.type === 'remove' || !c.type);
+    const addItems = (itemData.customizations || []).filter(c => c.type === 'add' || c.type === 'addon');
+    
+    const removeSection = customizationModal.querySelector('.customization-remove-section');
+    const removeContainer = customizationModal.querySelector('.customization-remove-options');
+    if (removeItems.length > 0) {
+      removeSection.style.display = 'block';
+      removeContainer.innerHTML = removeItems.map(c => `
+        <label class="customization-option">
+          <input type="checkbox" checked data-id="${c.id}" data-name="${c.name}" data-type="remove">
+          <span class="customization-checkbox"></span>
+          <span class="customization-name">${c.name}</span>
+        </label>
+      `).join('');
+    } else {
+      removeSection.style.display = 'none';
+      removeContainer.innerHTML = '';
+    }
+    
+    // Render add options
+    const addSection = customizationModal.querySelector('.customization-add-section');
+    const addContainer = customizationModal.querySelector('.customization-add-options');
+    if (addItems.length > 0) {
+      addSection.style.display = 'block';
+      addContainer.innerHTML = addItems.map(c => `
+        <label class="customization-option customization-addon">
+          <input type="checkbox" ${c.isDefault ? 'checked' : ''} data-id="${c.id}" data-name="${c.name}" data-type="add" data-price="${c.price || 0}" data-price-formatted="${c.priceFormatted || ''}">
+          <span class="customization-checkbox"></span>
+          <span class="customization-name">${c.name}</span>
+          ${c.priceFormatted ? `<span class="customization-price">+${c.priceFormatted}</span>` : ''}
+        </label>
+      `).join('');
+      
+      addContainer.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+        cb.addEventListener('change', updateCustomizationPrice);
+      });
+    } else {
+      addSection.style.display = 'none';
+      addContainer.innerHTML = '';
+    }
+    
+    updateCustomizationPrice();
+    customizationModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
   // Open customization modal
   function openCustomizationModal(itemData, customizations) {
     pendingItem = { ...itemData, customizations };
@@ -277,18 +386,88 @@
     // Update modal title with item name
     customizationModal.querySelector('.customization-modal-title').textContent = itemData.name;
     
-    // Render customization options (all checked by default)
-    const optionsContainer = customizationModal.querySelector('.customization-options');
-    optionsContainer.innerHTML = customizations.map(c => `
-      <label class="customization-option">
-        <input type="checkbox" checked data-id="${c.id}" data-name="${c.name}">
-        <span class="customization-checkbox"></span>
-        <span class="customization-name">${c.name}</span>
-      </label>
-    `).join('');
+    // Separate customizations by type
+    const removeItems = customizations.filter(c => c.type === 'remove' || !c.type);
+    const addItems = customizations.filter(c => c.type === 'add' || c.type === 'addon');
+    
+    // Render "remove" options (ingredients to exclude) - checked by default
+    const removeSection = customizationModal.querySelector('.customization-remove-section');
+    const removeContainer = customizationModal.querySelector('.customization-remove-options');
+    if (removeItems.length > 0) {
+      removeSection.style.display = 'block';
+      removeContainer.innerHTML = removeItems.map(c => `
+        <label class="customization-option">
+          <input type="checkbox" checked data-id="${c.id}" data-name="${c.name}" data-type="remove">
+          <span class="customization-checkbox"></span>
+          <span class="customization-name">${c.name}</span>
+        </label>
+      `).join('');
+    } else {
+      removeSection.style.display = 'none';
+      removeContainer.innerHTML = '';
+    }
+    
+    // Render "add" options (extras with price) - unchecked by default
+    const addSection = customizationModal.querySelector('.customization-add-section');
+    const addContainer = customizationModal.querySelector('.customization-add-options');
+    if (addItems.length > 0) {
+      addSection.style.display = 'block';
+      addContainer.innerHTML = addItems.map(c => `
+        <label class="customization-option customization-addon">
+          <input type="checkbox" ${c.isDefault ? 'checked' : ''} data-id="${c.id}" data-name="${c.name}" data-type="add" data-price="${c.price || 0}" data-price-formatted="${c.priceFormatted || ''}">
+          <span class="customization-checkbox"></span>
+          <span class="customization-name">${c.name}</span>
+          ${c.priceFormatted ? `<span class="customization-price">+${c.priceFormatted}</span>` : ''}
+        </label>
+      `).join('');
+      
+      // Add change listeners to update price
+      addContainer.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+        cb.addEventListener('change', updateCustomizationPrice);
+      });
+    } else {
+      addSection.style.display = 'none';
+      addContainer.innerHTML = '';
+    }
+    
+    // Update price display
+    updateCustomizationPrice();
     
     customizationModal.classList.add('open');
     document.body.style.overflow = 'hidden';
+  }
+
+  // Update price display in customization modal
+  function updateCustomizationPrice() {
+    if (!pendingItem) return;
+    
+    // Get base price from selected variant or item price
+    const basePrice = pendingItem.selectedVariant?.price || pendingItem.price || 0;
+    let addonsTotal = 0;
+    
+    // Sum selected addons
+    const addonCheckboxes = customizationModal.querySelectorAll('.customization-add-options input[type="checkbox"]:checked');
+    addonCheckboxes.forEach(cb => {
+      addonsTotal += parseFloat(cb.dataset.price) || 0;
+    });
+    
+    const totalPrice = basePrice + addonsTotal;
+    
+    // Update display
+    const basePriceEl = customizationModal.querySelector('.customization-base-price');
+    const addonsPriceEl = customizationModal.querySelector('.customization-addons-price');
+    const totalPriceEl = customizationModal.querySelector('.customization-total-price');
+    
+    basePriceEl.textContent = `Producto: ${formatPrice(basePrice)}`;
+    
+    if (addonsTotal > 0) {
+      addonsPriceEl.style.display = 'block';
+      addonsPriceEl.textContent = `Adicionales: +${formatPrice(addonsTotal)}`;
+      totalPriceEl.innerHTML = `<strong>Total: ${formatPrice(totalPrice)}</strong>`;
+    } else {
+      addonsPriceEl.style.display = 'none';
+      totalPriceEl.innerHTML = `<strong>Total: ${formatPrice(basePrice)}</strong>`;
+    }
   }
 
   // Close customization modal
@@ -302,32 +481,67 @@
   function confirmCustomization() {
     if (!pendingItem) return;
     
-    // Get unchecked items (exclusions)
-    const checkboxes = customizationModal.querySelectorAll('.customization-options input[type="checkbox"]');
+    // Get unchecked "remove" items (exclusions)
+    const removeCheckboxes = customizationModal.querySelectorAll('.customization-remove-options input[type="checkbox"]');
     const exclusions = [];
-    checkboxes.forEach(cb => {
+    removeCheckboxes.forEach(cb => {
       if (!cb.checked) {
         exclusions.push(cb.dataset.name);
       }
     });
     
-    // Create unique ID if there are exclusions
-    let itemId = pendingItem.id;
-    if (exclusions.length > 0) {
-      // Create a hash of exclusions to make unique cart entries
-      itemId = pendingItem.id + '_exc_' + exclusions.sort().join('_').toLowerCase().replace(/\s+/g, '-');
+    // Get checked "add" items (addons)
+    const addCheckboxes = customizationModal.querySelectorAll('.customization-add-options input[type="checkbox"]:checked');
+    const addons = [];
+    let addonsTotal = 0;
+    addCheckboxes.forEach(cb => {
+      const price = parseFloat(cb.dataset.price) || 0;
+      addons.push({
+        name: cb.dataset.name,
+        price: price,
+        priceFormatted: cb.dataset.priceFormatted || formatPrice(price)
+      });
+      addonsTotal += price;
+    });
+    
+    // Get base price from selected variant or item price
+    const hasVariant = pendingItem.selectedVariant && pendingItem.selectedVariant.price;
+    const basePrice = hasVariant ? pendingItem.selectedVariant.price : (pendingItem.price || 0);
+    const finalPrice = basePrice + addonsTotal;
+    
+    // Build item name with variant
+    let itemName = pendingItem.name;
+    if (hasVariant) {
+      itemName = pendingItem.name + ' - ' + pendingItem.selectedVariant.name;
     }
     
-    // Add to cart with exclusions
+    // Create unique ID based on variant, exclusions and addons
+    let itemId = pendingItem.id;
+    const idParts = [];
+    if (hasVariant) {
+      idParts.push('var_' + pendingItem.selectedVariant.id);
+    }
+    if (exclusions.length > 0) {
+      idParts.push('exc_' + exclusions.sort().join('_').toLowerCase().replace(/\s+/g, '-'));
+    }
+    if (addons.length > 0) {
+      idParts.push('add_' + addons.map(a => a.name).sort().join('_').toLowerCase().replace(/\s+/g, '-'));
+    }
+    if (idParts.length > 0) {
+      itemId = pendingItem.id + '_' + idParts.join('_');
+    }
+    
+    // Add to cart with exclusions and addons
     addToCart({
       id: itemId,
-      name: pendingItem.name,
-      price: pendingItem.price,
-      priceText: pendingItem.priceText,
+      name: itemName,
+      price: finalPrice,
+      priceText: formatPrice(finalPrice),
       image: pendingItem.image,
       exclusions: exclusions,
-      variantId: pendingItem.variantId,
-      variantName: pendingItem.variantName
+      addons: addons,
+      variantId: hasVariant ? pendingItem.selectedVariant.id : pendingItem.variantId,
+      variantName: hasVariant ? pendingItem.selectedVariant.name : pendingItem.variantName
     });
     
     closeCustomizationModal();
@@ -577,6 +791,67 @@
       // For items with variants, we need to handle differently
       if (hasVariants) {
         const variantSelect = item.querySelector('.variant-select');
+        const isNoImageItem = item.classList.contains('no-image');
+        
+        // For no-image items (price list style), create button that opens variant modal
+        if (isNoImageItem) {
+          // Get variants data from select options
+          const variants = [];
+          if (variantSelect) {
+            Array.from(variantSelect.options).forEach(opt => {
+              if (opt.value) {
+                variants.push({
+                  id: opt.value,
+                  name: opt.dataset.name,
+                  price: parseFloat(opt.dataset.price),
+                  priceText: opt.dataset.priceText
+                });
+              }
+            });
+          }
+          
+          // Get customizations
+          const hasCustomizations = item.dataset.hasCustomizations === 'true';
+          let customizations = [];
+          if (hasCustomizations && item.dataset.customizations) {
+            try {
+              customizations = JSON.parse(item.dataset.customizations);
+            } catch (e) {}
+          }
+          
+          // Create button that opens variant selection modal
+          const btn = document.createElement('button');
+          btn.className = 'item-add-cart';
+          btn.innerHTML = `
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+            </svg>
+            ${config.buttonText}
+          `;
+          btn.dataset.itemId = itemId || itemName;
+          btn.dataset.itemName = itemName;
+          btn.dataset.itemImage = imageUrl;
+          btn.dataset.hasVariants = 'true';
+          btn.dataset.isNoImage = 'true';
+          btn.dataset.variants = JSON.stringify(variants);
+          btn.dataset.hasCustomizations = hasCustomizations ? 'true' : 'false';
+          if (hasCustomizations) {
+            btn.dataset.customizations = item.dataset.customizations;
+          }
+
+          // Find or create footer area
+          let footer = item.querySelector('.item-footer, .item-actions');
+          if (!footer) {
+            footer = document.createElement('div');
+            footer.className = 'item-footer';
+            item.appendChild(footer);
+          }
+          footer.appendChild(btn);
+          return;
+        }
+        
+        // For items with image, use dropdown selector
         if (variantSelect) {
           // Create button for variant items
           const btn = document.createElement('button');
@@ -723,6 +998,27 @@
         
         // Check if this is a variant item
         if (btn.dataset.hasVariants === 'true') {
+          // Check if this is a no-image item that needs variant selection modal
+          if (btn.dataset.isNoImage === 'true') {
+            const variants = JSON.parse(btn.dataset.variants || '[]');
+            const hasCustomizations = btn.dataset.hasCustomizations === 'true';
+            let customizations = [];
+            if (hasCustomizations && btn.dataset.customizations) {
+              try {
+                customizations = JSON.parse(btn.dataset.customizations);
+              } catch (e) {}
+            }
+            
+            openVariantSelectionModal({
+              id: btn.dataset.itemId,
+              name: btn.dataset.itemName,
+              image: btn.dataset.itemImage,
+              variants: variants,
+              customizations: customizations
+            });
+            return;
+          }
+          
           if (!btn.dataset.variantId) {
             showToast('⚠️ Seleccioná una opción primero');
             return;
@@ -928,6 +1224,9 @@
             ${item.exclusions && item.exclusions.length > 0 ? `
               <div class="cart-item-exclusions">❌ Sin ${item.exclusions.join(', Sin ')}</div>
             ` : ''}
+            ${item.addons && item.addons.length > 0 ? `
+              <div class="cart-item-addons">➕ ${item.addons.map(a => a.name).join(', ')}</div>
+            ` : ''}
             <div class="cart-item-price">${formatPrice(item.price)} x ${item.qty} = ${formatPrice(item.price * item.qty)}</div>
           </div>
           <div class="cart-item-qty">
@@ -1084,6 +1383,10 @@
       // Add exclusions if any
       if (item.exclusions && item.exclusions.length > 0) {
         message += `  ❌ Sin ${item.exclusions.join(', Sin ')}\n`;
+      }
+      // Add addons if any
+      if (item.addons && item.addons.length > 0) {
+        message += `  ➕ Con ${item.addons.map(a => `${a.name} (+${a.priceFormatted})`).join(', ')}\n`;
       }
       message += `  ${item.qty} x ${formatPrice(item.price)} = ${formatPrice(item.price * item.qty)}\n\n`;
     });
