@@ -140,6 +140,11 @@ body {
   display: none !important;
 }
 
+/* Ocultar búsqueda y filtro del header - usar solo los de abajo */
+.header-controls {
+  display: none !important;
+}
+
 .header-content {
   position: relative;
   z-index: 1;
@@ -2301,3 +2306,12 @@ body.font-divertido .header-tagline {
   }
 }
 
+
+
+/* ============================================
+   OCULTAR BÚSQUEDA/FILTRO DEL HEADER
+   Solo mostrar la barra de abajo
+   ============================================ */
+.header-controls {
+  display: none !important;
+}
