@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/be79d91e/productos-naturales",
     "clientKey": "be79d91e",
-    "generatedAt": "2026-01-24T19:55:11.592Z",
+    "generatedAt": "2026-01-30T01:23:55.705Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -22,6 +22,7 @@
     "id": 5,
     "name": "Productos Naturales",
     "slug": "productos-naturales",
+    "publicKey": "be79d91e",
     "description": "Catálogo de productos orgánicos y naturales",
     "type": "Productos",
     "typeSlug": "products",
@@ -82,7 +83,9 @@
       "slug": "destacados",
       "description": null,
       "icon": null,
+      "iconUrl": "uploads/1769734704741-eoor6b0h2.png",
       "image": null,
+      "imageUrl": null,
       "itemCount": 4,
       "items": [
         {
@@ -92,20 +95,26 @@
           "description": "Miel pura de abejas, sin aditivos. Ideal para endulzar naturalmente.",
           "price": "$ 900",
           "priceRaw": 900,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
-          "image": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400&h=400&fit=crop",
-          "thumbnail": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400&h=400&fit=crop",
+          "image": "uploads/1769730205318-iy4bbjomm.jpeg",
+          "thumbnail": "uploads/1769730205318-iy4bbjomm.jpeg",
           "gallery": [],
           "isFeatured": false,
           "tags": [],
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false
         },
         {
           "id": 50,
@@ -114,20 +123,26 @@
           "description": "Mezcla de avena, frutos secos y semillas tostadas con miel.",
           "price": "$ 1.200",
           "priceRaw": 1200,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
-          "image": "https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?w=400&h=400&fit=crop",
-          "thumbnail": "https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?w=400&h=400&fit=crop",
+          "image": "uploads/1769730404014-ocvcd7oui.png",
+          "thumbnail": "uploads/1769730404014-ocvcd7oui.png",
           "gallery": [],
           "isFeatured": false,
           "tags": [],
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false
         },
         {
           "id": 51,
@@ -136,20 +151,26 @@
           "description": "Aceite de coco virgen extra, prensado en frío. Multiusos.",
           "price": "$ 1.500",
           "priceRaw": 1500,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
-          "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&h=400&fit=crop",
-          "thumbnail": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&h=400&fit=crop",
+          "image": "uploads/1769730597081-z28l09kcx.png",
+          "thumbnail": "uploads/1769730597081-z28l09kcx.png",
           "gallery": [],
           "isFeatured": false,
           "tags": [],
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false
         },
         {
           "id": 52,
@@ -158,20 +179,26 @@
           "description": "Combinación de almendras, nueces, castañas y pasas.",
           "price": "$ 1.100",
           "priceRaw": 1100,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
-          "image": "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=400&h=400&fit=crop",
-          "thumbnail": "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=400&h=400&fit=crop",
+          "image": "uploads/1769730895713-q8n2zdhgv.jpeg",
+          "thumbnail": "uploads/1769730895713-q8n2zdhgv.jpeg",
           "gallery": [],
           "isFeatured": false,
           "tags": [],
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false
         }
       ],
       "frameStyle": "chalk",
@@ -179,6 +206,7 @@
       "promoBadge": null,
       "showItemImages": true,
       "hasPromo": false,
+      "hasImage": false,
       "sectionClasses": "show-images"
     },
     {
@@ -187,7 +215,9 @@
       "slug": "snacks-saludables",
       "description": null,
       "icon": null,
+      "iconUrl": "uploads/1769734734322-nvp7ft9m8.jpeg",
       "image": null,
+      "imageUrl": null,
       "itemCount": 3,
       "items": [
         {
@@ -197,20 +227,26 @@
           "description": "Barras energéticas con avena, miel y frutos rojos.",
           "price": "$ 450",
           "priceRaw": 450,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
-          "image": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=400&fit=crop",
-          "thumbnail": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=400&fit=crop",
+          "image": "uploads/1769731130860-rwzdps06d.jpeg",
+          "thumbnail": "uploads/1769731130860-rwzdps06d.jpeg",
           "gallery": [],
           "isFeatured": false,
           "tags": [],
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false
         },
         {
           "id": 54,
@@ -219,20 +255,26 @@
           "description": "Chips crujientes de remolacha, zanahoria y batata.",
           "price": "$ 590",
           "priceRaw": 590,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
-          "image": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=400&h=400&fit=crop",
-          "thumbnail": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=400&h=400&fit=crop",
+          "image": "uploads/1769731212413-tm5rih2dd.jpeg",
+          "thumbnail": "uploads/1769731212413-tm5rih2dd.jpeg",
           "gallery": [],
           "isFeatured": false,
           "tags": [],
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false
         },
         {
           "id": 55,
@@ -241,20 +283,26 @@
           "description": "Galletas de avena con chips de chocolate orgánico.",
           "price": "$ 500",
           "priceRaw": 500,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
-          "image": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=400&fit=crop",
-          "thumbnail": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=400&fit=crop",
+          "image": "uploads/1769731231681-otdupa4u1.jpeg",
+          "thumbnail": "uploads/1769731231681-otdupa4u1.jpeg",
           "gallery": [],
           "isFeatured": false,
           "tags": [],
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false
         }
       ],
       "frameStyle": "chalk",
@@ -262,6 +310,7 @@
       "promoBadge": null,
       "showItemImages": true,
       "hasPromo": false,
+      "hasImage": false,
       "sectionClasses": "show-images"
     },
     {
@@ -270,7 +319,9 @@
       "slug": "infusiones-organicas",
       "description": null,
       "icon": null,
+      "iconUrl": "uploads/1769734769646-m7amfa4bp.jpeg",
       "image": null,
+      "imageUrl": null,
       "itemCount": 2,
       "items": [
         {
@@ -280,20 +331,26 @@
           "description": "Infusión relajante de flores de manzanilla orgánica.",
           "price": "$ 550",
           "priceRaw": 550,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
-          "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&h=400&fit=crop",
-          "thumbnail": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&h=400&fit=crop",
+          "image": "uploads/1769731301829-ltz49zz9r.jpeg",
+          "thumbnail": "uploads/1769731301829-ltz49zz9r.jpeg",
           "gallery": [],
           "isFeatured": false,
           "tags": [],
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false
         },
         {
           "id": 57,
@@ -302,20 +359,26 @@
           "description": "Mezcla depurativa con menta, jengibre y limón.",
           "price": "$ 700",
           "priceRaw": 700,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
-          "image": "https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?w=400&h=400&fit=crop",
-          "thumbnail": "https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?w=400&h=400&fit=crop",
+          "image": "uploads/1769731353627-gghtxvb62.jpeg",
+          "thumbnail": "uploads/1769731353627-gghtxvb62.jpeg",
           "gallery": [],
           "isFeatured": false,
           "tags": [],
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false
         }
       ],
       "frameStyle": "chalk",
@@ -323,6 +386,7 @@
       "promoBadge": null,
       "showItemImages": true,
       "hasPromo": false,
+      "hasImage": false,
       "sectionClasses": "show-images"
     }
   ],
@@ -330,18 +394,48 @@
   "cart": {
     "enabled": true,
     "buttonText": "Agregar",
-    "whatsappMessage": "Hola! Quiero hacer el siguiente pedido:"
+    "whatsappMessage": "Hola! Quiero hacer el siguiente pedido:",
+    "formConfig": {}
   },
   "searchFilter": {
     "enabled": true,
     "searchEnabled": true,
-    "filterEnabled": true,
+    "filterEnabled": false,
     "placeholder": "Buscar productos..."
   },
+  "prices": {
+    "enabled": true,
+    "firebaseConfig": {
+      "apiKey": "AIzaSyA_Gio5QOGoioBRXGusVdNAB_3esEmhBtY",
+      "authDomain": "catalogforge-72de5.firebaseapp.com",
+      "projectId": "catalogforge-72de5",
+      "storageBucket": "catalogforge-72de5.firebasestorage.app",
+      "messagingSenderId": "256375860425",
+      "appId": "1:256375860425:web:35bbaa56bd364ae6463118"
+    }
+  },
   "totalItems": 9,
+  "navButtonText": "Ver productos",
   "buildInfo": {
-    "version": "20260124-165511",
-    "timestamp": "2026-01-24T19:55:11.594Z",
+    "version": "20260129-222355",
+    "timestamp": "2026-01-30T01:23:55.707Z",
     "generator": "SCG v1.0.0"
-  }
+  },
+  "branding": {
+    "footerText": "Hecho por Catalog Forge",
+    "footerPhone": "5491150192474",
+    "footerPhoneDisplay": "11 5019-2474"
+  },
+  "fontUrls": [
+    "https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap",
+    "https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap"
+  ],
+  "fontStyles": {
+    "heading": "'Lora', Georgia, serif",
+    "body": "'Nunito', Georgia, serif",
+    "catalogTitle": "'Lora', Georgia, serif",
+    "sectionTitle": "'Lora', Georgia, serif",
+    "itemName": "'Nunito', Georgia, serif"
+  },
+  "globalSettings": {}
 }

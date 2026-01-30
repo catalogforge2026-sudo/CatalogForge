@@ -23,10 +23,10 @@
   document.addEventListener('DOMContentLoaded', init);
 
   function init() {
-    // Get elements
-    searchInput = document.querySelector('.search-input');
-    searchClear = document.querySelector('.search-clear');
-    filterSelect = document.querySelector('.filter-select');
+    // Get elements - support both header and body search/filter
+    searchInput = document.querySelector('.header-search .search-input') || document.querySelector('.search-input');
+    searchClear = document.querySelector('.header-search .search-clear') || document.querySelector('.search-clear');
+    filterSelect = document.querySelector('#header-category-filter') || document.querySelector('.filter-select');
     resultsInfo = document.querySelector('.search-results-info');
     
     // Get all sections and items
@@ -36,24 +36,28 @@
     // Create no results element
     createNoResultsElement();
 
-    // Bind events
-    if (searchInput) {
-      searchInput.addEventListener('input', handleSearch);
-      searchInput.addEventListener('keydown', (e) => {
+    // Bind events - also bind to all search inputs (header and body)
+    const allSearchInputs = document.querySelectorAll('.search-input');
+    allSearchInputs.forEach(input => {
+      input.addEventListener('input', handleSearch);
+      input.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
           clearSearch();
         }
       });
-    }
+    });
 
-    if (searchClear) {
-      searchClear.addEventListener('click', clearSearch);
-    }
+    // Bind all clear buttons
+    const allClearBtns = document.querySelectorAll('.search-clear');
+    allClearBtns.forEach(btn => {
+      btn.addEventListener('click', clearSearch);
+    });
 
-    // Filter select dropdown
-    if (filterSelect) {
-      filterSelect.addEventListener('change', handleFilterChange);
-    }
+    // Filter select dropdown - bind all filter selects
+    const allFilterSelects = document.querySelectorAll('.filter-select, #header-category-filter');
+    allFilterSelects.forEach(select => {
+      select.addEventListener('change', handleFilterChange);
+    });
   }
 
   function createNoResultsElement() {
@@ -104,6 +108,7 @@
   function applyFilters() {
     let visibleItems = 0;
     let visibleSections = 0;
+    const isSearching = currentSearch.length > 0;
 
     // First, handle section visibility based on filter
     sections.forEach(section => {
@@ -151,15 +156,32 @@
       }
     });
 
-    // Count visible sections (sections with at least one visible item)
+    // Hide sections that have no visible items when searching
     sections.forEach(section => {
       if (!section.classList.contains('hidden-by-filter')) {
         const sectionItems = section.querySelectorAll('.item-card:not(.hidden-by-search):not(.hidden-by-filter)');
         if (sectionItems.length > 0) {
+          section.classList.remove('hidden-by-search');
+          visibleSections++;
+        } else if (isSearching) {
+          // Hide section if searching and no items match
+          section.classList.add('hidden-by-search');
+        } else {
+          section.classList.remove('hidden-by-search');
           visibleSections++;
         }
       }
     });
+
+    // Also hide section nav when searching
+    const sectionNav = document.querySelector('.section-nav');
+    if (sectionNav) {
+      if (isSearching) {
+        sectionNav.classList.add('hidden-by-search');
+      } else {
+        sectionNav.classList.remove('hidden-by-search');
+      }
+    }
 
     // Update results info
     updateResultsInfo(visibleItems);

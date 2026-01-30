@@ -230,7 +230,9 @@
 /* Hidden items during search/filter */
 .item-card.hidden-by-search,
 .item-card.hidden-by-filter,
-.catalog-section.hidden-by-filter {
+.catalog-section.hidden-by-filter,
+.catalog-section.hidden-by-search,
+.section-nav.hidden-by-search {
   display: none !important;
 }
 
