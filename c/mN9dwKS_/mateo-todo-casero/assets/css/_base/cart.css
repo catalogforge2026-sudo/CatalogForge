@@ -1437,3 +1437,223 @@ body.cart-bar-visible {
 .mode-light .customization-variant .customization-price {
   background: rgba(212, 168, 83, 0.2);
 }
+
+
+/* ============================================
+   CUSTOMIZATION GROUPS (Selección múltiple)
+   ============================================ */
+.customization-groups-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.customization-group {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.customization-group.is-valid {
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.customization-group.is-invalid {
+  border-color: rgba(239, 68, 68, 0.5);
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.customization-group .customization-modal-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.customization-group-rule {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  background: rgba(var(--primary-color-rgb, 212, 168, 83), 0.15);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+
+.customization-group-status {
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.customization-group-status.valid {
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.1);
+}
+
+.customization-group-status.invalid {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.customization-group-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.customization-group-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.customization-group-option:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.customization-group-option input[type="checkbox"],
+.customization-group-option input[type="radio"] {
+  display: none;
+}
+
+.customization-group-option input + .customization-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  background: transparent;
+}
+
+.customization-group-option input[type="radio"] + .customization-checkbox {
+  border-radius: 50%;
+}
+
+.customization-group-option input:checked + .customization-checkbox {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.customization-group-option input:checked + .customization-checkbox::after {
+  content: '✓';
+  color: #000;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.customization-group-option input:not(:checked) + .customization-checkbox {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.customization-group-option input:not(:checked) + .customization-checkbox::after {
+  content: '';
+}
+
+.customization-group-option .customization-name {
+  flex: 1;
+  text-decoration: none !important;
+  color: var(--text-color, #fff) !important;
+}
+
+.customization-group-option.has-price .customization-price {
+  margin-left: auto;
+}
+
+/* Validation error message */
+.customization-validation-error {
+  font-size: 0.75rem;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Disabled confirm button */
+.customization-confirm-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Cart item groups display */
+.cart-item-groups {
+  margin-top: 0.15rem;
+}
+
+.cart-item-group {
+  font-size: 0.65rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Light mode adjustments for groups */
+.mode-light .customization-group {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.mode-light .customization-group.is-valid {
+  border-color: rgba(34, 197, 94, 0.4);
+}
+
+.mode-light .customization-group.is-invalid {
+  border-color: rgba(239, 68, 68, 0.4);
+  background: rgba(239, 68, 68, 0.03);
+}
+
+.mode-light .customization-group-option {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.mode-light .customization-group-option:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.mode-light .customization-group-option input:not(:checked) + .customization-checkbox {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.mode-light .customization-group-option .customization-name {
+  color: #333 !important;
+}
+
+
+/* Disabled options when max selection reached */
+.customization-group-option.is-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.customization-group-option.is-disabled .customization-checkbox {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  background: transparent !important;
+}
+
+.mode-light .customization-group-option.is-disabled .customization-checkbox {
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
