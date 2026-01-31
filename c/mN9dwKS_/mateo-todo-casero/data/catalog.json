@@ -1,11 +1,11 @@
 {
   "meta": {
     "title": "Mateo \"Todo Casero\" - Mateo Racedo",
-    "description": "•Desde 2009•\n\n“El que sabe comer bien, sabe esperar también”\nReapertura 2026… por eso volvimos!\n\nPodés hacer tu pedido con anticipación y coordinar para pasar a retirarlo \no solicitar delivery.\n\nConsultá por menú corporativo, viandas y eventos.",
+    "description": "•Desde 2009•\n\n“El que sabe comer bien, sabe esperar también”\nReapertura 2026… por eso volvimos!\n\nPodés hacer tu pedido con anticipación y coordinar para pasar a retirarlo \no solicitar delivery.\n\nConsultá por menú corporativo, viandas y eventos.\n\nNuestra Dirección es: Bellocq 3633 Olivos Vicente López https://maps.app.goo.gl/W4Y34AG6uHyjg71NA",
     "image": null,
     "url": "/c/mN9dwKS_/mateo-todo-casero",
     "clientKey": "mN9dwKS_",
-    "generatedAt": "2026-01-30T20:04:56.165Z",
+    "generatedAt": "2026-01-31T00:41:00.208Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -14,7 +14,8 @@
     "logo": null,
     "email": "",
     "phone": "1150192474",
-    "address": "",
+    "address": "Bellocq 3633 Olivos Vicente López",
+    "mapsUrl": "https://maps.app.goo.gl/W4Y34AG6uHyjg71NA",
     "website": null,
     "socialLinks": {}
   },
@@ -23,7 +24,7 @@
     "name": "Mateo \"Todo Casero\"",
     "slug": "mateo-todo-casero",
     "publicKey": "mN9dwKS_",
-    "description": "•Desde 2009•\n\n“El que sabe comer bien, sabe esperar también”\nReapertura 2026… por eso volvimos!\n\nPodés hacer tu pedido con anticipación y coordinar para pasar a retirarlo \no solicitar delivery.\n\nConsultá por menú corporativo, viandas y eventos.",
+    "description": "•Desde 2009•\n\n“El que sabe comer bien, sabe esperar también”\nReapertura 2026… por eso volvimos!\n\nPodés hacer tu pedido con anticipación y coordinar para pasar a retirarlo \no solicitar delivery.\n\nConsultá por menú corporativo, viandas y eventos.\n\nNuestra Dirección es: Bellocq 3633 Olivos Vicente López https://maps.app.goo.gl/W4Y34AG6uHyjg71NA",
     "type": "Restaurante",
     "typeSlug": "restaurant",
     "config": {
@@ -3480,8 +3481,8 @@
   "totalItems": 44,
   "navButtonText": "Ver productos",
   "buildInfo": {
-    "version": "20260130-170456",
-    "timestamp": "2026-01-30T20:04:56.177Z",
+    "version": "20260130-214100",
+    "timestamp": "2026-01-31T00:41:00.253Z",
     "generator": "SCG v1.0.0"
   },
   "branding": {
