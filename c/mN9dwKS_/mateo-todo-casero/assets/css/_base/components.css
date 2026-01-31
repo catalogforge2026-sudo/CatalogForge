@@ -80,6 +80,40 @@ a {
   line-height: 1.4;
 }
 
+/* Catalog Address Header */
+.catalog-address-header {
+  text-align: center;
+  margin: -0.5rem auto var(--spacing-lg);
+}
+
+.catalog-address-link,
+.catalog-address-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--surface-color, rgba(255,255,255,0.1));
+  border-radius: 2rem;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  transition: all 0.2s ease;
+}
+
+.catalog-address-link:hover {
+  background: var(--primary-color);
+  color: var(--primary-contrast, #fff);
+}
+
+.catalog-address-icon {
+  color: #EA4335;
+  flex-shrink: 0;
+}
+
+.catalog-address-link:hover .catalog-address-icon {
+  color: inherit;
+}
+
 /* Section Navigation */
 .section-nav {
   margin-bottom: var(--spacing-lg);

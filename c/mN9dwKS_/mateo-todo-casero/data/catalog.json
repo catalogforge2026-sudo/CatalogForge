@@ -1,11 +1,11 @@
 {
   "meta": {
     "title": "Mateo \"Todo Casero\" - Mateo Racedo",
-    "description": "•Desde 2009•\n\n“El que sabe comer bien, sabe esperar también”\nReapertura 2026… por eso volvimos!\n\nPodés hacer tu pedido con anticipación y coordinar para pasar a retirarlo \no solicitar delivery.\n\nConsultá por menú corporativo, viandas y eventos.\n\nNuestra Dirección es: Bellocq 3633 Olivos Vicente López https://maps.app.goo.gl/W4Y34AG6uHyjg71NA",
+    "description": "•Desde 2009•\n\n“El que sabe comer bien, sabe esperar también”\nReapertura 2026… por eso volvimos!\n\nPodés hacer tu pedido con anticipación y coordinar para pasar a retirarlo \no solicitar delivery.\n\nConsultá por menú corporativo, viandas y eventos.",
     "image": null,
     "url": "/c/mN9dwKS_/mateo-todo-casero",
     "clientKey": "mN9dwKS_",
-    "generatedAt": "2026-01-31T00:41:00.208Z",
+    "generatedAt": "2026-01-31T02:02:20.218Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -24,7 +24,10 @@
     "name": "Mateo \"Todo Casero\"",
     "slug": "mateo-todo-casero",
     "publicKey": "mN9dwKS_",
-    "description": "•Desde 2009•\n\n“El que sabe comer bien, sabe esperar también”\nReapertura 2026… por eso volvimos!\n\nPodés hacer tu pedido con anticipación y coordinar para pasar a retirarlo \no solicitar delivery.\n\nConsultá por menú corporativo, viandas y eventos.\n\nNuestra Dirección es: Bellocq 3633 Olivos Vicente López https://maps.app.goo.gl/W4Y34AG6uHyjg71NA",
+    "description": "•Desde 2009•\n\n“El que sabe comer bien, sabe esperar también”\nReapertura 2026… por eso volvimos!\n\nPodés hacer tu pedido con anticipación y coordinar para pasar a retirarlo \no solicitar delivery.\n\nConsultá por menú corporativo, viandas y eventos.",
+    "address": "Bellocq 3633 Olivos Vicente López",
+    "mapsUrl": "https://maps.app.goo.gl/W4Y34AG6uHyjg71NA",
+    "showAddressHeader": true,
     "type": "Restaurante",
     "typeSlug": "restaurant",
     "config": {
@@ -120,14 +123,6 @@
               "isDefault": false
             },
             {
-              "id": 12,
-              "name": "Bacon extra",
-              "type": "add",
-              "price": 3000,
-              "priceFormatted": "$ 3.000",
-              "isDefault": false
-            },
-            {
               "id": 13,
               "name": "Queso extra",
               "type": "add",
@@ -162,14 +157,6 @@
             {
               "id": 7,
               "name": "Mostaza",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 8,
-              "name": "Cebolla",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
@@ -233,14 +220,6 @@
               "isDefault": false
             },
             {
-              "id": 22,
-              "name": "Bacon extra",
-              "type": "add",
-              "price": 3000,
-              "priceFormatted": "$ 3.000",
-              "isDefault": false
-            },
-            {
               "id": 23,
               "name": "Queso extra",
               "type": "add",
@@ -275,14 +254,6 @@
             {
               "id": 17,
               "name": "Mostaza",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 18,
-              "name": "Cebolla",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
@@ -346,14 +317,6 @@
               "isDefault": false
             },
             {
-              "id": 32,
-              "name": "Bacon extra",
-              "type": "add",
-              "price": 3000,
-              "priceFormatted": "$ 3.000",
-              "isDefault": false
-            },
-            {
               "id": 33,
               "name": "Queso extra",
               "type": "add",
@@ -388,14 +351,6 @@
             {
               "id": 27,
               "name": "Mostaza",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 28,
-              "name": "Cebolla",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
@@ -3481,8 +3436,8 @@
   "totalItems": 44,
   "navButtonText": "Ver productos",
   "buildInfo": {
-    "version": "20260130-214100",
-    "timestamp": "2026-01-31T00:41:00.253Z",
+    "version": "20260130-230220",
+    "timestamp": "2026-01-31T02:02:20.237Z",
     "generator": "SCG v1.0.0"
   },
   "branding": {
