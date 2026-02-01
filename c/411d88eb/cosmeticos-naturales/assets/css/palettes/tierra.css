@@ -1,0 +1,33 @@
+/**
+ * Natura Theme - Palette: Tierra (Default)
+ * Warm brown and beige tones - Elegant and natural
+ */
+
+:root {
+  /* Primary Colors - Warm Brown */
+  --color-primary: #8B5A2B;
+  --color-primary-light: #A67C52;
+  --color-primary-dark: #6B4423;
+  
+  /* Background Colors */
+  --color-bg: #F5F0E8;
+  --color-bg-alt: #EDE5D8;
+  --color-bg-card: #FFFFFF;
+  --color-bg-header: #5D4037;
+  
+  /* Text Colors */
+  --color-text: #3E2723;
+  --color-text-light: #5D4037;
+  --color-text-muted: #8D6E63;
+  --color-text-on-dark: #F5F0E8;
+  
+  /* Accent Colors */
+  --color-accent: #A1887F;
+  --color-accent-light: #BCAAA4;
+  --color-border: #D7CCC8;
+  
+  /* Button Colors */
+  --color-button-bg: #5D4037;
+  --color-button-text: #FFFFFF;
+  --color-button-hover: #4E342E;
+}

@@ -1,0 +1,33 @@
+/**
+ * Natura Theme - Palette: Terracota
+ * Warm terracotta and rust tones - Earthy and warm
+ */
+
+:root {
+  /* Primary Colors - Terracotta */
+  --color-primary: #C67B5C;
+  --color-primary-light: #D9A08A;
+  --color-primary-dark: #A65D3F;
+  
+  /* Background Colors */
+  --color-bg: #FBF7F4;
+  --color-bg-alt: #F5EDE7;
+  --color-bg-card: #FFFFFF;
+  --color-bg-header: #8B5A4A;
+  
+  /* Text Colors */
+  --color-text: #4A3228;
+  --color-text-light: #6B4A3A;
+  --color-text-muted: #9C7A6A;
+  --color-text-on-dark: #FBF7F4;
+  
+  /* Accent Colors */
+  --color-accent: #D4A894;
+  --color-accent-light: #E8CFC2;
+  --color-border: #E5D5CA;
+  
+  /* Button Colors */
+  --color-button-bg: #A65D3F;
+  --color-button-text: #FFFFFF;
+  --color-button-hover: #8B4A32;
+}

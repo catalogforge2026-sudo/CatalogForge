@@ -1,0 +1,33 @@
+/**
+ * Natura Theme - Palette: Oliva
+ * Olive and sage green tones - Sophisticated and calm
+ */
+
+:root {
+  /* Primary Colors - Olive */
+  --color-primary: #808A5C;
+  --color-primary-light: #9DA67A;
+  --color-primary-dark: #636B47;
+  
+  /* Background Colors */
+  --color-bg: #F7F8F4;
+  --color-bg-alt: #ECEEE6;
+  --color-bg-card: #FFFFFF;
+  --color-bg-header: #5A5F47;
+  
+  /* Text Colors */
+  --color-text: #3A3D2E;
+  --color-text-light: #5A5F47;
+  --color-text-muted: #8A8F78;
+  --color-text-on-dark: #F7F8F4;
+  
+  /* Accent Colors */
+  --color-accent: #A8B08C;
+  --color-accent-light: #C5CBB2;
+  --color-border: #D8DCC8;
+  
+  /* Button Colors */
+  --color-button-bg: #636B47;
+  --color-button-text: #FFFFFF;
+  --color-button-hover: #4A5035;
+}

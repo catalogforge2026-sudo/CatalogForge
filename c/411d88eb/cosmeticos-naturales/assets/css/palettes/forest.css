@@ -1,0 +1,38 @@
+/**
+ * Natura Theme - Forest Palette
+ * Verdes naturales y terrosos
+ */
+
+:root {
+  /* Primary Colors */
+  --color-primary: #4A5D4A;
+  --color-primary-light: #5C725C;
+  --color-primary-dark: #3A4A3A;
+  
+  /* Background Colors */
+  --color-bg: #F0F4F0;
+  --color-bg-alt: #E5EBE5;
+  --color-bg-card: #FFFFFF;
+  --color-bg-header: rgba(74, 93, 74, 0.95);
+  
+  /* Text Colors */
+  --color-text: #2D3A2D;
+  --color-text-light: #5A6B5A;
+  --color-text-muted: #7A8B7A;
+  --color-text-inverse: #FFFFFF;
+  
+  /* Accent Colors */
+  --color-accent: #6B8E6B;
+  --color-accent-light: #8BAB8B;
+  --color-border: #C5D4C5;
+  --color-border-light: #D8E4D8;
+  
+  /* Button Colors */
+  --color-btn-primary: #4A5D4A;
+  --color-btn-primary-hover: #3A4A3A;
+  --color-btn-text: #FFFFFF;
+  
+  /* Card Styles */
+  --card-shadow: 0 4px 20px rgba(74, 93, 74, 0.1);
+  --card-shadow-hover: 0 8px 30px rgba(74, 93, 74, 0.15);
+}
