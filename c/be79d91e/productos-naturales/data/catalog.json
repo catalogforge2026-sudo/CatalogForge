@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/be79d91e/productos-naturales",
     "clientKey": "be79d91e",
-    "generatedAt": "2026-01-30T04:28:54.470Z",
+    "generatedAt": "2026-02-01T20:13:52.518Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -15,6 +15,7 @@
     "email": "contacto@tiendaorganica.com",
     "phone": "+54 11 4567 8901",
     "address": "Av. Natural 1234, Buenos Aires",
+    "mapsUrl": null,
     "website": null,
     "socialLinks": {}
   },
@@ -24,6 +25,9 @@
     "slug": "productos-naturales",
     "publicKey": "be79d91e",
     "description": "Catálogo de productos orgánicos y naturales",
+    "address": null,
+    "mapsUrl": null,
+    "showAddressHeader": false,
     "type": "Productos",
     "typeSlug": "products",
     "config": {
@@ -109,6 +113,7 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
           "minVariantPrice": null,
           "minVariantPriceFormatted": null,
           "hasPrice": true,
@@ -116,7 +121,8 @@
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false
         },
         {
           "id": 50,
@@ -139,6 +145,7 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
           "minVariantPrice": null,
           "minVariantPriceFormatted": null,
           "hasPrice": true,
@@ -146,7 +153,8 @@
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false
         },
         {
           "id": 51,
@@ -169,6 +177,7 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
           "minVariantPrice": null,
           "minVariantPriceFormatted": null,
           "hasPrice": true,
@@ -176,7 +185,8 @@
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false
         },
         {
           "id": 52,
@@ -199,6 +209,7 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
           "minVariantPrice": null,
           "minVariantPriceFormatted": null,
           "hasPrice": true,
@@ -206,7 +217,8 @@
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false
         }
       ],
       "frameStyle": "chalk",
@@ -249,6 +261,7 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
           "minVariantPrice": null,
           "minVariantPriceFormatted": null,
           "hasPrice": true,
@@ -256,7 +269,8 @@
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false
         },
         {
           "id": 54,
@@ -279,6 +293,7 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
           "minVariantPrice": null,
           "minVariantPriceFormatted": null,
           "hasPrice": true,
@@ -286,7 +301,8 @@
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false
         },
         {
           "id": 55,
@@ -309,6 +325,7 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
           "minVariantPrice": null,
           "minVariantPriceFormatted": null,
           "hasPrice": true,
@@ -316,7 +333,8 @@
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false
         }
       ],
       "frameStyle": "chalk",
@@ -359,6 +377,7 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
           "minVariantPrice": null,
           "minVariantPriceFormatted": null,
           "hasPrice": true,
@@ -366,7 +385,8 @@
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false
         },
         {
           "id": 57,
@@ -389,6 +409,7 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
           "minVariantPrice": null,
           "minVariantPriceFormatted": null,
           "hasPrice": true,
@@ -396,7 +417,8 @@
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false
         }
       ],
       "frameStyle": "chalk",
@@ -432,11 +454,28 @@
       "appId": "1:256375860425:web:35bbaa56bd364ae6463118"
     }
   },
+  "inventory": {
+    "enabled": true,
+    "firebaseConfig": {
+      "apiKey": "AIzaSyA_Gio5QOGoioBRXGusVdNAB_3esEmhBtY",
+      "authDomain": "catalogforge-72de5.firebaseapp.com",
+      "projectId": "catalogforge-72de5",
+      "storageBucket": "catalogforge-72de5.firebasestorage.app",
+      "messagingSenderId": "256375860425",
+      "appId": "1:256375860425:web:35bbaa56bd364ae6463118"
+    },
+    "config": {
+      "enabled": true,
+      "showStockBadge": true,
+      "hideOutOfStock": true,
+      "orderExpiryHours": 1
+    }
+  },
   "totalItems": 9,
   "navButtonText": "Ver productos",
   "buildInfo": {
-    "version": "20260130-012854",
-    "timestamp": "2026-01-30T04:28:54.473Z",
+    "version": "20260201-171352",
+    "timestamp": "2026-02-01T20:13:52.521Z",
     "generator": "SCG v1.0.0"
   },
   "branding": {

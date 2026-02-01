@@ -250,6 +250,7 @@
             <p class="customization-modal-subtitle">🍽️ Elegí tu opción:</p>
             <div class="customization-options customization-variant-options"></div>
           </div>
+          <div class="customization-groups-container"></div>
           <div class="customization-section customization-remove-section" style="display:none;">
             <p class="customization-modal-subtitle">🥗 Deseleccioná lo que no querés:</p>
             <div class="customization-options customization-remove-options"></div>
@@ -265,6 +266,7 @@
             <span class="customization-addons-price" style="display:none;"></span>
             <span class="customization-total-price"></span>
           </div>
+          <div class="customization-validation-error" style="display:none;"></div>
           <button class="customization-confirm-btn">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
@@ -291,6 +293,7 @@
       ...itemData, 
       variants: itemData.variants || [],
       customizations: itemData.customizations || [],
+      customizationGroups: itemData.customizationGroups || [],
       selectedVariant: null
     };
     
@@ -332,7 +335,10 @@
       variantContainer.innerHTML = '';
     }
     
-    // Render customizations (remove items)
+    // Render customization groups
+    renderCustomizationGroups(itemData.customizationGroups || []);
+    
+    // Render customizations (remove items) - only ungrouped ones
     const removeItems = (itemData.customizations || []).filter(c => c.type === 'remove' || !c.type);
     const addItems = (itemData.customizations || []).filter(c => c.type === 'add' || c.type === 'addon');
     
@@ -379,12 +385,237 @@
     document.body.style.overflow = 'hidden';
   }
 
+  // Render customization groups
+  function renderCustomizationGroups(groups) {
+    const container = customizationModal.querySelector('.customization-groups-container');
+    if (!groups || groups.length === 0) {
+      container.innerHTML = '';
+      return;
+    }
+    
+    container.innerHTML = groups.map(group => {
+      const selectionLabel = getGroupSelectionLabel(group);
+      const isRadio = group.selectionType === 'exactly' && group.maxSelections === 1;
+      const dependsOn = group.dependsOnOptionId || '';
+      const isHidden = dependsOn ? 'style="display:none;"' : '';
+      
+      return `
+        <div class="customization-section customization-group" data-group-id="${group.id}" data-selection-type="${group.selectionType}" data-min="${group.minSelections}" data-max="${group.maxSelections || ''}" data-required="${group.isRequired}" data-depends-on="${dependsOn}" ${isHidden}>
+          <p class="customization-modal-subtitle">
+            ${group.isRequired ? '⭐' : '📋'} ${group.name}
+            <span class="customization-group-rule">(${selectionLabel})</span>
+          </p>
+          <div class="customization-group-status"></div>
+          <div class="customization-options customization-group-options">
+            ${group.options.map((opt, i) => `
+              <label class="customization-option customization-group-option${opt.price ? ' has-price' : ''}">
+                <input type="${isRadio ? 'radio' : 'checkbox'}" 
+                  name="group_${group.id}" 
+                  value="${opt.id}" 
+                  data-id="${opt.id}" 
+                  data-name="${opt.name}" 
+                  data-group-id="${group.id}"
+                  data-price="${opt.price || 0}" 
+                  data-price-formatted="${opt.priceFormatted || ''}">
+                <span class="customization-checkbox"></span>
+                <span class="customization-name">${opt.name}</span>
+                ${opt.priceFormatted ? `<span class="customization-price">+${opt.priceFormatted}</span>` : ''}
+              </label>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }).join('');
+    
+    // Add change listeners for validation, price update, and conditional groups
+    container.querySelectorAll('input').forEach(input => {
+      input.addEventListener('change', (e) => {
+        const checkbox = e.target;
+        const groupEl = checkbox.closest('.customization-group');
+        const max = groupEl.dataset.max ? parseInt(groupEl.dataset.max) : null;
+        const selectionType = groupEl.dataset.selectionType;
+        
+        // If checking and we have a max limit, enforce it
+        if (checkbox.checked && max !== null && selectionType !== 'at_least') {
+          const checkedCount = groupEl.querySelectorAll('input:checked').length;
+          if (checkedCount > max) {
+            // Prevent selection - uncheck this one
+            checkbox.checked = false;
+            return;
+          }
+        }
+        
+        // Update conditional groups visibility
+        updateConditionalGroups();
+        validateGroups();
+        updateCustomizationPrice();
+      });
+    });
+    
+    // Initial conditional groups check and validation
+    updateConditionalGroups();
+    validateGroups();
+  }
+
+  // Update visibility of conditional groups based on selected options
+  function updateConditionalGroups() {
+    const container = customizationModal.querySelector('.customization-groups-container');
+    if (!container) return;
+    
+    // Get all selected option IDs
+    const selectedOptionIds = new Set();
+    container.querySelectorAll('input:checked').forEach(input => {
+      selectedOptionIds.add(input.dataset.id);
+    });
+    
+    // Show/hide groups based on their dependencies
+    container.querySelectorAll('.customization-group[data-depends-on]').forEach(groupEl => {
+      const dependsOn = groupEl.dataset.dependsOn;
+      if (!dependsOn) return;
+      
+      const shouldShow = selectedOptionIds.has(dependsOn);
+      groupEl.style.display = shouldShow ? '' : 'none';
+      
+      // If hiding, uncheck all options in this group
+      if (!shouldShow) {
+        groupEl.querySelectorAll('input:checked').forEach(input => {
+          input.checked = false;
+        });
+      }
+    });
+  }
+
+  // Get selection label for group
+  function getGroupSelectionLabel(group) {
+    const { selectionType, minSelections, maxSelections } = group;
+    if (selectionType === 'exactly') {
+      return `Elegir ${minSelections}`;
+    } else if (selectionType === 'up_to') {
+      return maxSelections ? `Hasta ${maxSelections}` : 'Opcional';
+    } else if (selectionType === 'at_least') {
+      return `Mínimo ${minSelections}`;
+    }
+    return '';
+  }
+
+  // Validate all groups and enforce max selection limits
+  function validateGroups() {
+    const groups = customizationModal.querySelectorAll('.customization-group');
+    let allValid = true;
+    const errors = [];
+    
+    groups.forEach(groupEl => {
+      // Skip hidden conditional groups
+      if (groupEl.style.display === 'none') {
+        groupEl.classList.remove('is-valid', 'is-invalid');
+        return;
+      }
+      
+      const groupId = groupEl.dataset.groupId;
+      const selectionType = groupEl.dataset.selectionType;
+      const min = parseInt(groupEl.dataset.min) || 0;
+      const max = groupEl.dataset.max ? parseInt(groupEl.dataset.max) : null;
+      const isRequired = groupEl.dataset.required === 'true';
+      const groupName = groupEl.querySelector('.customization-modal-subtitle').textContent.split('(')[0].trim();
+      
+      const checkboxes = groupEl.querySelectorAll('input[type="checkbox"]');
+      const checkedCount = groupEl.querySelectorAll('input:checked').length;
+      const statusEl = groupEl.querySelector('.customization-group-status');
+      
+      let isValid = true;
+      let statusText = '';
+      
+      if (selectionType === 'exactly') {
+        isValid = checkedCount === min;
+        statusText = `${checkedCount}/${min} seleccionados`;
+        if (!isValid && isRequired) {
+          errors.push(`${groupName}: Elegí exactamente ${min}`);
+        }
+        // Disable unchecked options when limit reached
+        if (checkedCount >= min) {
+          checkboxes.forEach(cb => {
+            if (!cb.checked) {
+              cb.disabled = true;
+              cb.closest('.customization-option').classList.add('is-disabled');
+            }
+          });
+        } else {
+          checkboxes.forEach(cb => {
+            cb.disabled = false;
+            cb.closest('.customization-option').classList.remove('is-disabled');
+          });
+        }
+      } else if (selectionType === 'up_to') {
+        isValid = max ? checkedCount <= max : true;
+        if (isRequired && checkedCount === 0) {
+          isValid = false;
+          errors.push(`${groupName}: Elegí al menos 1`);
+        }
+        statusText = max ? `${checkedCount}/${max} seleccionados` : `${checkedCount} seleccionados`;
+        // Disable unchecked options when max reached
+        if (max && checkedCount >= max) {
+          checkboxes.forEach(cb => {
+            if (!cb.checked) {
+              cb.disabled = true;
+              cb.closest('.customization-option').classList.add('is-disabled');
+            }
+          });
+        } else {
+          checkboxes.forEach(cb => {
+            cb.disabled = false;
+            cb.closest('.customization-option').classList.remove('is-disabled');
+          });
+        }
+      } else if (selectionType === 'at_least') {
+        isValid = checkedCount >= min;
+        statusText = `${checkedCount}/${min}+ seleccionados`;
+        if (!isValid) {
+          errors.push(`${groupName}: Elegí al menos ${min}`);
+        }
+      }
+      
+      groupEl.classList.toggle('is-valid', isValid);
+      groupEl.classList.toggle('is-invalid', !isValid && isRequired);
+      statusEl.textContent = statusText;
+      statusEl.className = 'customization-group-status ' + (isValid ? 'valid' : (isRequired ? 'invalid' : ''));
+      
+      if (!isValid && isRequired) {
+        allValid = false;
+      }
+    });
+    
+    // Update validation error display
+    const errorEl = customizationModal.querySelector('.customization-validation-error');
+    const confirmBtn = customizationModal.querySelector('.customization-confirm-btn');
+    
+    if (!allValid) {
+      errorEl.textContent = errors[0] || 'Completá las selecciones requeridas';
+      errorEl.style.display = 'block';
+      confirmBtn.disabled = true;
+    } else {
+      errorEl.style.display = 'none';
+      confirmBtn.disabled = false;
+    }
+    
+    return allValid;
+  }
+
   // Open customization modal
   function openCustomizationModal(itemData, customizations) {
     pendingItem = { ...itemData, customizations };
     
     // Update modal title with item name
     customizationModal.querySelector('.customization-modal-title').textContent = itemData.name;
+    
+    // Clear variant section (not used in this flow)
+    const variantSection = customizationModal.querySelector('.customization-variant-section');
+    const variantContainer = customizationModal.querySelector('.customization-variant-options');
+    variantSection.style.display = 'none';
+    variantContainer.innerHTML = '';
+    
+    // Clear customization groups container (not used in this flow)
+    const groupsContainer = customizationModal.querySelector('.customization-groups-container');
+    groupsContainer.innerHTML = '';
     
     // Separate customizations by type
     const removeItems = customizations.filter(c => c.type === 'remove' || !c.type);
@@ -445,10 +676,16 @@
     const basePrice = pendingItem.selectedVariant?.price || pendingItem.price || 0;
     let addonsTotal = 0;
     
-    // Sum selected addons
+    // Sum selected addons from ungrouped customizations
     const addonCheckboxes = customizationModal.querySelectorAll('.customization-add-options input[type="checkbox"]:checked');
     addonCheckboxes.forEach(cb => {
       addonsTotal += parseFloat(cb.dataset.price) || 0;
+    });
+    
+    // Sum selected options from groups that have prices
+    const groupOptions = customizationModal.querySelectorAll('.customization-group-options input:checked');
+    groupOptions.forEach(input => {
+      addonsTotal += parseFloat(input.dataset.price) || 0;
     });
     
     const totalPrice = basePrice + addonsTotal;
@@ -481,6 +718,12 @@
   function confirmCustomization() {
     if (!pendingItem) return;
     
+    // Validate groups first
+    if (!validateGroups()) {
+      showToast('⚠️ Completá las selecciones requeridas');
+      return;
+    }
+    
     // Get unchecked "remove" items (exclusions)
     const removeCheckboxes = customizationModal.querySelectorAll('.customization-remove-options input[type="checkbox"]');
     const exclusions = [];
@@ -490,7 +733,7 @@
       }
     });
     
-    // Get checked "add" items (addons)
+    // Get checked "add" items (addons) from ungrouped customizations
     const addCheckboxes = customizationModal.querySelectorAll('.customization-add-options input[type="checkbox"]:checked');
     const addons = [];
     let addonsTotal = 0;
@@ -504,6 +747,31 @@
       addonsTotal += price;
     });
     
+    // Get selections from groups
+    const groupSelections = [];
+    const groups = customizationModal.querySelectorAll('.customization-group');
+    groups.forEach(groupEl => {
+      const groupName = groupEl.querySelector('.customization-modal-subtitle').textContent.split('(')[0].trim().replace(/^[⭐📋]\s*/, '');
+      const selectedOptions = [];
+      
+      groupEl.querySelectorAll('input:checked').forEach(input => {
+        const price = parseFloat(input.dataset.price) || 0;
+        selectedOptions.push({
+          name: input.dataset.name,
+          price: price,
+          priceFormatted: input.dataset.priceFormatted || (price > 0 ? formatPrice(price) : '')
+        });
+        addonsTotal += price;
+      });
+      
+      if (selectedOptions.length > 0) {
+        groupSelections.push({
+          groupName: groupName,
+          options: selectedOptions
+        });
+      }
+    });
+    
     // Get base price from selected variant or item price
     const hasVariant = pendingItem.selectedVariant && pendingItem.selectedVariant.price;
     const basePrice = hasVariant ? pendingItem.selectedVariant.price : (pendingItem.price || 0);
@@ -515,7 +783,7 @@
       itemName = pendingItem.name + ' - ' + pendingItem.selectedVariant.name;
     }
     
-    // Create unique ID based on variant, exclusions and addons
+    // Create unique ID based on variant, exclusions, addons and group selections
     let itemId = pendingItem.id;
     const idParts = [];
     if (hasVariant) {
@@ -527,11 +795,15 @@
     if (addons.length > 0) {
       idParts.push('add_' + addons.map(a => a.name).sort().join('_').toLowerCase().replace(/\s+/g, '-'));
     }
+    if (groupSelections.length > 0) {
+      const groupIds = groupSelections.map(g => g.options.map(o => o.name).join('-')).join('_');
+      idParts.push('grp_' + groupIds.toLowerCase().replace(/\s+/g, '-'));
+    }
     if (idParts.length > 0) {
       itemId = pendingItem.id + '_' + idParts.join('_');
     }
     
-    // Add to cart with exclusions and addons
+    // Add to cart with exclusions, addons and group selections
     addToCart({
       id: itemId,
       name: itemName,
@@ -540,6 +812,7 @@
       image: pendingItem.image,
       exclusions: exclusions,
       addons: addons,
+      groupSelections: groupSelections,
       variantId: hasVariant ? pendingItem.selectedVariant.id : pendingItem.variantId,
       variantName: hasVariant ? pendingItem.selectedVariant.name : pendingItem.variantName
     });
@@ -819,6 +1092,15 @@
             } catch (e) {}
           }
           
+          // Get customization groups
+          const hasCustomizationGroups = item.dataset.hasCustomizationGroups === 'true';
+          let customizationGroups = [];
+          if (hasCustomizationGroups && item.dataset.customizationGroups) {
+            try {
+              customizationGroups = JSON.parse(item.dataset.customizationGroups);
+            } catch (e) {}
+          }
+          
           // Create button that opens variant selection modal
           const btn = document.createElement('button');
           btn.className = 'item-add-cart';
@@ -838,6 +1120,10 @@
           btn.dataset.hasCustomizations = hasCustomizations ? 'true' : 'false';
           if (hasCustomizations) {
             btn.dataset.customizations = item.dataset.customizations;
+          }
+          btn.dataset.hasCustomizationGroups = hasCustomizationGroups ? 'true' : 'false';
+          if (hasCustomizationGroups) {
+            btn.dataset.customizationGroups = item.dataset.customizationGroups;
           }
 
           // Find or create footer area
@@ -915,6 +1201,17 @@
         }
       }
 
+      // Check for customization groups
+      const hasCustomizationGroups = item.dataset.hasCustomizationGroups === 'true';
+      let customizationGroups = [];
+      if (hasCustomizationGroups && item.dataset.customizationGroups) {
+        try {
+          customizationGroups = JSON.parse(item.dataset.customizationGroups);
+        } catch (e) {
+          console.warn('Could not parse customization groups:', e);
+        }
+      }
+
       // Create button for regular items
       const btn = document.createElement('button');
       btn.className = 'item-add-cart';
@@ -933,6 +1230,10 @@
       btn.dataset.hasCustomizations = hasCustomizations;
       if (hasCustomizations) {
         btn.dataset.customizations = JSON.stringify(customizations);
+      }
+      btn.dataset.hasCustomizationGroups = hasCustomizationGroups;
+      if (hasCustomizationGroups) {
+        btn.dataset.customizationGroups = JSON.stringify(customizationGroups);
       }
 
       // Find or create footer area
@@ -1009,12 +1310,21 @@
               } catch (e) {}
             }
             
+            const hasCustomizationGroups = btn.dataset.hasCustomizationGroups === 'true';
+            let customizationGroups = [];
+            if (hasCustomizationGroups && btn.dataset.customizationGroups) {
+              try {
+                customizationGroups = JSON.parse(btn.dataset.customizationGroups);
+              } catch (e) {}
+            }
+            
             openVariantSelectionModal({
               id: btn.dataset.itemId,
               name: btn.dataset.itemName,
               image: btn.dataset.itemImage,
               variants: variants,
-              customizations: customizations
+              customizations: customizations,
+              customizationGroups: customizationGroups
             });
             return;
           }
@@ -1064,7 +1374,28 @@
             } catch (e) {}
           }
           
-          if (hasCustomizations && customizations.length > 0) {
+          // Check if item has customization groups
+          const hasCustomizationGroups = btn.dataset.hasCustomizationGroups === 'true';
+          let customizationGroups = [];
+          if (hasCustomizationGroups && btn.dataset.customizationGroups) {
+            try {
+              customizationGroups = JSON.parse(btn.dataset.customizationGroups);
+            } catch (e) {}
+          }
+          
+          if (hasCustomizationGroups && customizationGroups.length > 0) {
+            // Open variant selection modal (which also handles customization groups)
+            openVariantSelectionModal({
+              id: btn.dataset.itemId,
+              name: btn.dataset.itemName,
+              price: parseFloat(btn.dataset.itemPrice),
+              priceText: btn.dataset.itemPriceText,
+              image: btn.dataset.itemImage,
+              variants: [],
+              customizations: customizations,
+              customizationGroups: customizationGroups
+            });
+          } else if (hasCustomizations && customizations.length > 0) {
             // Open customization modal
             openCustomizationModal({
               id: btn.dataset.itemId,
@@ -1127,6 +1458,20 @@
 
   // Add item to cart
   function addToCart(item) {
+    // Check stock availability before adding
+    if (window.SCG_Inventory) {
+      // Extract base item ID for stock check
+      const baseItemId = String(item.id).split('_')[0];
+      const currentQty = cart.filter(i => String(i.id).split('_')[0] === baseItemId)
+        .reduce((sum, i) => sum + i.qty, 0);
+      const available = window.SCG_Inventory.getAvailable(baseItemId, item.variantId);
+      
+      if (available !== null && available <= currentQty) {
+        showToast(`⚠️ No hay más stock disponible de ${item.name}`);
+        return;
+      }
+    }
+    
     const existing = cart.find(i => i.id === item.id);
     if (existing) {
       existing.qty++;
@@ -1142,6 +1487,19 @@
   function updateQuantity(itemId, delta) {
     const item = cart.find(i => i.id === itemId);
     if (!item) return;
+
+    // Check stock availability before increasing
+    if (delta > 0 && window.SCG_Inventory) {
+      // Extract base item ID for stock check
+      const baseItemId = String(itemId).split('_')[0];
+      const currentQty = cart.filter(i => String(i.id).split('_')[0] === baseItemId)
+        .reduce((sum, i) => sum + i.qty, 0);
+      const available = window.SCG_Inventory.getAvailable(baseItemId, item.variantId);
+      if (available !== null && available <= currentQty) {
+        showToast(`⚠️ No hay más stock disponible`);
+        return;
+      }
+    }
 
     item.qty += delta;
     if (item.qty <= 0) {
@@ -1224,6 +1582,11 @@
             ${item.exclusions && item.exclusions.length > 0 ? `
               <div class="cart-item-exclusions">❌ Sin ${item.exclusions.join(', Sin ')}</div>
             ` : ''}
+            ${item.groupSelections && item.groupSelections.length > 0 ? `
+              <div class="cart-item-groups">
+                ${item.groupSelections.map(g => `<div class="cart-item-group">📋 ${g.groupName}: ${g.options.map(o => o.name).join(', ')}</div>`).join('')}
+              </div>
+            ` : ''}
             ${item.addons && item.addons.length > 0 ? `
               <div class="cart-item-addons">➕ ${item.addons.map(a => a.name).join(', ')}</div>
             ` : ''}
@@ -1299,8 +1662,153 @@
     document.body.style.overflow = '';
   }
 
+  // Check if inventory feature is enabled
+  function isInventoryEnabled() {
+    return window.FEATURES?.inventory && window.INVENTORY_CONFIG?.enabled;
+  }
+
+  // Validate stock availability before submitting order
+  async function validateStockAvailability() {
+    if (!isInventoryEnabled() || !window.SCG_Inventory) {
+      return { valid: true, errors: [] };
+    }
+
+    const errors = [];
+    
+    // Group cart items by base item ID to check total quantity per product
+    const itemTotals = {};
+    for (const item of cart) {
+      const baseItemId = String(item.id).split('_')[0];
+      const key = item.variantId ? `${baseItemId}_${item.variantId}` : baseItemId;
+      if (!itemTotals[key]) {
+        itemTotals[key] = { name: item.name.split(' - ')[0], qty: 0, variantId: item.variantId };
+      }
+      itemTotals[key].qty += item.qty;
+    }
+    
+    for (const [key, data] of Object.entries(itemTotals)) {
+      const baseItemId = key.split('_')[0];
+      const available = window.SCG_Inventory.getAvailable(baseItemId, data.variantId);
+      if (available !== null && available < data.qty) {
+        if (available <= 0) {
+          errors.push(`"${data.name}" ya no está disponible`);
+        } else {
+          errors.push(`"${data.name}" solo tiene ${available} unidades disponibles`);
+        }
+      }
+    }
+
+    return { valid: errors.length === 0, errors };
+  }
+
+  // Create order in Firebase and reserve stock
+  async function createFirebaseOrder(customerData, orderTotal) {
+    if (!isInventoryEnabled()) {
+      return { success: true, orderId: null };
+    }
+
+    const CATALOG_KEY = window.CATALOG_KEY;
+    if (!CATALOG_KEY || typeof firebase === 'undefined') {
+      return { success: true, orderId: null };
+    }
+
+    try {
+      const db = firebase.firestore();
+      const expiryHours = window.INVENTORY_CONFIG?.orderExpiryHours || 24;
+      const expiresAt = new Date(Date.now() + expiryHours * 60 * 60 * 1000).toISOString();
+
+      // Prepare order items
+      const orderItems = cart.map(item => ({
+        itemId: item.id,
+        variantId: item.variantId || null,
+        name: item.name,
+        variantName: item.variantName || null,
+        quantity: item.qty,
+        price: item.price,
+        priceText: formatPrice(item.price * item.qty),
+        image: item.image || null
+      }));
+
+      // Create order document
+      const orderRef = await db.collection('inventario')
+        .doc(CATALOG_KEY)
+        .collection('orders')
+        .add({
+          catalogKey: CATALOG_KEY,
+          status: 'pending',
+          items: orderItems,
+          customer: customerData,
+          subtotal: orderTotal.subtotal,
+          deliveryCost: orderTotal.delivery,
+          total: orderTotal.total,
+          createdAt: new Date().toISOString(),
+          expiresAt: expiresAt
+        });
+
+      // Reserve stock for each item using transactions for atomicity
+      console.log('📦 Starting stock reservation...');
+      for (const item of orderItems) {
+        // Extract base item ID (remove customization suffixes like _var_123_exc_...)
+        const baseItemId = String(item.itemId).split('_')[0];
+        const key = item.variantId ? `${baseItemId}_${item.variantId}` : baseItemId;
+        const invRef = db.collection('inventario').doc(CATALOG_KEY).collection('items').doc(key);
+        
+        console.log(`📦 Reserving stock: itemId=${item.itemId}, baseId=${baseItemId}, key=${key}, qty=${item.quantity}`);
+        console.log(`📦 Firebase path: inventario/${CATALOG_KEY}/items/${key}`);
+        
+        try {
+          await db.runTransaction(async (transaction) => {
+            const doc = await transaction.get(invRef);
+            console.log(`📦 Document exists: ${doc.exists}`);
+            
+            if (doc.exists) {
+              const data = doc.data();
+              console.log(`📦 Current data:`, data);
+              const currentStock = data.stock || 0;
+              const currentReserved = data.reserved || 0;
+              const newReserved = currentReserved + item.quantity;
+              const newAvailable = currentStock - newReserved;
+              
+              console.log(`📦 Updating ${key}: stock=${currentStock}, reserved=${currentReserved}->${newReserved}, available->${newAvailable}`);
+              
+              transaction.update(invRef, {
+                reserved: newReserved,
+                available: newAvailable,
+                updatedAt: new Date().toISOString()
+              });
+            } else {
+              // Document doesn't exist, create it with reserved stock
+              console.log(`📦 Creating inventory doc for ${key} with reserved=${item.quantity}`);
+              transaction.set(invRef, {
+                itemId: baseItemId,
+                stock: 0,
+                reserved: item.quantity,
+                available: -item.quantity,
+                createdAt: new Date().toISOString(),
+                updatedAt: new Date().toISOString()
+              });
+            }
+          });
+          console.log(`✅ Stock reserved for ${key}`);
+        } catch (stockError) {
+          console.error(`⚠️ Error reserving stock for ${key}:`, stockError);
+          console.error(`⚠️ Error code:`, stockError.code);
+          console.error(`⚠️ Error message:`, stockError.message);
+          // Continue with other items even if one fails
+        }
+      }
+      console.log('📦 Stock reservation complete');
+
+      return { success: true, orderId: orderRef.id };
+
+    } catch (error) {
+      console.error('Error creating Firebase order:', error);
+      return { success: false, orderId: null, error: error.message };
+    }
+  }
+
   // Submit order via WhatsApp
-  function submitOrder() {
+  async function submitOrder() {
     const nameInput = document.getElementById('cart-name');
     const phoneInput = document.getElementById('cart-phone');
     const addressInput = document.getElementById('cart-address');
@@ -1371,6 +1879,13 @@
       return;
     }
 
+    // Validate stock availability if inventory is enabled
+    const stockValidation = await validateStockAvailability();
+    if (!stockValidation.valid) {
+      showToast('⚠️ ' + stockValidation.errors[0]);
+      return;
+    }
+
     // Build message
     const { subtotal, delivery, total } = getCartTotals();
     const isToConsult = formState.deliveryZone?.toConsult === true;
@@ -1383,6 +1898,13 @@
       // Add exclusions if any
       if (item.exclusions && item.exclusions.length > 0) {
         message += `  ❌ Sin ${item.exclusions.join(', Sin ')}\n`;
+      }
+      // Add group selections if any
+      if (item.groupSelections && item.groupSelections.length > 0) {
+        item.groupSelections.forEach(g => {
+          const optionNames = g.options.map(o => o.price > 0 ? `${o.name} (+${o.priceFormatted})` : o.name).join(', ');
+          message += `  📋 ${g.groupName}: ${optionNames}\n`;
+        });
       }
       // Add addons if any
       if (item.addons && item.addons.length > 0) {
@@ -1448,6 +1970,26 @@
       message += `\n📝 *Notas:* ${notesInput.value.trim()}\n`;
     }
 
+    // Create Firebase order and reserve stock (if inventory enabled)
+    const customerData = {
+      name: nameInput.value.trim(),
+      phone: phoneInput.value.trim(),
+      address: addressInput?.value.trim() || null,
+      notes: notesInput?.value.trim() || null,
+      paymentMethod: paymentSelect?.value || null,
+      deliveryZone: formState.deliveryZone?.name || null
+    };
+    
+    const orderResult = await createFirebaseOrder(customerData, { subtotal, delivery, total });
+    
+    // Add order ID to message if created
+    if (orderResult.orderId) {
+      const orderIdShort = orderResult.orderId.substring(0, 8).toUpperCase();
+      message = `📦 *Pedido #${orderIdShort}*\n` + message;
+      message += `\n━━━━━━━━━━━━━━━━━━\n`;
+      message += `⚠️ _Stock reservado. Confirmar en admin._\n`;
+    }
+
     // Clean phone number - support multiple country codes
     let phone = config.whatsappNumber.replace(/\D/g, '');
     // Don't force country code - let the number be as configured
@@ -1456,9 +1998,45 @@
       return;
     }
 
-    // Open WhatsApp
-    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
+    // Sanitize message to avoid URI malformed errors
+    // Remove any problematic Unicode characters and normalize the string
+    let sanitizedMessage = message;
+    try {
+      sanitizedMessage = message.normalize('NFC');
+    } catch (e) {
+      // If normalize fails, continue with original
+    }
+    // Remove lone surrogates and control characters (compatible with all browsers)
+    sanitizedMessage = sanitizedMessage
+      .split('')
+      .filter(char => {
+        const code = char.charCodeAt(0);
+        // Remove control characters (except newline, carriage return, tab)
+        if (code < 32 && code !== 10 && code !== 13 && code !== 9) return false;
+        if (code === 127) return false;
+        // Remove lone surrogates
+        if (code >= 0xD800 && code <= 0xDFFF) return false;
+        return true;
+      })
+      .join('');
+
+    // Open WhatsApp with error handling
+    try {
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(sanitizedMessage)}`;
+      window.open(url, '_blank');
+    } catch (e) {
+      console.error('Error encoding message:', e);
+      // Fallback: try with a simpler message
+      try {
+        const simpleMessage = sanitizedMessage.replace(/[^\x20-\x7E\n\r\u00A0-\u00FF\u0100-\u017F]/g, '');
+        const url = `https://wa.me/${phone}?text=${encodeURIComponent(simpleMessage)}`;
+        window.open(url, '_blank');
+      } catch (e2) {
+        console.error('Error with fallback encoding:', e2);
+        showToast('⚠️ Error al enviar el pedido. Intentá de nuevo.');
+        return;
+      }
+    }
 
     // Clear cart and form after sending
     clearCart();

@@ -441,6 +441,50 @@
     };
   }
 
+  // Tab Navigation
+  function setupTabNavigation() {
+    var tabs = document.querySelectorAll('.admin-tab');
+    var tabContents = document.querySelectorAll('.tab-content');
+    
+    tabs.forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        var targetTab = tab.dataset.tab;
+        
+        // Update active tab button
+        tabs.forEach(function(t) { t.classList.remove('active'); });
+        tab.classList.add('active');
+        
+        // Show/hide tab content
+        tabContents.forEach(function(content) {
+          if (content.id === 'tab-' + targetTab) {
+            content.classList.add('active');
+            content.style.display = 'block';
+          } else {
+            content.classList.remove('active');
+            content.style.display = 'none';
+          }
+        });
+      });
+    });
+    
+    // Set initial active tab based on features
+    var features = window.FEATURES || {};
+    var firstActiveTab = null;
+    
+    if (features.appointments) {
+      firstActiveTab = 'appointments';
+    } else if (features.inventory) {
+      firstActiveTab = 'orders';
+    } else if (features.prices) {
+      firstActiveTab = 'prices';
+    }
+    
+    if (firstActiveTab) {
+      var activeTabBtn = document.querySelector('.admin-tab[data-tab="' + firstActiveTab + '"]');
+      if (activeTabBtn) activeTabBtn.click();
+    }
+  }
+
   document.addEventListener('DOMContentLoaded', function() {
     if (!initFirebase()) return;
     if (loginForm) loginForm.addEventListener('submit', handleLogin);
@@ -460,5 +504,8 @@
     if (slotForm) slotForm.addEventListener('submit', handleSlotSubmit);
     document.querySelectorAll('.modal-close, .modal-cancel').forEach(function(btn) { btn.addEventListener('click', closeModal); });
     if (slotModal) slotModal.addEventListener('click', function(e) { if (e.target === slotModal) closeModal(); });
+    
+    // Setup tab navigation
+    setupTabNavigation();
   });
 })();
