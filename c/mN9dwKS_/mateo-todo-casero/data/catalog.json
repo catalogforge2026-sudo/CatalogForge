@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/mN9dwKS_/mateo-todo-casero",
     "clientKey": "mN9dwKS_",
-    "generatedAt": "2026-01-31T02:02:20.218Z",
+    "generatedAt": "2026-02-01T14:34:38.018Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -13,7 +13,7 @@
     "slug": "mateo-racedo",
     "logo": null,
     "email": "",
-    "phone": "1150192474",
+    "phone": "+54 1171208978",
     "address": "Bellocq 3633 Olivos Vicente López",
     "mapsUrl": "https://maps.app.goo.gl/W4Y34AG6uHyjg71NA",
     "website": null,
@@ -123,19 +123,11 @@
               "isDefault": false
             },
             {
-              "id": 13,
-              "name": "Queso extra",
-              "type": "add",
-              "price": 2000,
-              "priceFormatted": "$ 2.000",
-              "isDefault": false
-            },
-            {
               "id": 14,
               "name": "Huevo frito",
               "type": "add",
-              "price": 2500,
-              "priceFormatted": "$ 2.500",
+              "price": 1500,
+              "priceFormatted": "$ 1.500",
               "isDefault": false
             },
             {
@@ -157,22 +149,6 @@
             {
               "id": 7,
               "name": "Mostaza",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 9,
-              "name": "Lechuga",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 10,
-              "name": "Tomate",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
@@ -220,19 +196,11 @@
               "isDefault": false
             },
             {
-              "id": 23,
-              "name": "Queso extra",
-              "type": "add",
-              "price": 2000,
-              "priceFormatted": "$ 2.000",
-              "isDefault": false
-            },
-            {
               "id": 24,
               "name": "Huevo frito",
               "type": "add",
-              "price": 2500,
-              "priceFormatted": "$ 2.500",
+              "price": 1500,
+              "priceFormatted": "$ 1.500",
               "isDefault": false
             },
             {
@@ -258,25 +226,37 @@
               "price": null,
               "priceFormatted": null,
               "isDefault": true
-            },
-            {
-              "id": 19,
-              "name": "Lechuga",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 20,
-              "name": "Tomate",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
             }
           ],
-          "customizationGroups": [],
+          "customizationGroups": [
+            {
+              "id": 17,
+              "name": "Elegí tu opción",
+              "selectionType": "exactly",
+              "minSelections": 1,
+              "maxSelections": 1,
+              "isRequired": true,
+              "dependsOnOptionId": null,
+              "options": [
+                {
+                  "id": 124,
+                  "name": "Con jamón y queso",
+                  "type": "add",
+                  "price": null,
+                  "priceFormatted": null,
+                  "isDefault": true
+                },
+                {
+                  "id": 125,
+                  "name": "Lechuga y tomate",
+                  "type": "add",
+                  "price": null,
+                  "priceFormatted": null,
+                  "isDefault": false
+                }
+              ]
+            }
+          ],
           "minVariantPrice": null,
           "minVariantPriceFormatted": null,
           "hasPrice": true,
@@ -285,7 +265,7 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": true,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": true
         },
         {
           "id": 231,
@@ -317,19 +297,11 @@
               "isDefault": false
             },
             {
-              "id": 33,
-              "name": "Queso extra",
-              "type": "add",
-              "price": 2000,
-              "priceFormatted": "$ 2.000",
-              "isDefault": false
-            },
-            {
               "id": 34,
               "name": "Huevo frito",
               "type": "add",
-              "price": 2500,
-              "priceFormatted": "$ 2.500",
+              "price": 1500,
+              "priceFormatted": "$ 1.500",
               "isDefault": false
             },
             {
@@ -351,22 +323,6 @@
             {
               "id": 27,
               "name": "Mostaza",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 29,
-              "name": "Lechuga",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 30,
-              "name": "Tomate",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
@@ -455,7 +411,40 @@
               "hasDiscount": false
             }
           ],
-          "customizations": [],
+          "customizations": [
+            {
+              "id": 128,
+              "name": "Papas fritas",
+              "type": "add",
+              "price": 5000,
+              "priceFormatted": "$ 5.000",
+              "isDefault": false
+            },
+            {
+              "id": 144,
+              "name": "Mayonesa",
+              "type": "remove",
+              "price": null,
+              "priceFormatted": null,
+              "isDefault": true
+            },
+            {
+              "id": 145,
+              "name": "Ketchup",
+              "type": "remove",
+              "price": null,
+              "priceFormatted": null,
+              "isDefault": true
+            },
+            {
+              "id": 146,
+              "name": "Mostaza",
+              "type": "remove",
+              "price": null,
+              "priceFormatted": null,
+              "isDefault": true
+            }
+          ],
           "customizationGroups": [],
           "minVariantPrice": 8000,
           "minVariantPriceFormatted": "$ 8.000",
@@ -464,12 +453,12 @@
           "hasGallery": false,
           "hasVariants": true,
           "hasDiscount": false,
-          "hasCustomizations": false,
+          "hasCustomizations": true,
           "hasCustomizationGroups": false
         },
         {
           "id": 234,
-          "name": "Sandwich de milanesa con guarnición",
+          "name": "Sandwich de milanesa (tomate y lechuga o jamón y queso)",
           "slug": "sandwich-de-milanesa-con-guarnicin",
           "description": "Con tomate y lechuga o jamón y queso",
           "price": "$ 10.000",
@@ -520,39 +509,67 @@
           ],
           "customizations": [
             {
-              "id": 35,
-              "name": "Tomate",
+              "id": 130,
+              "name": "Papas fritas",
+              "type": "add",
+              "price": 5000,
+              "priceFormatted": "$ 5.000",
+              "isDefault": false
+            },
+            {
+              "id": 150,
+              "name": "Mayonesa",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
               "isDefault": true
             },
             {
-              "id": 36,
-              "name": "Lechuga",
+              "id": 151,
+              "name": "Ketchup",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
               "isDefault": true
             },
             {
-              "id": 37,
-              "name": "Jamón",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 38,
-              "name": "Queso",
+              "id": 152,
+              "name": "Mostaza",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
               "isDefault": true
             }
           ],
-          "customizationGroups": [],
+          "customizationGroups": [
+            {
+              "id": 18,
+              "name": "Elegí tu opción",
+              "selectionType": "exactly",
+              "minSelections": 1,
+              "maxSelections": 1,
+              "isRequired": true,
+              "dependsOnOptionId": null,
+              "options": [
+                {
+                  "id": 174,
+                  "name": "Tomate y lechuga",
+                  "type": "add",
+                  "price": null,
+                  "priceFormatted": null,
+                  "isDefault": true
+                },
+                {
+                  "id": 175,
+                  "name": "Jamón y queso",
+                  "type": "add",
+                  "price": null,
+                  "priceFormatted": null,
+                  "isDefault": false
+                }
+              ]
+            }
+          ],
           "minVariantPrice": 10000,
           "minVariantPriceFormatted": "$ 10.000",
           "hasPrice": true,
@@ -561,7 +578,7 @@
           "hasVariants": true,
           "hasDiscount": false,
           "hasCustomizations": true,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": true
         },
         {
           "id": 235,
@@ -616,40 +633,32 @@
           ],
           "customizations": [
             {
-              "id": 39,
-              "name": "Jamón",
+              "id": 129,
+              "name": "Papas fritas",
+              "type": "add",
+              "price": 5000,
+              "priceFormatted": "$ 5.000",
+              "isDefault": false
+            },
+            {
+              "id": 147,
+              "name": "Mayonesa",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
               "isDefault": true
             },
             {
-              "id": 40,
-              "name": "Queso",
+              "id": 148,
+              "name": "Ketchup",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
               "isDefault": true
             },
             {
-              "id": 41,
-              "name": "Lechuga",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 42,
-              "name": "Tomate",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 43,
-              "name": "Huevo duro",
+              "id": 149,
+              "name": "Mostaza",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
@@ -720,24 +729,32 @@
           ],
           "customizations": [
             {
-              "id": 44,
-              "name": "Jamón",
+              "id": 132,
+              "name": "Papas fritas",
+              "type": "add",
+              "price": 5000,
+              "priceFormatted": "$ 5.000",
+              "isDefault": false
+            },
+            {
+              "id": 156,
+              "name": "Mayonesa",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
               "isDefault": true
             },
             {
-              "id": 45,
-              "name": "Queso",
+              "id": 157,
+              "name": "Ketchup",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
               "isDefault": true
             },
             {
-              "id": 46,
-              "name": "Tomate",
+              "id": 158,
+              "name": "Mostaza",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
@@ -808,40 +825,32 @@
           ],
           "customizations": [
             {
-              "id": 47,
-              "name": "Jamón",
+              "id": 131,
+              "name": "Papas fritas",
+              "type": "add",
+              "price": 5000,
+              "priceFormatted": "$ 5.000",
+              "isDefault": false
+            },
+            {
+              "id": 153,
+              "name": "Mayonesa",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
               "isDefault": true
             },
             {
-              "id": 48,
-              "name": "Queso",
+              "id": 154,
+              "name": "Ketchup",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
               "isDefault": true
             },
             {
-              "id": 49,
-              "name": "Lechuga",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 50,
-              "name": "Tomate",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 51,
-              "name": "Huevo duro",
+              "id": 155,
+              "name": "Mostaza",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
@@ -881,32 +890,32 @@
           "variants": [],
           "customizations": [
             {
-              "id": 52,
-              "name": "Pollo",
+              "id": 126,
+              "name": "Papas fritas",
+              "type": "add",
+              "price": 5000,
+              "priceFormatted": "$ 5.000",
+              "isDefault": false
+            },
+            {
+              "id": 138,
+              "name": "Mayonesa",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
               "isDefault": true
             },
             {
-              "id": 53,
-              "name": "Lechuga",
+              "id": 139,
+              "name": "Ketchup",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
               "isDefault": true
             },
             {
-              "id": 54,
-              "name": "Queso",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 55,
-              "name": "Salsa caesar",
+              "id": 140,
+              "name": "Mostaza",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
@@ -946,40 +955,32 @@
           "variants": [],
           "customizations": [
             {
-              "id": 56,
-              "name": "Lechuga",
+              "id": 134,
+              "name": "Papas fritas",
+              "type": "add",
+              "price": 5000,
+              "priceFormatted": "$ 5.000",
+              "isDefault": false
+            },
+            {
+              "id": 162,
+              "name": "Mayonesa",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
               "isDefault": true
             },
             {
-              "id": 57,
-              "name": "Tomate",
+              "id": 163,
+              "name": "Ketchup",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
               "isDefault": true
             },
             {
-              "id": 58,
-              "name": "Huevo",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 59,
-              "name": "Queso",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 60,
-              "name": "Aceitunas",
+              "id": 164,
+              "name": "Mostaza",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
@@ -1019,32 +1020,32 @@
           "variants": [],
           "customizations": [
             {
-              "id": 61,
-              "name": "Lechuga",
+              "id": 127,
+              "name": "Papas fritas",
+              "type": "add",
+              "price": 5000,
+              "priceFormatted": "$ 5.000",
+              "isDefault": false
+            },
+            {
+              "id": 141,
+              "name": "Mayonesa",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
               "isDefault": true
             },
             {
-              "id": 62,
-              "name": "Tomate",
+              "id": 142,
+              "name": "Ketchup",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
               "isDefault": true
             },
             {
-              "id": 63,
-              "name": "Atún",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 64,
-              "name": "Queso",
+              "id": 143,
+              "name": "Mostaza",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
@@ -1084,24 +1085,32 @@
           "variants": [],
           "customizations": [
             {
-              "id": 65,
-              "name": "Pollo",
+              "id": 133,
+              "name": "Papas fritas",
+              "type": "add",
+              "price": 5000,
+              "priceFormatted": "$ 5.000",
+              "isDefault": false
+            },
+            {
+              "id": 159,
+              "name": "Mayonesa",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
               "isDefault": true
             },
             {
-              "id": 66,
-              "name": "Queso",
+              "id": 160,
+              "name": "Ketchup",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
               "isDefault": true
             },
             {
-              "id": 67,
-              "name": "Tomate",
+              "id": 161,
+              "name": "Mostaza",
               "type": "remove",
               "price": null,
               "priceFormatted": null,
@@ -3436,8 +3445,8 @@
   "totalItems": 44,
   "navButtonText": "Ver productos",
   "buildInfo": {
-    "version": "20260130-230220",
-    "timestamp": "2026-01-31T02:02:20.237Z",
+    "version": "20260201-113438",
+    "timestamp": "2026-02-01T14:34:38.059Z",
     "generator": "SCG v1.0.0"
   },
   "branding": {
