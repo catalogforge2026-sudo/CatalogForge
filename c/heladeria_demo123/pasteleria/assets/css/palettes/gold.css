@@ -1,0 +1,58 @@
+/* Pastry Theme - Gold Palette
+   Lujoso y premium con tonos dorados */
+
+.palette-gold {
+  --bg-color: #FFFDF8;
+  --bg-secondary: #FFF9EE;
+  --bg-tertiary: #FFFBF5;
+  
+  --primary-color: #C9A87C;
+  --primary-hover: #b8956a;
+  --primary-contrast: #ffffff;
+  
+  --accent-color: #8B6914;
+  --accent-contrast: #ffffff;
+  
+  --highlight: #FFF5E6;
+  
+  --text-color: #4A4035;
+  --text-secondary: #7B6B5B;
+  --text-light: #A89B88;
+  
+  --card-bg: #ffffff;
+  --border-color: #F0E4D0;
+  
+  --tag-bg: #FFF5E6;
+  --tag-color: #8B6914;
+  
+  --shadow-card: 0 8px 32px rgba(201, 168, 124, 0.25);
+  --shadow-glow: 0 0 40px rgba(201, 168, 124, 0.3);
+  
+  --gradient-sweet: linear-gradient(180deg, #FFFDF8 0%, #FFF9EE 100%);
+}
+
+/* Gold palette premium touches */
+.palette-gold .brand-name {
+  background: linear-gradient(135deg, #C9A87C, #8B6914, #C9A87C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.palette-gold .item-card.is-featured::after {
+  background: linear-gradient(135deg, #C9A87C, #8B6914);
+  color: #ffffff;
+}
+
+.palette-gold .section-header h2 {
+  color: #8B6914;
+}
+
+.palette-gold .section-header::before {
+  content: '✦ ✦ ✦';
+  color: #C9A87C;
+}
+
+.palette-gold .btn-add-cart-lg {
+  background: linear-gradient(135deg, #8B6914, #C9A87C);
+}

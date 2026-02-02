@@ -1,0 +1,47 @@
+/* Pastry Theme - Chocolate Palette
+   Elegante y sofisticado con tonos cacao */
+
+.palette-chocolate {
+  --bg-color: #FFF9F5;
+  --bg-secondary: #FFF3ED;
+  --bg-tertiary: #FFFAF8;
+  
+  --primary-color: #6B4F4F;
+  --primary-hover: #5a4242;
+  --primary-contrast: #ffffff;
+  
+  --accent-color: #F6C1CC;
+  --accent-contrast: #6B4F4F;
+  
+  --highlight: #8B6B6B;
+  
+  --text-color: #4A3F3F;
+  --text-secondary: #7B6B6B;
+  --text-light: #A89898;
+  
+  --card-bg: #ffffff;
+  --border-color: #E8D8D0;
+  
+  --tag-bg: #F6C1CC;
+  --tag-color: #6B4F4F;
+  
+  --shadow-card: 0 8px 32px rgba(107, 79, 79, 0.2);
+  --shadow-glow: 0 0 40px rgba(107, 79, 79, 0.15);
+  
+  --gradient-sweet: linear-gradient(180deg, #FFF9F5 0%, #FFF3ED 100%);
+}
+
+/* Chocolate palette specific overrides */
+.palette-chocolate .btn-add-cart {
+  background: var(--primary-color);
+  color: var(--primary-contrast);
+}
+
+.palette-chocolate .btn-add-cart:hover {
+  background: var(--primary-hover);
+}
+
+.palette-chocolate .item-card.is-featured::after {
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  color: var(--accent-contrast);
+}

@@ -1,0 +1,32 @@
+/* Pastry Theme - Cream Palette
+   Cálido y elegante con tonos vainilla */
+
+.palette-cream {
+  --bg-color: #FFFCF8;
+  --bg-secondary: #FFF8F0;
+  --bg-tertiary: #FFFAF5;
+  
+  --primary-color: #E8D5C4;
+  --primary-hover: #dcc7b3;
+  --primary-contrast: #5D4E42;
+  
+  --accent-color: #C9A87C;
+  --accent-contrast: #ffffff;
+  
+  --highlight: #FFF8F0;
+  
+  --text-color: #5D4E42;
+  --text-secondary: #8B7B6B;
+  --text-light: #B8A898;
+  
+  --card-bg: #ffffff;
+  --border-color: #F0E4D8;
+  
+  --tag-bg: #FFF5E8;
+  --tag-color: #5D4E42;
+  
+  --shadow-card: 0 8px 32px rgba(232, 213, 196, 0.3);
+  --shadow-glow: 0 0 40px rgba(201, 168, 124, 0.25);
+  
+  --gradient-sweet: linear-gradient(180deg, #FFFCF8 0%, #FFF8F0 100%);
+}
