@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/mN9dwKS_/mateo-todo-casero",
     "clientKey": "mN9dwKS_",
-    "generatedAt": "2026-02-02T00:11:57.809Z",
+    "generatedAt": "2026-02-02T12:40:10.645Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -2030,7 +2030,7 @@
         },
         {
           "id": 245,
-          "name": "Caesar",
+          "name": "Caesar (Lechuga, pollo, salsa caesar, queso parmesano, crutones)",
           "slug": "caesar",
           "description": "Lechuga, pollo, salsa caesar, queso parmesano, crutones",
           "price": "$ 12.000",
@@ -2094,7 +2094,7 @@
         },
         {
           "id": 246,
-          "name": "Gran Mateo",
+          "name": "Gran Mateo (Lechuga, tomate, zanahoria, doble pollo, jamón, queso, huevo)",
           "slug": "gran-mateo",
           "description": "Lechuga, tomate, zanahoria, doble pollo, jamón, queso, huevo",
           "price": "$ 14.000",
@@ -2158,7 +2158,7 @@
         },
         {
           "id": 247,
-          "name": "Mateo",
+          "name": "Mateo (Lechuga, tomate, zanahoria, pollo, jamón, queso, huevo)",
           "slug": "mateo",
           "description": "Lechuga, tomate, zanahoria, pollo, jamón, queso, huevo",
           "price": "$ 12.000",
@@ -2222,7 +2222,7 @@
         },
         {
           "id": 248,
-          "name": "Alfonso",
+          "name": "Alfonso (Arroz, zanahoria, lechuga, arvejas, huevo, pollo, queso)",
           "slug": "alfonso",
           "description": "Arroz, zanahoria, lechuga, arvejas, huevo, pollo, queso",
           "price": "$ 12.000",
@@ -2286,7 +2286,7 @@
         },
         {
           "id": 249,
-          "name": "Karina",
+          "name": "Karina (Arroz, tomate, lechuga, zanahoria, queso)",
           "slug": "karina",
           "description": "Arroz, tomate, lechuga, zanahoria, queso",
           "price": "$ 12.000",
@@ -2350,7 +2350,7 @@
         },
         {
           "id": 250,
-          "name": "Dolores",
+          "name": "Dolores (Pollo, queso, tomate, lechuga, zanahoria)",
           "slug": "dolores",
           "description": "Pollo, queso, tomate, lechuga, zanahoria",
           "price": "$ 12.000",
@@ -2414,7 +2414,7 @@
         },
         {
           "id": 251,
-          "name": "Cristian",
+          "name": "Cristian (Queso, huevo, choclo, arvejas, tomate, lechuga, zanahoria)",
           "slug": "cristian",
           "description": "Queso, huevo, choclo, arvejas, tomate, lechuga, zanahoria",
           "price": "$ 12.000",
@@ -2478,7 +2478,7 @@
         },
         {
           "id": 252,
-          "name": "Nemo",
+          "name": "Nemo (Arroz, tomate, atún, queso)",
           "slug": "nemo",
           "description": "Arroz, tomate, atún, queso",
           "price": "$ 12.000",
@@ -2542,7 +2542,7 @@
         },
         {
           "id": 253,
-          "name": "Doble Pollo",
+          "name": "Doble Pollo (Arroz, tomate, doble pollo)",
           "slug": "doble-pollo",
           "description": "Arroz, tomate, doble pollo",
           "price": "$ 12.000",
@@ -3565,8 +3565,8 @@
   "totalItems": 44,
   "navButtonText": "Ver productos",
   "buildInfo": {
-    "version": "20260201-211157",
-    "timestamp": "2026-02-02T00:11:57.825Z",
+    "version": "20260202-094010",
+    "timestamp": "2026-02-02T12:40:10.659Z",
     "generator": "SCG v1.0.0"
   },
   "branding": {
