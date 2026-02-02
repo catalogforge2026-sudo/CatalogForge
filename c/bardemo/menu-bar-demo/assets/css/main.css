@@ -12,27 +12,13 @@
    ============================================ */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
 
-/* Curlz MT - Fuente del sistema Windows */
-@font-face {
-  font-family: 'Curlz MT';
-  src: local('Curlz MT');
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* ============================================
    BASE VARIABLES - Override base theme
    ============================================ */
 :root {
   --font-family: 'Montserrat', system-ui, sans-serif;
-  --font-family-heading: 'Cinzel', Georgia, serif;
-  --font-family-display: var(--font-family-heading); /* Alias for backwards compatibility */
+  --font-family-display: 'Cinzel', Georgia, serif;
   --font-family-accent: 'Cormorant Garamond', Georgia, serif;
-  
-  /* Granular font system - defaults to heading for backwards compatibility */
-  --font-family-catalog-title: var(--font-family-heading);
-  --font-family-section-title: var(--font-family-accent);
-  --font-family-item-name: var(--font-family);
   
   --primary-color: #d4a853;
   --primary-hover: #e8c068;
@@ -140,11 +126,6 @@ body {
   display: none !important;
 }
 
-/* Ocultar búsqueda y filtro del header - usar solo los de abajo */
-.header-controls {
-  display: none !important;
-}
-
 .header-content {
   position: relative;
   z-index: 1;
@@ -155,7 +136,7 @@ body {
 
 /* Subtítulo (nombre del catálogo) - mostrar como título principal en Mixology */
 .header-subtitle {
-  font-family: var(--font-family-catalog-title) !important;
+  font-family: var(--font-family-display) !important;
   font-size: clamp(2.5rem, 10vw, 4.5rem) !important;
   font-weight: 600 !important;
   color: #f5e6c8 !important;
@@ -215,332 +196,6 @@ body {
 }
 
 /* ============================================
-   PRESET CASERO - Estilo logo neón ovalado
-   ============================================ */
-body.font-casero .header-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0.6rem 1.5rem;
-  border: 2px solid #f5c842;
-  border-radius: 50%;
-  aspect-ratio: 2.2 / 1;
-  min-width: 180px;
-  max-width: 280px;
-  position: relative;
-  background: transparent;
-  /* Efecto neón intenso */
-  box-shadow: 
-    0 0 5px #f5c842,
-    0 0 10px #f5c842,
-    0 0 20px #f5c842,
-    0 0 40px rgba(245, 200, 66, 0.5),
-    inset 0 0 10px rgba(245, 200, 66, 0.15);
-  animation: neonBorderPulse 2s ease-in-out infinite alternate;
-}
-
-@keyframes neonBorderPulse {
-  from {
-    box-shadow: 
-      0 0 5px #f5c842,
-      0 0 10px #f5c842,
-      0 0 20px #f5c842,
-      0 0 40px rgba(245, 200, 66, 0.5),
-      inset 0 0 10px rgba(245, 200, 66, 0.15);
-  }
-  to {
-    box-shadow: 
-      0 0 8px #f5c842,
-      0 0 15px #f5c842,
-      0 0 30px #f5c842,
-      0 0 60px rgba(245, 200, 66, 0.7),
-      inset 0 0 15px rgba(245, 200, 66, 0.2);
-  }
-}
-
-/* Efecto hover/touch - Neón se enciende con más intensidad */
-body.font-casero .header-text {
-  cursor: pointer;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-/* Quitar highlight azul en TODOS los elementos del header para móvil */
-body.font-casero .site-header,
-body.font-casero .site-header *,
-body.font-casero .header-container,
-body.font-casero .header-container *,
-body.font-casero .header-brand,
-body.font-casero .header-brand *,
-body.font-casero .header-text,
-body.font-casero .header-text *,
-body.font-casero .header-subtitle,
-body.font-casero .header-subtitle * {
-  -webkit-tap-highlight-color: transparent !important;
-  -webkit-touch-callout: none !important;
-  -webkit-user-select: none !important;
-  user-select: none !important;
-  outline: none !important;
-  -webkit-focus-ring-color: transparent !important;
-}
-
-body.font-casero .header-text:focus,
-body.font-casero .header-text:focus-visible,
-body.font-casero .header-subtitle:focus,
-body.font-casero .header-subtitle:focus-visible {
-  outline: none !important;
-  box-shadow: none;
-}
-
-body.font-casero .header-text:hover,
-body.font-casero .header-text:active {
-  animation: neonFlicker 0.15s ease-in-out, neonBorderGlow 0.5s ease-out forwards;
-  transform: scale(1.03);
-}
-
-body.font-casero .header-text:hover .header-subtitle,
-body.font-casero .header-text:active .header-subtitle {
-  animation: neonTextGlow 0.5s ease-out forwards;
-}
-
-/* Animación de parpadeo tipo neón */
-@keyframes neonFlicker {
-  0%, 100% { opacity: 1; }
-  10% { opacity: 0.8; }
-  20% { opacity: 1; }
-  30% { opacity: 0.9; }
-  40% { opacity: 1; }
-}
-
-/* Brillo intenso del borde al hover */
-@keyframes neonBorderGlow {
-  0% {
-    box-shadow: 
-      0 0 5px #f5c842,
-      0 0 10px #f5c842,
-      0 0 20px #f5c842,
-      0 0 40px rgba(245, 200, 66, 0.5),
-      inset 0 0 10px rgba(245, 200, 66, 0.15);
-  }
-  100% {
-    box-shadow: 
-      0 0 10px #f5c842,
-      0 0 20px #f5c842,
-      0 0 40px #f5c842,
-      0 0 80px rgba(245, 200, 66, 0.8),
-      0 0 120px rgba(245, 200, 66, 0.5),
-      inset 0 0 25px rgba(245, 200, 66, 0.3);
-  }
-}
-
-/* Brillo intenso del texto al hover */
-@keyframes neonTextGlow {
-  0% {
-    text-shadow: 
-      0 0 5px #f5c842,
-      0 0 10px #f5c842,
-      0 0 20px #f5c842,
-      0 0 40px rgba(245, 200, 66, 0.6);
-  }
-  100% {
-    text-shadow: 
-      0 0 10px #fff,
-      0 0 20px #f5c842,
-      0 0 40px #f5c842,
-      0 0 60px #f5c842,
-      0 0 80px rgba(245, 200, 66, 0.8);
-    color: #fff;
-  }
-}
-
-/* Puntos decorativos a los lados */
-body.font-casero .header-text::before {
-  content: '•';
-  position: absolute;
-  font-size: 1.2rem;
-  color: #f5c842;
-  left: 5%;
-  top: 50%;
-  transform: translateY(-50%);
-  text-shadow: 
-    0 0 5px #f5c842,
-    0 0 10px #f5c842,
-    0 0 20px #f5c842;
-}
-
-/* Punto derecho */
-body.font-casero .header-text::after {
-  content: '•' !important;
-  position: absolute !important;
-  font-size: 1.2rem !important;
-  color: #f5c842 !important;
-  right: 5% !important;
-  left: auto !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  width: auto !important;
-  height: auto !important;
-  background: none !important;
-  border: none !important;
-  text-shadow: 
-    0 0 5px #f5c842,
-    0 0 10px #f5c842,
-    0 0 20px #f5c842 !important;
-  letter-spacing: normal !important;
-  opacity: 1 !important;
-}
-
-body.font-casero .header-subtitle {
-  font-family: var(--font-family-display) !important;
-  font-size: clamp(1.1rem, 4vw, 1.5rem) !important;
-  font-weight: 400 !important;
-  color: #f5c842 !important;
-  text-transform: none !important;
-  letter-spacing: 0.02em;
-  text-align: center;
-  line-height: 1.15;
-  padding: 0 !important;
-  position: relative;
-  /* Efecto neón en texto */
-  text-shadow: 
-    0 0 5px #f5c842,
-    0 0 10px #f5c842,
-    0 0 20px #f5c842,
-    0 0 40px rgba(245, 200, 66, 0.6);
-  animation: neonTextPulse 2s ease-in-out infinite alternate;
-}
-
-@keyframes neonTextPulse {
-  from {
-    text-shadow: 
-      0 0 5px #f5c842,
-      0 0 10px #f5c842,
-      0 0 20px #f5c842,
-      0 0 40px rgba(245, 200, 66, 0.6);
-  }
-  to {
-    text-shadow: 
-      0 0 8px #f5c842,
-      0 0 15px #f5c842,
-      0 0 30px #f5c842,
-      0 0 50px rgba(245, 200, 66, 0.8);
-  }
-}
-
-/* Efecto flicker de neón al pasar el mouse */
-@keyframes neonFlicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    text-shadow: 
-      0 0 5px #f5c842,
-      0 0 10px #f5c842,
-      0 0 20px #f5c842,
-      0 0 40px #f5c842,
-      0 0 80px #f5c842;
-    opacity: 1;
-  }
-  20%, 24%, 55% {
-    text-shadow: none;
-    opacity: 0.8;
-  }
-}
-
-@keyframes neonBorderFlicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    box-shadow: 
-      0 0 5px #f5c842,
-      0 0 10px #f5c842,
-      0 0 20px #f5c842,
-      0 0 40px #f5c842,
-      0 0 80px rgba(245, 200, 66, 0.8),
-      inset 0 0 15px rgba(245, 200, 66, 0.3);
-    border-color: #f5c842;
-  }
-  20%, 24%, 55% {
-    box-shadow: 
-      0 0 2px #f5c842,
-      0 0 5px rgba(245, 200, 66, 0.3),
-      inset 0 0 5px rgba(245, 200, 66, 0.1);
-    border-color: rgba(245, 200, 66, 0.5);
-  }
-}
-
-/* Hover en desktop - efecto flicker */
-body.font-casero .header-text:hover {
-  animation: neonBorderFlicker 0.8s ease-in-out;
-  cursor: pointer;
-}
-
-body.font-casero .header-text:hover .header-subtitle {
-  animation: neonFlicker 0.8s ease-in-out;
-}
-
-/* Clase para activar flicker via JS (touch en móvil) */
-body.font-casero .header-text.neon-flicker {
-  animation: neonBorderFlicker 0.8s ease-in-out;
-}
-
-body.font-casero .header-text.neon-flicker .header-subtitle {
-  animation: neonFlicker 0.8s ease-in-out;
-}
-
-/* Ocultar las líneas decorativas laterales del título */
-body.font-casero .header-subtitle::before,
-body.font-casero .header-subtitle::after {
-  display: none !important;
-}
-
-/* Estilo para el nombre dividido en dos líneas */
-body.font-casero .header-subtitle .casero-line-1 {
-  display: block;
-  font-size: 1em;
-  letter-spacing: 0.15em;
-  margin-bottom: 0.05em;
-  text-transform: uppercase;
-}
-
-body.font-casero .header-subtitle .casero-line-2 {
-  display: block;
-  font-size: 1em;
-  text-transform: none;
-  letter-spacing: 0.05em;
-  white-space: nowrap;
-}
-
-/* Ocultar tagline en casero para mantener compacto */
-body.font-casero .header-tagline {
-  display: none;
-}
-
-/* Responsive para preset casero */
-@media (max-width: 480px) {
-  body.font-casero .header-text {
-    min-width: 200px;
-    max-width: 280px;
-    padding: 0.5rem 1.2rem;
-  }
-  
-  body.font-casero .header-subtitle {
-    font-size: clamp(1rem, 4vw, 1.3rem) !important;
-  }
-  
-  body.font-casero .header-text::before,
-  body.font-casero .header-text::after {
-    font-size: 1rem !important;
-  }
-  
-  /* Asegurar mismo tamaño para ambas líneas en móvil */
-  body.font-casero .header-subtitle .casero-line-1,
-  body.font-casero .header-subtitle .casero-line-2 {
-    font-size: 1em;
-  }
-  
-  /* Efecto touch más visible en móvil */
-  body.font-casero .header-text:active {
-    transform: scale(1.05);
-  }
-}
-
-/* ============================================
    MAIN CONTENT - Layout 2 columnas
    ============================================ */
 .catalog-main {
@@ -555,16 +210,10 @@ body.font-casero .header-tagline {
 
 .catalog-intro {
   text-align: center;
-  margin-top: -1rem;
   margin-bottom: 1.5rem;
   font-style: italic;
   color: var(--text-muted);
   font-size: 0.9rem;
-  white-space: pre-line !important;
-}
-
-.catalog-intro p {
-  white-space: pre-line !important;
 }
 
 .section-nav {
@@ -655,7 +304,7 @@ body.font-casero .header-tagline {
 
 /* Título de sección - más pequeño, cursivo dorado */
 .section-content .section-title {
-  font-family: var(--font-family-section-title);
+  font-family: var(--font-family-accent);
   font-size: 1.1rem;
   font-weight: 600;
   font-style: italic;
@@ -689,7 +338,7 @@ body.font-casero .header-tagline {
 }
 
 .item-row .item-name {
-  font-family: var(--font-family-item-name);
+  font-family: var(--font-family);
   font-size: 0.875rem;
   font-weight: 400;
   color: var(--text-color);
@@ -723,7 +372,7 @@ body.font-casero .header-tagline {
 }
 
 .catalog-section:not(.has-image) .section-title {
-  font-family: var(--font-family-section-title);
+  font-family: var(--font-family-accent);
   font-size: 1rem;
   font-weight: 600;
   font-style: italic;
@@ -736,171 +385,70 @@ body.font-casero .header-tagline {
   display: inline-block;
 }
 
-/* ============================================
-   PRICE LIST STYLE - Items sin imagen
-   Formato: Nombre ... Precio [+]
-   ============================================ */
-
-/* Items sin imagen se muestran como lista de precios */
-.item-card.no-image {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  gap: 0.5rem;
-  padding: 0.5rem 0 !important;
-  background: transparent !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.item-card.no-image:hover {
-  background: rgba(255, 255, 255, 0.03) !important;
-}
-
-.item-card.no-image:last-child {
-  border-bottom: none !important;
-}
-
-/* Ocultar botón cerrar en modo lista */
-.item-card.no-image .item-card-close {
-  display: none !important;
-}
-
-/* Contenido en fila - usar CSS para alinear precio a la derecha */
-.item-card.no-image .item-content {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  width: 100% !important;
-  gap: 0 !important;
-  padding: 0 !important;
-  flex: 1;
-  min-width: 0;
-}
-
-/* Nombre del producto - sin max-width para que crezca con los puntos */
-.item-card.no-image .item-name {
-  font-family: var(--font-family-item-name) !important;
-  font-size: 0.9rem !important;
-  font-weight: 400 !important;
-  color: var(--text-color) !important;
-  margin: 0 !important;
-  flex: 1 !important;
-  display: flex !important;
-  align-items: center !important;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* Línea de puntos entre nombre y precio - crece para llenar espacio */
-.item-card.no-image .item-name::after {
-  content: '';
-  flex: 1;
-  border-bottom: 1px dotted rgba(255, 255, 255, 0.35);
-  margin: 0 0.75rem;
-  min-width: 20px;
-}
-
-/* Ocultar descripción, tags, expand indicator */
-.item-card.no-image .item-description,
-.item-card.no-image .item-tags,
-.item-card.no-image .expand-indicator {
-  display: none !important;
-}
-
-/* Footer con precio y botón - pegado al final sin margin-left auto */
-.item-card.no-image .item-footer {
-  display: flex !important;
-  align-items: center !important;
-  gap: 0.75rem !important;
-  flex-shrink: 0 !important;
-  padding: 0 !important;
-}
-
-/* Precio */
-.item-card.no-image .item-price {
-  display: flex !important;
-  align-items: center !important;
-  gap: 0.5rem !important;
-}
-
-.item-card.no-image .price-amount {
-  font-family: var(--font-family) !important;
-  font-size: 0.9rem !important;
-  font-weight: 600 !important;
-  color: var(--primary-color) !important;
-  white-space: nowrap;
-}
-
-.item-card.no-image .price-original {
-  font-size: 0.75rem !important;
-  color: var(--text-muted) !important;
-  text-decoration: line-through;
-}
-
-/* Botón agregar al carrito - estilo compacto */
-.item-card.no-image .cart-add-btn {
-  width: 28px !important;
-  height: 28px !important;
-  min-width: 28px !important;
-  padding: 0 !important;
-  border-radius: 50% !important;
-  background: var(--primary-color) !important;
-  color: #000 !important;
-  border: none !important;
-  font-size: 1.1rem !important;
-  font-weight: 700 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 0 10px rgba(212, 168, 83, 0.3);
-}
-
-.item-card.no-image .cart-add-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px rgba(212, 168, 83, 0.5);
-}
-
-/* Ocultar texto del botón, mostrar solo + */
-.item-card.no-image .cart-add-btn .btn-text {
-  display: none !important;
-}
-
-.item-card.no-image .cart-add-btn::before {
-  content: '+';
-}
-
-/* Grid de items - columna para items sin imagen */
-.items-grid:has(.item-card.no-image) {
+/* Estilo lista simple: solo cuando NO tiene imagen de sección Y NO tiene show-images activo */
+.catalog-section:not(.has-image):not(.show-images) .items-grid {
   display: flex;
   flex-direction: column;
   gap: 0;
 }
 
-/* Responsive móvil */
-@media (max-width: 480px) {
-  .item-card.no-image .item-name {
-    font-size: 0.85rem !important;
-    max-width: 55%;
-  }
-  
-  .item-card.no-image .price-amount {
-    font-size: 0.85rem !important;
-  }
-  
-  .item-card.no-image .cart-add-btn {
-    width: 26px !important;
-    height: 26px !important;
-    min-width: 26px !important;
-    font-size: 1rem !important;
-  }
+.catalog-section:not(.has-image):not(.show-images) .item-card {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  padding: 0.3rem 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.catalog-section:not(.has-image):not(.show-images) .item-card .item-image {
+  display: none;
+}
+
+.catalog-section:not(.has-image):not(.show-images) .item-card .item-content {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0.4rem;
+  padding: 0;
+}
+
+.catalog-section:not(.has-image):not(.show-images) .item-card .item-name {
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.catalog-section:not(.has-image):not(.show-images) .item-card .item-name::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.35);
+  margin: 0 0.5rem;
+  min-width: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.catalog-section:not(.has-image):not(.show-images) .item-card .item-description,
+.catalog-section:not(.has-image):not(.show-images) .item-card .item-tags {
+  display: none;
+}
+
+.catalog-section:not(.has-image):not(.show-images) .item-card .item-footer {
+  flex-shrink: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.catalog-section:not(.has-image):not(.show-images) .item-card .price-amount {
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-color);
 }
 
 /* ============================================
@@ -947,7 +495,7 @@ body.font-casero .header-tagline {
 }
 
 .catalog-section.show-images .item-card .item-name {
-  font-family: var(--font-family-item-name);
+  font-family: var(--font-family-accent);
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--text-gold);
@@ -1123,8 +671,8 @@ body::after {
 }
 
 .footer-powered {
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.625rem;
+  color: rgba(255, 255, 255, 0.2);
 }
 
 /* ============================================
@@ -1769,549 +1317,3 @@ body::after {
 .promo-card:nth-child(2) { animation-delay: 0.2s; }
 .promo-card:nth-child(3) { animation-delay: 0.3s; }
 .promo-card:nth-child(4) { animation-delay: 0.4s; }
-
-/* ============================================
-   PRESET DIVERTIDO - Estilo logo neón ovalado con Curlz MT
-   ============================================ */
-body.font-divertido .header-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0.8rem 2rem;
-  border: 2px solid #f5c842;
-  border-radius: 50%;
-  aspect-ratio: 2.2 / 1;
-  min-width: 220px;
-  max-width: 340px;
-  position: relative;
-  background: transparent;
-  /* Efecto neón intenso */
-  box-shadow: 
-    0 0 5px #f5c842,
-    0 0 10px #f5c842,
-    0 0 20px #f5c842,
-    0 0 40px rgba(245, 200, 66, 0.5),
-    inset 0 0 10px rgba(245, 200, 66, 0.15);
-  animation: neonBorderPulse 2s ease-in-out infinite alternate;
-  cursor: pointer;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-/* Quitar highlight azul en TODOS los elementos del header para móvil */
-body.font-divertido .site-header,
-body.font-divertido .site-header *,
-body.font-divertido .header-container,
-body.font-divertido .header-container *,
-body.font-divertido .header-brand,
-body.font-divertido .header-brand *,
-body.font-divertido .header-text,
-body.font-divertido .header-text *,
-body.font-divertido .header-subtitle,
-body.font-divertido .header-subtitle * {
-  -webkit-tap-highlight-color: transparent !important;
-  -webkit-touch-callout: none !important;
-  -webkit-user-select: none !important;
-  user-select: none !important;
-  outline: none !important;
-  -webkit-focus-ring-color: transparent !important;
-}
-
-body.font-divertido .header-text:focus,
-body.font-divertido .header-text:focus-visible,
-body.font-divertido .header-subtitle:focus,
-body.font-divertido .header-subtitle:focus-visible {
-  outline: none !important;
-  box-shadow: none;
-}
-
-body.font-divertido .header-text:hover,
-body.font-divertido .header-text:active {
-  animation: neonFlicker 0.15s ease-in-out, neonBorderGlow 0.5s ease-out forwards;
-  transform: scale(1.03);
-}
-
-body.font-divertido .header-text:hover .header-subtitle,
-body.font-divertido .header-text:active .header-subtitle {
-  animation: neonTextGlow 0.5s ease-out forwards;
-}
-
-/* Puntos decorativos a los lados */
-body.font-divertido .header-text::before {
-  content: '•';
-  position: absolute;
-  font-size: 1.2rem;
-  color: #f5c842;
-  left: 5%;
-  top: 50%;
-  transform: translateY(-50%);
-  text-shadow: 
-    0 0 5px #f5c842,
-    0 0 10px #f5c842,
-    0 0 20px #f5c842;
-}
-
-/* Punto derecho */
-body.font-divertido .header-text::after {
-  content: '•' !important;
-  position: absolute !important;
-  font-size: 1.2rem !important;
-  color: #f5c842 !important;
-  right: 5% !important;
-  left: auto !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  width: auto !important;
-  height: auto !important;
-  background: none !important;
-  border: none !important;
-  text-shadow: 
-    0 0 5px #f5c842,
-    0 0 10px #f5c842,
-    0 0 20px #f5c842 !important;
-  letter-spacing: normal !important;
-  opacity: 1 !important;
-}
-
-body.font-divertido .header-subtitle {
-  font-family: 'Curlz MT', fantasy !important;
-  font-size: clamp(1.6rem, 6vw, 2.2rem) !important;
-  font-weight: 400 !important;
-  color: #f5c842 !important;
-  text-transform: none !important;
-  letter-spacing: 0.02em;
-  text-align: center;
-  line-height: 1.15;
-  padding: 0 !important;
-  position: relative;
-  /* Efecto neón en texto */
-  text-shadow: 
-    0 0 5px #f5c842,
-    0 0 10px #f5c842,
-    0 0 20px #f5c842,
-    0 0 40px rgba(245, 200, 66, 0.6);
-  animation: neonTextPulse 2s ease-in-out infinite alternate;
-}
-
-/* Hover en desktop - efecto flicker */
-body.font-divertido .header-text:hover {
-  animation: neonBorderFlicker 0.8s ease-in-out;
-  cursor: pointer;
-}
-
-body.font-divertido .header-text:hover .header-subtitle {
-  animation: neonFlicker 0.8s ease-in-out;
-}
-
-/* Clase para activar flicker via JS (touch en móvil) */
-body.font-divertido .header-text.neon-flicker {
-  animation: neonBorderFlicker 0.8s ease-in-out;
-}
-
-body.font-divertido .header-text.neon-flicker .header-subtitle {
-  animation: neonFlicker 0.8s ease-in-out;
-}
-
-/* Ocultar las líneas decorativas laterales del título */
-body.font-divertido .header-subtitle::before,
-body.font-divertido .header-subtitle::after {
-  display: none !important;
-}
-
-/* Estilo para el nombre dividido en dos líneas */
-body.font-divertido .header-subtitle .casero-line-1 {
-  display: block;
-  font-size: 1em;
-  letter-spacing: 0.15em;
-  margin-bottom: 0.05em;
-  text-transform: uppercase;
-}
-
-body.font-divertido .header-subtitle .casero-line-2 {
-  display: block;
-  font-size: 1em;
-  text-transform: none;
-  letter-spacing: 0.05em;
-  white-space: nowrap;
-}
-
-/* Ocultar tagline en divertido para mantener compacto */
-body.font-divertido .header-tagline {
-  display: none;
-}
-
-/* 
- * NOTA: Las fuentes de section-title e item-name ahora se controlan
- * a través del sistema granular de fuentes (--font-family-section-title, --font-family-item-name)
- * definido en el fontPreset del theme.json. Ya no se necesitan overrides aquí.
- */
-
-/* Responsive para preset divertido */
-@media (max-width: 480px) {
-  body.font-divertido .header-text {
-    min-width: 220px;
-    max-width: 320px;
-    padding: 0.6rem 1.5rem;
-  }
-  
-  body.font-divertido .header-subtitle {
-    font-size: clamp(1.2rem, 5vw, 1.6rem) !important;
-  }
-  
-  body.font-divertido .header-text::before,
-  body.font-divertido .header-text::after {
-    font-size: 1.1rem !important;
-  }
-  
-  /* Asegurar mismo tamaño para ambas líneas en móvil */
-  body.font-divertido .header-subtitle .casero-line-1,
-  body.font-divertido .header-subtitle .casero-line-2 {
-    font-size: 1em;
-  }
-  
-  /* Efecto touch más visible en móvil */
-  body.font-divertido .header-text:active {
-    transform: scale(1.05);
-  }
-}
-
-/* ============================================
-   ITEMS SIN IMAGEN - Formato lista de precios
-   Cuando el producto no tiene imagen, mostrar
-   en formato horizontal: nombre...precio [+]
-   ============================================ */
-.item-card.no-image {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  gap: 0.5rem !important;
-  padding: 0.4rem 0 !important;
-  background: transparent !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  cursor: default !important;
-  pointer-events: auto;
-}
-
-/* Ocultar botón cerrar en items sin imagen */
-.item-card.no-image .item-card-close {
-  display: none !important;
-}
-
-/* Contenido del item en línea */
-.item-card.no-image .item-content {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  width: 100% !important;
-  gap: 0.5rem !important;
-  padding: 0 !important;
-  flex: 1;
-}
-
-/* Nombre del producto */
-.item-card.no-image .item-name {
-  font-family: var(--font-family-item-name) !important;
-  font-size: 0.9rem !important;
-  font-weight: 400 !important;
-  color: var(--text-color) !important;
-  margin: 0 !important;
-  flex-shrink: 0;
-  white-space: nowrap;
-}
-
-/* Línea de puntos entre nombre y precio */
-.item-card.no-image .item-name::after {
-  content: '' !important;
-  flex: 1 !important;
-  border-bottom: 1px dotted rgba(255, 255, 255, 0.35) !important;
-  margin: 0 0.5rem !important;
-  min-width: 20px !important;
-  display: inline-block !important;
-  vertical-align: middle !important;
-}
-
-/* Ocultar descripción y tags en formato lista */
-.item-card.no-image .item-description,
-.item-card.no-image .item-tags,
-.item-card.no-image .expand-indicator {
-  display: none !important;
-}
-
-/* Footer con precio y botón carrito */
-.item-card.no-image .item-footer {
-  display: flex !important;
-  align-items: center !important;
-  gap: 0.75rem !important;
-  flex-shrink: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  border: none !important;
-}
-
-/* Precio */
-.item-card.no-image .item-price {
-  display: flex !important;
-  align-items: center !important;
-  gap: 0.5rem !important;
-}
-
-.item-card.no-image .price-amount {
-  font-family: var(--font-family) !important;
-  font-size: 0.9rem !important;
-  font-weight: 600 !important;
-  color: var(--primary-color) !important;
-  white-space: nowrap;
-}
-
-.item-card.no-image .price-original {
-  font-size: 0.75rem !important;
-  color: var(--text-muted) !important;
-  text-decoration: line-through !important;
-}
-
-.item-card.no-image .badge-discount {
-  font-size: 0.65rem !important;
-  padding: 0.15rem 0.35rem !important;
-  background: var(--accent-color) !important;
-  color: #fff !important;
-  border-radius: 3px !important;
-}
-
-/* Botón agregar al carrito - estilo compacto */
-.item-card.no-image .btn-add-cart {
-  width: 28px !important;
-  height: 28px !important;
-  min-width: 28px !important;
-  padding: 0 !important;
-  border-radius: 50% !important;
-  background: var(--primary-color) !important;
-  color: #000 !important;
-  border: none !important;
-  font-size: 1rem !important;
-  font-weight: 700 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  cursor: pointer !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
-  box-shadow: 0 0 10px rgba(212, 168, 83, 0.4) !important;
-}
-
-.item-card.no-image .btn-add-cart:hover {
-  transform: scale(1.1) !important;
-  box-shadow: 0 0 20px var(--primary-color) !important;
-}
-
-/* Ocultar texto del botón, mostrar solo + */
-.item-card.no-image .btn-add-cart .btn-text {
-  display: none !important;
-}
-
-.item-card.no-image .btn-add-cart::before {
-  content: '+' !important;
-}
-
-/* Items con variantes en formato lista - ocultar selector, mostrar precio */
-/* Forzar layout horizontal para items sin imagen con variantes */
-.items-grid .item-card.no-image.has-variants {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  flex-wrap: nowrap !important;
-}
-
-.items-grid .item-card.no-image.has-variants .item-content {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  align-items: center !important;
-  width: 100% !important;
-  gap: 0 !important;
-}
-
-/* Nombre igual que items sin variantes */
-.items-grid .item-card.no-image.has-variants .item-name {
-  font-family: var(--font-family-item-name) !important;
-  font-size: 0.9rem !important;
-  font-weight: 400 !important;
-  color: var(--text-color) !important;
-  margin: 0 !important;
-  flex: 1 !important;
-  display: flex !important;
-  align-items: center !important;
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-}
-
-/* Asegurar que los puntos se muestren para items con variantes */
-.items-grid .item-card.no-image.has-variants .item-name::after {
-  content: '' !important;
-  flex: 1 !important;
-  border-bottom: 1px dotted rgba(255, 255, 255, 0.35) !important;
-  margin: 0 0.75rem !important;
-  min-width: 20px !important;
-}
-
-/* Footer con precio y botón - sin margin-left auto */
-.items-grid .item-card.no-image.has-variants .item-footer {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  gap: 0.75rem !important;
-  flex-shrink: 0 !important;
-  padding: 0 !important;
-}
-
-.items-grid .item-card.no-image.has-variants .item-variants {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  gap: 0.75rem !important;
-  flex-shrink: 0 !important;
-  width: auto !important;
-}
-
-.item-card.no-image.has-variants .variant-select {
-  display: none !important;
-}
-
-.item-card.no-image.has-variants .variant-price {
-  display: flex !important;
-  align-items: center !important;
-  gap: 0.3rem !important;
-  flex-shrink: 0 !important;
-}
-
-.item-card.no-image.has-variants .variant-price .price-amount {
-  font-family: var(--font-family) !important;
-  font-size: 0.9rem !important;
-  font-weight: 600 !important;
-  color: var(--primary-color) !important;
-  white-space: nowrap !important;
-  font-style: italic !important;
-}
-
-/* Botón agregar - estilo sutil solo ícono para lista de precios */
-.item-card.no-image .item-add-cart {
-  width: 32px !important;
-  height: 32px !important;
-  min-width: 32px !important;
-  padding: 0 !important;
-  border-radius: 50% !important;
-  background: transparent !important;
-  border: 1px solid var(--primary-color) !important;
-  color: var(--primary-color) !important;
-  font-size: 0 !important; /* Ocultar texto */
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  cursor: pointer !important;
-  transition: all 0.2s ease !important;
-  flex-shrink: 0 !important;
-}
-
-.item-card.no-image .item-add-cart svg {
-  width: 16px !important;
-  height: 16px !important;
-  stroke: var(--primary-color) !important;
-}
-
-.item-card.no-image .item-add-cart:hover {
-  background: var(--primary-color) !important;
-  transform: scale(1.1) !important;
-  box-shadow: 0 0 15px rgba(212, 168, 83, 0.4) !important;
-}
-
-.item-card.no-image .item-add-cart:hover svg {
-  stroke: #000 !important;
-}
-
-/* Botón de agregar más sutil para items sin imagen - solo ícono */
-.item-card.no-image .item-add-cart {
-  width: 32px !important;
-  height: 32px !important;
-  min-width: 32px !important;
-  padding: 0 !important;
-  border-radius: 50% !important;
-  background: transparent !important;
-  border: 1.5px solid var(--primary-color) !important;
-  color: var(--primary-color) !important;
-  font-size: 0 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  transition: all 0.3s ease !important;
-  position: relative !important;
-}
-
-/* Ocultar el SVG del carrito original */
-.item-card.no-image .item-add-cart svg {
-  display: none !important;
-}
-
-/* Mostrar ícono de cloche/plato usando pseudo-elemento */
-.item-card.no-image .item-add-cart::before {
-  content: '';
-  position: absolute !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  width: 18px;
-  height: 18px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d4a853' stroke-width='1.8'%3E%3Cpath d='M12 2v2'/%3E%3Cpath d='M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8'/%3E%3Crect x='2' y='12' width='20' height='4' rx='1'/%3E%3Cpath d='M6 16v3'/%3E%3Cpath d='M18 16v3'/%3E%3Cpath d='M4 19h16'/%3E%3C/svg%3E");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.item-card.no-image .item-add-cart:hover {
-  background: var(--primary-color) !important;
-  transform: scale(1.1) !important;
-}
-
-.item-card.no-image .item-add-cart:hover::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='1.8'%3E%3Cpath d='M12 2v2'/%3E%3Cpath d='M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8'/%3E%3Crect x='2' y='12' width='20' height='4' rx='1'/%3E%3Cpath d='M6 16v3'/%3E%3Cpath d='M18 16v3'/%3E%3Cpath d='M4 19h16'/%3E%3C/svg%3E");
-}
-
-/* Grid de items - cuando hay items sin imagen, mostrar en columna */
-.items-grid:has(.item-card.no-image) {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 0.15rem !important;
-}
-
-/* Hover sutil en items sin imagen */
-.item-card.no-image:hover {
-  background: rgba(255, 255, 255, 0.03) !important;
-}
-
-/* Responsive para items sin imagen */
-@media (max-width: 480px) {
-  .item-card.no-image .item-name {
-    font-size: 0.85rem !important;
-  }
-  
-  .item-card.no-image .price-amount {
-    font-size: 0.85rem !important;
-  }
-  
-  .item-card.no-image .btn-add-cart {
-    width: 26px !important;
-    height: 26px !important;
-    min-width: 26px !important;
-    font-size: 0.9rem !important;
-  }
-}
-
-
-
-/* ============================================
-   OCULTAR BÚSQUEDA/FILTRO DEL HEADER
-   Solo mostrar la barra de abajo
-   ============================================ */
-.header-controls {
-  display: none !important;
-}

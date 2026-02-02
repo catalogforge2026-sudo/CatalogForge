@@ -134,8 +134,6 @@
 
 .filter-select option {
   padding: 0.5rem;
-  background: #1a1a1a !important;
-  color: #ffffff !important;
 }
 
 /* Legacy button filters (kept for backwards compatibility) */
@@ -232,9 +230,7 @@
 /* Hidden items during search/filter */
 .item-card.hidden-by-search,
 .item-card.hidden-by-filter,
-.catalog-section.hidden-by-filter,
-.catalog-section.hidden-by-search,
-.section-nav.hidden-by-search {
+.catalog-section.hidden-by-filter {
   display: none !important;
 }
 

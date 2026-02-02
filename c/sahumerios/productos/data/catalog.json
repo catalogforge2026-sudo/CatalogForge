@@ -5,7 +5,7 @@
     "image": "uploads/1769362299531-0yolrmpin.png",
     "url": "/c/sahumerios/productos",
     "clientKey": "sahumerios",
-    "generatedAt": "2026-01-30T04:29:54.390Z",
+    "generatedAt": "2026-01-25T17:37:45.702Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -22,7 +22,6 @@
     "id": 11,
     "name": "Sahumerio & Aromatizantes",
     "slug": "productos",
-    "publicKey": "sahumerios",
     "description": "Productos naturales para armonizar tu espacio: sahumerios, inciensos, sprays y aceites esenciales",
     "type": "Productos",
     "typeSlug": "products",
@@ -91,7 +90,6 @@
       "icon": "🌿",
       "iconUrl": null,
       "image": "https://images.unsplash.com/photo-1600431521340-491eca880813?w=400&q=80",
-      "imageUrl": "https://images.unsplash.com/photo-1600431521340-491eca880813?w=400&q=80",
       "itemCount": 4,
       "items": [
         {
@@ -114,15 +112,11 @@
           "sku": null,
           "customFields": {},
           "variants": [],
-          "customizations": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
-          "hasDiscount": true,
-          "hasCustomizations": false
+          "hasDiscount": true
         },
         {
           "id": 120,
@@ -144,15 +138,11 @@
           "sku": null,
           "customFields": {},
           "variants": [],
-          "customizations": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
-          "hasDiscount": false,
-          "hasCustomizations": false
+          "hasDiscount": false
         },
         {
           "id": 121,
@@ -174,15 +164,11 @@
           "sku": null,
           "customFields": {},
           "variants": [],
-          "customizations": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
-          "hasDiscount": false,
-          "hasCustomizations": false
+          "hasDiscount": false
         },
         {
           "id": 122,
@@ -204,15 +190,11 @@
           "sku": null,
           "customFields": {},
           "variants": [],
-          "customizations": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
-          "hasDiscount": false,
-          "hasCustomizations": false
+          "hasDiscount": false
         }
       ],
       "frameStyle": "chalk",
@@ -220,8 +202,7 @@
       "promoBadge": null,
       "showItemImages": true,
       "hasPromo": false,
-      "hasImage": true,
-      "sectionClasses": "show-images has-image"
+      "sectionClasses": "show-images"
     },
     {
       "id": 46,
@@ -231,7 +212,6 @@
       "icon": "✨",
       "iconUrl": null,
       "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&q=80",
-      "imageUrl": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&q=80",
       "itemCount": 4,
       "items": [
         {
@@ -254,15 +234,11 @@
           "sku": null,
           "customFields": {},
           "variants": [],
-          "customizations": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
-          "hasDiscount": false,
-          "hasCustomizations": false
+          "hasDiscount": false
         },
         {
           "id": 124,
@@ -284,15 +260,11 @@
           "sku": null,
           "customFields": {},
           "variants": [],
-          "customizations": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
-          "hasDiscount": false,
-          "hasCustomizations": false
+          "hasDiscount": false
         },
         {
           "id": 125,
@@ -314,15 +286,11 @@
           "sku": null,
           "customFields": {},
           "variants": [],
-          "customizations": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
-          "hasDiscount": false,
-          "hasCustomizations": false
+          "hasDiscount": false
         },
         {
           "id": 126,
@@ -344,15 +312,11 @@
           "sku": null,
           "customFields": {},
           "variants": [],
-          "customizations": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
-          "hasDiscount": false,
-          "hasCustomizations": false
+          "hasDiscount": false
         }
       ],
       "frameStyle": "chalk",
@@ -360,16 +324,14 @@
       "promoBadge": null,
       "showItemImages": true,
       "hasPromo": false,
-      "hasImage": true,
-      "sectionClasses": "show-images has-image"
+      "sectionClasses": "show-images"
     }
   ],
   "promotions": [],
   "cart": {
     "enabled": true,
     "buttonText": "Agregar",
-    "whatsappMessage": "Hola! Me interesa hacer el siguiente pedido:",
-    "formConfig": {}
+    "whatsappMessage": "Hola! Me interesa hacer el siguiente pedido:"
   },
   "searchFilter": {
     "enabled": true,
@@ -378,26 +340,9 @@
     "placeholder": "Buscar productos..."
   },
   "totalItems": 8,
-  "navButtonText": "Ver productos",
   "buildInfo": {
-    "version": "20260130-012954",
-    "timestamp": "2026-01-30T04:29:54.392Z",
+    "version": "20260125-143745",
+    "timestamp": "2026-01-25T17:37:45.703Z",
     "generator": "SCG v1.0.0"
-  },
-  "branding": {
-    "footerText": "Hecho por Catalog Forge",
-    "footerPhone": "5491150192474",
-    "footerPhoneDisplay": "11 5019-2474"
-  },
-  "fontUrls": [
-    "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-  ],
-  "fontStyles": {
-    "heading": "'Inter', Georgia, serif",
-    "body": "'Inter', Georgia, serif",
-    "catalogTitle": "'Inter', Georgia, serif",
-    "sectionTitle": "'Inter', Georgia, serif",
-    "itemName": "'Inter', Georgia, serif"
-  },
-  "globalSettings": {}
+  }
 }

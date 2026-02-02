@@ -538,25 +538,76 @@ body.cart-bar-visible {
 
 .cart-form-input {
   width: 100%;
-  padding: 0.55rem 0.75rem;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 6px;
+  padding: 0.65rem 0.9rem;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 2px solid var(--primary-color, #d4a853) !important;
+  border-radius: 8px;
   color: #ffffff !important;
   font-family: var(--font-family, system-ui);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 500;
   transition: all 0.3s ease;
-  -webkit-text-fill-color: currentColor;
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #ffffff !important;
+  box-sizing: border-box;
+}
+
+/* Forzar color blanco en el texto escrito */
+.cart-form input[type="text"],
+.cart-form input[type="tel"],
+.cart-form-input[type="text"],
+.cart-form-input[type="tel"] {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Asegurar que el texto escrito sea visible en todos los navegadores */
+.cart-form-input:not(:placeholder-shown) {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Autofill styles para Chrome/Safari */
+.cart-form-input:-webkit-autofill,
+.cart-form-input:-webkit-autofill:hover,
+.cart-form-input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  caret-color: #ffffff !important;
+  border-color: var(--primary-color, #d4a853) !important;
+  background-color: transparent !important;
 }
 
 .cart-form-input::placeholder {
-  color: var(--text-muted, #888);
+  color: #aaaaaa !important;
+  -webkit-text-fill-color: #aaaaaa !important;
+  opacity: 1 !important;
+  font-weight: 400;
+}
+
+/* Placeholder para diferentes navegadores */
+.cart-form-input::-webkit-input-placeholder {
+  color: #aaaaaa !important;
+  -webkit-text-fill-color: #aaaaaa !important;
+  opacity: 1 !important;
+}
+
+.cart-form-input::-moz-placeholder {
+  color: #aaaaaa !important;
+  opacity: 1 !important;
+}
+
+.cart-form-input:-ms-input-placeholder {
+  color: #aaaaaa !important;
 }
 
 .cart-form-input:focus {
   outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary-color) 20%, transparent);
+  border-color: var(--primary-color, #d4a853) !important;
+  background: transparent !important;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary-color, #d4a853) 25%, transparent);
 }
 
 .cart-form-input.error {
@@ -819,10 +870,12 @@ body.cart-bar-visible {
   background: rgba(0, 0, 0, 0.05);
   border-color: rgba(0, 0, 0, 0.2);
   color: #111 !important;
+  -webkit-text-fill-color: #111 !important;
 }
 
 .mode-light .cart-form-input::placeholder {
-  color: #555;
+  color: rgba(0, 0, 0, 0.5) !important;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0.5) !important;
 }
 
 .mode-light .cart-form-select option {
@@ -1471,7 +1524,14 @@ body.cart-bar-visible {
   align-items: center;
   gap: 0.5rem;
   flex-wrap: wrap;
+  margin-bottom: 0.25rem;
+}
+
+.customization-group-hint {
+  font-size: 0.7rem;
+  color: #888;
   margin-bottom: 0.5rem;
+  font-style: italic;
 }
 
 .customization-group-rule {
@@ -1657,4 +1717,49 @@ body.cart-bar-visible {
 
 .mode-light .customization-group-option.is-disabled .customization-checkbox {
   border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ============================================
+   FORZAR COLORES EN INPUTS DEL CARRITO
+   Para temas oscuros como Mixology
+   ============================================ */
+.cart-form .cart-form-input,
+.cart-modal .cart-form-input,
+input.cart-form-input {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background-color: transparent !important;
+  border-color: var(--primary-color, #d4a853) !important;
+}
+
+/* Texto escrito - forzar blanco */
+.cart-form-input:focus,
+.cart-form-input:active,
+.cart-form-input:valid,
+.cart-form-input:invalid {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* ============================================
+   OVERRIDE FINAL - Forzar colores en inputs
+   ============================================ */
+.cart-modal-overlay .cart-form-input,
+.cart-modal .cart-form .cart-form-input,
+.cart-form-group .cart-form-input,
+.cart-form-group input,
+.cart-form input {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background: transparent !important;
+  border: 2px solid var(--primary-color, #d4a853) !important;
+}
+
+/* Placeholder gris */
+.cart-modal-overlay .cart-form-input::placeholder,
+.cart-modal .cart-form .cart-form-input::placeholder,
+.cart-form-group .cart-form-input::placeholder {
+  color: #999999 !important;
+  -webkit-text-fill-color: #999999 !important;
+  opacity: 1 !important;
 }

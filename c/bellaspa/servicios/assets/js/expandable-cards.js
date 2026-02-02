@@ -1,83 +1,54 @@
 /* ============================================
    Expandable Cards Feature
-   Allows all cards to expand on click for better viewing
+   Allows cards with long descriptions to expand
    ============================================ */
 
 (function() {
   'use strict';
 
+  const MIN_DESC_LENGTH = 80; // Minimum characters to make card expandable
   let backdrop = null;
   let expandedCard = null;
 
   document.addEventListener('DOMContentLoaded', init);
 
   function init() {
-    // Check if expandable cards are disabled for this theme
-    // Check body class, CSS display:none on backdrop, or global flag
-    const body = document.body;
-    if (body.classList.contains('theme-pastry') || 
-        window.EXPANDABLE_CARDS_DISABLED === true) {
-      // Expose empty API and exit
-      window.expandableCards = {
-        expand: function() {},
-        collapse: function() {},
-        isDisabled: true
-      };
-      return;
-    }
-    
-    // Create backdrop element if not exists
-    backdrop = document.querySelector('.card-backdrop');
-    if (!backdrop) {
-      backdrop = document.createElement('div');
-      backdrop.className = 'card-backdrop';
-      document.body.appendChild(backdrop);
-    }
-    
-    // Check if backdrop is hidden by CSS (theme disabled it)
-    const backdropStyle = window.getComputedStyle(backdrop);
-    if (backdropStyle.display === 'none') {
-      window.expandableCards = {
-        expand: function() {},
-        collapse: function() {},
-        isDisabled: true
-      };
-      return;
-    }
+    // Create backdrop element
+    backdrop = document.createElement('div');
+    backdrop.className = 'card-backdrop';
+    document.body.appendChild(backdrop);
 
-    // Find all item cards - make cards expandable (except no-image items)
+    // Find all item cards with descriptions
     const cards = document.querySelectorAll('.item-card');
     
     cards.forEach(card => {
-      // Skip items without image - they show as price list, no expansion
-      if (card.classList.contains('no-image')) {
-        return;
-      }
-      
-      // Mark cards with images as expandable
-      card.classList.add('expandable');
-      
-      // Add click handler to card content (not buttons)
-      card.addEventListener('click', (e) => {
-        // Don't expand if clicking on buttons, selects, or close button
-        if (e.target.closest('button, select, .btn, .item-card-close, .variant-select')) {
-          return;
-        }
+      const description = card.querySelector('.item-description');
+      if (description && description.textContent.length > MIN_DESC_LENGTH) {
+        // Mark as expandable
+        card.classList.add('expandable');
         
-        if (card.classList.contains('expanded')) {
-          return; // Already expanded, let close button handle it
-        }
-        
-        expandCard(card);
-      });
-
-      // Close button handler
-      const closeBtn = card.querySelector('.item-card-close');
-      if (closeBtn) {
-        closeBtn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          collapseCard(card);
+        // Add click handler to card content (not buttons)
+        card.addEventListener('click', (e) => {
+          // Don't expand if clicking on buttons, selects, or close button
+          if (e.target.closest('button, select, .btn, .item-card-close')) {
+            return;
+          }
+          
+          if (card.classList.contains('expanded')) {
+            return; // Already expanded, let close button handle it
+          }
+          
+          expandCard(card);
         });
+
+        // Close button handler
+        const closeBtn = card.querySelector('.item-card-close');
+        if (closeBtn) {
+          closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            collapseCard(card);
+          });
+        }
       }
     });
 
@@ -94,13 +65,6 @@
         collapseCard(expandedCard);
       }
     });
-    
-    // Expose API
-    window.expandableCards = {
-      expand: expandCard,
-      collapse: collapseCard,
-      isDisabled: false
-    };
   }
 
   function expandCard(card) {
@@ -126,13 +90,17 @@
 
   function collapseCard(card) {
     card.classList.remove('expanded');
-    if (backdrop) {
-      backdrop.classList.remove('active');
-    }
+    backdrop.classList.remove('active');
     expandedCard = null;
 
     // Restore body scroll
     document.body.style.overflow = '';
   }
+
+  // Expose API
+  window.expandableCards = {
+    expand: expandCard,
+    collapse: collapseCard
+  };
 
 })();

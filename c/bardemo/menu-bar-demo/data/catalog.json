@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/bardemo/menu-bar-demo",
     "clientKey": "bardemo",
-    "generatedAt": "2026-02-02T16:58:41.116Z",
+    "generatedAt": "2026-01-26T22:27:04.791Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -15,7 +15,6 @@
     "email": "info@bardemo.com",
     "phone": "+54 11 50192474",
     "address": "",
-    "mapsUrl": null,
     "website": null,
     "socialLinks": {}
   },
@@ -23,11 +22,7 @@
     "id": 4,
     "name": "Menú Bar Demo",
     "slug": "menu-bar-demo",
-    "publicKey": "bardemo",
     "description": null,
-    "address": null,
-    "mapsUrl": null,
-    "showAddressHeader": false,
     "type": "Productos",
     "typeSlug": "products",
     "config": {
@@ -164,17 +159,12 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasCustomizations": false
         },
         {
           "id": 29,
@@ -197,17 +187,12 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasCustomizations": false
         },
         {
           "id": 30,
@@ -230,17 +215,12 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasCustomizations": false
         }
       ],
       "frameStyle": "chalk",
@@ -285,48 +265,27 @@
           "customizations": [
             {
               "id": 1,
-              "name": "Cebolla",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
+              "name": "Cebolla"
             },
             {
               "id": 2,
-              "name": "Mayonesa",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
+              "name": "Mayonesa"
             },
             {
               "id": 3,
-              "name": "Tomate",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
+              "name": "Tomate"
             },
             {
               "id": 4,
-              "name": "ketchu",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
+              "name": "ketchu"
             }
           ],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": true,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasCustomizations": true
         },
         {
           "id": 26,
@@ -349,17 +308,12 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasCustomizations": false
         },
         {
           "id": 27,
@@ -382,17 +336,12 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasCustomizations": false
         }
       ],
       "frameStyle": "chalk",
@@ -434,51 +383,13 @@
           "sku": null,
           "customFields": {},
           "variants": [],
-          "customizations": [
-            {
-              "id": 135,
-              "name": "Papas fritas",
-              "type": "add",
-              "price": 5000,
-              "priceFormatted": "$5,000",
-              "isDefault": false
-            },
-            {
-              "id": 165,
-              "name": "Mayonesa",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 166,
-              "name": "Ketchup",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 167,
-              "name": "Mostaza",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            }
-          ],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
+          "customizations": [],
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": true,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasCustomizations": false
         },
         {
           "id": 32,
@@ -500,51 +411,13 @@
           "sku": null,
           "customFields": {},
           "variants": [],
-          "customizations": [
-            {
-              "id": 137,
-              "name": "Papas fritas",
-              "type": "add",
-              "price": 5000,
-              "priceFormatted": "$5,000",
-              "isDefault": false
-            },
-            {
-              "id": 171,
-              "name": "Mayonesa",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 172,
-              "name": "Ketchup",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 173,
-              "name": "Mostaza",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            }
-          ],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
+          "customizations": [],
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": true,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasCustomizations": false
         },
         {
           "id": 33,
@@ -566,51 +439,13 @@
           "sku": null,
           "customFields": {},
           "variants": [],
-          "customizations": [
-            {
-              "id": 136,
-              "name": "Papas fritas",
-              "type": "add",
-              "price": 5000,
-              "priceFormatted": "$5,000",
-              "isDefault": false
-            },
-            {
-              "id": 168,
-              "name": "Mayonesa",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 169,
-              "name": "Ketchup",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            },
-            {
-              "id": 170,
-              "name": "Mostaza",
-              "type": "remove",
-              "price": null,
-              "priceFormatted": null,
-              "isDefault": true
-            }
-          ],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
+          "customizations": [],
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": true,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasCustomizations": false
         }
       ],
       "frameStyle": "chalk",
@@ -653,17 +488,12 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasCustomizations": false
         },
         {
           "id": 35,
@@ -686,17 +516,12 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasCustomizations": false
         },
         {
           "id": 36,
@@ -719,17 +544,12 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasCustomizations": false
         }
       ],
       "frameStyle": "chalk",
@@ -772,17 +592,12 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasCustomizations": false
         },
         {
           "id": 38,
@@ -805,17 +620,12 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasCustomizations": false
         },
         {
           "id": 39,
@@ -838,17 +648,12 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasCustomizations": false
         }
       ],
       "frameStyle": "chalk",
@@ -891,17 +696,12 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasCustomizations": false
         },
         {
           "id": 41,
@@ -924,17 +724,12 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasCustomizations": false
         }
       ],
       "frameStyle": "chalk",
@@ -1079,27 +874,9 @@
     "placeholder": "Buscar productos..."
   },
   "totalItems": 17,
-  "navButtonText": "Ver servicios",
   "buildInfo": {
-    "version": "20260202-135841",
-    "timestamp": "2026-02-02T16:58:41.120Z",
+    "version": "20260126-192704",
+    "timestamp": "2026-01-26T22:27:04.796Z",
     "generator": "SCG v1.0.0"
-  },
-  "branding": {
-    "footerText": "Hecho por Catalog Forge",
-    "footerPhone": "5491150192474",
-    "footerPhoneDisplay": "11 5019-2474"
-  },
-  "fontUrls": [
-    "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap",
-    "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
-  ],
-  "fontStyles": {
-    "heading": "'Playfair Display', Georgia, serif",
-    "body": "'Montserrat', Georgia, serif",
-    "catalogTitle": "'Playfair Display', Georgia, serif",
-    "sectionTitle": "'Playfair Display', Georgia, serif",
-    "itemName": "'Playfair Display', Georgia, serif"
-  },
-  "globalSettings": {}
+  }
 }

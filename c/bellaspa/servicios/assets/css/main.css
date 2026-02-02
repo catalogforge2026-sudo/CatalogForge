@@ -242,20 +242,6 @@ body::before {
   box-shadow: 0 6px 20px rgba(233, 30, 140, 0.4);
 }
 
-/* Ocultar buscador y filtro SOLO en el header (evitar duplicado) */
-.header-search,
-.header-filter,
-.header-controls,
-.site-header .header-search,
-.site-header .header-filter,
-.site-header .header-controls {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  height: 0 !important;
-  overflow: hidden !important;
-}
-
 /* ============================================
    NAVIGATION - Tab style
    ============================================ */

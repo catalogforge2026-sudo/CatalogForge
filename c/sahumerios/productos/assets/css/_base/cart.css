@@ -6,8 +6,7 @@
 /* ============================================
    ADD TO CART BUTTON
    ============================================ */
-.item-add-cart,
-.promo-add-cart {
+.item-add-cart {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -25,46 +24,19 @@
   letter-spacing: 0.02em;
 }
 
-.item-add-cart:hover,
-.promo-add-cart:hover {
+.item-add-cart:hover {
   background: var(--primary-hover, var(--primary-color));
   transform: scale(1.05);
   box-shadow: 0 4px 15px color-mix(in srgb, var(--primary-color) 40%, transparent);
 }
 
-.item-add-cart:active,
-.promo-add-cart:active {
+.item-add-cart:active {
   transform: scale(0.98);
 }
 
-.item-add-cart svg,
-.promo-add-cart svg {
+.item-add-cart svg {
   width: 16px;
   height: 16px;
-}
-
-/* Promo card footer with price and cart button */
-.promo-card-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-top: 0.75rem;
-  padding-top: 0.75rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.promo-card-price {
-  font-family: var(--font-family-accent, var(--font-family));
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--promo-accent, var(--primary-color));
-}
-
-.promo-card-price small {
-  font-size: 0.75rem;
-  font-weight: 400;
-  opacity: 0.8;
 }
 
 /* ============================================
@@ -242,7 +214,7 @@ body.cart-bar-visible {
   bottom: 0;
   left: 0;
   right: 0;
-  max-height: 90vh;
+  max-height: 80vh;
   background: var(--card-bg, #1a1a1a);
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
@@ -251,10 +223,7 @@ body.cart-bar-visible {
   transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: env(safe-area-inset-bottom, 20px);
+  overflow: hidden;
 }
 
 .cart-modal-overlay.open .cart-modal {
@@ -271,8 +240,7 @@ body.cart-bar-visible {
 }
 
 .cart-modal-title {
-  font-family: var(--font-family, system-ui);
-  font-family: 'Montserrat', system-ui, sans-serif !important;
+  font-family: var(--font-family-display, var(--font-family, system-ui));
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--text-color, #fff);
@@ -343,11 +311,11 @@ body.cart-bar-visible {
 
 /* Modal Body - Items List */
 .cart-modal-body {
-  flex: 0 0 auto;
+  flex: 1;
   overflow-y: auto;
   padding: 0.5rem 0.85rem;
-  max-height: 25vh;
-  min-height: 60px;
+  max-height: 30vh;
+  min-height: 90px;
 }
 
 .cart-empty {
@@ -480,7 +448,6 @@ body.cart-bar-visible {
   padding: 0.5rem 0.85rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(0, 0, 0, 0.2);
-  flex: 0 0 auto;
 }
 
 .cart-summary-row {
@@ -510,9 +477,7 @@ body.cart-bar-visible {
    ============================================ */
 .cart-form {
   padding: 0.6rem 0.85rem;
-  padding-bottom: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  flex: 0 0 auto;
 }
 
 .cart-form-title {
@@ -562,89 +527,6 @@ body.cart-bar-visible {
   border-color: #ff3b30;
 }
 
-/* Dynamic form fields */
-.cart-form-label {
-  display: block;
-  font-family: var(--font-family, system-ui);
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--text-color, #fff);
-  margin-bottom: 0.3rem;
-  opacity: 0.9;
-}
-
-.cart-form-textarea {
-  resize: vertical;
-  min-height: 50px;
-}
-
-.cart-form-select {
-  appearance: none;
-  background-color: rgba(255, 255, 255, 0.08);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 0.75rem center;
-  padding-right: 2rem;
-  cursor: pointer;
-  color: #fff;
-  font-weight: 500;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-/* Selected value uses primary color for visibility */
-.cart-form-select:not([value=""]):not(:invalid) {
-  color: var(--primary-color, #fff);
-}
-
-.cart-form-select option {
-  background: #1a1a1a;
-  color: #fff;
-  padding: 0.5rem;
-  font-weight: 500;
-}
-
-/* Delivery row in summary */
-.cart-summary-delivery {
-  color: var(--text-muted, #aaa);
-  font-size: 0.7rem;
-}
-
-.cart-summary-delivery .cart-delivery-value {
-  color: var(--primary-color);
-}
-
-/* Checkbox field */
-.cart-form-checkbox {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-
-.cart-form-checkbox label {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-  cursor: pointer;
-  font-family: var(--font-family, system-ui);
-  font-size: 0.8rem;
-  color: var(--text-color, #fff);
-  line-height: 1.4;
-}
-
-.cart-form-checkbox input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  margin-top: 2px;
-  accent-color: var(--primary-color);
-  cursor: pointer;
-  flex-shrink: 0;
-}
-
-.cart-form-checkbox input[type="checkbox"].error {
-  outline: 2px solid #ff3b30;
-  outline-offset: 1px;
-}
-
 /* Submit Button */
 .cart-submit {
   width: 100%;
@@ -663,8 +545,6 @@ body.cart-bar-visible {
   gap: 0.5rem;
   transition: all 0.3s ease;
   margin-top: 0.6rem;
-  margin-bottom: 1rem;
-  flex-shrink: 0;
 }
 
 .cart-submit:hover {
@@ -725,13 +605,6 @@ body.cart-bar-visible {
   width: 100%;
 }
 
-/* Items sin imagen con variantes - layout horizontal */
-.item-card.no-image.has-variants .item-variants {
-  flex-direction: row;
-  width: auto;
-  align-items: center;
-}
-
 .variant-select {
   width: 100%;
   padding: 0.5rem 0.75rem;
@@ -789,7 +662,7 @@ body.cart-bar-visible {
 }
 
 /* Item card with variants */
-.item-card.has-variants:not(.no-image) .item-footer {
+.item-card.has-variants .item-footer {
   flex-direction: column;
   align-items: stretch;
   gap: 0.5rem;
@@ -805,635 +678,4 @@ body.cart-bar-visible {
 .mode-light .variant-select option {
   background: #fff;
   color: #333;
-}
-
-
-/* ============================================
-   LIGHT/DARK MODE ADJUSTMENTS FOR FORM
-   ============================================ */
-
-/* Light mode - form inputs and selects */
-.mode-light .cart-form-input,
-.mode-light .cart-form-select {
-  background: rgba(0, 0, 0, 0.05);
-  border-color: rgba(0, 0, 0, 0.15);
-  color: #333;
-}
-
-.mode-light .cart-form-input::placeholder {
-  color: #666;
-}
-
-.mode-light .cart-form-select option {
-  background: #fff;
-  color: #333;
-}
-
-.mode-light .cart-form-label {
-  color: #333;
-}
-
-/* Dark mode - ensure selects match inputs with high visibility text */
-.mode-dark .cart-form-select,
-.cart-form-select {
-  background-color: rgba(255, 255, 255, 0.08) !important;
-  border-color: rgba(255, 255, 255, 0.15);
-  color: var(--primary-color, #f0c040) !important;
-  font-weight: 600;
-}
-
-/* Options in dropdown - dark background with white text */
-.mode-dark .cart-form-select option,
-.cart-form-select option {
-  background: #1a1a1a !important;
-  color: #ffffff !important;
-  padding: 0.75rem 0.5rem;
-  font-weight: 500;
-}
-
-/* Checked/selected option highlight */
-.cart-form-select option:checked {
-  background: linear-gradient(0deg, var(--primary-color, #f0c040) 0%, var(--primary-color, #f0c040) 100%) !important;
-  color: #000 !important;
-  font-weight: 600;
-}
-
-/* Focus state */
-.cart-form-select:focus {
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary-color) 25%, transparent);
-}
-
-
-/* ============================================
-   CUSTOMIZATION MODAL (Ingredientes)
-   ============================================ */
-.customization-modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(4px);
-  z-index: 10003;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-}
-
-.customization-modal-overlay.open {
-  opacity: 1;
-  visibility: visible;
-}
-
-.customization-modal {
-  background: var(--card-bg, #1a1a1a);
-  border-radius: 16px;
-  max-width: 340px;
-  width: 100%;
-  max-height: 85vh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  transform: scale(0.9) translateY(20px);
-  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-}
-
-.customization-modal-overlay.open .customization-modal {
-  transform: scale(1) translateY(0);
-}
-
-.customization-modal-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  flex-shrink: 0;
-}
-
-.customization-modal-title {
-  font-family: var(--font-family-item-name, var(--font-family, system-ui));
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--text-color, #fff);
-  margin: 0;
-}
-
-.customization-modal-close {
-  width: 28px;
-  height: 28px;
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  border-radius: 50%;
-  color: var(--text-color, #fff);
-  font-size: 1rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  flex-shrink: 0;
-}
-
-.customization-modal-close:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.customization-modal-body {
-  padding: 0.75rem 1rem;
-  flex: 1;
-  overflow-y: auto;
-  overflow-y: scroll; /* Always show scrollbar */
-  min-height: 0;
-  max-height: 40vh;
-}
-
-/* Scrollbar styling - more visible */
-.customization-modal-body::-webkit-scrollbar {
-  width: 10px;
-}
-
-.customization-modal-body::-webkit-scrollbar-track {
-  background: #e0e0e0;
-  border-radius: 5px;
-}
-
-.customization-modal-body::-webkit-scrollbar-thumb {
-  background: #999;
-  border-radius: 5px;
-}
-
-.customization-modal-body::-webkit-scrollbar-thumb:hover {
-  background: #777;
-}
-
-/* Light mode scrollbar */
-.mode-light .customization-modal-body::-webkit-scrollbar-track {
-  background: #e5e5e5;
-}
-
-.mode-light .customization-modal-body::-webkit-scrollbar-thumb {
-  background: #aaa;
-}
-
-.mode-light .customization-modal-body::-webkit-scrollbar-thumb:hover {
-  background: #888;
-}
-
-.customization-modal-subtitle {
-  font-family: var(--font-family, system-ui);
-  font-size: 0.75rem;
-  color: var(--text-muted, #888);
-  margin: 0 0 0.5rem 0;
-}
-
-.customization-options {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.customization-option {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.75rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.customization-option:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-.customization-option input[type="checkbox"] {
-  display: none;
-}
-
-.customization-checkbox {
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--primary-color);
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  flex-shrink: 0;
-}
-
-.customization-option input[type="checkbox"]:checked + .customization-checkbox {
-  background: var(--primary-color);
-}
-
-.customization-option input[type="checkbox"]:checked + .customization-checkbox::after {
-  content: '✓';
-  color: #000;
-  font-weight: 700;
-  font-size: 0.75rem;
-}
-
-.customization-option input[type="checkbox"]:not(:checked) + .customization-checkbox {
-  background: transparent;
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-.customization-option input[type="checkbox"]:not(:checked) + .customization-checkbox::after {
-  content: '✕';
-  color: #ff6b6b;
-  font-weight: 700;
-  font-size: 0.75rem;
-}
-
-.customization-name {
-  font-family: var(--font-family, system-ui);
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--text-color, #fff);
-}
-
-.customization-option input[type="checkbox"]:not(:checked) ~ .customization-name {
-  text-decoration: line-through;
-  color: var(--text-muted, #888);
-}
-
-.customization-modal-footer {
-  padding: 0.75rem 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  flex-shrink: 0;
-}
-
-.customization-confirm-btn {
-  width: 100%;
-  padding: 0.65rem;
-  background: var(--primary-color);
-  color: #000;
-  border: none;
-  border-radius: 8px;
-  font-family: var(--font-family, system-ui);
-  font-size: 0.85rem;
-  font-weight: 700;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  transition: all 0.3s ease;
-}
-
-.customization-confirm-btn:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 15px color-mix(in srgb, var(--primary-color) 40%, transparent);
-}
-
-.customization-confirm-btn svg {
-  width: 20px;
-  height: 20px;
-}
-
-/* Cart item exclusions */
-.cart-item-exclusions {
-  font-size: 0.65rem;
-  color: #ff6b6b;
-  margin-top: 0.15rem;
-  font-weight: 500;
-}
-
-/* Light mode adjustments */
-.mode-light .customization-modal {
-  background: #fff;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-}
-
-.mode-light .customization-modal-header {
-  border-color: rgba(0, 0, 0, 0.1);
-}
-
-.mode-light .customization-modal-close {
-  background: rgba(0, 0, 0, 0.05);
-  color: #333;
-}
-
-.mode-light .customization-modal-close:hover {
-  background: rgba(0, 0, 0, 0.1);
-}
-
-.mode-light .customization-modal-title {
-  color: #333;
-}
-
-.mode-light .customization-modal-subtitle {
-  color: #666;
-}
-
-.mode-light .customization-option {
-  background: rgba(0, 0, 0, 0.03);
-  border-color: rgba(0, 0, 0, 0.1);
-}
-
-.mode-light .customization-option:hover {
-  background: rgba(0, 0, 0, 0.05);
-  border-color: rgba(0, 0, 0, 0.15);
-}
-
-.mode-light .customization-name {
-  color: #333;
-}
-
-.mode-light .customization-option input[type="checkbox"]:not(:checked) ~ .customization-name {
-  color: #999;
-}
-
-.mode-light .customization-option input[type="checkbox"]:not(:checked) + .customization-checkbox {
-  border-color: rgba(0, 0, 0, 0.2);
-}
-
-.mode-light .customization-modal-footer {
-  border-color: rgba(0, 0, 0, 0.1);
-}
-
-.mode-light .customization-confirm-btn {
-  color: #000;
-}
-
-/* ============================================
-   CUSTOMIZATION ADDONS (Adicionales con precio)
-   ============================================ */
-.customization-section {
-  margin-bottom: 1rem;
-}
-
-.customization-section:last-child {
-  margin-bottom: 0;
-}
-
-.customization-add-section .customization-modal-subtitle {
-  color: #f59e0b;
-}
-
-/* Addon option styling */
-.customization-addon {
-  justify-content: flex-start;
-}
-
-.customization-addon .customization-name {
-  flex: 1;
-}
-
-.customization-price {
-  font-family: var(--font-family, system-ui);
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #f59e0b;
-  background: rgba(245, 158, 11, 0.15);
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
-  margin-left: auto;
-}
-
-/* Addon checkbox styling (different from remove) */
-.customization-addon input[type="checkbox"]:not(:checked) + .customization-checkbox {
-  border-color: rgba(245, 158, 11, 0.5);
-}
-
-.customization-addon input[type="checkbox"]:not(:checked) + .customization-checkbox::after {
-  content: '';
-}
-
-.customization-addon input[type="checkbox"]:checked + .customization-checkbox {
-  background: #f59e0b;
-  border-color: #f59e0b;
-}
-
-.customization-addon input[type="checkbox"]:not(:checked) ~ .customization-name {
-  text-decoration: none;
-  color: var(--text-color, #fff);
-}
-
-/* Price summary in footer */
-.customization-price-summary {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-  margin-bottom: 0.5rem;
-  font-family: var(--font-family, system-ui);
-  font-size: 0.75rem;
-  color: var(--text-muted, #888);
-}
-
-.customization-base-price {
-  color: var(--text-muted, #888);
-}
-
-.customization-addons-price {
-  color: #f59e0b;
-}
-
-.customization-total-price {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--text-color, #fff);
-  padding-top: 0.25rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: 0.25rem;
-}
-
-/* Cart item addons display */
-.cart-item-addons {
-  font-size: 0.65rem;
-  color: #f59e0b;
-  margin-top: 0.15rem;
-  font-weight: 500;
-}
-
-/* Light mode for addons */
-.mode-light .customization-addon input[type="checkbox"]:not(:checked) ~ .customization-name {
-  color: #333;
-}
-
-.mode-light .customization-price-summary {
-  color: #666;
-}
-
-.mode-light .customization-base-price {
-  color: #666;
-}
-
-.mode-light .customization-total-price {
-  color: #333;
-  border-color: rgba(0, 0, 0, 0.1);
-}
-
-/* ============================================
-   VARIANT SELECTION MODAL
-   ============================================ */
-.variant-modal .variant-options {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.variant-option {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 0.75rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.variant-option:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-.variant-option input[type="radio"] {
-  display: none;
-}
-
-.variant-option input[type="radio"] + .customization-checkbox {
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--primary-color, #d4a853);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  flex-shrink: 0;
-  background: transparent;
-}
-
-.variant-option input[type="radio"]:checked + .customization-checkbox {
-  background: var(--primary-color, #d4a853);
-  border-color: var(--primary-color, #d4a853);
-}
-
-.variant-option input[type="radio"]:checked + .customization-checkbox::after {
-  content: '✓';
-  color: #000;
-  font-weight: 700;
-  font-size: 0.7rem;
-}
-
-.variant-option .customization-name {
-  flex: 1;
-  font-size: 0.8rem;
-}
-
-.variant-option .customization-price {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--primary-color, #d4a853);
-  background: rgba(212, 168, 83, 0.15);
-}
-
-.variant-selection-section {
-  margin-bottom: 0.75rem;
-}
-
-/* Light mode variant modal */
-.mode-light .variant-option {
-  background: rgba(0, 0, 0, 0.03);
-  border-color: rgba(0, 0, 0, 0.1);
-}
-
-.mode-light .variant-option:hover {
-  background: rgba(0, 0, 0, 0.05);
-  border-color: rgba(0, 0, 0, 0.15);
-}
-
-.mode-light .variant-option .customization-name {
-  color: #333;
-}
-
-.mode-light .variant-option .customization-price {
-  color: var(--primary-color, #d4a853);
-}
-
-/* Disabled confirm button */
-.customization-confirm-btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.customization-confirm-btn:disabled:hover {
-  transform: none;
-  box-shadow: none;
-}
-
-
-/* ============================================
-   VARIANT RADIO BUTTONS IN CUSTOMIZATION MODAL
-   ============================================ */
-.customization-variant-section .customization-modal-subtitle {
-  color: var(--primary-color, #d4a853);
-}
-
-.customization-variant {
-  justify-content: flex-start;
-}
-
-.customization-variant .customization-name {
-  flex: 1;
-}
-
-.customization-variant .customization-price {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--primary-color, #d4a853);
-  background: rgba(212, 168, 83, 0.15);
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-  margin-left: auto;
-}
-
-/* Radio button styling for variants */
-.customization-variant input[type="radio"] {
-  display: none;
-}
-
-.customization-variant input[type="radio"] + .customization-checkbox {
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--primary-color, #d4a853);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  flex-shrink: 0;
-  background: transparent;
-}
-
-.customization-variant input[type="radio"]:checked + .customization-checkbox {
-  background: var(--primary-color, #d4a853);
-  border-color: var(--primary-color, #d4a853);
-}
-
-.customization-variant input[type="radio"]:checked + .customization-checkbox::after {
-  content: '✓';
-  color: #000;
-  font-weight: 700;
-  font-size: 0.7rem;
-}
-
-.customization-variant input[type="radio"]:not(:checked) + .customization-checkbox::after {
-  content: '';
-}
-
-/* Light mode adjustments */
-.mode-light .customization-variant .customization-price {
-  background: rgba(212, 168, 83, 0.2);
 }

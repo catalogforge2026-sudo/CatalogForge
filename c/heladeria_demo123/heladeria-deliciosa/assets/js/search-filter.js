@@ -23,10 +23,10 @@
   document.addEventListener('DOMContentLoaded', init);
 
   function init() {
-    // Get elements - support both header and body search/filter
-    searchInput = document.querySelector('.header-search .search-input') || document.querySelector('.search-input');
-    searchClear = document.querySelector('.header-search .search-clear') || document.querySelector('.search-clear');
-    filterSelect = document.querySelector('#header-category-filter') || document.querySelector('.filter-select');
+    // Get elements
+    searchInput = document.querySelector('.search-input');
+    searchClear = document.querySelector('.search-clear');
+    filterSelect = document.querySelector('.filter-select');
     resultsInfo = document.querySelector('.search-results-info');
     
     // Get all sections and items
@@ -36,28 +36,24 @@
     // Create no results element
     createNoResultsElement();
 
-    // Bind events - also bind to all search inputs (header and body)
-    const allSearchInputs = document.querySelectorAll('.search-input');
-    allSearchInputs.forEach(input => {
-      input.addEventListener('input', handleSearch);
-      input.addEventListener('keydown', (e) => {
+    // Bind events
+    if (searchInput) {
+      searchInput.addEventListener('input', handleSearch);
+      searchInput.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
           clearSearch();
         }
       });
-    });
+    }
 
-    // Bind all clear buttons
-    const allClearBtns = document.querySelectorAll('.search-clear');
-    allClearBtns.forEach(btn => {
-      btn.addEventListener('click', clearSearch);
-    });
+    if (searchClear) {
+      searchClear.addEventListener('click', clearSearch);
+    }
 
-    // Filter select dropdown - bind all filter selects
-    const allFilterSelects = document.querySelectorAll('.filter-select, #header-category-filter');
-    allFilterSelects.forEach(select => {
-      select.addEventListener('change', handleFilterChange);
-    });
+    // Filter select dropdown
+    if (filterSelect) {
+      filterSelect.addEventListener('change', handleFilterChange);
+    }
   }
 
   function createNoResultsElement() {

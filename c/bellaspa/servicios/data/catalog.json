@@ -5,7 +5,7 @@
     "image": "uploads/1769312696454-pp3h10d6q.png",
     "url": "/c/bellaspa/servicios",
     "clientKey": "bellaspa",
-    "generatedAt": "2026-02-02T16:27:16.639Z",
+    "generatedAt": "2026-01-25T04:44:16.976Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -13,9 +13,8 @@
     "slug": "bella-nails-spa",
     "logo": "uploads/1769312696454-pp3h10d6q.png",
     "email": "contacto@bellanails.com",
-    "phone": "+54 11 50192474",
+    "phone": "+54 11 5555-1234",
     "address": "",
-    "mapsUrl": null,
     "website": null,
     "socialLinks": {}
   },
@@ -23,11 +22,7 @@
     "id": 10,
     "name": "Nuestros Servicios",
     "slug": "servicios",
-    "publicKey": "bellaspa",
     "description": "Servicios profesionales de manicura, pedicura, spa y masajes",
-    "address": null,
-    "mapsUrl": null,
-    "showAddressHeader": false,
     "type": "Servicios",
     "typeSlug": "services",
     "config": {
@@ -92,7 +87,6 @@
       "icon": "💅",
       "iconUrl": null,
       "image": "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&q=80",
-      "imageUrl": "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&q=80",
       "itemCount": 3,
       "items": [
         {
@@ -102,9 +96,6 @@
           "description": "Manos bien cuidadas con esmaltado a elección",
           "price": "$ 4.500",
           "priceRaw": 4500,
-          "originalPrice": null,
-          "originalPriceRaw": null,
-          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&q=80",
@@ -115,18 +106,10 @@
           "sku": null,
           "customFields": {},
           "variants": [],
-          "customizations": [],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false,
-          "hasDiscount": false,
-          "hasCustomizations": false,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasVariants": false
         },
         {
           "id": 114,
@@ -135,9 +118,6 @@
           "description": "Esculpidas para lucir hermosas y elegantes",
           "price": "$ 8.500",
           "priceRaw": 8500,
-          "originalPrice": null,
-          "originalPriceRaw": null,
-          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=400&q=80",
@@ -148,18 +128,10 @@
           "sku": null,
           "customFields": {},
           "variants": [],
-          "customizations": [],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false,
-          "hasDiscount": false,
-          "hasCustomizations": false,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasVariants": false
         },
         {
           "id": 115,
@@ -168,9 +140,6 @@
           "description": "Diseños personalizados y brillantes",
           "price": "$ 3.500",
           "priceRaw": 3500,
-          "originalPrice": null,
-          "originalPriceRaw": null,
-          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=400&q=80",
@@ -181,18 +150,10 @@
           "sku": null,
           "customFields": {},
           "variants": [],
-          "customizations": [],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false,
-          "hasDiscount": false,
-          "hasCustomizations": false,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasVariants": false
         }
       ],
       "frameStyle": "chalk",
@@ -200,8 +161,7 @@
       "promoBadge": null,
       "showItemImages": true,
       "hasPromo": false,
-      "hasImage": true,
-      "sectionClasses": "show-images has-image"
+      "sectionClasses": "show-images"
     },
     {
       "id": 44,
@@ -211,7 +171,6 @@
       "icon": "🧖",
       "iconUrl": null,
       "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&q=80",
-      "imageUrl": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&q=80",
       "itemCount": 3,
       "items": [
         {
@@ -221,9 +180,6 @@
           "description": "Sesión de masaje relajante y desestresante",
           "price": "$ 7.500",
           "priceRaw": 7500,
-          "originalPrice": null,
-          "originalPriceRaw": null,
-          "discountPercent": null,
           "priceLabel": "60 min",
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&q=80",
@@ -234,18 +190,10 @@
           "sku": null,
           "customFields": {},
           "variants": [],
-          "customizations": [],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false,
-          "hasDiscount": false,
-          "hasCustomizations": false,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasVariants": false
         },
         {
           "id": 117,
@@ -254,9 +202,6 @@
           "description": "Tratamiento facial humectante y refrescante",
           "price": "$ 6.500",
           "priceRaw": 6500,
-          "originalPrice": null,
-          "originalPriceRaw": null,
-          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&q=80",
@@ -267,18 +212,10 @@
           "sku": null,
           "customFields": {},
           "variants": [],
-          "customizations": [],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false,
-          "hasDiscount": false,
-          "hasCustomizations": false,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasVariants": false
         },
         {
           "id": 118,
@@ -287,9 +224,6 @@
           "description": "Masaje focalizado para aliviar tensiones",
           "price": "$ 8.500",
           "priceRaw": 8500,
-          "originalPrice": null,
-          "originalPriceRaw": null,
-          "discountPercent": null,
           "priceLabel": "60 min",
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=400&q=80",
@@ -300,18 +234,10 @@
           "sku": null,
           "customFields": {},
           "variants": [],
-          "customizations": [],
-          "customizationGroups": [],
-          "minVariantPrice": null,
-          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false,
-          "hasDiscount": false,
-          "hasCustomizations": false,
-          "hasCustomizationGroups": false,
-          "ingredientsDefaultChecked": true
+          "hasVariants": false
         }
       ],
       "frameStyle": "chalk",
@@ -319,16 +245,14 @@
       "promoBadge": null,
       "showItemImages": true,
       "hasPromo": false,
-      "hasImage": true,
-      "sectionClasses": "show-images has-image"
+      "sectionClasses": "show-images"
     }
   ],
   "promotions": [],
   "cart": {
     "enabled": true,
     "buttonText": "Hacer Pedido",
-    "whatsappMessage": "Hola! Me gustaría reservar el siguiente servicio:",
-    "formConfig": {}
+    "whatsappMessage": "Hola! Me gustaría reservar el siguiente servicio:"
   },
   "searchFilter": {
     "enabled": false,
@@ -337,26 +261,9 @@
     "placeholder": "Buscar productos..."
   },
   "totalItems": 6,
-  "navButtonText": "Ver servicios",
   "buildInfo": {
-    "version": "20260202-132716",
-    "timestamp": "2026-02-02T16:27:16.656Z",
+    "version": "20260125-014416",
+    "timestamp": "2026-01-25T04:44:16.978Z",
     "generator": "SCG v1.0.0"
-  },
-  "branding": {
-    "footerText": "Hecho por Catalog Forge",
-    "footerPhone": "5491150192474",
-    "footerPhoneDisplay": "11 5019-2474"
-  },
-  "fontUrls": [
-    "https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
-  ],
-  "fontStyles": {
-    "heading": "'Quicksand', Georgia, serif",
-    "body": "'Quicksand', Georgia, serif",
-    "catalogTitle": "'Quicksand', Georgia, serif",
-    "sectionTitle": "'Quicksand', Georgia, serif",
-    "itemName": "'Quicksand', Georgia, serif"
-  },
-  "globalSettings": {}
+  }
 }

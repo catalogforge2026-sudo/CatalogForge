@@ -342,23 +342,13 @@
     const removeItems = (itemData.customizations || []).filter(c => c.type === 'remove' || !c.type);
     const addItems = (itemData.customizations || []).filter(c => c.type === 'add' || c.type === 'addon');
     
-    // Check if ingredients should be checked by default
-    const ingredientsDefaultChecked = itemData.ingredientsDefaultChecked !== false;
-    
     const removeSection = customizationModal.querySelector('.customization-remove-section');
     const removeContainer = customizationModal.querySelector('.customization-remove-options');
-    const removeSubtitle = removeSection.querySelector('.customization-modal-subtitle');
-    
     if (removeItems.length > 0) {
       removeSection.style.display = 'block';
-      // Update subtitle based on default checked state
-      removeSubtitle.innerHTML = ingredientsDefaultChecked 
-        ? '🥗 Deseleccioná lo que no querés:'
-        : '🥗 Seleccioná lo que querés:';
-      
       removeContainer.innerHTML = removeItems.map(c => `
         <label class="customization-option">
-          <input type="checkbox" ${ingredientsDefaultChecked ? 'checked' : ''} data-id="${c.id}" data-name="${c.name}" data-type="remove">
+          <input type="checkbox" checked data-id="${c.id}" data-name="${c.name}" data-type="remove">
           <span class="customization-checkbox"></span>
           <span class="customization-name">${c.name}</span>
         </label>
@@ -409,37 +399,15 @@
       const dependsOn = group.dependsOnOptionId || '';
       const isHidden = dependsOn ? 'style="display:none;"' : '';
       
-      // defaultChecked logic:
-      // - Conditional groups (dependsOn) should NEVER start checked - user must select them
-      // - For groups with max selections, only check up to max
-      const isConditionalGroup = Boolean(dependsOn);
-      const baseDefaultChecked = group.defaultChecked !== false && !isConditionalGroup;
-      const maxToCheck = group.maxSelections || group.options.length;
-      
-      // Determine subtitle text based on selection type and default state
-      let subtitleText;
-      if (group.selectionType === 'exactly') {
-        subtitleText = `Elegí ${group.minSelections}`;
-      } else if (baseDefaultChecked) {
-        subtitleText = 'Deseleccioná lo que no querés';
-      } else {
-        subtitleText = 'Seleccioná lo que querés';
-      }
-      
       return `
-        <div class="customization-section customization-group" data-group-id="${group.id}" data-selection-type="${group.selectionType}" data-min="${group.minSelections}" data-max="${group.maxSelections || ''}" data-required="${group.isRequired}" data-default-checked="${baseDefaultChecked}" data-depends-on="${dependsOn}" ${isHidden}>
+        <div class="customization-section customization-group" data-group-id="${group.id}" data-selection-type="${group.selectionType}" data-min="${group.minSelections}" data-max="${group.maxSelections || ''}" data-required="${group.isRequired}" data-depends-on="${dependsOn}" ${isHidden}>
           <p class="customization-modal-subtitle">
             ${group.isRequired ? '⭐' : '📋'} ${group.name}
             <span class="customization-group-rule">(${selectionLabel})</span>
           </p>
-          <p class="customization-group-hint">${subtitleText}:</p>
           <div class="customization-group-status"></div>
           <div class="customization-options customization-group-options">
-            ${group.options.map((opt, i) => {
-              // Only check up to maxSelections options when defaultChecked is true
-              // Conditional groups never start checked
-              const shouldBeChecked = baseDefaultChecked && i < maxToCheck;
-              return `
+            ${group.options.map((opt, i) => `
               <label class="customization-option customization-group-option${opt.price ? ' has-price' : ''}">
                 <input type="${isRadio ? 'radio' : 'checkbox'}" 
                   name="group_${group.id}" 
@@ -448,13 +416,12 @@
                   data-name="${opt.name}" 
                   data-group-id="${group.id}"
                   data-price="${opt.price || 0}" 
-                  data-price-formatted="${opt.priceFormatted || ''}"
-                  ${shouldBeChecked ? 'checked' : ''}>
+                  data-price-formatted="${opt.priceFormatted || ''}">
                 <span class="customization-checkbox"></span>
                 <span class="customization-name">${opt.name}</span>
                 ${opt.priceFormatted ? `<span class="customization-price">+${opt.priceFormatted}</span>` : ''}
               </label>
-            `}).join('')}
+            `).join('')}
           </div>
         </div>
       `;
@@ -654,22 +621,14 @@
     const removeItems = customizations.filter(c => c.type === 'remove' || !c.type);
     const addItems = customizations.filter(c => c.type === 'add' || c.type === 'addon');
     
-    // Check if ingredients should be checked by default
-    const ingredientsDefaultChecked = itemData.ingredientsDefaultChecked !== false;
-    
-    // Render "remove" options (ingredients to exclude)
+    // Render "remove" options (ingredients to exclude) - checked by default
     const removeSection = customizationModal.querySelector('.customization-remove-section');
     const removeContainer = customizationModal.querySelector('.customization-remove-options');
-    const removeSubtitle = removeSection.querySelector('.customization-modal-subtitle');
     if (removeItems.length > 0) {
       removeSection.style.display = 'block';
-      // Update subtitle based on default checked state
-      removeSubtitle.innerHTML = ingredientsDefaultChecked 
-        ? '🥗 Deseleccioná lo que no querés:'
-        : '🥗 Seleccioná lo que querés:';
       removeContainer.innerHTML = removeItems.map(c => `
         <label class="customization-option">
-          <input type="checkbox" ${ingredientsDefaultChecked ? 'checked' : ''} data-id="${c.id}" data-name="${c.name}" data-type="remove">
+          <input type="checkbox" checked data-id="${c.id}" data-name="${c.name}" data-type="remove">
           <span class="customization-checkbox"></span>
           <span class="customization-name">${c.name}</span>
         </label>
@@ -753,57 +712,6 @@
     customizationModal.classList.remove('open');
     document.body.style.overflow = '';
     pendingItem = null;
-    
-    // Reset modal state to prevent stale data on next open
-    resetCustomizationModal();
-  }
-
-  // Reset customization modal to clean state
-  function resetCustomizationModal() {
-    // Clear variant section
-    const variantSection = customizationModal.querySelector('.customization-variant-section');
-    const variantContainer = customizationModal.querySelector('.customization-variant-options');
-    if (variantSection) variantSection.style.display = 'none';
-    if (variantContainer) variantContainer.innerHTML = '';
-    
-    // Clear customization groups - this is critical for conditional groups
-    const groupsContainer = customizationModal.querySelector('.customization-groups-container');
-    if (groupsContainer) groupsContainer.innerHTML = '';
-    
-    // Clear remove section
-    const removeSection = customizationModal.querySelector('.customization-remove-section');
-    const removeContainer = customizationModal.querySelector('.customization-remove-options');
-    if (removeSection) removeSection.style.display = 'none';
-    if (removeContainer) removeContainer.innerHTML = '';
-    
-    // Clear add section
-    const addSection = customizationModal.querySelector('.customization-add-section');
-    const addContainer = customizationModal.querySelector('.customization-add-options');
-    if (addSection) addSection.style.display = 'none';
-    if (addContainer) addContainer.innerHTML = '';
-    
-    // Reset validation error
-    const errorEl = customizationModal.querySelector('.customization-validation-error');
-    if (errorEl) errorEl.style.display = 'none';
-    
-    // Reset confirm button
-    const confirmBtn = customizationModal.querySelector('.customization-confirm-btn');
-    if (confirmBtn) confirmBtn.disabled = false;
-    
-    // Reset price display
-    const basePriceEl = customizationModal.querySelector('.customization-base-price');
-    const addonsPriceEl = customizationModal.querySelector('.customization-addons-price');
-    const totalPriceEl = customizationModal.querySelector('.customization-total-price');
-    if (basePriceEl) basePriceEl.textContent = '';
-    if (addonsPriceEl) {
-      addonsPriceEl.textContent = '';
-      addonsPriceEl.style.display = 'none';
-    }
-    if (totalPriceEl) totalPriceEl.innerHTML = '';
-    
-    // Reset modal title
-    const titleEl = customizationModal.querySelector('.customization-modal-title');
-    if (titleEl) titleEl.textContent = 'Personalizá tu pedido';
   }
 
   // Confirm customization and add to cart
@@ -1217,7 +1125,6 @@
           if (hasCustomizationGroups) {
             btn.dataset.customizationGroups = item.dataset.customizationGroups;
           }
-          btn.dataset.ingredientsDefaultChecked = item.dataset.ingredientsDefaultChecked || 'true';
 
           // Find or create footer area
           let footer = item.querySelector('.item-footer, .item-actions');
@@ -1328,7 +1235,6 @@
       if (hasCustomizationGroups) {
         btn.dataset.customizationGroups = JSON.stringify(customizationGroups);
       }
-      btn.dataset.ingredientsDefaultChecked = item.dataset.ingredientsDefaultChecked || 'true';
 
       // Find or create footer area
       let footer = item.querySelector('.item-footer, .item-actions');
@@ -1418,8 +1324,7 @@
               image: btn.dataset.itemImage,
               variants: variants,
               customizations: customizations,
-              customizationGroups: customizationGroups,
-              ingredientsDefaultChecked: btn.dataset.ingredientsDefaultChecked === 'true'
+              customizationGroups: customizationGroups
             });
             return;
           }
@@ -1431,7 +1336,6 @@
           // For variants, check if parent item has customizations
           const itemCard = btn.closest('.item-card');
           const hasCustomizations = itemCard?.dataset.hasCustomizations === 'true';
-          const ingredientsDefaultChecked = itemCard?.dataset.ingredientsDefaultChecked === 'true';
           let customizations = [];
           if (hasCustomizations && itemCard.dataset.customizations) {
             try {
@@ -1447,8 +1351,7 @@
               priceText: btn.dataset.itemPriceText,
               image: btn.dataset.itemImage,
               variantId: btn.dataset.variantId,
-              variantName: btn.dataset.variantName,
-              ingredientsDefaultChecked: ingredientsDefaultChecked
+              variantName: btn.dataset.variantName
             }, customizations);
           } else {
             addToCart({
@@ -1490,8 +1393,7 @@
               image: btn.dataset.itemImage,
               variants: [],
               customizations: customizations,
-              customizationGroups: customizationGroups,
-              ingredientsDefaultChecked: btn.dataset.ingredientsDefaultChecked === 'true'
+              customizationGroups: customizationGroups
             });
           } else if (hasCustomizations && customizations.length > 0) {
             // Open customization modal
@@ -1500,8 +1402,7 @@
               name: btn.dataset.itemName,
               price: parseFloat(btn.dataset.itemPrice),
               priceText: btn.dataset.itemPriceText,
-              image: btn.dataset.itemImage,
-              ingredientsDefaultChecked: btn.dataset.ingredientsDefaultChecked === 'true'
+              image: btn.dataset.itemImage
             }, customizations);
           } else {
             // Add directly to cart

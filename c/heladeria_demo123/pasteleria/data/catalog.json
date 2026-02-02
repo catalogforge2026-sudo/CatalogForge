@@ -5,7 +5,7 @@
     "image": "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=200&h=200&fit=crop",
     "url": "/c/heladeria_demo123/pasteleria",
     "clientKey": "heladeria_demo123",
-    "generatedAt": "2026-02-01T21:49:23.537Z",
+    "generatedAt": "2026-02-02T15:31:41.632Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -103,7 +103,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 190,
@@ -138,7 +139,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 191,
@@ -173,7 +175,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 192,
@@ -208,7 +211,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 193,
@@ -243,7 +247,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -298,7 +303,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 195,
@@ -332,7 +338,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 196,
@@ -367,7 +374,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 197,
@@ -402,7 +410,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -457,7 +466,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 199,
@@ -492,7 +502,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 200,
@@ -527,7 +538,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 201,
@@ -562,7 +574,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -617,7 +630,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 203,
@@ -652,7 +666,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 204,
@@ -687,7 +702,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 205,
@@ -722,7 +738,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -777,7 +794,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 207,
@@ -812,7 +830,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 208,
@@ -847,7 +866,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 209,
@@ -882,7 +902,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 210,
@@ -917,7 +938,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -945,6 +967,7 @@
   "coverPage": {
     "enabled": true,
     "backgroundImage": null,
+    "backgroundImageMobile": null,
     "showLogo": true,
     "showTitle": true,
     "showSubtitle": true,
@@ -954,8 +977,8 @@
   "totalItems": 22,
   "navButtonText": "Ver productos",
   "buildInfo": {
-    "version": "20260201-184923",
-    "timestamp": "2026-02-01T21:49:23.542Z",
+    "version": "20260202-123141",
+    "timestamp": "2026-02-02T15:31:41.644Z",
     "generator": "SCG v1.0.0"
   },
   "branding": {

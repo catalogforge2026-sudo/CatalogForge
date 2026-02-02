@@ -1471,14 +1471,7 @@ body.cart-bar-visible {
   align-items: center;
   gap: 0.5rem;
   flex-wrap: wrap;
-  margin-bottom: 0.25rem;
-}
-
-.customization-group-hint {
-  font-size: 0.7rem;
-  color: #888;
   margin-bottom: 0.5rem;
-  font-style: italic;
 }
 
 .customization-group-rule {

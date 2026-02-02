@@ -33,6 +33,26 @@
   object-position: center;
 }
 
+/* Responsive images - Desktop/Mobile */
+.cover-bg-desktop {
+  display: block;
+}
+
+.cover-bg-mobile {
+  display: none;
+}
+
+/* On mobile screens, show mobile image and hide desktop */
+@media (max-width: 768px) {
+  .cover-bg-desktop.hide-on-mobile {
+    display: none;
+  }
+  
+  .cover-bg-mobile {
+    display: block;
+  }
+}
+
 /* Default gradient when no image is provided - uses theme colors */
 /* Uses --header-bg directly to match the header gradient */
 .cover-background-gradient {
