@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/bardemo/menu-gastronomico",
     "clientKey": "bardemo",
-    "generatedAt": "2026-02-02T17:15:07.031Z",
+    "generatedAt": "2026-02-02T17:17:02.722Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -821,8 +821,8 @@
   "totalItems": 20,
   "navButtonText": "Ver servicios",
   "buildInfo": {
-    "version": "20260202-141507",
-    "timestamp": "2026-02-02T17:15:07.035Z",
+    "version": "20260202-141702",
+    "timestamp": "2026-02-02T17:17:02.726Z",
     "generator": "SCG v1.0.0"
   },
   "branding": {
