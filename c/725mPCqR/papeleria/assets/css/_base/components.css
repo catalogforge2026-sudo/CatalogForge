@@ -73,9 +73,45 @@ a {
 .catalog-intro {
   text-align: center;
   max-width: 600px;
-  margin: 0 auto var(--spacing-xl);
+  margin: -1rem auto var(--spacing-xl);
   color: var(--text-muted, #64748b);
   font-size: var(--font-size-base);
+  white-space: pre-line;
+  line-height: 1.4;
+}
+
+/* Catalog Address Header */
+.catalog-address-header {
+  text-align: center;
+  margin: -0.5rem auto var(--spacing-lg);
+}
+
+.catalog-address-link,
+.catalog-address-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--surface-color, rgba(255,255,255,0.1));
+  border-radius: 2rem;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  transition: all 0.2s ease;
+}
+
+.catalog-address-link:hover {
+  background: var(--primary-color);
+  color: var(--primary-contrast, #fff);
+}
+
+.catalog-address-icon {
+  color: #EA4335;
+  flex-shrink: 0;
+}
+
+.catalog-address-link:hover .catalog-address-icon {
+  color: inherit;
 }
 
 /* Section Navigation */
@@ -112,6 +148,14 @@ a {
 }
 
 .nav-count { opacity: 0.6; font-size: var(--font-size-xs); }
+
+/* Nav icon image support */
+.nav-icon-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
 
 /* Sections */
 .catalog-section {
@@ -317,7 +361,7 @@ body:not(.theme-mixology):not(.theme-gastro) .catalog-section.frame-gold::after 
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) !important;
-  z-index: 1000;
+  z-index: 9999;
   width: 90%;
   max-width: 500px;
   max-height: 85vh;
@@ -409,9 +453,9 @@ body:not(.theme-mixology):not(.theme-gastro) .catalog-section.frame-gold::after 
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px);
-  z-index: 999;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: none;
+  z-index: 9998;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
@@ -460,6 +504,36 @@ body:not(.theme-mixology):not(.theme-gastro) .catalog-section.frame-gold::after 
   font-size: var(--price-size, var(--font-size-lg));
   font-weight: var(--price-weight, 700);
   color: var(--price-color, var(--primary-color));
+}
+
+/* Precio original tachado (descuento) */
+.price-original {
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  color: var(--text-muted, #9ca3af);
+  text-decoration: line-through;
+  margin-right: var(--spacing-xs);
+}
+
+/* Badge de descuento estilo MercadoLibre */
+.badge-discount {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 6px;
+  background: var(--discount-badge-bg, #00a650);
+  color: var(--discount-badge-color, #ffffff);
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 3px;
+  margin-left: var(--spacing-xs);
+  white-space: nowrap;
+}
+
+/* Variante con descuento */
+.variant-price .price-original {
+  display: block;
+  margin-right: 0;
+  margin-bottom: 2px;
 }
 
 .price-label {
@@ -563,13 +637,67 @@ body:not(.theme-mixology):not(.theme-gastro) .catalog-section.frame-gold::after 
   opacity: 0.8;
 }
 
+.footer-maps-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer-maps-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.footer-maps-link .maps-icon {
+  color: #EA4335;
+  flex-shrink: 0;
+}
+
 .footer-cta { margin-top: var(--spacing-xs); }
 
 .footer-powered {
   margin-top: var(--spacing-sm);
   font-size: var(--font-size-xs);
   color: var(--text-muted, #64748b);
-  opacity: 0.5;
+  opacity: 0.65;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.footer-contact-info {
+  display: block;
+  font-size: 0.7rem;
+}
+
+.footer-contact-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footer-contact-link:hover {
+  opacity: 0.8;
+}
+
+.footer-branding {
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.footer-branding-link {
+  color: inherit;
+  text-decoration: underline;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.footer-branding-link:hover {
+  opacity: 1;
 }
 
 /* Aspect Ratios */
@@ -597,5 +725,5 @@ body:not(.theme-mixology):not(.theme-gastro) .catalog-section.frame-gold::after 
 }
 
 @media (max-width: 360px) {
-  .grid-auto { grid-template-columns: 1fr; }
+  .grid-auto { grid-template-columns: repeat(2, 1fr); }
 }

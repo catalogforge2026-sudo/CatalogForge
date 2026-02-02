@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/725mPCqR/papeleria",
     "clientKey": "725mPCqR",
-    "generatedAt": "2026-01-24T18:02:16.069Z",
+    "generatedAt": "2026-02-02T00:53:26.364Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -15,6 +15,7 @@
     "email": "romandesign81@gmail.com",
     "phone": "+54 11 5903 3756",
     "address": "Segurola 2324",
+    "mapsUrl": null,
     "website": null,
     "socialLinks": {}
   },
@@ -22,7 +23,11 @@
     "id": 1,
     "name": "Papeleria Creativa",
     "slug": "papeleria",
+    "publicKey": "725mPCqR",
     "description": null,
+    "address": null,
+    "mapsUrl": null,
+    "showAddressHeader": false,
     "type": "Productos",
     "typeSlug": "products",
     "config": {
@@ -34,52 +39,53 @@
       "layout": "grid",
       "itemsPerRow": 3,
       "themeLayout": "compact",
-      "themeMode": "light",
-      "themeSlug": "social",
-      "themePalette": "pastel"
+      "themeSlug": "spa",
+      "fontPreset": "default",
+      "basePreset": "default",
+      "customFonts": {},
+      "themePalette": "pink",
+      "themeMode": "light"
     }
   },
   "theme": {
-    "name": "Social",
-    "slug": "social",
+    "name": "Spa",
+    "slug": "spa",
     "styles": {
-      "primaryColor": "#ec4899",
-      "secondaryColor": "#8b5cf6",
-      "backgroundColor": "#ffffff",
-      "textColor": "#18181b",
-      "accentColor": "#f472b6",
-      "fontFamily": "Inter, sans-serif",
-      "borderRadius": "16px",
-      "cardShadow": "0 4px 12px rgba(0,0,0,0.1)",
-      "category": "social",
+      "primaryColor": "#e91e8c",
+      "secondaryColor": "#f8bbd9",
+      "backgroundColor": "#fce4ec",
+      "textColor": "#4a1942",
+      "accentColor": "#ff69b4",
+      "fontFamily": "Quicksand, sans-serif",
+      "borderRadius": "20px",
+      "cardShadow": "0 8px 32px rgba(233, 30, 140, 0.15)",
+      "category": "services",
       "idealFor": [
-        "Instagram",
-        "WhatsApp",
-        "link en bio",
-        "QR codes"
+        "spa",
+        "manicura",
+        "pedicura",
+        "masajes",
+        "belleza"
       ],
-      "icon": "📱",
+      "icon": "💅",
       "variants": {
         "modes": [
-          "light",
-          "dark"
+          "light"
         ],
         "palettes": [
-          "vibrant",
-          "pastel",
-          "mono"
+          "pink",
+          "blush",
+          "rose",
+          "lavender",
+          "mint",
+          "peach"
         ]
-      },
-      "features": [
-        "verticalCards",
-        "largeCTA",
-        "quickScroll"
-      ]
+      }
     },
     "mode": "light",
-    "palette": "pastel",
+    "palette": "pink",
     "layout": "compact",
-    "classes": "theme-social mode-light layout-compact palette-pastel"
+    "classes": "theme-spa mode-light layout-compact palette-pink"
   },
   "sections": [
     {
@@ -88,7 +94,9 @@
       "slug": "tarjetas",
       "description": "Tarjetas Personalizadas",
       "icon": null,
+      "iconUrl": null,
       "image": null,
+      "imageUrl": null,
       "itemCount": 3,
       "items": [
         {
@@ -98,6 +106,9 @@
           "description": "Tarjetas Personalizadas en opalina",
           "price": "$ 13.000",
           "priceRaw": 13000,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": "uploads/1769277535535-2aprp1fzm.jpeg",
@@ -108,10 +119,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 42,
@@ -120,6 +139,9 @@
           "description": "Tarjeta personalizada de agradecimiento",
           "price": null,
           "priceRaw": null,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": "uploads/1769269858756-rx0djw5es.png",
@@ -135,28 +157,44 @@
               "name": "100 unidades",
               "price": "$ 25.000",
               "priceRaw": 25000,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": "por pack",
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             },
             {
               "id": 2,
               "name": "50 unidades",
               "price": "$ 15.000",
               "priceRaw": 15000,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": "por pack",
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             }
           ],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": 15000,
+          "minVariantPriceFormatted": "$ 15.000",
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": true
+          "hasVariants": true,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 44,
@@ -165,6 +203,9 @@
           "description": " Tarjetas de presentación profesionales impresas a doble cara. Tamaño estándar 9x5cm, perfectas para networking y eventos. Material: papel opalina chambril de 240g mate, acabado elegante y resistente. Diseño personalizado incluido.",
           "price": "$ 12.870",
           "priceRaw": 12870,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": "uploads/1769277549005-i5w7dankg.jpeg",
@@ -180,72 +221,104 @@
               "name": "100 unidades",
               "price": "$ 12.870",
               "priceRaw": 12870,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": null,
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             },
             {
               "id": 4,
               "name": "200 unidades",
               "price": "$ 24.000",
               "priceRaw": 24000,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": null,
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             },
             {
               "id": 5,
               "name": "300 unidades",
               "price": "$ 34.320",
               "priceRaw": 34320,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": null,
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             },
             {
               "id": 6,
               "name": "400 unidades",
               "price": "$ 41.200",
               "priceRaw": 41200,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": null,
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             },
             {
               "id": 7,
               "name": "500 unidades",
               "price": "$ 47.190",
               "priceRaw": 47190,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": null,
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             },
             {
               "id": 8,
               "name": "1000 unidades",
               "price": "$ 68.640",
               "priceRaw": 68640,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": null,
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             }
           ],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": 12870,
+          "minVariantPriceFormatted": "$ 12.870",
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": true
+          "hasVariants": true,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -253,6 +326,7 @@
       "promoBadge": null,
       "showItemImages": true,
       "hasPromo": false,
+      "hasImage": false,
       "sectionClasses": "show-images"
     },
     {
@@ -261,7 +335,9 @@
       "slug": "volantes",
       "description": "Volantes publicitarios impresos en alta calidad",
       "icon": "",
+      "iconUrl": null,
       "image": null,
+      "imageUrl": null,
       "itemCount": 2,
       "items": [
         {
@@ -271,6 +347,9 @@
           "description": "🎨 Volantes publicitarios impresos a todo color en papel couche de alta calidad. Tamaño 10x15cm, ideales para promociones, eventos y publicidad. Impresión full color ambas caras disponible.",
           "price": "$ 4.500",
           "priceRaw": 4500,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": "uploads/1769277562951-2r40djlyr.jpeg",
@@ -286,50 +365,74 @@
               "name": "100 unidades",
               "price": "$ 4.500",
               "priceRaw": 4500,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": null,
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             },
             {
               "id": 10,
               "name": "500 unidades",
               "price": "$ 18.000",
               "priceRaw": 18000,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": null,
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             },
             {
               "id": 11,
               "name": "1000 unidades",
               "price": "$ 32.000",
               "priceRaw": 32000,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": null,
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             },
             {
               "id": 12,
               "name": "5000 unidades",
               "price": "$ 130.000",
               "priceRaw": 130000,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": null,
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             }
           ],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": 4500,
+          "minVariantPriceFormatted": "$ 4.500",
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": true
+          "hasVariants": true,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 46,
@@ -338,6 +441,9 @@
           "description": " Volantes publicitarios impresos en blanco y negro. Tamaño 10x15cm, opcion economica para distribucion masiva. Papel bond de calidad.",
           "price": "$ 2.500",
           "priceRaw": 2500,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": null,
@@ -353,39 +459,59 @@
               "name": "100 unidades",
               "price": "$ 2.500",
               "priceRaw": 2500,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": null,
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             },
             {
               "id": 14,
               "name": "500 unidades",
               "price": "$ 10.000",
               "priceRaw": 10000,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": null,
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             },
             {
               "id": 15,
               "name": "1000 unidades",
               "price": "$ 18.000",
               "priceRaw": 18000,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": null,
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             }
           ],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": 2500,
+          "minVariantPriceFormatted": "$ 2.500",
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
-          "hasVariants": true
+          "hasVariants": true,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -393,6 +519,7 @@
       "promoBadge": null,
       "showItemImages": false,
       "hasPromo": false,
+      "hasImage": false,
       "sectionClasses": ""
     },
     {
@@ -401,7 +528,9 @@
       "slug": "stickers",
       "description": "Stickers personalizados para eventos y decoración",
       "icon": "🎨",
+      "iconUrl": null,
       "image": null,
+      "imageUrl": null,
       "itemCount": 3,
       "items": [
         {
@@ -411,6 +540,9 @@
           "description": "🎉 Stickers Personalizados para Cumpleaños 🎉 Diseñamos stickers personalizados con el nombre, edad y temática que más te guste. Son ideales para decorar sorpresas, souvenirs, bolsitas, invitaciones o cualquier detalle de tu evento.",
           "price": "$ 3.500",
           "priceRaw": 3500,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": "uploads/1769272551996-6y5zlmucr.png",
@@ -421,10 +553,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 47,
@@ -433,6 +573,9 @@
           "description": " Stickers troquelados personalizados con corte a medida. Ideales para branding, packaging, decoraci�n y eventos. Impresi�n full color en vinilo de alta calidad con acabado resistente.",
           "price": null,
           "priceRaw": null,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Desde .500",
           "currency": "ARS",
           "image": null,
@@ -448,94 +591,134 @@
               "name": "135 stickers de 3x3cm",
               "price": "$ 7.500",
               "priceRaw": 7500,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": null,
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             },
             {
               "id": 17,
               "name": "95 stickers de 4x4cm",
               "price": "$ 7.500",
               "priceRaw": 7500,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": null,
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             },
             {
               "id": 18,
               "name": "96 stickers de 5x5cm",
               "price": "$ 11.000",
               "priceRaw": 11000,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": null,
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             },
             {
               "id": 19,
               "name": "96 stickers de 6x6cm",
               "price": "$ 16.200",
               "priceRaw": 16200,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": null,
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             },
             {
               "id": 20,
               "name": "48 stickers de 4x4cm",
               "price": "$ 4.500",
               "priceRaw": 4500,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": null,
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             },
             {
               "id": 21,
               "name": "68 stickers de 3x3cm",
               "price": "$ 4.500",
               "priceRaw": 4500,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": null,
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             },
             {
               "id": 22,
               "name": "48 stickers de 5x5cm",
               "price": "$ 6.000",
               "priceRaw": 6000,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": null,
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             },
             {
               "id": 23,
               "name": "48 stickers de 6x6cm",
               "price": "$ 10.300",
               "priceRaw": 10300,
+              "originalPrice": null,
+              "originalPriceRaw": null,
+              "discountPercent": null,
               "priceLabel": null,
               "sku": null,
               "stock": null,
               "image": null,
-              "isAvailable": true
+              "isAvailable": true,
+              "hasDiscount": false
             }
           ],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": 4500,
+          "minVariantPriceFormatted": "$ 4.500",
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
-          "hasVariants": true
+          "hasVariants": true,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 48,
@@ -544,6 +727,9 @@
           "description": "Plancha de stickers adhesiva tamaño A4 TROQUELADOS listo para USAR.",
           "price": "$ 2.500",
           "priceRaw": 2500,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": null,
@@ -554,10 +740,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -565,6 +759,7 @@
       "promoBadge": null,
       "showItemImages": true,
       "hasPromo": false,
+      "hasImage": false,
       "sectionClasses": "show-images"
     }
   ],
@@ -572,7 +767,8 @@
   "cart": {
     "enabled": true,
     "buttonText": "Agregar",
-    "whatsappMessage": "Hola! Quiero hacer el siguiente pedido:"
+    "whatsappMessage": "Hola! Quiero hacer el siguiente pedido:",
+    "formConfig": {}
   },
   "searchFilter": {
     "enabled": true,
@@ -580,10 +776,37 @@
     "filterEnabled": true,
     "placeholder": "Buscar productos..."
   },
+  "coverPage": {
+    "enabled": true,
+    "backgroundImage": null,
+    "backgroundImageMobile": null,
+    "showLogo": true,
+    "showTitle": true,
+    "showSubtitle": true,
+    "buttonText": "Ver Catálogo",
+    "buttonStyle": "outlined"
+  },
   "totalItems": 8,
+  "navButtonText": "Ver productos",
   "buildInfo": {
-    "version": "20260124-150216",
-    "timestamp": "2026-01-24T18:02:16.071Z",
+    "version": "20260201-215326",
+    "timestamp": "2026-02-02T00:53:26.368Z",
     "generator": "SCG v1.0.0"
-  }
+  },
+  "branding": {
+    "footerText": "Hecho por Catalog Forge",
+    "footerPhone": "5491150192474",
+    "footerPhoneDisplay": "11 5019-2474"
+  },
+  "fontUrls": [
+    "https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
+  ],
+  "fontStyles": {
+    "heading": "'Quicksand', Georgia, serif",
+    "body": "'Quicksand', Georgia, serif",
+    "catalogTitle": "'Quicksand', Georgia, serif",
+    "sectionTitle": "'Quicksand', Georgia, serif",
+    "itemName": "'Quicksand', Georgia, serif"
+  },
+  "globalSettings": {}
 }

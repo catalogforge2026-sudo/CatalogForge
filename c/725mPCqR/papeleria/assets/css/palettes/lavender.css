@@ -1,0 +1,49 @@
+/* Spa Theme - Lavender Palette (Lavanda/Violeta) */
+
+:root {
+  --primary-color: #8b5cf6;
+  --primary-hover: #7c3aed;
+  --accent-color: #a78bfa;
+  
+  --bg-color: #faf5ff;
+  --text-color: #4c1d95;
+  --text-muted: #6d28d9;
+  
+  --card-bg: rgba(255, 255, 255, 0.9);
+  
+  --header-bg: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 50%, #d8b4fe 100%);
+  --footer-bg: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  --footer-text: #ffffff;
+  
+  --logo-shadow: drop-shadow(0 10px 30px rgba(139, 92, 246, 0.4)) drop-shadow(0 5px 15px rgba(0, 0, 0, 0.15)) drop-shadow(0 0 20px rgba(167, 139, 250, 0.3));
+  --logo-shadow-hover: drop-shadow(0 20px 40px rgba(139, 92, 246, 0.5)) drop-shadow(0 10px 25px rgba(0, 0, 0, 0.2)) drop-shadow(0 0 30px rgba(167, 139, 250, 0.4));
+  
+  --cart-bar-bg: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  --cart-bar-text: #ffffff;
+  --cart-btn-bg: rgba(255, 255, 255, 0.2);
+  --cart-btn-border: rgba(255, 255, 255, 0.3);
+  --cart-btn-hover: rgba(255, 255, 255, 0.3);
+}
+
+/* Override button gradient */
+.item-add-cart {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(167, 139, 250, 0.15) 100%) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.item-add-cart:hover {
+  background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%) !important;
+}
+
+.social-link {
+  background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%) !important;
+}
+
+.section-nav a:hover,
+.section-nav a.active {
+  background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%) !important;
+}
+
+.item-card .badge-featured {
+  background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%) !important;
+}

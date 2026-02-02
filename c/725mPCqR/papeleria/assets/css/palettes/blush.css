@@ -1,0 +1,51 @@
+/* Spa Theme - Blush Palette (Rosa pastel principal) */
+
+:root {
+  --primary-color: #e91e8c;
+  --primary-hover: #d81b7a;
+  --accent-color: #ff69b4;
+  
+  --bg-color: #fdf2f8;
+  --text-color: #4a1942;
+  --text-muted: #8b5a8b;
+  
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-border: 2px solid rgba(233, 30, 140, 0.2);
+  --card-shadow: 0 8px 32px rgba(233, 30, 140, 0.15);
+  
+  --header-bg: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 50%, #f48fb1 100%);
+  --footer-bg: linear-gradient(135deg, #e91e8c 0%, #d81b7a 100%);
+  --footer-text: #ffffff;
+  
+  --logo-shadow: drop-shadow(0 10px 30px rgba(233, 30, 140, 0.4)) drop-shadow(0 5px 15px rgba(0, 0, 0, 0.15)) drop-shadow(0 0 20px rgba(255, 105, 180, 0.3));
+  --logo-shadow-hover: drop-shadow(0 20px 40px rgba(233, 30, 140, 0.5)) drop-shadow(0 10px 25px rgba(0, 0, 0, 0.2)) drop-shadow(0 0 30px rgba(255, 105, 180, 0.4));
+  
+  --cart-bar-bg: linear-gradient(135deg, #e91e8c 0%, #d81b7a 100%);
+  --cart-bar-text: #ffffff;
+  --cart-btn-bg: rgba(255, 255, 255, 0.2);
+  --cart-btn-border: rgba(255, 255, 255, 0.3);
+  --cart-btn-hover: rgba(255, 255, 255, 0.3);
+}
+
+/* Override button gradient */
+.item-add-cart {
+  background: linear-gradient(135deg, rgba(233, 30, 140, 0.1) 0%, rgba(255, 105, 180, 0.15) 100%) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.item-add-cart:hover {
+  background: linear-gradient(135deg, #e91e8c 0%, #ff69b4 100%) !important;
+}
+
+.social-link {
+  background: linear-gradient(135deg, #e91e8c 0%, #ff69b4 100%) !important;
+}
+
+.section-nav a:hover,
+.section-nav a.active {
+  background: linear-gradient(135deg, #e91e8c 0%, #ff69b4 100%) !important;
+}
+
+.item-card .badge-featured {
+  background: linear-gradient(135deg, #e91e8c 0%, #ff69b4 100%) !important;
+}
