@@ -546,6 +546,7 @@ body.cart-bar-visible {
   font-family: var(--font-family, system-ui);
   font-size: 0.8rem;
   transition: all 0.3s ease;
+  -webkit-text-fill-color: currentColor;
 }
 
 .cart-form-input::placeholder {
@@ -816,12 +817,12 @@ body.cart-bar-visible {
 .mode-light .cart-form-input,
 .mode-light .cart-form-select {
   background: rgba(0, 0, 0, 0.05);
-  border-color: rgba(0, 0, 0, 0.15);
-  color: #333;
+  border-color: rgba(0, 0, 0, 0.2);
+  color: #111 !important;
 }
 
 .mode-light .cart-form-input::placeholder {
-  color: #666;
+  color: #555;
 }
 
 .mode-light .cart-form-select option {
@@ -1470,7 +1471,14 @@ body.cart-bar-visible {
   align-items: center;
   gap: 0.5rem;
   flex-wrap: wrap;
+  margin-bottom: 0.25rem;
+}
+
+.customization-group-hint {
+  font-size: 0.7rem;
+  color: #888;
   margin-bottom: 0.5rem;
+  font-style: italic;
 }
 
 .customization-group-rule {

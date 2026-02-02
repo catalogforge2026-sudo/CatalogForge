@@ -342,13 +342,23 @@
     const removeItems = (itemData.customizations || []).filter(c => c.type === 'remove' || !c.type);
     const addItems = (itemData.customizations || []).filter(c => c.type === 'add' || c.type === 'addon');
     
+    // Check if ingredients should be checked by default
+    const ingredientsDefaultChecked = itemData.ingredientsDefaultChecked !== false;
+    
     const removeSection = customizationModal.querySelector('.customization-remove-section');
     const removeContainer = customizationModal.querySelector('.customization-remove-options');
+    const removeSubtitle = removeSection.querySelector('.customization-modal-subtitle');
+    
     if (removeItems.length > 0) {
       removeSection.style.display = 'block';
+      // Update subtitle based on default checked state
+      removeSubtitle.innerHTML = ingredientsDefaultChecked 
+        ? '🥗 Deseleccioná lo que no querés:'
+        : '🥗 Seleccioná lo que querés:';
+      
       removeContainer.innerHTML = removeItems.map(c => `
         <label class="customization-option">
-          <input type="checkbox" checked data-id="${c.id}" data-name="${c.name}" data-type="remove">
+          <input type="checkbox" ${ingredientsDefaultChecked ? 'checked' : ''} data-id="${c.id}" data-name="${c.name}" data-type="remove">
           <span class="customization-checkbox"></span>
           <span class="customization-name">${c.name}</span>
         </label>
@@ -399,15 +409,37 @@
       const dependsOn = group.dependsOnOptionId || '';
       const isHidden = dependsOn ? 'style="display:none;"' : '';
       
+      // defaultChecked logic:
+      // - Conditional groups (dependsOn) should NEVER start checked - user must select them
+      // - For groups with max selections, only check up to max
+      const isConditionalGroup = Boolean(dependsOn);
+      const baseDefaultChecked = group.defaultChecked !== false && !isConditionalGroup;
+      const maxToCheck = group.maxSelections || group.options.length;
+      
+      // Determine subtitle text based on selection type and default state
+      let subtitleText;
+      if (group.selectionType === 'exactly') {
+        subtitleText = `Elegí ${group.minSelections}`;
+      } else if (baseDefaultChecked) {
+        subtitleText = 'Deseleccioná lo que no querés';
+      } else {
+        subtitleText = 'Seleccioná lo que querés';
+      }
+      
       return `
-        <div class="customization-section customization-group" data-group-id="${group.id}" data-selection-type="${group.selectionType}" data-min="${group.minSelections}" data-max="${group.maxSelections || ''}" data-required="${group.isRequired}" data-depends-on="${dependsOn}" ${isHidden}>
+        <div class="customization-section customization-group" data-group-id="${group.id}" data-selection-type="${group.selectionType}" data-min="${group.minSelections}" data-max="${group.maxSelections || ''}" data-required="${group.isRequired}" data-default-checked="${baseDefaultChecked}" data-depends-on="${dependsOn}" ${isHidden}>
           <p class="customization-modal-subtitle">
             ${group.isRequired ? '⭐' : '📋'} ${group.name}
             <span class="customization-group-rule">(${selectionLabel})</span>
           </p>
+          <p class="customization-group-hint">${subtitleText}:</p>
           <div class="customization-group-status"></div>
           <div class="customization-options customization-group-options">
-            ${group.options.map((opt, i) => `
+            ${group.options.map((opt, i) => {
+              // Only check up to maxSelections options when defaultChecked is true
+              // Conditional groups never start checked
+              const shouldBeChecked = baseDefaultChecked && i < maxToCheck;
+              return `
               <label class="customization-option customization-group-option${opt.price ? ' has-price' : ''}">
                 <input type="${isRadio ? 'radio' : 'checkbox'}" 
                   name="group_${group.id}" 
@@ -416,12 +448,13 @@
                   data-name="${opt.name}" 
                   data-group-id="${group.id}"
                   data-price="${opt.price || 0}" 
-                  data-price-formatted="${opt.priceFormatted || ''}">
+                  data-price-formatted="${opt.priceFormatted || ''}"
+                  ${shouldBeChecked ? 'checked' : ''}>
                 <span class="customization-checkbox"></span>
                 <span class="customization-name">${opt.name}</span>
                 ${opt.priceFormatted ? `<span class="customization-price">+${opt.priceFormatted}</span>` : ''}
               </label>
-            `).join('')}
+            `}).join('')}
           </div>
         </div>
       `;
@@ -621,14 +654,22 @@
     const removeItems = customizations.filter(c => c.type === 'remove' || !c.type);
     const addItems = customizations.filter(c => c.type === 'add' || c.type === 'addon');
     
-    // Render "remove" options (ingredients to exclude) - checked by default
+    // Check if ingredients should be checked by default
+    const ingredientsDefaultChecked = itemData.ingredientsDefaultChecked !== false;
+    
+    // Render "remove" options (ingredients to exclude)
     const removeSection = customizationModal.querySelector('.customization-remove-section');
     const removeContainer = customizationModal.querySelector('.customization-remove-options');
+    const removeSubtitle = removeSection.querySelector('.customization-modal-subtitle');
     if (removeItems.length > 0) {
       removeSection.style.display = 'block';
+      // Update subtitle based on default checked state
+      removeSubtitle.innerHTML = ingredientsDefaultChecked 
+        ? '🥗 Deseleccioná lo que no querés:'
+        : '🥗 Seleccioná lo que querés:';
       removeContainer.innerHTML = removeItems.map(c => `
         <label class="customization-option">
-          <input type="checkbox" checked data-id="${c.id}" data-name="${c.name}" data-type="remove">
+          <input type="checkbox" ${ingredientsDefaultChecked ? 'checked' : ''} data-id="${c.id}" data-name="${c.name}" data-type="remove">
           <span class="customization-checkbox"></span>
           <span class="customization-name">${c.name}</span>
         </label>
@@ -712,6 +753,57 @@
     customizationModal.classList.remove('open');
     document.body.style.overflow = '';
     pendingItem = null;
+    
+    // Reset modal state to prevent stale data on next open
+    resetCustomizationModal();
+  }
+
+  // Reset customization modal to clean state
+  function resetCustomizationModal() {
+    // Clear variant section
+    const variantSection = customizationModal.querySelector('.customization-variant-section');
+    const variantContainer = customizationModal.querySelector('.customization-variant-options');
+    if (variantSection) variantSection.style.display = 'none';
+    if (variantContainer) variantContainer.innerHTML = '';
+    
+    // Clear customization groups - this is critical for conditional groups
+    const groupsContainer = customizationModal.querySelector('.customization-groups-container');
+    if (groupsContainer) groupsContainer.innerHTML = '';
+    
+    // Clear remove section
+    const removeSection = customizationModal.querySelector('.customization-remove-section');
+    const removeContainer = customizationModal.querySelector('.customization-remove-options');
+    if (removeSection) removeSection.style.display = 'none';
+    if (removeContainer) removeContainer.innerHTML = '';
+    
+    // Clear add section
+    const addSection = customizationModal.querySelector('.customization-add-section');
+    const addContainer = customizationModal.querySelector('.customization-add-options');
+    if (addSection) addSection.style.display = 'none';
+    if (addContainer) addContainer.innerHTML = '';
+    
+    // Reset validation error
+    const errorEl = customizationModal.querySelector('.customization-validation-error');
+    if (errorEl) errorEl.style.display = 'none';
+    
+    // Reset confirm button
+    const confirmBtn = customizationModal.querySelector('.customization-confirm-btn');
+    if (confirmBtn) confirmBtn.disabled = false;
+    
+    // Reset price display
+    const basePriceEl = customizationModal.querySelector('.customization-base-price');
+    const addonsPriceEl = customizationModal.querySelector('.customization-addons-price');
+    const totalPriceEl = customizationModal.querySelector('.customization-total-price');
+    if (basePriceEl) basePriceEl.textContent = '';
+    if (addonsPriceEl) {
+      addonsPriceEl.textContent = '';
+      addonsPriceEl.style.display = 'none';
+    }
+    if (totalPriceEl) totalPriceEl.innerHTML = '';
+    
+    // Reset modal title
+    const titleEl = customizationModal.querySelector('.customization-modal-title');
+    if (titleEl) titleEl.textContent = 'Personalizá tu pedido';
   }
 
   // Confirm customization and add to cart
@@ -1125,6 +1217,7 @@
           if (hasCustomizationGroups) {
             btn.dataset.customizationGroups = item.dataset.customizationGroups;
           }
+          btn.dataset.ingredientsDefaultChecked = item.dataset.ingredientsDefaultChecked || 'true';
 
           // Find or create footer area
           let footer = item.querySelector('.item-footer, .item-actions');
@@ -1235,6 +1328,7 @@
       if (hasCustomizationGroups) {
         btn.dataset.customizationGroups = JSON.stringify(customizationGroups);
       }
+      btn.dataset.ingredientsDefaultChecked = item.dataset.ingredientsDefaultChecked || 'true';
 
       // Find or create footer area
       let footer = item.querySelector('.item-footer, .item-actions');
@@ -1324,7 +1418,8 @@
               image: btn.dataset.itemImage,
               variants: variants,
               customizations: customizations,
-              customizationGroups: customizationGroups
+              customizationGroups: customizationGroups,
+              ingredientsDefaultChecked: btn.dataset.ingredientsDefaultChecked === 'true'
             });
             return;
           }
@@ -1336,6 +1431,7 @@
           // For variants, check if parent item has customizations
           const itemCard = btn.closest('.item-card');
           const hasCustomizations = itemCard?.dataset.hasCustomizations === 'true';
+          const ingredientsDefaultChecked = itemCard?.dataset.ingredientsDefaultChecked === 'true';
           let customizations = [];
           if (hasCustomizations && itemCard.dataset.customizations) {
             try {
@@ -1351,7 +1447,8 @@
               priceText: btn.dataset.itemPriceText,
               image: btn.dataset.itemImage,
               variantId: btn.dataset.variantId,
-              variantName: btn.dataset.variantName
+              variantName: btn.dataset.variantName,
+              ingredientsDefaultChecked: ingredientsDefaultChecked
             }, customizations);
           } else {
             addToCart({
@@ -1393,7 +1490,8 @@
               image: btn.dataset.itemImage,
               variants: [],
               customizations: customizations,
-              customizationGroups: customizationGroups
+              customizationGroups: customizationGroups,
+              ingredientsDefaultChecked: btn.dataset.ingredientsDefaultChecked === 'true'
             });
           } else if (hasCustomizations && customizations.length > 0) {
             // Open customization modal
@@ -1402,7 +1500,8 @@
               name: btn.dataset.itemName,
               price: parseFloat(btn.dataset.itemPrice),
               priceText: btn.dataset.itemPriceText,
-              image: btn.dataset.itemImage
+              image: btn.dataset.itemImage,
+              ingredientsDefaultChecked: btn.dataset.ingredientsDefaultChecked === 'true'
             }, customizations);
           } else {
             // Add directly to cart
@@ -1458,6 +1557,20 @@
 
   // Add item to cart
   function addToCart(item) {
+    // Check stock availability before adding
+    if (window.SCG_Inventory) {
+      // Extract base item ID for stock check
+      const baseItemId = String(item.id).split('_')[0];
+      const currentQty = cart.filter(i => String(i.id).split('_')[0] === baseItemId)
+        .reduce((sum, i) => sum + i.qty, 0);
+      const available = window.SCG_Inventory.getAvailable(baseItemId, item.variantId);
+      
+      if (available !== null && available <= currentQty) {
+        showToast(`⚠️ No hay más stock disponible de ${item.name}`);
+        return;
+      }
+    }
+    
     const existing = cart.find(i => i.id === item.id);
     if (existing) {
       existing.qty++;
@@ -1473,6 +1586,19 @@
   function updateQuantity(itemId, delta) {
     const item = cart.find(i => i.id === itemId);
     if (!item) return;
+
+    // Check stock availability before increasing
+    if (delta > 0 && window.SCG_Inventory) {
+      // Extract base item ID for stock check
+      const baseItemId = String(itemId).split('_')[0];
+      const currentQty = cart.filter(i => String(i.id).split('_')[0] === baseItemId)
+        .reduce((sum, i) => sum + i.qty, 0);
+      const available = window.SCG_Inventory.getAvailable(baseItemId, item.variantId);
+      if (available !== null && available <= currentQty) {
+        showToast(`⚠️ No hay más stock disponible`);
+        return;
+      }
+    }
 
     item.qty += delta;
     if (item.qty <= 0) {
@@ -1635,8 +1761,153 @@
     document.body.style.overflow = '';
   }
 
+  // Check if inventory feature is enabled
+  function isInventoryEnabled() {
+    return window.FEATURES?.inventory && window.INVENTORY_CONFIG?.enabled;
+  }
+
+  // Validate stock availability before submitting order
+  async function validateStockAvailability() {
+    if (!isInventoryEnabled() || !window.SCG_Inventory) {
+      return { valid: true, errors: [] };
+    }
+
+    const errors = [];
+    
+    // Group cart items by base item ID to check total quantity per product
+    const itemTotals = {};
+    for (const item of cart) {
+      const baseItemId = String(item.id).split('_')[0];
+      const key = item.variantId ? `${baseItemId}_${item.variantId}` : baseItemId;
+      if (!itemTotals[key]) {
+        itemTotals[key] = { name: item.name.split(' - ')[0], qty: 0, variantId: item.variantId };
+      }
+      itemTotals[key].qty += item.qty;
+    }
+    
+    for (const [key, data] of Object.entries(itemTotals)) {
+      const baseItemId = key.split('_')[0];
+      const available = window.SCG_Inventory.getAvailable(baseItemId, data.variantId);
+      if (available !== null && available < data.qty) {
+        if (available <= 0) {
+          errors.push(`"${data.name}" ya no está disponible`);
+        } else {
+          errors.push(`"${data.name}" solo tiene ${available} unidades disponibles`);
+        }
+      }
+    }
+
+    return { valid: errors.length === 0, errors };
+  }
+
+  // Create order in Firebase and reserve stock
+  async function createFirebaseOrder(customerData, orderTotal) {
+    if (!isInventoryEnabled()) {
+      return { success: true, orderId: null };
+    }
+
+    const CATALOG_KEY = window.CATALOG_KEY;
+    if (!CATALOG_KEY || typeof firebase === 'undefined') {
+      return { success: true, orderId: null };
+    }
+
+    try {
+      const db = firebase.firestore();
+      const expiryHours = window.INVENTORY_CONFIG?.orderExpiryHours || 24;
+      const expiresAt = new Date(Date.now() + expiryHours * 60 * 60 * 1000).toISOString();
+
+      // Prepare order items
+      const orderItems = cart.map(item => ({
+        itemId: item.id,
+        variantId: item.variantId || null,
+        name: item.name,
+        variantName: item.variantName || null,
+        quantity: item.qty,
+        price: item.price,
+        priceText: formatPrice(item.price * item.qty),
+        image: item.image || null
+      }));
+
+      // Create order document
+      const orderRef = await db.collection('inventario')
+        .doc(CATALOG_KEY)
+        .collection('orders')
+        .add({
+          catalogKey: CATALOG_KEY,
+          status: 'pending',
+          items: orderItems,
+          customer: customerData,
+          subtotal: orderTotal.subtotal,
+          deliveryCost: orderTotal.delivery,
+          total: orderTotal.total,
+          createdAt: new Date().toISOString(),
+          expiresAt: expiresAt
+        });
+
+      // Reserve stock for each item using transactions for atomicity
+      console.log('📦 Starting stock reservation...');
+      for (const item of orderItems) {
+        // Extract base item ID (remove customization suffixes like _var_123_exc_...)
+        const baseItemId = String(item.itemId).split('_')[0];
+        const key = item.variantId ? `${baseItemId}_${item.variantId}` : baseItemId;
+        const invRef = db.collection('inventario').doc(CATALOG_KEY).collection('items').doc(key);
+        
+        console.log(`📦 Reserving stock: itemId=${item.itemId}, baseId=${baseItemId}, key=${key}, qty=${item.quantity}`);
+        console.log(`📦 Firebase path: inventario/${CATALOG_KEY}/items/${key}`);
+        
+        try {
+          await db.runTransaction(async (transaction) => {
+            const doc = await transaction.get(invRef);
+            console.log(`📦 Document exists: ${doc.exists}`);
+            
+            if (doc.exists) {
+              const data = doc.data();
+              console.log(`📦 Current data:`, data);
+              const currentStock = data.stock || 0;
+              const currentReserved = data.reserved || 0;
+              const newReserved = currentReserved + item.quantity;
+              const newAvailable = currentStock - newReserved;
+              
+              console.log(`📦 Updating ${key}: stock=${currentStock}, reserved=${currentReserved}->${newReserved}, available->${newAvailable}`);
+              
+              transaction.update(invRef, {
+                reserved: newReserved,
+                available: newAvailable,
+                updatedAt: new Date().toISOString()
+              });
+            } else {
+              // Document doesn't exist, create it with reserved stock
+              console.log(`📦 Creating inventory doc for ${key} with reserved=${item.quantity}`);
+              transaction.set(invRef, {
+                itemId: baseItemId,
+                stock: 0,
+                reserved: item.quantity,
+                available: -item.quantity,
+                createdAt: new Date().toISOString(),
+                updatedAt: new Date().toISOString()
+              });
+            }
+          });
+          console.log(`✅ Stock reserved for ${key}`);
+        } catch (stockError) {
+          console.error(`⚠️ Error reserving stock for ${key}:`, stockError);
+          console.error(`⚠️ Error code:`, stockError.code);
+          console.error(`⚠️ Error message:`, stockError.message);
+          // Continue with other items even if one fails
+        }
+      }
+      console.log('📦 Stock reservation complete');
+
+      return { success: true, orderId: orderRef.id };
+
+    } catch (error) {
+      console.error('Error creating Firebase order:', error);
+      return { success: false, orderId: null, error: error.message };
+    }
+  }
+
   // Submit order via WhatsApp
-  function submitOrder() {
+  async function submitOrder() {
     const nameInput = document.getElementById('cart-name');
     const phoneInput = document.getElementById('cart-phone');
     const addressInput = document.getElementById('cart-address');
@@ -1704,6 +1975,13 @@
 
     if (!valid) {
       showToast('⚠️ Completá los campos requeridos');
+      return;
+    }
+
+    // Validate stock availability if inventory is enabled
+    const stockValidation = await validateStockAvailability();
+    if (!stockValidation.valid) {
+      showToast('⚠️ ' + stockValidation.errors[0]);
       return;
     }
 
@@ -1789,6 +2067,26 @@
     // Add notes if provided
     if (notesInput && notesInput.value.trim()) {
       message += `\n📝 *Notas:* ${notesInput.value.trim()}\n`;
+    }
+
+    // Create Firebase order and reserve stock (if inventory enabled)
+    const customerData = {
+      name: nameInput.value.trim(),
+      phone: phoneInput.value.trim(),
+      address: addressInput?.value.trim() || null,
+      notes: notesInput?.value.trim() || null,
+      paymentMethod: paymentSelect?.value || null,
+      deliveryZone: formState.deliveryZone?.name || null
+    };
+    
+    const orderResult = await createFirebaseOrder(customerData, { subtotal, delivery, total });
+    
+    // Add order ID to message if created
+    if (orderResult.orderId) {
+      const orderIdShort = orderResult.orderId.substring(0, 8).toUpperCase();
+      message = `📦 *Pedido #${orderIdShort}*\n` + message;
+      message += `\n━━━━━━━━━━━━━━━━━━\n`;
+      message += `⚠️ _Stock reservado. Confirmar en admin._\n`;
     }
 
     // Clean phone number - support multiple country codes
