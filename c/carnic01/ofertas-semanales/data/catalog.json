@@ -5,7 +5,7 @@
     "image": "uploads/1769304904287-95yxmnrda.png",
     "url": "/c/carnic01/ofertas-semanales",
     "clientKey": "carnic01",
-    "generatedAt": "2026-02-02T14:52:38.249Z",
+    "generatedAt": "2026-02-02T14:58:34.374Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -13,7 +13,7 @@
     "slug": "carniceria-demo",
     "logo": "uploads/1769304904287-95yxmnrda.png",
     "email": "demo@carniceria.com",
-    "phone": "+54 11 1234-5678",
+    "phone": "+54 11 5019-2474",
     "address": "",
     "mapsUrl": null,
     "website": null,
@@ -1085,8 +1085,8 @@
   "totalItems": 26,
   "navButtonText": "Ver productos",
   "buildInfo": {
-    "version": "20260202-115238",
-    "timestamp": "2026-02-02T14:52:38.259Z",
+    "version": "20260202-115834",
+    "timestamp": "2026-02-02T14:58:34.378Z",
     "generator": "SCG v1.0.0"
   },
   "branding": {
