@@ -85,6 +85,12 @@
   --badge-radius: 0;
 }
 
+/* Ocultar buscador del header (usar solo el de abajo) */
+.header-search,
+.header-controls {
+  display: none !important;
+}
+
 /* Header hero */
 .site-header {
   color: #ffffff;
@@ -685,4 +691,66 @@
   padding: 0.125rem 0.5rem;
   border-radius: 4px;
   margin-left: 0.5rem;
+}
+
+
+/* ============================================
+   OCULTAR BUSCADOR DEL HEADER
+   Solo mostrar el buscador principal fuera del header
+   ============================================ */
+.header-search {
+  display: none !important;
+}
+
+
+/* ============================================
+   CARRITO - Inputs de formulario (TEMA CLARO)
+   Selectores muy específicos para sobreescribir base
+   ============================================ */
+.cart-modal-overlay .cart-form-input,
+.cart-modal .cart-form .cart-form-input,
+.cart-form-group .cart-form-input,
+.cart-form-group input,
+.cart-form input,
+input.cart-form-input,
+.cart-form .cart-form-input,
+.cart-modal .cart-form-input {
+  color: #1a1a1a !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  background: #ffffff !important;
+  border: 2px solid var(--primary-color, #ef4444) !important;
+}
+
+.cart-modal-overlay .cart-form-input:focus,
+.cart-modal .cart-form .cart-form-input:focus,
+.cart-form-group .cart-form-input:focus,
+input.cart-form-input:focus,
+.cart-form .cart-form-input:focus,
+.cart-modal .cart-form-input:focus,
+.cart-form-input:focus,
+.cart-form-input:active,
+.cart-form-input:valid,
+.cart-form-input:invalid {
+  color: #1a1a1a !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+}
+
+.cart-form-input:not(:placeholder-shown) {
+  color: #1a1a1a !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+}
+
+.cart-modal-overlay .cart-form-input::placeholder,
+.cart-modal .cart-form .cart-form-input::placeholder,
+.cart-form-group .cart-form-input::placeholder,
+.cart-form-input::placeholder {
+  color: #999999 !important;
+  -webkit-text-fill-color: #999999 !important;
+}
+
+.cart-form-input:-webkit-autofill,
+.cart-form-input:-webkit-autofill:hover,
+.cart-form-input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #1a1a1a !important;
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
 }
