@@ -5,7 +5,7 @@
     "image": "uploads/1769304904287-95yxmnrda.png",
     "url": "/c/carnic01/ofertas-semanales",
     "clientKey": "carnic01",
-    "generatedAt": "2026-01-25T02:36:04.879Z",
+    "generatedAt": "2026-02-02T14:38:35.772Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -15,6 +15,7 @@
     "email": "demo@carniceria.com",
     "phone": "+54 11 1234-5678",
     "address": "",
+    "mapsUrl": null,
     "website": null,
     "socialLinks": {}
   },
@@ -22,7 +23,11 @@
     "id": 9,
     "name": "Ofertas Semanales",
     "slug": "ofertas-semanales",
+    "publicKey": "carnic01",
     "description": "¡Las mejores ofertas de la semana! Carne de primera calidad a precios increíbles.",
+    "address": null,
+    "mapsUrl": null,
+    "showAddressHeader": false,
     "type": "Productos",
     "typeSlug": "products",
     "config": {
@@ -90,6 +95,7 @@
       "icon": "🔥",
       "iconUrl": null,
       "image": "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=200&h=200&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=200&h=200&fit=crop",
       "itemCount": 4,
       "items": [
         {
@@ -99,6 +105,9 @@
           "description": null,
           "price": "$ 8.500",
           "priceRaw": 8500,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1603048297172-c92544798d5a?w=400&q=80",
@@ -109,10 +118,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 88,
@@ -121,6 +138,9 @@
           "description": null,
           "price": "$ 9.200",
           "priceRaw": 9200,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1588168333986-5078d3ae3976?w=400&q=80",
@@ -131,10 +151,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 89,
@@ -143,6 +171,9 @@
           "description": null,
           "price": "$ 7.800",
           "priceRaw": 7800,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1602470520998-f4a52199a3d6?w=400&q=80",
@@ -153,10 +184,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 90,
@@ -165,6 +204,9 @@
           "description": null,
           "price": "$ 6.500",
           "priceRaw": 6500,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "uploads/1769308517746-ez4kpkvjq.jpeg",
@@ -175,10 +217,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -186,7 +236,8 @@
       "promoBadge": null,
       "showItemImages": true,
       "hasPromo": false,
-      "sectionClasses": "show-images"
+      "hasImage": true,
+      "sectionClasses": "show-images has-image"
     },
     {
       "id": 39,
@@ -196,6 +247,7 @@
       "icon": "🥩",
       "iconUrl": null,
       "image": "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=200&h=200&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=200&h=200&fit=crop",
       "itemCount": 8,
       "items": [
         {
@@ -205,6 +257,9 @@
           "description": null,
           "price": "$ 12.500",
           "priceRaw": 12500,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=400&q=80",
@@ -215,10 +270,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 92,
@@ -227,6 +290,9 @@
           "description": null,
           "price": "$ 14.000",
           "priceRaw": 14000,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1558030006-450675393462?w=400&q=80",
@@ -237,10 +303,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 93,
@@ -249,6 +323,9 @@
           "description": null,
           "price": "$ 15.500",
           "priceRaw": 15500,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1588347818036-558601350947?w=400&q=80",
@@ -259,10 +336,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 94,
@@ -271,6 +356,9 @@
           "description": null,
           "price": "$ 11.000",
           "priceRaw": 11000,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?w=400&q=80",
@@ -281,10 +369,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 95,
@@ -293,6 +389,9 @@
           "description": null,
           "price": "$ 8.000",
           "priceRaw": 8000,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=400&q=80",
@@ -303,10 +402,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 96,
@@ -315,6 +422,9 @@
           "description": null,
           "price": "$ 9.500",
           "priceRaw": 9500,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1551028150-64b9f398f678?w=400&q=80",
@@ -325,10 +435,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 97,
@@ -337,6 +455,9 @@
           "description": null,
           "price": "$ 8.200",
           "priceRaw": 8200,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "uploads/1769308473299-67yw527gc.jpeg",
@@ -347,10 +468,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 98,
@@ -359,6 +488,9 @@
           "description": null,
           "price": "$ 6.500",
           "priceRaw": 6500,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1602470520998-f4a52199a3d6?w=400&q=80",
@@ -369,10 +501,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -380,7 +520,8 @@
       "promoBadge": null,
       "showItemImages": true,
       "hasPromo": false,
-      "sectionClasses": "show-images"
+      "hasImage": true,
+      "sectionClasses": "show-images has-image"
     },
     {
       "id": 40,
@@ -390,6 +531,7 @@
       "icon": "🐷",
       "iconUrl": null,
       "image": "https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=200&h=200&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=200&h=200&fit=crop",
       "itemCount": 4,
       "items": [
         {
@@ -399,6 +541,9 @@
           "description": null,
           "price": "$ 5.800",
           "priceRaw": 5800,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80",
@@ -409,10 +554,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 100,
@@ -421,6 +574,9 @@
           "description": null,
           "price": "$ 7.200",
           "priceRaw": 7200,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=400&q=80",
@@ -431,10 +587,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 101,
@@ -443,6 +607,9 @@
           "description": null,
           "price": "$ 5.500",
           "priceRaw": 5500,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=400&q=80",
@@ -453,10 +620,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 102,
@@ -465,6 +640,9 @@
           "description": null,
           "price": "$ 8.500",
           "priceRaw": 8500,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1624174503860-478619028ab3?w=400&q=80",
@@ -475,10 +653,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -486,7 +672,8 @@
       "promoBadge": null,
       "showItemImages": true,
       "hasPromo": false,
-      "sectionClasses": "show-images"
+      "hasImage": true,
+      "sectionClasses": "show-images has-image"
     },
     {
       "id": 41,
@@ -496,6 +683,7 @@
       "icon": "🍗",
       "iconUrl": null,
       "image": "https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=200&h=200&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=200&h=200&fit=crop",
       "itemCount": 4,
       "items": [
         {
@@ -505,6 +693,9 @@
           "description": null,
           "price": "$ 3.200",
           "priceRaw": 3200,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=400&q=80",
@@ -515,10 +706,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 104,
@@ -527,6 +726,9 @@
           "description": null,
           "price": "$ 2.800",
           "priceRaw": 2800,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=400&q=80",
@@ -537,10 +739,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 105,
@@ -549,6 +759,9 @@
           "description": null,
           "price": "$ 4.500",
           "priceRaw": 4500,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=400&q=80",
@@ -559,10 +772,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 106,
@@ -571,6 +792,9 @@
           "description": null,
           "price": "$ 2.500",
           "priceRaw": 2500,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "uploads/1769308412419-0brm0jmmy.png",
@@ -581,10 +805,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -592,7 +824,8 @@
       "promoBadge": null,
       "showItemImages": true,
       "hasPromo": false,
-      "sectionClasses": "show-images"
+      "hasImage": true,
+      "sectionClasses": "show-images has-image"
     },
     {
       "id": 42,
@@ -602,6 +835,7 @@
       "icon": "🧀",
       "iconUrl": null,
       "image": "../../uploads/1769306354693-dnj7wjxe1.jpeg",
+      "imageUrl": "uploads/1769306354693-dnj7wjxe1.jpeg",
       "itemCount": 6,
       "items": [
         {
@@ -611,6 +845,9 @@
           "description": null,
           "price": "$ 8.500",
           "priceRaw": 8500,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1524438418049-ab2acb7aa48f?w=400&q=80",
@@ -621,10 +858,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 108,
@@ -633,6 +878,9 @@
           "description": null,
           "price": "$ 15.000",
           "priceRaw": 15000,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "uploads/1769308315875-w6eqq3pjm.jpeg",
@@ -643,10 +891,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 109,
@@ -655,6 +911,9 @@
           "description": null,
           "price": "$ 9.500",
           "priceRaw": 9500,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "uploads/1769308096857-5rgoy1pt8.jpeg",
@@ -665,10 +924,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 110,
@@ -677,6 +944,9 @@
           "description": null,
           "price": "$ 7.800",
           "priceRaw": 7800,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Kg",
           "currency": "ARS",
           "image": "uploads/1769308244791-yjvjk1wuh.jpeg",
@@ -687,10 +957,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 111,
@@ -699,6 +977,9 @@
           "description": null,
           "price": "$ 8.200",
           "priceRaw": 8200,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Uni",
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80",
@@ -709,10 +990,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 112,
@@ -721,6 +1010,9 @@
           "description": null,
           "price": "$ 3.500",
           "priceRaw": 3500,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": "Uni",
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80",
@@ -731,10 +1023,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -742,7 +1042,8 @@
       "promoBadge": null,
       "showItemImages": true,
       "hasPromo": false,
-      "sectionClasses": "show-images"
+      "hasImage": true,
+      "sectionClasses": "show-images has-image"
     }
   ],
   "promotions": [
@@ -762,13 +1063,18 @@
       "backgroundColor": "#8b1538",
       "accentColor": "#fbbf24",
       "style": "bold",
-      "isActive": true
+      "isActive": true,
+      "price": null,
+      "priceRaw": null,
+      "priceLabel": null,
+      "hasPrice": false
     }
   ],
   "cart": {
     "enabled": true,
     "buttonText": "Agregar",
-    "whatsappMessage": "Hola! Quiero hacer el siguiente pedido:"
+    "whatsappMessage": "Hola! Quiero hacer el siguiente pedido:",
+    "formConfig": {}
   },
   "searchFilter": {
     "enabled": true,
@@ -777,9 +1083,27 @@
     "placeholder": "Buscar productos..."
   },
   "totalItems": 26,
+  "navButtonText": "Ver productos",
   "buildInfo": {
-    "version": "20260124-233604",
-    "timestamp": "2026-01-25T02:36:04.886Z",
+    "version": "20260202-113835",
+    "timestamp": "2026-02-02T14:38:35.780Z",
     "generator": "SCG v1.0.0"
-  }
+  },
+  "branding": {
+    "footerText": "Hecho por Catalog Forge",
+    "footerPhone": "5491150192474",
+    "footerPhoneDisplay": "11 5019-2474"
+  },
+  "fontUrls": [
+    "https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap",
+    "https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap"
+  ],
+  "fontStyles": {
+    "heading": "'Bebas Neue', Georgia, serif",
+    "body": "'Roboto Condensed', Georgia, serif",
+    "catalogTitle": "'Bebas Neue', Georgia, serif",
+    "sectionTitle": "'Bebas Neue', Georgia, serif",
+    "itemName": "'Roboto Condensed', Georgia, serif"
+  },
+  "globalSettings": {}
 }
