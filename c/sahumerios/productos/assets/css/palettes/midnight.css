@@ -1,0 +1,19 @@
+/* Stream Theme - Midnight Palette (Default) */
+:root {
+  --primary-color: #7c3aed;
+  --primary-hover: #6d28d9;
+  --primary-contrast: #ffffff;
+  --accent-color: #f59e0b;
+  
+  --header-bg: #1e293b;
+  --footer-bg: #1e293b;
+  
+  --card-hover-shadow: 0 12px 32px rgba(124,58,237,0.15), 0 0 0 2px rgba(124,58,237,0.1);
+  --card-hover-border: rgba(124,58,237,0.3);
+  
+  --price-color: #7c3aed;
+  --tag-bg: rgba(124,58,237,0.1);
+  --tag-color: #7c3aed;
+  --badge-bg: #f59e0b;
+  --badge-color: #1e293b;
+}

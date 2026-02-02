@@ -1,0 +1,20 @@
+/* Generated theme variables for spa (light/blush) */
+:root {
+  --primary-color: #e91e8c;
+  --secondary-color: #f8bbd9;
+  --background-color: #fdf2f8;
+  --text-color: #4a1942;
+  --accent-color: #ff69b4;
+  --font-family: Quicksand, sans-serif;
+}
+
+/* Higher specificity for theme classes */
+.theme-spa.mode-light.palette-blush,
+body.theme-spa.mode-light.palette-blush {
+  --primary-color: #e91e8c;
+  --secondary-color: #f8bbd9;
+  --background-color: #fdf2f8;
+  --text-color: #4a1942;
+  --accent-color: #ff69b4;
+  --font-family: Quicksand, sans-serif;
+}

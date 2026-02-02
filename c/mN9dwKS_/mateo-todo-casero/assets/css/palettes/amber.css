@@ -1,0 +1,68 @@
+/* Mixology - Amber Palette */
+/* Tonos ámbar cálidos para un ambiente acogedor de whisky bar */
+
+body.palette-amber {
+  --primary-color: #f59e0b;
+  --primary-hover: #fbbf24;
+  --accent-color: #dc2626;
+  --text-gold: #fbbf24;
+  
+  background-image: 
+    radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.85) 100%),
+    radial-gradient(ellipse 120% 60% at 50% -10%, rgba(245, 158, 11, 0.45) 0%, transparent 50%),
+    radial-gradient(ellipse 80% 50% at 30% -5%, rgba(251, 191, 36, 0.35) 0%, transparent 45%),
+    radial-gradient(ellipse 80% 50% at 70% -5%, rgba(220, 38, 38, 0.25) 0%, transparent 45%),
+    radial-gradient(ellipse 60% 35% at 50% 0%, rgba(251, 191, 36, 0.2) 0%, transparent 35%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='5' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E"),
+    linear-gradient(180deg, #1c1408 0%, #0f0a04 25%, #080604 60%, #050403 100%);
+}
+
+body.palette-amber .header-title {
+  color: #fef3c7 !important;
+  text-shadow: 
+    0 0 20px rgba(251, 191, 36, 0.7),
+    0 0 40px rgba(245, 158, 11, 0.5),
+    0 0 60px rgba(220, 38, 38, 0.3),
+    0 3px 10px rgba(0, 0, 0, 0.9);
+}
+
+body.palette-amber .header-title::before,
+body.palette-amber .header-title::after {
+  background: linear-gradient(90deg, transparent, #f59e0b, transparent);
+}
+
+body.palette-amber .header-content::after {
+  color: #f59e0b;
+}
+
+body.palette-amber .section-content .section-title {
+  color: #fbbf24;
+  border-bottom-color: #f59e0b;
+}
+
+body.palette-amber .section-image::before {
+  border-color: rgba(251, 191, 36, 0.8);
+}
+
+body.palette-amber .item-row .item-dots {
+  border-bottom-color: rgba(251, 191, 36, 0.4);
+}
+
+body.palette-amber .catalog-main::before,
+body.palette-amber .catalog-main::after,
+body.palette-amber::before,
+body.palette-amber::after {
+  border-color: #f59e0b;
+}
+
+body.palette-amber .site-footer::before {
+  background: linear-gradient(90deg, transparent, #f59e0b, transparent);
+}
+
+body.palette-amber .footer-contact a {
+  color: #f59e0b;
+}
+
+body.palette-amber .footer-social a:hover {
+  color: #fbbf24;
+}

@@ -1,0 +1,32 @@
+/* Pastry Theme - Rose Palette (Default)
+   Delicado rosa pastel con toques chocolate */
+
+.palette-rose {
+  --bg-color: #FFFAF8;
+  --bg-secondary: #FFF3E8;
+  --bg-tertiary: #FFF9F5;
+  
+  --primary-color: #F6C1CC;
+  --primary-hover: #f0a8b6;
+  --primary-contrast: #6B4F4F;
+  
+  --accent-color: #6B4F4F;
+  --accent-contrast: #ffffff;
+  
+  --highlight: #FFE4E9;
+  
+  --text-color: #4A3F3F;
+  --text-secondary: #8B7E7E;
+  --text-light: #B8A8A8;
+  
+  --card-bg: #ffffff;
+  --border-color: #F5E6DC;
+  
+  --tag-bg: #FFF3E8;
+  --tag-color: #6B4F4F;
+  
+  --shadow-card: 0 8px 32px rgba(246, 193, 204, 0.25);
+  --shadow-glow: 0 0 40px rgba(246, 193, 204, 0.3);
+  
+  --gradient-sweet: linear-gradient(180deg, #FFFAF8 0%, #FFF3E8 100%);
+}

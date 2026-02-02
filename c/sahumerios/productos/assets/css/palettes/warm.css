@@ -1,0 +1,24 @@
+/* Stream Theme - Warm Palette (Earthy tones for Sahumerios) */
+:root {
+  --primary-color: #b45309;
+  --primary-hover: #92400e;
+  --primary-contrast: #ffffff;
+  --accent-color: #7c3aed;
+  
+  --header-bg: #451a03;
+  --footer-bg: #451a03;
+  
+  --card-hover-shadow: 0 12px 32px rgba(180,83,9,0.2), 0 0 0 2px rgba(180,83,9,0.15);
+  --card-hover-border: rgba(180,83,9,0.4);
+  
+  --price-color: #b45309;
+  --tag-bg: rgba(180,83,9,0.1);
+  --tag-color: #b45309;
+  --badge-bg: #7c3aed;
+  --badge-color: #ffffff;
+}
+
+/* Warm theme - subtle warm tint */
+body {
+  background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%);
+}

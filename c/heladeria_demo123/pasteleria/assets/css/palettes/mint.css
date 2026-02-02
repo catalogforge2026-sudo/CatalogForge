@@ -1,0 +1,51 @@
+/* Pastry Theme - Mint Palette
+   Fresco y natural con tonos menta */
+
+.palette-mint {
+  --bg-color: #FAFFFE;
+  --bg-secondary: #E8F8F0;
+  --bg-tertiary: #F0FFF8;
+  
+  --primary-color: #98D4BB;
+  --primary-hover: #7fc9aa;
+  --primary-contrast: #3D5A4C;
+  
+  --accent-color: #5A8B73;
+  --accent-contrast: #ffffff;
+  
+  --highlight: #E8F8F0;
+  
+  --text-color: #3D5A4C;
+  --text-secondary: #6B8B7B;
+  --text-light: #98B8A8;
+  
+  --card-bg: #ffffff;
+  --border-color: #D0E8DC;
+  
+  --tag-bg: #E8F8F0;
+  --tag-color: #5A8B73;
+  
+  --shadow-card: 0 8px 32px rgba(152, 212, 187, 0.25);
+  --shadow-glow: 0 0 40px rgba(152, 212, 187, 0.3);
+  
+  --gradient-sweet: linear-gradient(180deg, #FAFFFE 0%, #E8F8F0 100%);
+}
+
+/* Mint palette decorative elements */
+.palette-mint .section-header::before {
+  content: '🌿 🌿 🌿';
+  color: var(--primary-color);
+}
+
+.palette-mint .footer-decoration::before {
+  content: '🌿 🧁 🌿';
+}
+
+.palette-mint .item-image.no-image::before {
+  content: '🧁';
+}
+
+/* Mint specific button style */
+.palette-mint .btn-add-cart-lg {
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+}

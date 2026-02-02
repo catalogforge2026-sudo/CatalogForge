@@ -1,0 +1,38 @@
+/**
+ * Natura Theme - Cream Palette
+ * Beige claro y sofisticado
+ */
+
+:root {
+  /* Primary Colors */
+  --color-primary: #9C8B7A;
+  --color-primary-light: #B8A99A;
+  --color-primary-dark: #7A6B5C;
+  
+  /* Background Colors */
+  --color-bg: #FAF7F2;
+  --color-bg-alt: #F5F0E8;
+  --color-bg-card: #FFFFFF;
+  --color-bg-header: rgba(156, 139, 122, 0.95);
+  
+  /* Text Colors */
+  --color-text: #4A4A4A;
+  --color-text-light: #7A7A7A;
+  --color-text-muted: #9A9A9A;
+  --color-text-inverse: #FFFFFF;
+  
+  /* Accent Colors */
+  --color-accent: #C4A77D;
+  --color-accent-light: #D9C4A5;
+  --color-border: #E5DDD0;
+  --color-border-light: #F0EBE3;
+  
+  /* Button Colors */
+  --color-btn-primary: #9C8B7A;
+  --color-btn-primary-hover: #7A6B5C;
+  --color-btn-text: #FFFFFF;
+  
+  /* Card Styles */
+  --card-shadow: 0 4px 20px rgba(156, 139, 122, 0.08);
+  --card-shadow-hover: 0 8px 30px rgba(156, 139, 122, 0.12);
+}

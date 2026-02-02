@@ -1,0 +1,33 @@
+/**
+ * Natura Theme - Palette: Bosque
+ * Deep forest green tones - Natural and grounded
+ */
+
+:root {
+  /* Primary Colors - Forest Green */
+  --color-primary: #4A6741;
+  --color-primary-light: #6B8B5E;
+  --color-primary-dark: #3A5233;
+  
+  /* Background Colors */
+  --color-bg: #F4F6F3;
+  --color-bg-alt: #E8EDE6;
+  --color-bg-card: #FFFFFF;
+  --color-bg-header: #3A5233;
+  
+  /* Text Colors */
+  --color-text: #2D3B28;
+  --color-text-light: #4A6741;
+  --color-text-muted: #7A8F73;
+  --color-text-on-dark: #F4F6F3;
+  
+  /* Accent Colors */
+  --color-accent: #8FA888;
+  --color-accent-light: #B5C7AF;
+  --color-border: #D1DBC9;
+  
+  /* Button Colors */
+  --color-button-bg: #4A6741;
+  --color-button-text: #FFFFFF;
+  --color-button-hover: #3A5233;
+}

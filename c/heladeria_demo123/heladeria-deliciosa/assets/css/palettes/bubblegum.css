@@ -1,0 +1,42 @@
+/* Ice Cream Theme - Bubblegum Palette */
+/* Estilo dulce y divertido: rosa chicle, azul cielo */
+
+:root {
+  --primary-color: #f06292;
+  --primary-hover: #ec407a;
+  --secondary-color: #64b5f6;
+  --accent-color: #f8bbd9;
+  
+  --bg-color: #fce4ec;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f8bbd9;
+  
+  --text-color: #880e4f;
+  --text-muted: #ad1457;
+  
+  --header-bg: linear-gradient(135deg, #f06292 0%, #64b5f6 100%);
+  --header-text: #ffffff;
+  
+  --footer-bg: #880e4f;
+  --footer-text: #ffffff;
+  
+  --ribbon-bg: #f06292;
+  --ribbon-color: #ffffff;
+  
+  --price-color: #ec407a;
+  --tag-bg: rgba(240, 98, 146, 0.15);
+  --tag-color: #ec407a;
+}
+
+.section-nav a:hover .nav-icon,
+.section-nav a.active .nav-icon {
+  background: linear-gradient(135deg, #f06292 0%, #f8bbd9 100%);
+}
+
+.item-card .item-add-cart {
+  background: linear-gradient(135deg, #f06292 0%, #64b5f6 100%);
+}
+
+.cart-fab {
+  background: linear-gradient(135deg, #f06292 0%, #64b5f6 100%);
+}

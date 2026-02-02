@@ -1,0 +1,40 @@
+/* Generated theme variables for pastry (light/warm) */
+:root {
+  --font-family: 'Quicksand', system-ui, sans-serif;
+  --font-family-heading: 'Cormorant Garamond', Georgia, serif;
+  --radius: 24px;
+  --radius-lg: 32px;
+  --container-width: 480px;
+  --grid-min: 165px;
+  --bg-color: #FFFAF8;
+  --bg-secondary: #FFF3E8;
+  --text-color: #4A3F3F;
+  --text-secondary: #8B7E7E;
+  --card-bg: #ffffff;
+  --border-color: #F5E6DC;
+  --shadow: 0 4px 24px rgba(107, 79, 79, 0.08);
+  --shadow-lg: 0 16px 48px rgba(107, 79, 79, 0.12);
+  --tag-bg: #FFF3E8;
+  --tag-color: #6B4F4F;
+}
+
+/* Higher specificity for theme classes */
+.theme-pastry.mode-light.palette-warm,
+body.theme-pastry.mode-light.palette-warm {
+  --font-family: 'Quicksand', system-ui, sans-serif;
+  --font-family-heading: 'Cormorant Garamond', Georgia, serif;
+  --radius: 24px;
+  --radius-lg: 32px;
+  --container-width: 480px;
+  --grid-min: 165px;
+  --bg-color: #FFFAF8;
+  --bg-secondary: #FFF3E8;
+  --text-color: #4A3F3F;
+  --text-secondary: #8B7E7E;
+  --card-bg: #ffffff;
+  --border-color: #F5E6DC;
+  --shadow: 0 4px 24px rgba(107, 79, 79, 0.08);
+  --shadow-lg: 0 16px 48px rgba(107, 79, 79, 0.12);
+  --tag-bg: #FFF3E8;
+  --tag-color: #6B4F4F;
+}

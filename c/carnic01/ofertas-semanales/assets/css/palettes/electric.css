@@ -1,0 +1,53 @@
+/* Bold - Electric Palette (Azul eléctrico) */
+
+:root {
+  /* Primary Colors */
+  --primary-color: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-contrast: #ffffff;
+  --accent-color: #fbbf24;
+  
+  /* Backgrounds */
+  --bg-color: #eff6ff;
+  --card-bg: #ffffff;
+  
+  /* Text */
+  --text-color: #0f0f0f;
+  --text-muted: #525252;
+  
+  /* Header */
+  --header-bg: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1e3a8a 100%);
+  
+  /* Footer */
+  --footer-bg: #1e3a8a;
+  
+  /* Price badge */
+  --price-badge-bg: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  
+  /* Unit badge (Kg, Unidad) */
+  --unit-badge-bg: linear-gradient(135deg, #fcd34d 0%, #f59e0b 100%);
+  --unit-badge-color: #0f0f0f;
+  
+  /* Featured badge */
+  --featured-badge-bg: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  --featured-badge-color: #ffffff;
+  
+  /* Navigation ring gradient */
+  --nav-ring-gradient: linear-gradient(135deg, #fbbf24 0%, #f59e0b 30%, #3b82f6 70%, #1e3a8a 100%);
+  --nav-text-bg: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  --nav-text-color: #ffffff;
+  --nav-text-hover-bg: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  --nav-text-hover-color: #0f0f0f;
+  
+  /* Cart button */
+  --cart-btn-bg: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+}
+
+/* Header gradient override */
+.site-header {
+  background: var(--header-bg) !important;
+}
+
+.site-header::before {
+  display: none;
+}

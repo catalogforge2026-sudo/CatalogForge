@@ -1,0 +1,50 @@
+/* Spa Theme - Pink Palette (Rosa vibrante) */
+/* Estilo rosa vibrante y femenino */
+
+:root {
+  --primary-color: #ec4899;
+  --primary-hover: #db2777;
+  --accent-color: #f472b6;
+  
+  --bg-color: #fdf2f8;
+  --text-color: #4a1942;
+  --text-muted: #8e6b87;
+  
+  --card-bg: rgba(255, 255, 255, 0.85);
+  
+  --header-bg: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 50%, #f48fb1 100%);
+  --footer-bg: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  --footer-text: #ffffff;
+  
+  --logo-shadow: drop-shadow(0 10px 30px rgba(236, 72, 153, 0.4)) drop-shadow(0 5px 15px rgba(0, 0, 0, 0.15)) drop-shadow(0 0 20px rgba(244, 114, 182, 0.3));
+  --logo-shadow-hover: drop-shadow(0 20px 40px rgba(236, 72, 153, 0.5)) drop-shadow(0 10px 25px rgba(0, 0, 0, 0.2)) drop-shadow(0 0 30px rgba(244, 114, 182, 0.4));
+  
+  --cart-bar-bg: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  --cart-bar-text: #ffffff;
+  --cart-btn-bg: rgba(255, 255, 255, 0.2);
+  --cart-btn-border: rgba(255, 255, 255, 0.3);
+  --cart-btn-hover: rgba(255, 255, 255, 0.3);
+}
+
+/* Override button gradient */
+.item-add-cart {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.1) 0%, rgba(244, 114, 182, 0.15) 100%) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.item-add-cart:hover {
+  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%) !important;
+}
+
+.social-link {
+  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%) !important;
+}
+
+.section-nav a:hover,
+.section-nav a.active {
+  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%) !important;
+}
+
+.item-card .badge-featured {
+  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%) !important;
+}

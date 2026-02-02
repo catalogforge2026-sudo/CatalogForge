@@ -1,0 +1,53 @@
+/* Bold - Market Palette (Verdulería/Mercado) */
+
+:root {
+  /* Primary Colors - Verde fresco */
+  --primary-color: #16a34a;
+  --primary-hover: #15803d;
+  --primary-contrast: #ffffff;
+  --accent-color: #fbbf24;
+  
+  /* Backgrounds */
+  --bg-color: #f0fdf4;
+  --card-bg: #ffffff;
+  
+  /* Text */
+  --text-color: #1a1a1a;
+  --text-muted: #666666;
+  
+  /* Header - Gradiente verde */
+  --header-bg: linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #166534 100%);
+  
+  /* Footer */
+  --footer-bg: #14532d;
+  
+  /* Price badge */
+  --price-badge-bg: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  
+  /* Unit badge (Kg, Unidad) */
+  --unit-badge-bg: linear-gradient(135deg, #fcd34d 0%, #f59e0b 100%);
+  --unit-badge-color: #1a1a1a;
+  
+  /* Featured badge */
+  --featured-badge-bg: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  --featured-badge-color: #ffffff;
+  
+  /* Navigation ring gradient */
+  --nav-ring-gradient: linear-gradient(135deg, #fbbf24 0%, #f59e0b 30%, #22c55e 70%, #166534 100%);
+  --nav-text-bg: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  --nav-text-color: #ffffff;
+  --nav-text-hover-bg: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  --nav-text-hover-color: #1a1a1a;
+  
+  /* Cart button - Naranja para contrastar con verde */
+  --cart-btn-bg: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+/* Header gradient override */
+.site-header {
+  background: var(--header-bg) !important;
+}
+
+.site-header::before {
+  display: none;
+}

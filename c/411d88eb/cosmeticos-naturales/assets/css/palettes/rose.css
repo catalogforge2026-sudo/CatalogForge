@@ -1,0 +1,38 @@
+/**
+ * Natura Theme - Rose Palette
+ * Rosa empolvado elegante
+ */
+
+:root {
+  /* Primary Colors */
+  --color-primary: #C9A9A6;
+  --color-primary-light: #D9BDB9;
+  --color-primary-dark: #B89895;
+  
+  /* Background Colors */
+  --color-bg: #FDF8F7;
+  --color-bg-alt: #F8F0EE;
+  --color-bg-card: #FFFFFF;
+  --color-bg-header: rgba(201, 169, 166, 0.95);
+  
+  /* Text Colors */
+  --color-text: #4A3D3C;
+  --color-text-light: #7A6B69;
+  --color-text-muted: #9A8B89;
+  --color-text-inverse: #FFFFFF;
+  
+  /* Accent Colors */
+  --color-accent: #D4B5B2;
+  --color-accent-light: #E5CCC9;
+  --color-border: #E8D8D6;
+  --color-border-light: #F2E8E6;
+  
+  /* Button Colors */
+  --color-btn-primary: #C9A9A6;
+  --color-btn-primary-hover: #B89895;
+  --color-btn-text: #FFFFFF;
+  
+  /* Card Styles */
+  --card-shadow: 0 4px 20px rgba(201, 169, 166, 0.15);
+  --card-shadow-hover: 0 8px 30px rgba(201, 169, 166, 0.2);
+}

@@ -1,0 +1,605 @@
+/* ============================================
+   SPA THEME - Manicura, Pedicura & Masajes
+   Estilo: Elegante, femenino, rosa pastel
+   ============================================ */
+
+:root {
+  /* Typography */
+  --font-family: 'Quicksand', 'Poppins', sans-serif;
+  --font-family-display: 'Playfair Display', 'Georgia', serif;
+  --line-height: 1.5;
+  
+  /* Colors - Pink/Blush palette */
+  --primary-color: #e91e8c;
+  --primary-hover: #d81b7a;
+  --primary-contrast: #ffffff;
+  --accent-color: #ff69b4;
+  
+  --bg-color: #fdf2f8;
+  --text-color: #4a1942;
+  --text-muted: #8b5a8b;
+  
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-border: 1px solid rgba(233, 30, 140, 0.15);
+  --card-shadow: 0 8px 32px rgba(233, 30, 140, 0.12);
+  --card-hover-shadow: 0 12px 40px rgba(233, 30, 140, 0.2);
+  --card-radius: 20px;
+  --card-padding: 1.25rem;
+  
+  /* Layout */
+  --container-width: 1000px;
+  --container-padding: 1rem;
+  --grid-gap: 1.25rem;
+  --grid-min: 280px;
+  --section-spacing: 2rem;
+  --main-padding: 1rem;
+  
+  /* Header */
+  --header-bg: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 50%, #f48fb1 100%);
+  --header-border: none;
+  --header-padding: 2rem 1rem;
+  --header-direction: column;
+  --header-align: center;
+  --header-title-size: 2.5rem;
+  --header-title-weight: 400;
+  --logo-height: 60px;
+  
+  /* Navigation */
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  --nav-hover-bg: var(--primary-color);
+  --nav-hover-color: #ffffff;
+  --nav-radius: 25px;
+  
+  /* Sections */
+  --section-title-size: 1.5rem;
+  --section-title-weight: 600;
+  --section-header-align: left;
+  
+  /* Items */
+  --item-name-size: 1rem;
+  --item-name-weight: 600;
+  --price-size: 1.25rem;
+  --price-weight: 700;
+  --price-color: var(--primary-color);
+  
+  /* Image */
+  --image-aspect: 4/3;
+  --image-fit: cover;
+  --image-radius: 16px;
+  
+  /* Buttons */
+  --btn-radius: 25px;
+  --btn-padding: 0.625rem 1.25rem;
+  
+  /* Footer */
+  --footer-bg: linear-gradient(135deg, #f8bbd9 0%, #f48fb1 100%);
+  --footer-border: none;
+  --footer-padding: 1.5rem;
+  
+  /* Tags */
+  --tag-bg: rgba(233, 30, 140, 0.1);
+  --tag-color: var(--primary-color);
+  --tag-radius: 12px;
+}
+
+/* ============================================
+   BACKGROUND WITH SPARKLES EFFECT
+   ============================================ */
+body {
+  background: var(--bg-color);
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(255, 182, 193, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255, 105, 180, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(248, 187, 217, 0.15) 0%, transparent 70%);
+  min-height: 100vh;
+}
+
+/* Sparkle overlay effect */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='10' cy='10' r='1' fill='%23fff' fill-opacity='0.3'/%3E%3Ccircle cx='50' cy='30' r='0.5' fill='%23fff' fill-opacity='0.4'/%3E%3Ccircle cx='80' cy='60' r='1.5' fill='%23fff' fill-opacity='0.2'/%3E%3Ccircle cx='30' cy='80' r='0.8' fill='%23fff' fill-opacity='0.3'/%3E%3Ccircle cx='70' cy='90' r='1' fill='%23fff' fill-opacity='0.25'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+.catalog-main {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   HEADER - Elegant with floating logo
+   ============================================ */
+.site-header {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  min-height: 160px;
+}
+
+/* Decorative curved lines */
+.site-header::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300px;
+  height: 200%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.site-header::after {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.header-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo flotante en la esquina izquierda */
+.header-logo-wrapper {
+  position: absolute;
+  left: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+/* Logo grande flotando sin círculo */
+.header-logo {
+  width: 280px;
+  height: auto;
+  max-height: 160px;
+  object-fit: contain;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  border: none;
+  filter: var(--logo-shadow, drop-shadow(0 10px 30px rgba(233, 30, 140, 0.4)) drop-shadow(0 5px 15px rgba(0, 0, 0, 0.15)) drop-shadow(0 0 20px rgba(255, 105, 180, 0.3)));
+  animation: logoFloat 4s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0);
+    filter: var(--logo-shadow, drop-shadow(0 10px 30px rgba(233, 30, 140, 0.4)) drop-shadow(0 5px 15px rgba(0, 0, 0, 0.15)) drop-shadow(0 0 20px rgba(255, 105, 180, 0.3)));
+  }
+  50% {
+    transform: translateY(-10px);
+    filter: drop-shadow(0 20px 40px rgba(233, 30, 140, 0.5))
+            drop-shadow(0 10px 25px rgba(0, 0, 0, 0.2))
+            drop-shadow(0 0 30px rgba(255, 105, 180, 0.4));
+  }
+}
+
+.header-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.header-title {
+  font-family: var(--font-family-display);
+  font-style: italic;
+  color: var(--text-color);
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.header-tagline {
+  color: var(--text-color);
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Social icons in header */
+.header-social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e91e8c 0%, #ff69b4 100%);
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(233, 30, 140, 0.3);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(233, 30, 140, 0.4);
+}
+
+/* Ocultar buscador y filtro SOLO en el header (evitar duplicado) */
+.header-search,
+.header-filter,
+.header-controls,
+.site-header .header-search,
+.site-header .header-filter,
+.site-header .header-controls {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* ============================================
+   NAVIGATION - Tab style
+   ============================================ */
+.section-nav {
+  margin: 1.5rem auto;
+  max-width: 600px;
+}
+
+.section-nav ul {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem;
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(233, 30, 140, 0.15);
+}
+
+.section-nav li {
+  list-style: none;
+}
+
+.section-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: transparent;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  width: 100%;
+  text-align: center;
+}
+
+.section-nav a:hover,
+.section-nav a.active {
+  background: linear-gradient(135deg, #e91e8c 0%, #ff69b4 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(233, 30, 140, 0.3);
+}
+
+.section-nav .nav-icon {
+  font-size: 1.1rem;
+}
+
+/* Hide extra nav elements */
+.section-nav .nav-description,
+.section-nav .nav-button {
+  display: none;
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+.catalog-section {
+  margin-bottom: 2rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(233, 30, 140, 0.1);
+}
+
+.section-title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.section-icon {
+  font-size: 1.3rem;
+}
+
+.section-description {
+  display: none;
+}
+
+/* "Más servicios" link style */
+.section-header::after {
+  content: '❤️ Más servicios >';
+  font-size: 0.85rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* ============================================
+   GRID - 3 columns
+   ============================================ */
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--grid-gap);
+}
+
+@media (max-width: 900px) {
+  .grid-auto {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .grid-auto {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   ITEM CARDS - Elegant rounded style
+   ============================================ */
+.item-card {
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  border: var(--card-border);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--card-hover-shadow);
+}
+
+/* Image */
+.item-card .item-image {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: var(--image-radius);
+  margin: 0.75rem;
+  margin-bottom: 0;
+}
+
+.item-card .item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.item-card:hover .item-image img {
+  transform: scale(1.05);
+}
+
+/* Content */
+.item-card .item-content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.item-card .item-name {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.item-card .item-description {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Hide expand indicator and tags */
+.item-card .expand-indicator,
+.item-card .item-tags {
+  display: none;
+}
+
+/* Footer with price and button */
+.item-card .item-footer {
+  padding: 0 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.item-card .item-price {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.item-card .price-amount {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+}
+
+.item-card .price-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: rgba(233, 30, 140, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+}
+
+/* Add to cart button - "Hacer Pedido" style */
+.item-add-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.625rem 1rem;
+  background: linear-gradient(135deg, rgba(233, 30, 140, 0.1) 0%, rgba(255, 105, 180, 0.15) 100%);
+  border: 2px solid var(--primary-color);
+  border-radius: 25px;
+  color: var(--primary-color);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.item-add-cart:hover {
+  background: linear-gradient(135deg, #e91e8c 0%, #ff69b4 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(233, 30, 140, 0.3);
+}
+
+.item-add-cart svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Featured badge */
+.item-card .badge-featured {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, #e91e8c 0%, #ff69b4 100%);
+  color: white;
+  padding: 0.3rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 0 2px 10px rgba(233, 30, 140, 0.3);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer { 
+  text-align: center; 
+  color: var(--footer-text, #ffffff); 
+  background: var(--footer-bg);
+}
+
+.footer-container {
+  color: #ffffff;
+}
+
+.footer-name {
+  font-family: var(--font-family-display);
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #ffffff;
+}
+
+.footer-contact {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-contact a {
+  color: #ffffff;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.footer-contact a:hover {
+  opacity: 1;
+}
+
+.footer-powered {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .header-logo-wrapper {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin-bottom: 1rem;
+  }
+  
+  .header-logo {
+    width: 100px;
+    max-height: 110px;
+  }
+  
+  .header-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .header-brand {
+    align-items: center;
+  }
+  
+  .header-title {
+    font-size: 2rem;
+  }
+  
+  .section-nav ul {
+    padding: 0.375rem;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .section-nav a {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}

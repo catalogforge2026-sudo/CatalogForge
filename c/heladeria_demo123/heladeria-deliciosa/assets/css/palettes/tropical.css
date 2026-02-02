@@ -1,0 +1,42 @@
+/* Ice Cream Theme - Tropical Palette */
+/* Rosa magenta a cyan - Como la imagen de referencia */
+
+:root {
+  --primary-color: #e91e8c;
+  --primary-hover: #d81b7a;
+  --secondary-color: #00bcd4;
+  --accent-color: #ff69b4;
+  
+  --bg-color: #f5f9fc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f0f7fa;
+  
+  --text-color: #2d3748;
+  --text-muted: #718096;
+  
+  --header-bg: linear-gradient(135deg, #e91e8c 0%, #00bcd4 100%);
+  --header-text: #ffffff;
+  
+  --footer-bg: #1a365d;
+  --footer-text: #ffffff;
+  
+  --ribbon-bg: #e91e8c;
+  --ribbon-color: #ffffff;
+  
+  --price-color: #e91e8c;
+  --tag-bg: rgba(233, 30, 140, 0.1);
+  --tag-color: #e91e8c;
+}
+
+.section-nav a:hover .nav-icon,
+.section-nav a.active .nav-icon {
+  background: linear-gradient(135deg, #e91e8c 0%, #ff69b4 100%);
+}
+
+.item-card .item-add-cart {
+  background: linear-gradient(135deg, #e91e8c 0%, #ff69b4 100%);
+}
+
+.cart-fab {
+  background: linear-gradient(135deg, #e91e8c 0%, #00bcd4 100%);
+}

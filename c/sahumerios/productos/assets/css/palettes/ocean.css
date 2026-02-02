@@ -1,0 +1,96 @@
+/* Stream Theme - Ocean Palette */
+/* Azul degradado con blanco */
+:root {
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-contrast: #ffffff;
+  --accent-color: #06b6d4;
+  
+  /* Fondo blanco/azul muy claro */
+  --bg-color: #ffffff;
+  --bg-secondary: #eff6ff;
+  --bg-tertiary: #dbeafe;
+  --card-bg: #ffffff;
+  --text-color: #1e3a5f;
+  --text-muted: #64748b;
+  --text-secondary: #475569;
+  
+  --card-border: 1px solid #dbeafe;
+  --card-shadow: 0 2px 8px rgba(37,99,235,0.08);
+  --card-hover-shadow: 0 12px 32px rgba(37,99,235,0.2), 0 0 0 2px rgba(37,99,235,0.15);
+  --card-hover-border: rgba(37,99,235,0.4);
+  
+  --price-color: #2563eb;
+  --tag-bg: rgba(37,99,235,0.1);
+  --tag-color: #2563eb;
+  --badge-bg: #06b6d4;
+  --badge-color: #ffffff;
+  
+  /* Navegación azul */
+  --nav-bg: #dbeafe;
+  --nav-hover-bg: #2563eb;
+  --nav-hover-color: #ffffff;
+  --nav-active-bg: #2563eb;
+  
+  /* Header y footer azul */
+  --header-bg: #1e40af;
+  --footer-bg: #1e40af;
+}
+
+/* Header con degradado azul océano */
+.site-header {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 40%, #1d4ed8 70%, #1e40af 100%) !important;
+}
+
+/* Footer con degradado azul */
+.site-footer {
+  background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 50%, #2563eb 100%) !important;
+}
+
+/* Navegación con fondo azul claro */
+.section-nav {
+  background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%) !important;
+  border-bottom: 1px solid #bfdbfe !important;
+}
+
+.section-nav a {
+  background: #2563eb !important;
+  color: #ffffff !important;
+}
+
+.section-nav a:hover,
+.section-nav a.active {
+  background: #1d4ed8 !important;
+  color: #ffffff !important;
+}
+
+/* Intro con tinte azul */
+.catalog-intro {
+  background: linear-gradient(180deg, #dbeafe 0%, #ffffff 100%) !important;
+}
+
+/* Buscador */
+.header-search .search-input {
+  background: rgba(255,255,255,0.2) !important;
+  border-color: rgba(255,255,255,0.3) !important;
+}
+
+.header-search .search-input:focus {
+  background: rgba(255,255,255,0.25) !important;
+  border-color: #06b6d4 !important;
+  box-shadow: 0 0 0 3px rgba(6,182,212,0.2) !important;
+}
+
+/* Cart floating bar */
+.cart-floating-bar {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%) !important;
+}
+
+/* Cart FAB */
+.cart-fab {
+  background: #06b6d4 !important;
+}
+
+.cart-fab:hover {
+  background: #0891b2 !important;
+}

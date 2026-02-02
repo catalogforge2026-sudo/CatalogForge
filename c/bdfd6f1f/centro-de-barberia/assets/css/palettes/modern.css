@@ -1,0 +1,66 @@
+/* Barber Theme - Modern Steel Palette */
+/* Gris acero moderno y minimalista */
+
+:root {
+  --primary-color: #8a9ba8;
+  --primary-hover: #a8b8c8;
+  --primary-contrast: #1c1c1e;
+  --accent-color: #c0c8d0;
+  
+  --bg-color: #121214;
+  --bg-secondary: #1c1c1e;
+  --bg-tertiary: #2c2c2e;
+  --text-color: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.65);
+  
+  --card-bg: rgba(28, 28, 30, 0.95);
+  --card-border: 1px solid rgba(138, 155, 168, 0.2);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --card-hover-shadow: 0 8px 30px rgba(138, 155, 168, 0.15);
+  
+  --tag-bg: rgba(138, 155, 168, 0.15);
+  --tag-color: var(--primary-color);
+  
+  --footer-bg: #121214;
+  --footer-border: 1px solid rgba(138, 155, 168, 0.2);
+  
+  --image-placeholder-bg: #1c1c1e;
+  
+  --nav-card-bg: rgba(28, 28, 30, 0.9);
+  --nav-card-border: rgba(138, 155, 168, 0.25);
+}
+
+body {
+  background-image: 
+    radial-gradient(ellipse at top center, rgba(138, 155, 168, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom center, rgba(138, 155, 168, 0.02) 0%, transparent 50%);
+}
+
+/* Ajustes específicos para modern */
+.site-header::before {
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--primary-color) 20%, 
+    var(--primary-color) 80%, 
+    transparent 100%);
+}
+
+.header-brand::after {
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+
+/* Estilo más limpio para modern */
+.section-title::before,
+.section-title::after {
+  content: '—';
+  font-size: 1em;
+}
+
+.site-header::after {
+  content: '— — —';
+  letter-spacing: 0.5rem;
+}
+
+.site-footer::before {
+  content: '—';
+}

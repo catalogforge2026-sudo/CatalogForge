@@ -1,0 +1,136 @@
+/* Stream Theme - Black Palette */
+/* Fondo gris claro para productos, header/footer negro con degradado */
+:root {
+  --primary-color: #1a1a1a;
+  --primary-hover: #000000;
+  --primary-contrast: #ffffff;
+  --accent-color: #10b981;
+  
+  /* Fondo gris claro para la zona de productos */
+  --bg-color: #f5f5f5;
+  --bg-secondary: #e5e5e5;
+  --bg-tertiary: #d4d4d4;
+  --card-bg: #ffffff;
+  --text-color: #1a1a1a;
+  --text-muted: #6b7280;
+  --text-secondary: #4b5563;
+  
+  --card-border: 1px solid #e5e5e5;
+  --card-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  --card-hover-shadow: 0 12px 32px rgba(0,0,0,0.12), 0 0 0 2px rgba(16,185,129,0.2);
+  --card-hover-border: rgba(16,185,129,0.4);
+  
+  --price-color: #10b981;
+  --tag-bg: rgba(0,0,0,0.06);
+  --tag-color: #374151;
+  --badge-bg: #10b981;
+  --badge-color: #ffffff;
+  
+  /* Navegación oscura sobre fondo claro */
+  --nav-bg: #1a1a1a;
+  --nav-hover-bg: #10b981;
+  --nav-hover-color: #ffffff;
+  --nav-active-bg: #10b981;
+  
+  /* Header y footer oscuros */
+  --header-bg: #000000;
+  --footer-bg: #000000;
+}
+
+/* Header con degradado negro */
+.site-header {
+  background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%) !important;
+}
+
+/* Footer con degradado negro */
+.site-footer {
+  background: linear-gradient(0deg, #000000 0%, #1a1a1a 100%) !important;
+}
+
+/* Navegación con fondo gris claro y pills oscuros */
+.section-nav {
+  background: #e5e5e5 !important;
+  border-bottom: 1px solid #d4d4d4 !important;
+}
+
+.section-nav a {
+  background: #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+.section-nav a:hover,
+.section-nav a.active {
+  background: #10b981 !important;
+  color: #ffffff !important;
+}
+
+/* Intro con degradado sutil */
+.catalog-intro {
+  background: linear-gradient(180deg, #e5e5e5 0%, #f5f5f5 100%) !important;
+}
+
+.catalog-intro p {
+  color: #1a1a1a !important;
+  background: rgba(0,0,0,0.05);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+}
+
+/* ============================================
+   BUSCADOR CON FONDO GRIS CLARO
+   ============================================ */
+.header-search .search-input {
+  background: #f5f5f5 !important;
+  border-color: #e5e5e5 !important;
+  color: #1a1a1a !important;
+}
+
+.header-search .search-input:focus {
+  background: #ffffff !important;
+  border-color: #10b981 !important;
+  box-shadow: 0 0 0 3px rgba(16,185,129,0.15) !important;
+}
+
+.header-search .search-input::placeholder {
+  color: #6b7280 !important;
+}
+
+.header-search .search-icon {
+  color: #6b7280 !important;
+}
+
+/* ============================================
+   CART FAB Y FLOATING BAR
+   ============================================ */
+.cart-fab {
+  background: #10b981 !important;
+  color: #ffffff !important;
+}
+
+.cart-fab:hover {
+  background: #059669 !important;
+}
+
+.cart-floating-bar {
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%) !important;
+}
+
+/* ============================================
+   MOBILE SEARCH
+   ============================================ */
+@media (max-width: 768px) {
+  .catalog-main .search-filter-bar {
+    background: #f5f5f5 !important;
+    border-bottom: 1px solid #e5e5e5 !important;
+  }
+  
+  .catalog-main .search-input {
+    background: #ffffff !important;
+    border: 1px solid #e5e5e5 !important;
+    color: #1a1a1a !important;
+  }
+  
+  .catalog-main .search-input::placeholder {
+    color: #6b7280 !important;
+  }
+}

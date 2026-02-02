@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heladería Deliciosa - Heladería Deliciosa</title>
+  <meta name="description" content="Los mejores helados artesanales de la ciudad">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Heladería Deliciosa - Heladería Deliciosa">
+  <meta property="og:description" content="Los mejores helados artesanales de la ciudad">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w&#x3D;200&amp;h&#x3D;200&amp;fit&#x3D;crop">
+  <meta property="og:type" content="website">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family&#x3D;Quicksand:wght@400;500;600;700&amp;display&#x3D;swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/_base/variables.css">
+  <link rel="stylesheet" href="assets/css/_base/components.css">
+  <link rel="stylesheet" href="assets/css/_base/cart.css">
+  <link rel="stylesheet" href="assets/css/_base/search-filter.css">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/palettes/bubblegum.css">
+  <link rel="stylesheet" href="assets/css/_base/cover-page.css">
+  
+  <style>
+    /* Font override from catalog config */
+    :root,
+    html,
+    body {
+      --font-family: 'Quicksand', Georgia, serif;
+      --font-family-heading: 'Quicksand', Georgia, serif;
+      --font-family-display: 'Quicksand', Georgia, serif;
+      --font-family-accent: 'Quicksand', Georgia, serif;
+      /* Granular font system */
+      --font-family-catalog-title: 'Quicksand', Georgia, serif;
+      --font-family-section-title: 'Quicksand', Georgia, serif;
+      --font-family-item-name: 'Quicksand', Georgia, serif;
+    }
+  </style>
+  
+  <!-- Build Info -->
+  <meta name="generator" content="SCG v1.0.0">
+  <meta name="build-version" content="20260201-192930">
+</head>
+<body class="theme-icecream mode-light layout-classic palette-bubblegum" data-layout="classic">
+  <section class="cover-page" id="cover">
+    <div class="cover-background">
+      <img src="uploads/1769984942610-o4rpklpsb.png" alt="Heladería Deliciosa" loading="eager" class="cover-bg-desktop">
+    </div>
+    
+    <div class="cover-overlay"></div>
+    
+    <div class="cover-content">
+      <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w&#x3D;200&amp;h&#x3D;200&amp;fit&#x3D;crop" alt="Heladería Deliciosa" class="cover-logo">
+      
+      <h1 class="cover-title">Heladería Deliciosa</h1>
+      
+      <p class="cover-subtitle">Heladería Deliciosa</p>
+      
+      <a href="#catalog" class="cover-button outlined">
+        Ver Catálogo
+      </a>
+    </div>
+    
+    <div class="cover-scroll-indicator" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 5v14M19 12l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
+  
+  <div class="catalog-page" id="catalog">
+  <header class="site-header">
+    <div class="header-container">
+      <div class="header-brand">
+        <div class="header-logo-wrapper">
+          <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w&#x3D;200&amp;h&#x3D;200&amp;fit&#x3D;crop" alt="Heladería Deliciosa" class="header-logo">
+        </div>
+        <div class="header-text">
+          <h1 class="header-title">Heladería Deliciosa</h1>
+          <p class="header-subtitle">Heladería Deliciosa</p>
+        </div>
+      </div>
+  
+      <div class="header-controls">
+        <div class="header-search">
+          <div class="search-container">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
+            </svg>
+            <input type="text" class="search-input" placeholder="Buscar productos..." autocomplete="off">
+            <button class="search-clear" type="button" aria-label="Limpiar búsqueda">✕</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="header-social">
+      </div>
+    </div>
+  </header>
+  
+  <main class="catalog-main">
+    <div class="container">
+      <section class="catalog-intro">
+        <p>Los mejores helados artesanales de la ciudad</p>
+      </section>
+
+
+      <!-- Promotions Carousel (Amazon Prime style) -->
+
+      <!-- Section Navigation -->
+      <nav class="section-nav">
+        <ul>
+          <li>
+            <a href="#section-paletas" data-section-image="">
+              <span class="nav-icon">
+                <span class="icon">🍦</span>
+              </span>
+              <span class="nav-text">Paletas</span>
+              <span class="nav-button">Ver productos</span>
+            </a>
+          </li>
+          <li>
+            <a href="#section-sundaes" data-section-image="">
+              <span class="nav-icon">
+                <span class="icon">🍨</span>
+              </span>
+              <span class="nav-text">Sundaes</span>
+              <span class="nav-button">Ver productos</span>
+            </a>
+          </li>
+          <li>
+            <a href="#section-helados" data-section-image="">
+              <span class="nav-icon">
+                <span class="icon">🍧</span>
+              </span>
+              <span class="nav-text">Helados</span>
+              <span class="nav-button">Ver productos</span>
+            </a>
+          </li>
+          <li>
+            <a href="#section-malteadas" data-section-image="">
+              <span class="nav-icon">
+                <span class="icon">🥤</span>
+              </span>
+              <span class="nav-text">Malteadas</span>
+              <span class="nav-button">Ver productos</span>
+            </a>
+          </li>
+          <li>
+            <a href="#section-promos" data-section-image="">
+              <span class="nav-icon">
+                <span class="icon">🏷️</span>
+              </span>
+              <span class="nav-text">Promos</span>
+              <span class="nav-button">Ver productos</span>
+            </a>
+          </li>
+          <li>
+            <a href="#section-frutas" data-section-image="">
+              <span class="nav-icon">
+                <span class="icon">🍓</span>
+              </span>
+              <span class="nav-text">Frutas</span>
+              <span class="nav-button">Ver productos</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Search & Filter Bar -->
+      <div class="search-filter-bar">
+        <div class="search-container">
+          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
+          <input type="text" class="search-input" placeholder="Buscar productos..." autocomplete="off">
+          <button class="search-clear" type="button" aria-label="Limpiar búsqueda">✕</button>
+        </div>
+        
+      </div>
+      <div class="search-results-info" style="display: none;"></div>
+
+      <!-- Sections -->
+      <section id="section-paletas" class="catalog-section show-images" >
+        <header class="section-header">
+          <h2 class="section-title">
+            <span class="section-icon">🍦</span>
+            Paletas
+          </h2>
+        </header>
+        <div class="items-grid grid grid-auto">
+          <article class="item-card card is-featured" data-item-id="144" data-item-name="Paleta de Frambuesa" data-item-price="25" data-item-price-text="$ 25" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Paleta de Frambuesa" loading="lazy">
+              <span class="badge badge-featured">Destacado</span>
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Paleta de Frambuesa</h3>
+              <p class="item-description">Paletas artesanales de frambuesa con trozos de fruta</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-amount">$ 25</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card card" data-item-id="161" data-item-name="Paleta de Mango" data-item-price="28" data-item-price-text="$ 28" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="uploads/1769368007758-p7zou71hu.webp" alt="Paleta de Mango" loading="lazy">
+              
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Paleta de Mango</h3>
+              <p class="item-description">Refrescante paleta de mango natural</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-amount">$ 28</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card card" data-item-id="162" data-item-name="Paleta de Limón" data-item-price="25" data-item-price-text="$ 25" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="uploads/1769368035358-nxwo0f7gb.webp" alt="Paleta de Limón" loading="lazy">
+              
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Paleta de Limón</h3>
+              <p class="item-description">Paleta cítrica de limón con un toque de menta</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-amount">$ 25</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="section-sundaes" class="catalog-section show-images" >
+        <header class="section-header">
+          <h2 class="section-title">
+            <span class="section-icon">🍨</span>
+            Sundaes
+          </h2>
+        </header>
+        <div class="items-grid grid grid-auto">
+          <article class="item-card card is-featured" data-item-id="145" data-item-name="Sundae Especial" data-item-price="65" data-item-price-text="$ 65" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Sundae Especial" loading="lazy">
+              <span class="badge badge-featured">Destacado</span>
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Sundae Especial</h3>
+              <p class="item-description">Helado con salsa de chocolate, crema y toppings variados</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-amount">$ 65</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card card" data-item-id="163" data-item-name="Sundae de Chocolate" data-item-price="69" data-item-price-text="$ 69" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Sundae de Chocolate" loading="lazy">
+              
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Sundae de Chocolate</h3>
+              <p class="item-description">Sundae con helado de chocolate, brownie y salsa caliente</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-amount">$ 69</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card card" data-item-id="164" data-item-name="Sundae de Vainilla" data-item-price="59" data-item-price-text="$ 59" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="uploads/1769368071156-5xgjuytjb.webp" alt="Sundae de Vainilla" loading="lazy">
+              
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Sundae de Vainilla</h3>
+              <p class="item-description">Clásico sundae de vainilla con nueces y cereza</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-amount">$ 59</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="section-helados" class="catalog-section show-images" >
+        <header class="section-header">
+          <h2 class="section-title">
+            <span class="section-icon">🍧</span>
+            Helados
+          </h2>
+        </header>
+        <div class="items-grid grid grid-auto">
+          <article class="item-card card" data-item-id="147" data-item-name="Conos de Chocolate" data-item-price="55" data-item-price-text="$ 55" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1580915411954-282cb1b0d780?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Conos de Chocolate" loading="lazy">
+              
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Conos de Chocolate</h3>
+              <p class="item-description">Conos crujientes con helado de chocolate artesanal</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-amount">$ 55</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card card is-featured" data-item-id="148" data-item-name="Cono Artesanal" data-item-price="45" data-item-price-text="$ 45" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Cono Artesanal" loading="lazy">
+              <span class="badge badge-featured">Destacado</span>
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Cono Artesanal</h3>
+              <p class="item-description">Cono decorado con helado premium y flores comestibles</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-amount">$ 45</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card card is-featured" data-item-id="149" data-item-name="Copa Oreo" data-item-price="55" data-item-price-text="$ 55" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Copa Oreo" loading="lazy">
+              <span class="badge badge-featured">Destacado</span>
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Copa Oreo</h3>
+              <p class="item-description">Helado de vainilla con galletas Oreo y chocolate</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-amount">$ 55</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card card" data-item-id="150" data-item-name="Helado Multicolor" data-item-price="40" data-item-price-text="$ 40" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Helado Multicolor" loading="lazy">
+              
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Helado Multicolor</h3>
+              <p class="item-description">Helado de colores con confeti y toppings divertidos</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-amount">$ 40</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card card" data-item-id="151" data-item-name="Conos Frutales" data-item-price="35" data-item-price-text="$ 35" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Conos Frutales" loading="lazy">
+              
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Conos Frutales</h3>
+              <p class="item-description">Conos artesanales con helado y frutas frescas</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-amount">$ 35</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card card" data-item-id="152" data-item-name="Helado de Dulce de Leche" data-item-price="30" data-item-price-text="$ 30" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Helado de Dulce de Leche" loading="lazy">
+              
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Helado de Dulce de Leche</h3>
+              <p class="item-description">Cremoso helado de dulce de leche artesanal</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-amount">$ 30</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card card" data-item-id="153" data-item-name="Conos Arcoíris" data-item-price="45" data-item-price-text="$ 45" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1629385701021-fcd568a743e8?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Conos Arcoíris" loading="lazy">
+              
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Conos Arcoíris</h3>
+              <p class="item-description">Conos coloridos con helado multicolor y confeti</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-amount">$ 45</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="section-malteadas" class="catalog-section show-images" >
+        <header class="section-header">
+          <h2 class="section-title">
+            <span class="section-icon">🥤</span>
+            Malteadas
+          </h2>
+        </header>
+        <div class="items-grid grid grid-auto">
+          <article class="item-card card" data-item-id="146" data-item-name="Batido de Fresa" data-item-price="59" data-item-price-text="$ 59" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Batido de Fresa" loading="lazy">
+              
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Batido de Fresa</h3>
+              <p class="item-description">Delicioso batido de fresa con fresas frescas</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-amount">$ 59</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card card is-featured" data-item-id="154" data-item-name="Malteada Premium" data-item-price="59" data-item-price-text="$ 59" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Malteada Premium" loading="lazy">
+              <span class="badge badge-featured">Destacado</span>
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Malteada Premium</h3>
+              <p class="item-description">Malteada cremosa con crema batida y toppings</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-amount">$ 59</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card card" data-item-id="155" data-item-name="Malteada de Chocolate" data-item-price="49" data-item-price-text="$ 49" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1541658016709-82535e94bc69?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Malteada de Chocolate" loading="lazy">
+              
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Malteada de Chocolate</h3>
+              <p class="item-description">Clásica malteada de chocolate con crema</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-amount">$ 49</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card card" data-item-id="156" data-item-name="Smoothie de Granada" data-item-price="45" data-item-price-text="$ 45" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Smoothie de Granada" loading="lazy">
+              
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Smoothie de Granada</h3>
+              <p class="item-description">Bebida refrescante de granada con hielo</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-amount">$ 45</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card card" data-item-id="157" data-item-name="Malteada de Fresa" data-item-price="49" data-item-price-text="$ 49" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1568901839119-631418a3910d?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Malteada de Fresa" loading="lazy">
+              
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Malteada de Fresa</h3>
+              <p class="item-description">Malteada rosa de fresa con crema batida</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-amount">$ 49</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="section-promos" class="catalog-section show-images" >
+        <header class="section-header">
+          <h2 class="section-title">
+            <span class="section-icon">🏷️</span>
+            Promos
+          </h2>
+        </header>
+        <div class="items-grid grid grid-auto">
+          <article class="item-card card is-featured" data-item-id="165" data-item-name="Combo Familiar" data-item-price="199" data-item-price-text="$ 199" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Combo Familiar" loading="lazy">
+              <span class="badge badge-featured">Destacado</span>
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Combo Familiar</h3>
+              <p class="item-description">4 helados medianos + 2 sundaes a precio especial</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-original">$ 280</span>
+                  <span class="price-amount">$ 199</span>
+                  <span class="badge-discount">29% OFF</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card card is-featured" data-item-id="166" data-item-name="2x1 en Paletas" data-item-price="25" data-item-price-text="$ 25" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="2x1 en Paletas" loading="lazy">
+              <span class="badge badge-featured">Destacado</span>
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">2x1 en Paletas</h3>
+              <p class="item-description">Lleva 2 paletas por el precio de 1</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-original">$ 50</span>
+                  <span class="price-amount">$ 25</span>
+                  <span class="badge-discount">50% OFF</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card card is-featured" data-item-id="167" data-item-name="Sundae Gigante" data-item-price="69" data-item-price-text="$ 69" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Sundae Gigante" loading="lazy">
+              <span class="badge badge-featured">Destacado</span>
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Sundae Gigante</h3>
+              <p class="item-description">Sundae tamaño XL con todos los toppings</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-original">$ 99</span>
+                  <span class="price-amount">$ 69</span>
+                  <span class="badge-discount">30% OFF</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="section-frutas" class="catalog-section show-images" >
+        <header class="section-header">
+          <h2 class="section-title">
+            <span class="section-icon">🍓</span>
+            Frutas
+          </h2>
+        </header>
+        <div class="items-grid grid grid-auto">
+          <article class="item-card card is-featured" data-item-id="158" data-item-name="Fresas con Crema" data-item-price="50" data-item-price-text="$ 50" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Fresas con Crema" loading="lazy">
+              <span class="badge badge-featured">Destacado</span>
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Fresas con Crema</h3>
+              <p class="item-description">Fresas frescas con crema batida</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-amount">$ 50</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card card" data-item-id="159" data-item-name="Ensalada de Frutas" data-item-price="45" data-item-price-text="$ 45" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1564093497595-593b96d80180?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Ensalada de Frutas" loading="lazy">
+              
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Ensalada de Frutas</h3>
+              <p class="item-description">Mix colorido de frutas frescas de temporada</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-amount">$ 45</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card card" data-item-id="160" data-item-name="Bowl de Frutas" data-item-price="55" data-item-price-text="$ 55" data-has-variants="false" data-has-customizations="false" data-has-customization-groups="false">
+            <button class="item-card-close" aria-label="Cerrar" title="Cerrar">✕</button>
+            <div class="item-image">
+              <img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Bowl de Frutas" loading="lazy">
+              
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-name">Bowl de Frutas</h3>
+              <p class="item-description">Bowl con frutas variadas, yogurt y granola</p>
+              <span class="expand-indicator">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+                Ver más
+              </span>
+              
+              
+              <div class="item-footer">
+                <div class="item-price">
+                  <span class="price-amount">$ 55</span>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <strong class="footer-name">Heladería Deliciosa</strong>
+      </div>
+      
+      <div class="footer-contact">
+        <a href="mailto:demo@heladeria.com" class="footer-link">demo@heladeria.com</a>
+        <a href="tel:555-123-4567" class="footer-link">555-123-4567</a>
+      </div>
+  
+      
+      <div class="footer-powered">
+        <span>Catálogo digital · Hecho por Catalog Forge</span>
+        <span class="footer-contact-info">Para información de catálogo digital: <a href="https://wa.me/5491150192474" class="footer-contact-link">11 5019-2474</a></span>
+      </div>
+    </div>
+  </footer>
+  </div>
+
+  <!-- Catalog Data for JS -->
+  <script>
+    window.CATALOG_DATA = {"meta":{"title":"Heladería Deliciosa - Heladería Deliciosa","description":"Los mejores helados artesanales de la ciudad","image":"https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=200&h=200&fit=crop","url":"/c/heladeria_demo123/heladeria-deliciosa","clientKey":"heladeria_demo123","generatedAt":"2026-02-01T22:29:30.912Z","generator":"CatalogForge"},"client":{"name":"Heladería Deliciosa","slug":"heladeria-demo","logo":"https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=200&h=200&fit=crop","email":"demo@heladeria.com","phone":"555-123-4567","address":null,"mapsUrl":null,"website":null,"socialLinks":{}},"catalog":{"id":13,"name":"Heladería Deliciosa","slug":"heladeria-deliciosa","publicKey":"heladeria_demo123","description":"Los mejores helados artesanales de la ciudad","address":null,"mapsUrl":null,"showAddressHeader":false,"type":"Productos","typeSlug":"products","config":{"showPrices":true,"showSku":false,"showStock":false,"currency":"$","priceFormat":"$ {price}","layout":"grid","itemsPerRow":3,"themePalette":"bubblegum","showDescriptions":true,"contactInfo":{"phone":"555-123-4567","address":"Av. Siempre Fría 123, Ciudad","instagram":"@HeladeriaDeliciosa"},"themeSlug":"icecream","themeMode":"light"}},"theme":{"name":"Ice Cream","slug":"icecream","styles":{"primaryColor":"#e91e8c","secondaryColor":"#00bcd4","backgroundColor":"#f5f9fc","textColor":"#2d3748","accentColor":"#ff69b4","fontFamily":"Quicksand, sans-serif","borderRadius":"20px","cardShadow":"0 4px 20px rgba(0,0,0,0.08)","category":"food","idealFor":["heladería","paletería","postres","dulces","frozen","smoothies"],"icon":"🍦","variants":{"modes":["light"],"palettes":["tropical","berry","mint","sunset","classic","bubblegum"]}},"mode":"light","palette":"bubblegum","layout":"classic","classes":"theme-icecream mode-light layout-classic palette-bubblegum"},"sections":[{"id":47,"name":"Paletas","slug":"paletas","description":null,"icon":"🍦","iconUrl":null,"image":null,"imageUrl":null,"itemCount":3,"items":[{"id":144,"name":"Paleta de Frambuesa","slug":"paleta-frambuesa","description":"Paletas artesanales de frambuesa con trozos de fruta","price":"$ 25","priceRaw":25,"originalPrice":null,"originalPriceRaw":null,"discountPercent":null,"priceLabel":null,"currency":"ARS","image":"https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?w=400&h=400&fit=crop","thumbnail":"https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?w=400&h=400&fit=crop","gallery":[],"isFeatured":true,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":false,"hasCustomizations":false,"hasCustomizationGroups":false},{"id":161,"name":"Paleta de Mango","slug":"paleta-mango","description":"Refrescante paleta de mango natural","price":"$ 28","priceRaw":28,"originalPrice":null,"originalPriceRaw":null,"discountPercent":null,"priceLabel":null,"currency":"ARS","image":"uploads/1769368007758-p7zou71hu.webp","thumbnail":"uploads/1769368007758-p7zou71hu.webp","gallery":[],"isFeatured":false,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":false,"hasCustomizations":false,"hasCustomizationGroups":false},{"id":162,"name":"Paleta de Limón","slug":"paleta-limon","description":"Paleta cítrica de limón con un toque de menta","price":"$ 25","priceRaw":25,"originalPrice":null,"originalPriceRaw":null,"discountPercent":null,"priceLabel":null,"currency":"ARS","image":"uploads/1769368035358-nxwo0f7gb.webp","thumbnail":"uploads/1769368035358-nxwo0f7gb.webp","gallery":[],"isFeatured":false,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":false,"hasCustomizations":false,"hasCustomizationGroups":false}],"frameStyle":"chalk","promoText":null,"promoBadge":null,"showItemImages":true,"hasPromo":false,"hasImage":false,"sectionClasses":"show-images"},{"id":48,"name":"Sundaes","slug":"sundaes","description":null,"icon":"🍨","iconUrl":null,"image":null,"imageUrl":null,"itemCount":3,"items":[{"id":145,"name":"Sundae Especial","slug":"sundae-especial","description":"Helado con salsa de chocolate, crema y toppings variados","price":"$ 65","priceRaw":65,"originalPrice":null,"originalPriceRaw":null,"discountPercent":null,"priceLabel":null,"currency":"ARS","image":"https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=400&fit=crop","thumbnail":"https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=400&fit=crop","gallery":[],"isFeatured":true,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":false,"hasCustomizations":false,"hasCustomizationGroups":false},{"id":163,"name":"Sundae de Chocolate","slug":"sundae-chocolate","description":"Sundae con helado de chocolate, brownie y salsa caliente","price":"$ 69","priceRaw":69,"originalPrice":null,"originalPriceRaw":null,"discountPercent":null,"priceLabel":null,"currency":"ARS","image":"https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=400&fit=crop","thumbnail":"https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=400&fit=crop","gallery":[],"isFeatured":false,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":false,"hasCustomizations":false,"hasCustomizationGroups":false},{"id":164,"name":"Sundae de Vainilla","slug":"sundae-vainilla","description":"Clásico sundae de vainilla con nueces y cereza","price":"$ 59","priceRaw":59,"originalPrice":null,"originalPriceRaw":null,"discountPercent":null,"priceLabel":null,"currency":"ARS","image":"uploads/1769368071156-5xgjuytjb.webp","thumbnail":"uploads/1769368071156-5xgjuytjb.webp","gallery":[],"isFeatured":false,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":false,"hasCustomizations":false,"hasCustomizationGroups":false}],"frameStyle":"chalk","promoText":null,"promoBadge":null,"showItemImages":true,"hasPromo":false,"hasImage":false,"sectionClasses":"show-images"},{"id":49,"name":"Helados","slug":"helados","description":null,"icon":"🍧","iconUrl":null,"image":null,"imageUrl":null,"itemCount":7,"items":[{"id":147,"name":"Conos de Chocolate","slug":"conos-chocolate","description":"Conos crujientes con helado de chocolate artesanal","price":"$ 55","priceRaw":55,"originalPrice":null,"originalPriceRaw":null,"discountPercent":null,"priceLabel":null,"currency":"ARS","image":"https://images.unsplash.com/photo-1580915411954-282cb1b0d780?w=400&h=400&fit=crop","thumbnail":"https://images.unsplash.com/photo-1580915411954-282cb1b0d780?w=400&h=400&fit=crop","gallery":[],"isFeatured":false,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":false,"hasCustomizations":false,"hasCustomizationGroups":false},{"id":148,"name":"Cono Artesanal","slug":"cono-artesanal","description":"Cono decorado con helado premium y flores comestibles","price":"$ 45","priceRaw":45,"originalPrice":null,"originalPriceRaw":null,"discountPercent":null,"priceLabel":null,"currency":"ARS","image":"https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=400&h=400&fit=crop","thumbnail":"https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=400&h=400&fit=crop","gallery":[],"isFeatured":true,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":false,"hasCustomizations":false,"hasCustomizationGroups":false},{"id":149,"name":"Copa Oreo","slug":"copa-oreo","description":"Helado de vainilla con galletas Oreo y chocolate","price":"$ 55","priceRaw":55,"originalPrice":null,"originalPriceRaw":null,"discountPercent":null,"priceLabel":null,"currency":"ARS","image":"https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=400&fit=crop","thumbnail":"https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=400&fit=crop","gallery":[],"isFeatured":true,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":false,"hasCustomizations":false,"hasCustomizationGroups":false},{"id":150,"name":"Helado Multicolor","slug":"helado-multicolor","description":"Helado de colores con confeti y toppings divertidos","price":"$ 40","priceRaw":40,"originalPrice":null,"originalPriceRaw":null,"discountPercent":null,"priceLabel":null,"currency":"ARS","image":"https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?w=400&h=400&fit=crop","thumbnail":"https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?w=400&h=400&fit=crop","gallery":[],"isFeatured":false,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":false,"hasCustomizations":false,"hasCustomizationGroups":false},{"id":151,"name":"Conos Frutales","slug":"conos-frutales","description":"Conos artesanales con helado y frutas frescas","price":"$ 35","priceRaw":35,"originalPrice":null,"originalPriceRaw":null,"discountPercent":null,"priceLabel":null,"currency":"ARS","image":"https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=400&h=400&fit=crop","thumbnail":"https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=400&h=400&fit=crop","gallery":[],"isFeatured":false,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":false,"hasCustomizations":false,"hasCustomizationGroups":false},{"id":152,"name":"Helado de Dulce de Leche","slug":"helado-dulce-leche","description":"Cremoso helado de dulce de leche artesanal","price":"$ 30","priceRaw":30,"originalPrice":null,"originalPriceRaw":null,"discountPercent":null,"priceLabel":null,"currency":"ARS","image":"https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=400&h=400&fit=crop","thumbnail":"https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=400&h=400&fit=crop","gallery":[],"isFeatured":false,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":false,"hasCustomizations":false,"hasCustomizationGroups":false},{"id":153,"name":"Conos Arcoíris","slug":"conos-arcoiris","description":"Conos coloridos con helado multicolor y confeti","price":"$ 45","priceRaw":45,"originalPrice":null,"originalPriceRaw":null,"discountPercent":null,"priceLabel":null,"currency":"ARS","image":"https://images.unsplash.com/photo-1629385701021-fcd568a743e8?w=400&h=400&fit=crop","thumbnail":"https://images.unsplash.com/photo-1629385701021-fcd568a743e8?w=400&h=400&fit=crop","gallery":[],"isFeatured":false,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":false,"hasCustomizations":false,"hasCustomizationGroups":false}],"frameStyle":"chalk","promoText":null,"promoBadge":null,"showItemImages":true,"hasPromo":false,"hasImage":false,"sectionClasses":"show-images"},{"id":50,"name":"Malteadas","slug":"malteadas","description":null,"icon":"🥤","iconUrl":null,"image":null,"imageUrl":null,"itemCount":5,"items":[{"id":146,"name":"Batido de Fresa","slug":"batido-fresa","description":"Delicioso batido de fresa con fresas frescas","price":"$ 59","priceRaw":59,"originalPrice":null,"originalPriceRaw":null,"discountPercent":null,"priceLabel":null,"currency":"ARS","image":"https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=400&h=400&fit=crop","thumbnail":"https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=400&h=400&fit=crop","gallery":[],"isFeatured":false,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":false,"hasCustomizations":false,"hasCustomizationGroups":false},{"id":154,"name":"Malteada Premium","slug":"malteada-premium","description":"Malteada cremosa con crema batida y toppings","price":"$ 59","priceRaw":59,"originalPrice":null,"originalPriceRaw":null,"discountPercent":null,"priceLabel":null,"currency":"ARS","image":"https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=400&fit=crop","thumbnail":"https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=400&fit=crop","gallery":[],"isFeatured":true,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":false,"hasCustomizations":false,"hasCustomizationGroups":false},{"id":155,"name":"Malteada de Chocolate","slug":"malteada-chocolate","description":"Clásica malteada de chocolate con crema","price":"$ 49","priceRaw":49,"originalPrice":null,"originalPriceRaw":null,"discountPercent":null,"priceLabel":null,"currency":"ARS","image":"https://images.unsplash.com/photo-1541658016709-82535e94bc69?w=400&h=400&fit=crop","thumbnail":"https://images.unsplash.com/photo-1541658016709-82535e94bc69?w=400&h=400&fit=crop","gallery":[],"isFeatured":false,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":false,"hasCustomizations":false,"hasCustomizationGroups":false},{"id":156,"name":"Smoothie de Granada","slug":"smoothie-granada","description":"Bebida refrescante de granada con hielo","price":"$ 45","priceRaw":45,"originalPrice":null,"originalPriceRaw":null,"discountPercent":null,"priceLabel":null,"currency":"ARS","image":"https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=400&h=400&fit=crop","thumbnail":"https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=400&h=400&fit=crop","gallery":[],"isFeatured":false,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":false,"hasCustomizations":false,"hasCustomizationGroups":false},{"id":157,"name":"Malteada de Fresa","slug":"malteada-fresa","description":"Malteada rosa de fresa con crema batida","price":"$ 49","priceRaw":49,"originalPrice":null,"originalPriceRaw":null,"discountPercent":null,"priceLabel":null,"currency":"ARS","image":"https://images.unsplash.com/photo-1568901839119-631418a3910d?w=400&h=400&fit=crop","thumbnail":"https://images.unsplash.com/photo-1568901839119-631418a3910d?w=400&h=400&fit=crop","gallery":[],"isFeatured":false,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":false,"hasCustomizations":false,"hasCustomizationGroups":false}],"frameStyle":"chalk","promoText":null,"promoBadge":null,"showItemImages":true,"hasPromo":false,"hasImage":false,"sectionClasses":"show-images"},{"id":51,"name":"Promos","slug":"promos","description":null,"icon":"🏷️","iconUrl":null,"image":null,"imageUrl":null,"itemCount":3,"items":[{"id":165,"name":"Combo Familiar","slug":"combo-familiar","description":"4 helados medianos + 2 sundaes a precio especial","price":"$ 199","priceRaw":199,"originalPrice":"$ 280","originalPriceRaw":280,"discountPercent":29,"priceLabel":null,"currency":"ARS","image":"https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?w=400&h=400&fit=crop","thumbnail":"https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?w=400&h=400&fit=crop","gallery":[],"isFeatured":true,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":true,"hasCustomizations":false,"hasCustomizationGroups":false},{"id":166,"name":"2x1 en Paletas","slug":"promo-2x1-paletas","description":"Lleva 2 paletas por el precio de 1","price":"$ 25","priceRaw":25,"originalPrice":"$ 50","originalPriceRaw":50,"discountPercent":50,"priceLabel":null,"currency":"ARS","image":"https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?w=400&h=400&fit=crop","thumbnail":"https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?w=400&h=400&fit=crop","gallery":[],"isFeatured":true,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":true,"hasCustomizations":false,"hasCustomizationGroups":false},{"id":167,"name":"Sundae Gigante","slug":"sundae-gigante","description":"Sundae tamaño XL con todos los toppings","price":"$ 69","priceRaw":69,"originalPrice":"$ 99","originalPriceRaw":99,"discountPercent":30,"priceLabel":null,"currency":"ARS","image":"https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=400&fit=crop","thumbnail":"https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=400&fit=crop","gallery":[],"isFeatured":true,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":true,"hasCustomizations":false,"hasCustomizationGroups":false}],"frameStyle":"chalk","promoText":null,"promoBadge":null,"showItemImages":true,"hasPromo":false,"hasImage":false,"sectionClasses":"show-images"},{"id":52,"name":"Frutas","slug":"frutas","description":null,"icon":"🍓","iconUrl":null,"image":null,"imageUrl":null,"itemCount":3,"items":[{"id":158,"name":"Fresas con Crema","slug":"fresas-crema","description":"Fresas frescas con crema batida","price":"$ 50","priceRaw":50,"originalPrice":null,"originalPriceRaw":null,"discountPercent":null,"priceLabel":null,"currency":"ARS","image":"https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=400&fit=crop","thumbnail":"https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=400&fit=crop","gallery":[],"isFeatured":true,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":false,"hasCustomizations":false,"hasCustomizationGroups":false},{"id":159,"name":"Ensalada de Frutas","slug":"ensalada-frutas","description":"Mix colorido de frutas frescas de temporada","price":"$ 45","priceRaw":45,"originalPrice":null,"originalPriceRaw":null,"discountPercent":null,"priceLabel":null,"currency":"ARS","image":"https://images.unsplash.com/photo-1564093497595-593b96d80180?w=400&h=400&fit=crop","thumbnail":"https://images.unsplash.com/photo-1564093497595-593b96d80180?w=400&h=400&fit=crop","gallery":[],"isFeatured":false,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":false,"hasCustomizations":false,"hasCustomizationGroups":false},{"id":160,"name":"Bowl de Frutas","slug":"bowl-frutas","description":"Bowl con frutas variadas, yogurt y granola","price":"$ 55","priceRaw":55,"originalPrice":null,"originalPriceRaw":null,"discountPercent":null,"priceLabel":null,"currency":"ARS","image":"https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=400&h=400&fit=crop","thumbnail":"https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=400&h=400&fit=crop","gallery":[],"isFeatured":false,"tags":[],"sku":null,"customFields":{},"variants":[],"customizations":[],"customizationGroups":[],"minVariantPrice":null,"minVariantPriceFormatted":null,"hasPrice":true,"hasImage":true,"hasGallery":false,"hasVariants":false,"hasDiscount":false,"hasCustomizations":false,"hasCustomizationGroups":false}],"frameStyle":"chalk","promoText":null,"promoBadge":null,"showItemImages":true,"hasPromo":false,"hasImage":false,"sectionClasses":"show-images"}],"promotions":[],"cart":{"enabled":true,"buttonText":"Agregar","whatsappMessage":"Hola! Quiero hacer el siguiente pedido:","formConfig":{}},"searchFilter":{"enabled":true,"searchEnabled":true,"filterEnabled":false,"placeholder":"Buscar productos..."},"coverPage":{"enabled":true,"backgroundImage":"uploads/1769984942610-o4rpklpsb.png","backgroundImageMobile":null,"showLogo":true,"showTitle":true,"showSubtitle":true,"buttonText":"Ver Catálogo","buttonStyle":"outlined"},"totalItems":24,"navButtonText":"Ver productos","buildInfo":{"version":"20260201-192930","timestamp":"2026-02-01T22:29:30.954Z","generator":"SCG v1.0.0"},"branding":{"footerText":"Hecho por Catalog Forge","footerPhone":"5491150192474","footerPhoneDisplay":"11 5019-2474"},"fontUrls":["https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"],"fontStyles":{"heading":"'Quicksand', Georgia, serif","body":"'Quicksand', Georgia, serif","catalogTitle":"'Quicksand', Georgia, serif","sectionTitle":"'Quicksand', Georgia, serif","itemName":"'Quicksand', Georgia, serif"},"globalSettings":{}};
+  </script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/expandable-cards.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/search-filter.js"></script>
+</body>
+</html>

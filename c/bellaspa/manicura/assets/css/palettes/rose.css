@@ -1,0 +1,95 @@
+/* Beauty Theme - Rose Soft Palette */
+/* Suave y femenino con tonos rosa */
+
+:root {
+  --primary-color: #c9a9a9;
+  --primary-hover: #b89999;
+  --primary-contrast: #ffffff;
+  --accent-color: #e8d4d4;
+  
+  --bg-color: #faf5f5;
+  --bg-secondary: #f5eded;
+  --text-color: #4a3f3f;
+  --text-muted: rgba(74, 63, 63, 0.7);
+  
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --card-border: 1px solid rgba(201, 169, 169, 0.3);
+  --card-shadow: 0 4px 20px rgba(201, 169, 169, 0.15);
+  --card-hover-shadow: 0 8px 30px rgba(201, 169, 169, 0.25);
+  
+  --tag-bg: rgba(201, 169, 169, 0.15);
+  --tag-color: #8a7070;
+  
+  --footer-bg: #f5eded;
+  --footer-border: 1px solid rgba(201, 169, 169, 0.3);
+  
+  --image-placeholder-bg: #f0e8e8;
+  
+  --header-bg: linear-gradient(180deg, #faf5f5 0%, #f5eded 100%);
+  
+  /* Navigation cards */
+  --nav-card-bg: rgba(255, 255, 255, 0.9);
+  --nav-card-border: rgba(201, 169, 169, 0.4);
+}
+
+body {
+  background-image: 
+    radial-gradient(ellipse at top, rgba(201, 169, 169, 0.1) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a9a9' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.header-title {
+  color: #8a7070 !important;
+  text-shadow: none !important;
+}
+
+.site-header .header-subtitle {
+  color: rgba(74, 63, 63, 0.6) !important;
+}
+
+.site-header::after {
+  color: #c9a9a9 !important;
+}
+
+.section-title {
+  color: var(--text-color) !important;
+}
+
+.section-title::before,
+.section-title::after {
+  color: #c9a9a9 !important;
+}
+
+.item-image-container::after {
+  background: linear-gradient(to top, rgba(74, 63, 63, 0.85) 0%, transparent 100%) !important;
+}
+
+.site-footer::before {
+  color: #c9a9a9 !important;
+  background: var(--footer-bg) !important;
+}
+
+
+/* Navigation cards for light theme */
+.section-nav a {
+  background: var(--nav-card-bg) !important;
+  border-color: var(--nav-card-border) !important;
+}
+
+.section-nav a::before {
+  background: linear-gradient(135deg, rgba(201, 169, 169, 0.15) 0%, transparent 50%) !important;
+}
+
+.section-nav a:hover {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 8px 25px rgba(201, 169, 169, 0.2) !important;
+}
+
+.section-nav .nav-text {
+  color: #8a7070 !important;
+}
+
+.section-nav a:hover .nav-text {
+  color: var(--primary-hover) !important;
+  text-shadow: none !important;
+}

@@ -1,0 +1,9 @@
+/* Organic Theme - Green Palette (Default) */
+:root {
+  --primary-color: #6b7c4c;
+  --primary-hover: #5a6940;
+  --accent-color: #8fa66b;
+  --header-bg: linear-gradient(135deg, #6b8e4e 0%, #4a7c59 50%, #3d6b4f 100%);
+  --tag-bg: rgba(107, 124, 76, 0.1);
+  --tag-color: #6b7c4c;
+}

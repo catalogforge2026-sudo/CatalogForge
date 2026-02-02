@@ -1,0 +1,43 @@
+/**
+ * Natura Theme - Earth Palette (Default)
+ * Tonos tierra cálidos inspirados en Natura
+ */
+
+:root {
+  /* Primary Colors - Natura Brown */
+  --color-primary: #8B5A2B;
+  --color-primary-light: #A67C52;
+  --color-primary-dark: #6B4423;
+  
+  /* Background Colors - Warm Beige */
+  --color-bg: #F5E6D3;
+  --color-bg-alt: #EDE0CE;
+  --color-bg-card: rgba(255, 255, 255, 0.85);
+  --color-bg-header: rgba(245, 230, 211, 0.98);
+  --color-bg-section-nav: rgba(255, 248, 240, 0.9);
+  
+  /* Header gradient for cover page */
+  --header-bg: linear-gradient(135deg, #8B5A2B 0%, #C4956A 100%);
+  
+  /* Text Colors */
+  --color-text: #5C4033;
+  --color-text-light: #8B7355;
+  --color-text-muted: #A89080;
+  --color-text-inverse: #FFFFFF;
+  --color-text-heading: #6B4423;
+  
+  /* Accent Colors */
+  --color-accent: #C4956A;
+  --color-accent-light: #D4B896;
+  --color-border: #D4C4A8;
+  --color-border-light: #E8DCC8;
+  
+  /* Button Colors - Natura Orange */
+  --color-btn-primary: #D4874D;
+  --color-btn-primary-hover: #C4773D;
+  --color-btn-text: #FFFFFF;
+  
+  /* Card Styles */
+  --card-shadow: 0 4px 20px rgba(139, 90, 43, 0.08);
+  --card-shadow-hover: 0 8px 30px rgba(139, 90, 43, 0.12);
+}

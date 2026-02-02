@@ -1,0 +1,70 @@
+/* Mixology - Neon Palette */
+/* Estilo neón cyberpunk para bares modernos */
+
+body.palette-neon {
+  --primary-color: #00f5d4;
+  --primary-hover: #00e5c4;
+  --accent-color: #ff006e;
+  --text-gold: #00f5d4;
+  
+  background-image: 
+    radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.9) 100%),
+    radial-gradient(ellipse 120% 60% at 50% -10%, rgba(0, 245, 212, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse 80% 50% at 30% -5%, rgba(255, 0, 110, 0.25) 0%, transparent 45%),
+    radial-gradient(ellipse 80% 50% at 70% -5%, rgba(0, 245, 212, 0.2) 0%, transparent 45%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='5' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.3'/%3E%3C/svg%3E"),
+    linear-gradient(180deg, #0a0a12 0%, #050508 50%, #020204 100%);
+}
+
+body.palette-neon .header-title {
+  color: #ffffff !important;
+  text-shadow: 
+    0 0 10px rgba(0, 245, 212, 0.8),
+    0 0 20px rgba(0, 245, 212, 0.6),
+    0 0 40px rgba(0, 245, 212, 0.4),
+    0 0 80px rgba(0, 245, 212, 0.2),
+    0 3px 10px rgba(0, 0, 0, 0.9);
+}
+
+body.palette-neon .header-title::before,
+body.palette-neon .header-title::after {
+  background: linear-gradient(90deg, #00f5d4, #ff006e);
+  height: 2px;
+  box-shadow: 0 0 10px rgba(0, 245, 212, 0.5);
+}
+
+body.palette-neon .header-content::after {
+  color: #00f5d4;
+  text-shadow: 0 0 10px rgba(0, 245, 212, 0.5);
+}
+
+body.palette-neon .section-content .section-title {
+  color: #00f5d4;
+  border-bottom-color: #00f5d4;
+  text-shadow: 0 0 8px rgba(0, 245, 212, 0.4);
+}
+
+body.palette-neon .section-image::before {
+  border-color: rgba(0, 245, 212, 0.7);
+  box-shadow: 0 0 15px rgba(0, 245, 212, 0.3);
+}
+
+body.palette-neon .item-row .item-dots {
+  border-bottom-color: rgba(0, 245, 212, 0.4);
+}
+
+body.palette-neon .catalog-main::before,
+body.palette-neon .catalog-main::after,
+body.palette-neon::before,
+body.palette-neon::after {
+  border-color: #00f5d4;
+  box-shadow: 0 0 10px rgba(0, 245, 212, 0.3);
+}
+
+body.palette-neon .site-footer::before {
+  background: linear-gradient(90deg, transparent, #00f5d4, #ff006e, transparent);
+}
+
+body.palette-neon .footer-contact a {
+  color: #00f5d4;
+}

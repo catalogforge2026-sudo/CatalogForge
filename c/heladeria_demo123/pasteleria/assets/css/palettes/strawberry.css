@@ -1,0 +1,45 @@
+/* Pastry Theme - Strawberry Palette
+   Vibrante y fresco con tonos fresa */
+
+.palette-strawberry {
+  --bg-color: #FFFAFA;
+  --bg-secondary: #FFF0F3;
+  --bg-tertiary: #FFF5F7;
+  
+  --primary-color: #E85A71;
+  --primary-hover: #d64a61;
+  --primary-contrast: #ffffff;
+  
+  --accent-color: #FF8FA3;
+  --accent-contrast: #6B4F4F;
+  
+  --highlight: #FFD6DD;
+  
+  --text-color: #5A3F45;
+  --text-secondary: #8B6B73;
+  --text-light: #B89BA3;
+  
+  --card-bg: #ffffff;
+  --border-color: #FFE0E6;
+  
+  --tag-bg: #FFE8EC;
+  --tag-color: #E85A71;
+  
+  --shadow-card: 0 8px 32px rgba(232, 90, 113, 0.2);
+  --shadow-glow: 0 0 40px rgba(232, 90, 113, 0.25);
+  
+  --gradient-sweet: linear-gradient(180deg, #FFFAFA 0%, #FFF0F3 100%);
+}
+
+/* Strawberry palette decorative elements */
+.palette-strawberry .section-header::before {
+  content: '🍓 🍓 🍓';
+}
+
+.palette-strawberry .footer-decoration::before {
+  content: '🍓 🍰 🍓';
+}
+
+.palette-strawberry .item-image.no-image::before {
+  content: '🍓';
+}

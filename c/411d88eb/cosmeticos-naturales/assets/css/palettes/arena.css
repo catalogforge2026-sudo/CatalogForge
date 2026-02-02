@@ -1,0 +1,33 @@
+/**
+ * Natura Theme - Palette: Arena
+ * Soft sand and cream tones - Light and airy
+ */
+
+:root {
+  /* Primary Colors - Soft Beige */
+  --color-primary: #C9A86C;
+  --color-primary-light: #D4BC8E;
+  --color-primary-dark: #A68B4B;
+  
+  /* Background Colors */
+  --color-bg: #FAF8F5;
+  --color-bg-alt: #F5F1EA;
+  --color-bg-card: #FFFFFF;
+  --color-bg-header: #8B7355;
+  
+  /* Text Colors */
+  --color-text: #4A4035;
+  --color-text-light: #6B5D4D;
+  --color-text-muted: #9C8B7A;
+  --color-text-on-dark: #FAF8F5;
+  
+  /* Accent Colors */
+  --color-accent: #C4B59D;
+  --color-accent-light: #DDD4C4;
+  --color-border: #E5DFD5;
+  
+  /* Button Colors */
+  --color-button-bg: #8B7355;
+  --color-button-text: #FFFFFF;
+  --color-button-hover: #6F5A42;
+}
