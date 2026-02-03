@@ -12,7 +12,8 @@
   height: 100vh;
   min-height: 600px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 5vh;
   justify-content: center;
   overflow: hidden;
 }
