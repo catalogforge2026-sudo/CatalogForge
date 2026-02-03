@@ -918,9 +918,39 @@ body {
     font-size: 28px;
   }
   
+  /* Benefits bar compacta - 4 iconos en horizontal */
+  .benefits-bar-hero {
+    padding: 10px 0;
+  }
+  
   .benefits-bar-hero .benefits-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+  
+  .benefits-bar-hero .benefit-item {
+    padding: 0 6px;
+    gap: 4px;
+    border-right: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  .benefits-bar-hero .benefit-item:last-child {
+    border-right: none;
+  }
+  
+  .benefits-bar-hero .benefit-icon {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .benefits-bar-hero .benefit-content h4 {
+    font-size: 8px;
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+  
+  .benefits-bar-hero .benefit-content p {
+    display: none;
   }
   
   .section-header h2 {
@@ -945,14 +975,16 @@ body {
 }
 
 @media (max-width: 480px) {
-  .benefits-bar-hero .benefits-grid {
-    grid-template-columns: 1fr;
+  .benefits-bar-hero {
+    padding: 8px 0;
   }
   
-  .benefits-bar-hero .benefit-item {
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
+  .benefits-bar-hero .benefit-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .benefits-bar-hero .benefit-content h4 {
+    font-size: 7px;
   }
 }
