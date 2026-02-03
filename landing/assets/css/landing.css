@@ -892,6 +892,11 @@ body {
     display: flex;
   }
   
+  .hero {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+  
   .hero-bg {
     background: 
       linear-gradient(135deg, rgba(10,10,10,0.7) 0%, rgba(10,10,10,0.5) 50%, rgba(10,10,10,0.6) 100%),
@@ -904,9 +909,11 @@ body {
   .hero-content {
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 90px;
-    align-items: center;
-    justify-content: center;
+    padding-top: 70px;
+    padding-bottom: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex: 0;
   }
   
   .hero-text {
@@ -915,12 +922,34 @@ body {
   }
   
   .hero h1 {
-    font-size: 28px;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .hero-subtitle {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-badge {
+    font-size: 8px;
+    margin-bottom: 6px;
+  }
+  
+  .btn-lg {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+  
+  .hero-note {
+    font-size: 8px;
+    margin-top: 6px;
   }
   
   /* Benefits bar compacta - 4 iconos en horizontal */
   .benefits-bar-hero {
-    padding: 10px 0;
+    padding: 8px 0;
+    margin-top: auto;
   }
   
   .benefits-bar-hero .benefits-grid {
@@ -929,8 +958,8 @@ body {
   }
   
   .benefits-bar-hero .benefit-item {
-    padding: 0 6px;
-    gap: 4px;
+    padding: 0 4px;
+    gap: 3px;
     border-right: 1px solid rgba(255,255,255,0.1);
   }
   
@@ -939,12 +968,12 @@ body {
   }
   
   .benefits-bar-hero .benefit-icon {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
   }
   
   .benefits-bar-hero .benefit-content h4 {
-    font-size: 8px;
+    font-size: 7px;
     line-height: 1.1;
     white-space: nowrap;
   }
