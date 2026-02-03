@@ -892,6 +892,28 @@ body {
     display: flex;
   }
   
+  .hero-bg {
+    background: 
+      linear-gradient(135deg, rgba(10,10,10,0.7) 0%, rgba(10,10,10,0.5) 50%, rgba(10,10,10,0.6) 100%),
+      url('../images/hero-bg-mobile.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .hero-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 90px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-text {
+    text-align: center;
+    max-width: 100%;
+  }
+  
   .hero h1 {
     font-size: 28px;
   }
