@@ -398,13 +398,10 @@ body {
 }
 
 .section-nav a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: block;
   text-decoration: none;
   position: relative;
-  height: 180px;
+  height: 220px;
   border-radius: var(--card-radius);
   overflow: hidden;
   background: var(--color-bg-section-nav);
@@ -421,12 +418,12 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.85) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.5) 100%);
   transition: all 0.3s ease;
 }
 
 .section-nav a:hover::before {
-  background: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.7) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.4) 100%);
 }
 
 .section-nav a:hover {
@@ -434,32 +431,71 @@ body {
   box-shadow: var(--card-shadow-hover);
 }
 
+/* Ocultar el icono en tema natura - solo mostrar texto */
 .section-nav .nav-icon {
-  position: relative;
-  z-index: 2;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  display: none !important;
 }
 
+.section-nav .nav-icon-img {
+  display: none !important;
+}
+
+/* Contenedor de texto centrado absolutamente */
 .section-nav .nav-text {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
   font-family: var(--font-heading);
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.3;
+  padding: 0.5rem 1rem;
+  text-shadow: 
+    1px 1px 0 rgba(255,255,255,1),
+    -1px -1px 0 rgba(255,255,255,1),
+    1px -1px 0 rgba(255,255,255,1),
+    -1px 1px 0 rgba(255,255,255,1);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 90%;
+  max-width: 100%;
+  background: rgba(255,255,255,0.75);
+  border-radius: 8px;
 }
 
+/* Descripción debajo del título */
 .section-nav .nav-description {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50% !important;
+  right: auto !important;
+  transform: translate(-50%, calc(-50% + 2rem)) !important;
   z-index: 2;
-  font-size: 0.8rem;
-  color: var(--color-text-light);
-  text-align: center;
-  margin-top: 0.3rem;
-  max-width: 90%;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--color-text);
+  text-align: center !important;
+  text-indent: 0 !important;
+  padding: 0.4rem 0.8rem !important;
+  margin: 0 !important;
+  text-shadow: none;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: auto !important;
+  max-width: 92%;
+  background: rgba(255,255,255,0.88);
+  border-radius: 6px;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+/* Cuando hay descripción, ajustar posición del título */
+.section-nav a:has(.nav-description) .nav-text {
+  transform: translate(-50%, calc(-50% - 0.6rem));
 }
 
 .section-nav .nav-button {
@@ -965,24 +1001,77 @@ footer a:hover {
     padding: 1.5rem;
   }
   
+  /* Cover button - Brown solid style on mobile */
   .cover-button {
-    padding: 0.8rem 2rem;
+    padding: 0.9rem 2.2rem;
     font-size: 0.85rem;
+    background: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    color: #FFFFFF !important;
+    border-radius: 8px;
+  }
+  
+  .cover-button:hover {
+    background: var(--color-primary-dark) !important;
+    border-color: var(--color-primary-dark) !important;
+    color: #FFFFFF !important;
+  }
+  
+  /* Header - Centered layout on mobile */
+  .site-header,
+  .header {
+    padding: 1rem 1rem 1.2rem;
+    border-radius: 0 0 25px 25px;
   }
   
   .header-container {
     flex-direction: column;
-    align-items: stretch;
-    gap: 1rem;
+    align-items: center;
+    gap: 0.8rem;
+    text-align: center;
   }
   
   .header-brand {
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  
+  .header-logo-wrapper {
+    margin-bottom: 0.2rem;
+  }
+  
+  .header-text {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .header-title {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  
+  .header-subtitle {
+    text-align: center;
+    font-size: 0.8rem;
   }
   
   .header-controls {
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .header-search {
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .header-search .search-container {
+    justify-content: center;
   }
   
   .catalog-main {
@@ -995,11 +1084,17 @@ footer a:hover {
   }
   
   .section-nav a {
-    height: 140px;
+    height: 180px;
   }
   
   .section-nav .nav-text {
     font-size: 1.1rem;
+    width: 95%;
+  }
+  
+  .section-nav .nav-description {
+    font-size: 0.75rem;
+    width: 95%;
   }
   
   .items-grid {

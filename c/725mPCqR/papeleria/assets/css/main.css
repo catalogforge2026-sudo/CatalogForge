@@ -358,32 +358,38 @@ body::before {
 }
 
 /* ============================================
-   GRID - 3 columns
+   GRID - 4 columns (compact cards)
    ============================================ */
 .grid-auto {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--grid-gap);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
+  .grid-auto {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
   .grid-auto {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 480px) {
   .grid-auto {
     grid-template-columns: 1fr;
   }
 }
 
 /* ============================================
-   ITEM CARDS - Elegant rounded style
+   ITEM CARDS - Compact elegant style
    ============================================ */
 .item-card {
   background: var(--card-bg);
-  border-radius: var(--card-radius);
+  border-radius: 16px;
   overflow: hidden;
   box-shadow: var(--card-shadow);
   border: var(--card-border);
@@ -392,16 +398,16 @@ body::before {
 }
 
 .item-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   box-shadow: var(--card-hover-shadow);
 }
 
 /* Image */
 .item-card .item-image {
-  aspect-ratio: 4/3;
+  aspect-ratio: 1/1;
   overflow: hidden;
-  border-radius: var(--image-radius);
-  margin: 0.75rem;
+  border-radius: 12px;
+  margin: 0.5rem;
   margin-bottom: 0;
 }
 
@@ -418,23 +424,24 @@ body::before {
 
 /* Content */
 .item-card .item-content {
-  padding: 1rem;
+  padding: 0.75rem;
   text-align: center;
 }
 
 .item-card .item-name {
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.85rem;
   color: var(--primary-color);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.2;
 }
 
 .item-card .item-description {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
-  line-height: 1.4;
-  margin-bottom: 0.75rem;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -449,11 +456,11 @@ body::before {
 
 /* Footer with price and button */
 .item-card .item-footer {
-  padding: 0 1rem 1rem;
+  padding: 0 0.75rem 0.75rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 .item-card .item-price {
@@ -465,33 +472,33 @@ body::before {
 .item-card .price-amount {
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: var(--primary-color);
 }
 
 .item-card .price-label {
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   color: var(--text-muted);
   background: rgba(233, 30, 140, 0.1);
-  padding: 0.2rem 0.5rem;
-  border-radius: 10px;
+  padding: 0.15rem 0.4rem;
+  border-radius: 8px;
 }
 
-/* Add to cart button - "Hacer Pedido" style */
+/* Add to cart button - Compact */
 .item-add-cart {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   width: 100%;
-  padding: 0.625rem 1rem;
+  padding: 0.5rem 0.75rem;
   background: linear-gradient(135deg, rgba(233, 30, 140, 0.1) 0%, rgba(255, 105, 180, 0.15) 100%);
   border: 2px solid var(--primary-color);
-  border-radius: 25px;
+  border-radius: 20px;
   color: var(--primary-color);
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -503,20 +510,20 @@ body::before {
 }
 
 .item-add-cart svg {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
 }
 
 /* Featured badge */
 .item-card .badge-featured {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0.75rem;
+  right: 0.75rem;
   background: linear-gradient(135deg, #e91e8c 0%, #ff69b4 100%);
   color: white;
-  padding: 0.3rem 0.75rem;
-  border-radius: 15px;
-  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.6rem;
   font-weight: 700;
   text-transform: uppercase;
   box-shadow: 0 2px 10px rgba(233, 30, 140, 0.3);

@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/411d88eb/cosmeticos-naturales",
     "clientKey": "411d88eb",
-    "generatedAt": "2026-02-01T22:37:56.033Z",
+    "generatedAt": "2026-02-02T00:37:46.065Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -91,9 +91,9 @@
       "id": 75,
       "name": "Cuidado Facial",
       "slug": "cuidado-facial",
-      "description": "Cremas, serums y tratamientos para el rostro",
+      "description": "Cremas, serums y tratamientos",
       "icon": "🌸",
-      "iconUrl": null,
+      "iconUrl": "uploads/1769991555476-q9t722ffo.png",
       "image": null,
       "imageUrl": null,
       "itemCount": 4,
@@ -128,7 +128,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 276,
@@ -160,7 +161,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 277,
@@ -192,7 +194,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 278,
@@ -224,7 +227,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -276,7 +280,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 280,
@@ -308,7 +313,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 281,
@@ -340,7 +346,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -392,7 +399,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 283,
@@ -424,7 +432,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 284,
@@ -456,7 +465,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -471,7 +481,7 @@
       "id": 78,
       "name": "Cabello Natural",
       "slug": "cabello-natural",
-      "description": "Shampoos, acondicionadores y tratamientos",
+      "description": "Shampoos, acondicionadores",
       "icon": "🌿",
       "iconUrl": null,
       "image": null,
@@ -508,7 +518,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 286,
@@ -540,7 +551,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 287,
@@ -572,7 +584,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -624,7 +637,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 289,
@@ -656,7 +670,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 290,
@@ -688,7 +703,8 @@
           "hasVariants": false,
           "hasDiscount": false,
           "hasCustomizations": false,
-          "hasCustomizationGroups": false
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -726,8 +742,8 @@
   "totalItems": 16,
   "navButtonText": "Ver servicios",
   "buildInfo": {
-    "version": "20260201-193756",
-    "timestamp": "2026-02-01T22:37:56.038Z",
+    "version": "20260201-213746",
+    "timestamp": "2026-02-02T00:37:46.068Z",
     "generator": "SCG v1.0.0"
   },
   "branding": {

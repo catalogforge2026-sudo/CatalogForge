@@ -5,7 +5,7 @@
     "image": "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=200&h=200&fit=crop",
     "url": "/c/heladeria_demo123/pasteleria",
     "clientKey": "heladeria_demo123",
-    "generatedAt": "2026-02-02T15:31:41.632Z",
+    "generatedAt": "2026-02-02T15:41:11.596Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -977,8 +977,8 @@
   "totalItems": 22,
   "navButtonText": "Ver productos",
   "buildInfo": {
-    "version": "20260202-123141",
-    "timestamp": "2026-02-02T15:31:41.644Z",
+    "version": "20260202-124111",
+    "timestamp": "2026-02-02T15:41:11.601Z",
     "generator": "SCG v1.0.0"
   },
   "branding": {

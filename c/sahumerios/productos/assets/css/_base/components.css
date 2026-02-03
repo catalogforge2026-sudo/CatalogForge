@@ -73,9 +73,11 @@ a {
 .catalog-intro {
   text-align: center;
   max-width: 600px;
-  margin: 0 auto var(--spacing-xl);
+  margin: -1rem auto var(--spacing-xl);
   color: var(--text-muted, #64748b);
   font-size: var(--font-size-base);
+  white-space: pre-line;
+  line-height: 1.4;
 }
 
 /* Section Navigation */
@@ -325,7 +327,7 @@ body:not(.theme-mixology):not(.theme-gastro) .catalog-section.frame-gold::after 
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) !important;
-  z-index: 1000;
+  z-index: 9999;
   width: 90%;
   max-width: 500px;
   max-height: 85vh;
@@ -417,9 +419,9 @@ body:not(.theme-mixology):not(.theme-gastro) .catalog-section.frame-gold::after 
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px);
-  z-index: 999;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: none;
+  z-index: 9998;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
@@ -607,7 +609,42 @@ body:not(.theme-mixology):not(.theme-gastro) .catalog-section.frame-gold::after 
   margin-top: var(--spacing-sm);
   font-size: var(--font-size-xs);
   color: var(--text-muted, #64748b);
-  opacity: 0.5;
+  opacity: 0.65;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.footer-contact-info {
+  display: block;
+  font-size: 0.7rem;
+}
+
+.footer-contact-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footer-contact-link:hover {
+  opacity: 0.8;
+}
+
+.footer-branding {
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.footer-branding-link {
+  color: inherit;
+  text-decoration: underline;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.footer-branding-link:hover {
+  opacity: 1;
 }
 
 /* Aspect Ratios */

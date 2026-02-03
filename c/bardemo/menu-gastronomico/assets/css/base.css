@@ -1,0 +1,101 @@
+/* ============================================
+   Gastro Theme - Base Styles & Font Loading
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+
+/* ============================================
+   LAYOUT DETECTION
+   Aplica clase de layout basada en data attribute
+   ============================================ */
+
+/* Default: Classic layout */
+body:not([data-layout]) {
+  /* Hereda variables de .layout-classic */
+}
+
+body[data-layout="classic"] {
+  /* Variables ya definidas en main.css */
+}
+
+body[data-layout="compact"] {
+  /* Variables ya definidas en main.css */
+}
+
+body[data-layout="qr"] {
+  /* Variables ya definidas en main.css */
+}
+
+/* ============================================
+   PRINT STYLES
+   Optimizado para imprimir menús
+   ============================================ */
+@media print {
+  .site-header {
+    background: none !important;
+    color: #000 !important;
+    border-bottom: 2px solid #000;
+  }
+  
+  .header-title {
+    color: #000 !important;
+  }
+  
+  .section-nav {
+    display: none;
+  }
+  
+  .item-card {
+    break-inside: avoid;
+    box-shadow: none !important;
+    border: 1px solid #ddd;
+  }
+  
+  .site-footer {
+    background: none !important;
+    color: #000 !important;
+    border-top: 1px solid #000;
+  }
+  
+  .footer-powered {
+    display: none;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible para navegación por teclado */
+.section-nav a:focus-visible,
+.item-card:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   HIGH CONTRAST MODE
+   ============================================ */
+@media (prefers-contrast: high) {
+  :root {
+    --card-border: 2px solid currentColor;
+    --card-shadow: none;
+  }
+  
+  .item-card {
+    border: 2px solid currentColor;
+  }
+  
+  .section-title::after {
+    height: 3px;
+  }
+}

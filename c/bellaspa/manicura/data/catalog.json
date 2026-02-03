@@ -5,7 +5,7 @@
     "image": "uploads/1769312696454-pp3h10d6q.png",
     "url": "/c/bellaspa/manicura",
     "clientKey": "bellaspa",
-    "generatedAt": "2026-01-29T18:42:15.210Z",
+    "generatedAt": "2026-02-02T23:29:15.340Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -15,6 +15,7 @@
     "email": "contacto@bellanails.com",
     "phone": "+54 11 50192474",
     "address": "",
+    "mapsUrl": null,
     "website": null,
     "socialLinks": {}
   },
@@ -24,6 +25,9 @@
     "slug": "manicura",
     "publicKey": "bellaspa",
     "description": "Manicura tradicional, semipermanente, esculpidas y nail art",
+    "address": null,
+    "mapsUrl": null,
+    "showAddressHeader": false,
     "type": "Servicios",
     "typeSlug": "services",
     "config": {
@@ -107,12 +111,17 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 212,
@@ -135,12 +144,17 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 213,
@@ -163,12 +177,17 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -211,12 +230,17 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 215,
@@ -239,12 +263,17 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 216,
@@ -267,12 +296,17 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -315,12 +349,17 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 218,
@@ -343,12 +382,17 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 219,
@@ -371,12 +415,17 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 220,
@@ -399,12 +448,17 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -447,12 +501,17 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 222,
@@ -475,12 +534,17 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 223,
@@ -503,12 +567,17 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 224,
@@ -531,12 +600,17 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -579,12 +653,17 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 226,
@@ -607,12 +686,17 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 227,
@@ -635,12 +719,17 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 228,
@@ -663,12 +752,17 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
           "hasVariants": false,
           "hasDiscount": false,
-          "hasCustomizations": false
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -750,9 +844,10 @@
     }
   },
   "totalItems": 18,
+  "navButtonText": "Ver servicios",
   "buildInfo": {
-    "version": "20260129-154215",
-    "timestamp": "2026-01-29T18:42:15.212Z",
+    "version": "20260202-202915",
+    "timestamp": "2026-02-02T23:29:15.409Z",
     "generator": "SCG v1.0.0"
   },
   "branding": {

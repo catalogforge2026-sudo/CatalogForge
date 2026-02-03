@@ -176,6 +176,20 @@ body {
   margin: 1rem auto 0;
 }
 
+/* Ocultar buscador y filtro SOLO en el header (evitar duplicado) */
+.header-search,
+.header-filter,
+.header-controls,
+.site-header .header-search,
+.site-header .header-filter,
+.site-header .header-controls {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
 
 /* ============================================
    SECTION NAVIGATION - Elegant Card Style

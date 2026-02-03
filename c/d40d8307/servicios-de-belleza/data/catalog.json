@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/d40d8307/servicios-de-belleza",
     "clientKey": "d40d8307",
-    "generatedAt": "2026-01-24T22:44:25.001Z",
+    "generatedAt": "2026-02-02T00:27:12.849Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -15,6 +15,7 @@
     "email": "info@glamourbeauty.com",
     "phone": "+54 11 5555-8888",
     "address": null,
+    "mapsUrl": null,
     "website": null,
     "socialLinks": {}
   },
@@ -22,7 +23,11 @@
     "id": 6,
     "name": "Servicios de Belleza",
     "slug": "servicios-de-belleza",
+    "publicKey": "d40d8307",
     "description": "Peluquería, uñas, cejas y más",
+    "address": null,
+    "mapsUrl": null,
+    "showAddressHeader": false,
     "type": "Servicios",
     "typeSlug": "services",
     "config": {
@@ -85,6 +90,7 @@
       "icon": null,
       "iconUrl": "uploads/1769288833322-gng4bsrqo.png",
       "image": null,
+      "imageUrl": null,
       "itemCount": 3,
       "items": [
         {
@@ -94,6 +100,9 @@
           "description": "Corte moderno personalizado",
           "price": "$ 8.500",
           "priceRaw": 8500,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&h=300&fit=crop",
@@ -104,10 +113,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 59,
@@ -116,6 +133,9 @@
           "description": "Baño de color, reflejos o balayage",
           "price": "$ 25.000",
           "priceRaw": 25000,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=300&fit=crop",
@@ -126,10 +146,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 60,
@@ -138,6 +166,9 @@
           "description": "Secado y peinado profesional",
           "price": "$ 6.000",
           "priceRaw": 6000,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=400&h=300&fit=crop",
@@ -148,10 +179,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -159,6 +198,7 @@
       "promoBadge": null,
       "showItemImages": true,
       "hasPromo": false,
+      "hasImage": false,
       "sectionClasses": "show-images"
     },
     {
@@ -169,6 +209,7 @@
       "icon": null,
       "iconUrl": "uploads/1769289542676-7ujoo761y.png",
       "image": null,
+      "imageUrl": null,
       "itemCount": 2,
       "items": [
         {
@@ -178,6 +219,9 @@
           "description": "Uñas acrílicas con diseño",
           "price": "$ 18.000",
           "priceRaw": 18000,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&h=300&fit=crop",
@@ -188,10 +232,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 62,
@@ -200,6 +252,9 @@
           "description": "Duración de 3 semanas",
           "price": "$ 8.000",
           "priceRaw": 8000,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=400&h=300&fit=crop",
@@ -210,10 +265,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -221,6 +284,7 @@
       "promoBadge": null,
       "showItemImages": true,
       "hasPromo": false,
+      "hasImage": false,
       "sectionClasses": "show-images"
     },
     {
@@ -231,6 +295,7 @@
       "icon": null,
       "iconUrl": "uploads/1769289554454-6eru18b1r.png",
       "image": null,
+      "imageUrl": null,
       "itemCount": 2,
       "items": [
         {
@@ -240,6 +305,9 @@
           "description": "Diseño y depilación",
           "price": "$ 4.500",
           "priceRaw": 4500,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&h=300&fit=crop",
@@ -250,10 +318,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 64,
@@ -262,6 +338,9 @@
           "description": "Curvado y tinte",
           "price": "$ 12.000",
           "priceRaw": 12000,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1583001931096-959e9a1a6223?w=400&h=300&fit=crop",
@@ -272,10 +351,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -283,6 +370,7 @@
       "promoBadge": null,
       "showItemImages": true,
       "hasPromo": false,
+      "hasImage": false,
       "sectionClasses": "show-images"
     },
     {
@@ -293,6 +381,7 @@
       "icon": null,
       "iconUrl": "uploads/1769290032822-oigsnkub1.png",
       "image": null,
+      "imageUrl": null,
       "itemCount": 2,
       "items": [
         {
@@ -302,6 +391,9 @@
           "description": "Tratamiento nutritivo",
           "price": "$ 9.000",
           "priceRaw": 9000,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1522337094846-8a818192de1f?w=400&h=300&fit=crop",
@@ -312,10 +404,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 66,
@@ -324,6 +424,9 @@
           "description": "Alisado y nutrición",
           "price": "$ 35.000",
           "priceRaw": 35000,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=400&h=300&fit=crop",
@@ -334,10 +437,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -345,6 +456,7 @@
       "promoBadge": null,
       "showItemImages": true,
       "hasPromo": false,
+      "hasImage": false,
       "sectionClasses": "show-images"
     },
     {
@@ -355,6 +467,7 @@
       "icon": null,
       "iconUrl": "uploads/1769289578922-5izyxhvp1.png",
       "image": null,
+      "imageUrl": null,
       "itemCount": 2,
       "items": [
         {
@@ -364,6 +477,9 @@
           "description": "Cuerpo completo 60 min",
           "price": "$ 15.000",
           "priceRaw": 15000,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=300&fit=crop",
@@ -374,10 +490,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         },
         {
           "id": 68,
@@ -386,6 +510,9 @@
           "description": "Limpieza profunda",
           "price": "$ 12.000",
           "priceRaw": 12000,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&h=300&fit=crop",
@@ -396,10 +523,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -407,6 +542,7 @@
       "promoBadge": null,
       "showItemImages": true,
       "hasPromo": false,
+      "hasImage": false,
       "sectionClasses": "show-images"
     },
     {
@@ -417,6 +553,7 @@
       "icon": null,
       "iconUrl": "uploads/1769290040697-ujlodrh2u.png",
       "image": null,
+      "imageUrl": null,
       "itemCount": 1,
       "items": [
         {
@@ -426,6 +563,9 @@
           "description": "Cera tradicional",
           "price": "$ 8.000",
           "priceRaw": 8000,
+          "originalPrice": null,
+          "originalPriceRaw": null,
+          "discountPercent": null,
           "priceLabel": null,
           "currency": "ARS",
           "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&h=300&fit=crop",
@@ -436,10 +576,18 @@
           "sku": null,
           "customFields": {},
           "variants": [],
+          "customizations": [],
+          "customizationGroups": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
-          "hasVariants": false
+          "hasVariants": false,
+          "hasDiscount": false,
+          "hasCustomizations": false,
+          "hasCustomizationGroups": false,
+          "ingredientsDefaultChecked": true
         }
       ],
       "frameStyle": "chalk",
@@ -447,6 +595,7 @@
       "promoBadge": null,
       "showItemImages": true,
       "hasPromo": false,
+      "hasImage": false,
       "sectionClasses": "show-images"
     }
   ],
@@ -454,7 +603,8 @@
   "cart": {
     "enabled": true,
     "buttonText": "Agregar",
-    "whatsappMessage": "Hola! Quiero hacer el siguiente servicio:"
+    "whatsappMessage": "Hola! Quiero hacer el siguiente servicio:",
+    "formConfig": {}
   },
   "searchFilter": {
     "enabled": true,
@@ -463,9 +613,27 @@
     "placeholder": "Buscar productos..."
   },
   "totalItems": 12,
+  "navButtonText": "Ver servicios",
   "buildInfo": {
-    "version": "20260124-194424",
-    "timestamp": "2026-01-24T22:44:25.004Z",
+    "version": "20260201-212712",
+    "timestamp": "2026-02-02T00:27:12.853Z",
     "generator": "SCG v1.0.0"
-  }
+  },
+  "branding": {
+    "footerText": "Hecho por Catalog Forge",
+    "footerPhone": "5491150192474",
+    "footerPhoneDisplay": "11 5019-2474"
+  },
+  "fontUrls": [
+    "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap",
+    "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+  ],
+  "fontStyles": {
+    "heading": "'Cormorant Garamond', Georgia, serif",
+    "body": "'Montserrat', Georgia, serif",
+    "catalogTitle": "'Cormorant Garamond', Georgia, serif",
+    "sectionTitle": "'Cormorant Garamond', Georgia, serif",
+    "itemName": "'Montserrat', Georgia, serif"
+  },
+  "globalSettings": {}
 }

@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/bardemo/menu-bar-demo",
     "clientKey": "bardemo",
-    "generatedAt": "2026-01-26T22:27:04.791Z",
+    "generatedAt": "2026-01-30T04:29:22.433Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -22,6 +22,7 @@
     "id": 4,
     "name": "Menú Bar Demo",
     "slug": "menu-bar-demo",
+    "publicKey": "bardemo",
     "description": null,
     "type": "Productos",
     "typeSlug": "products",
@@ -159,6 +160,8 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
@@ -187,6 +190,8 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
@@ -215,6 +220,8 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
@@ -265,21 +272,39 @@
           "customizations": [
             {
               "id": 1,
-              "name": "Cebolla"
+              "name": "Cebolla",
+              "type": "remove",
+              "price": null,
+              "priceFormatted": null,
+              "isDefault": true
             },
             {
               "id": 2,
-              "name": "Mayonesa"
+              "name": "Mayonesa",
+              "type": "remove",
+              "price": null,
+              "priceFormatted": null,
+              "isDefault": true
             },
             {
               "id": 3,
-              "name": "Tomate"
+              "name": "Tomate",
+              "type": "remove",
+              "price": null,
+              "priceFormatted": null,
+              "isDefault": true
             },
             {
               "id": 4,
-              "name": "ketchu"
+              "name": "ketchu",
+              "type": "remove",
+              "price": null,
+              "priceFormatted": null,
+              "isDefault": true
             }
           ],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": true,
           "hasGallery": false,
@@ -308,6 +333,8 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
@@ -336,6 +363,8 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
@@ -384,6 +413,8 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
@@ -412,6 +443,8 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
@@ -440,6 +473,8 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
@@ -488,6 +523,8 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
@@ -516,6 +553,8 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
@@ -544,6 +583,8 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
@@ -592,6 +633,8 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
@@ -620,6 +663,8 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
@@ -648,6 +693,8 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
@@ -696,6 +743,8 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
@@ -724,6 +773,8 @@
           "customFields": {},
           "variants": [],
           "customizations": [],
+          "minVariantPrice": null,
+          "minVariantPriceFormatted": null,
           "hasPrice": true,
           "hasImage": false,
           "hasGallery": false,
@@ -874,9 +925,27 @@
     "placeholder": "Buscar productos..."
   },
   "totalItems": 17,
+  "navButtonText": "Ver servicios",
   "buildInfo": {
-    "version": "20260126-192704",
-    "timestamp": "2026-01-26T22:27:04.796Z",
+    "version": "20260130-012922",
+    "timestamp": "2026-01-30T04:29:22.440Z",
     "generator": "SCG v1.0.0"
-  }
+  },
+  "branding": {
+    "footerText": "Hecho por Catalog Forge",
+    "footerPhone": "5491150192474",
+    "footerPhoneDisplay": "11 5019-2474"
+  },
+  "fontUrls": [
+    "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap",
+    "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+  ],
+  "fontStyles": {
+    "heading": "'Playfair Display', Georgia, serif",
+    "body": "'Montserrat', Georgia, serif",
+    "catalogTitle": "'Playfair Display', Georgia, serif",
+    "sectionTitle": "'Playfair Display', Georgia, serif",
+    "itemName": "'Playfair Display', Georgia, serif"
+  },
+  "globalSettings": {}
 }
