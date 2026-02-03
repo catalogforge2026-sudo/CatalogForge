@@ -1,5 +1,8 @@
 /* Spa Theme - Main JavaScript */
 
+// Deshabilitar expandable cards para este tema
+window.EXPANDABLE_CARDS_DISABLED = true;
+
 document.addEventListener('DOMContentLoaded', function() {
   // Add sparkle animation to cards on hover
   const cards = document.querySelectorAll('.item-card');

@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Papeleria Creativa - Keisi",
+    "title": "Papelería Creativa - Keisi",
     "description": "",
     "image": null,
     "url": "/c/725mPCqR/papeleria",
     "clientKey": "725mPCqR",
-    "generatedAt": "2026-02-02T15:41:22.504Z",
+    "generatedAt": "2026-02-03T02:17:48.897Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -21,7 +21,7 @@
   },
   "catalog": {
     "id": 1,
-    "name": "Papeleria Creativa",
+    "name": "Papelería Creativa",
     "slug": "papeleria",
     "publicKey": "725mPCqR",
     "description": null,
@@ -778,19 +778,22 @@
   },
   "coverPage": {
     "enabled": true,
+    "backgroundType": "video",
     "backgroundImage": null,
     "backgroundImageMobile": null,
-    "showLogo": true,
-    "showTitle": true,
-    "showSubtitle": true,
+    "videoUrl": "uploads/video-1770084110450-8xczlhkxu.mp4",
+    "videoMobileUrl": null,
+    "showLogo": false,
+    "showTitle": false,
+    "showSubtitle": false,
     "buttonText": "Ver Catálogo",
     "buttonStyle": "outlined"
   },
   "totalItems": 8,
   "navButtonText": "Ver productos",
   "buildInfo": {
-    "version": "20260202-124122",
-    "timestamp": "2026-02-02T15:41:22.507Z",
+    "version": "20260202-231748",
+    "timestamp": "2026-02-03T02:17:48.903Z",
     "generator": "SCG v1.0.0"
   },
   "branding": {

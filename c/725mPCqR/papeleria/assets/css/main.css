@@ -610,3 +610,56 @@ body::before {
     font-size: 0.8rem;
   }
 }
+
+
+/* ============================================
+   DESACTIVAR MODAL DE ZOOM EN IMAGEN
+   ============================================ */
+.image-modal,
+.image-modal-overlay,
+.lightbox,
+.lightbox-overlay,
+.card-backdrop {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Quitar clase expandable y cursor pointer */
+.item-card {
+  cursor: default !important;
+}
+
+.item-card.expandable {
+  cursor: default !important;
+}
+
+.item-card .item-image {
+  cursor: default !important;
+}
+
+.item-card .item-image img {
+  cursor: default !important;
+}
+
+/* Prevenir expansión de tarjetas */
+.item-card.expanded {
+  position: relative !important;
+  transform: none !important;
+  z-index: auto !important;
+}
+
+/* Mantener el botón y contenido clickeable */
+.item-card .item-footer,
+.item-card .item-content,
+.item-card .item-add-cart,
+.item-card .variant-select {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* Ocultar botón de cerrar */
+.item-card .item-card-close {
+  display: none !important;
+}
