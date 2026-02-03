@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/725mPCqR/papeleria",
     "clientKey": "725mPCqR",
-    "generatedAt": "2026-02-03T02:17:48.897Z",
+    "generatedAt": "2026-02-03T02:24:46.694Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -781,7 +781,7 @@
     "backgroundType": "video",
     "backgroundImage": null,
     "backgroundImageMobile": null,
-    "videoUrl": "uploads/video-1770084110450-8xczlhkxu.mp4",
+    "videoUrl": "uploads/video-1770085478613-uyci12key.mp4",
     "videoMobileUrl": null,
     "showLogo": false,
     "showTitle": false,
@@ -792,8 +792,8 @@
   "totalItems": 8,
   "navButtonText": "Ver productos",
   "buildInfo": {
-    "version": "20260202-231748",
-    "timestamp": "2026-02-03T02:17:48.903Z",
+    "version": "20260202-232446",
+    "timestamp": "2026-02-03T02:24:46.699Z",
     "generator": "SCG v1.0.0"
   },
   "branding": {
