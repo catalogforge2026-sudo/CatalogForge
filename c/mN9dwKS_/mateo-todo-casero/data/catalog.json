@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/mN9dwKS_/mateo-todo-casero",
     "clientKey": "mN9dwKS_",
-    "generatedAt": "2026-02-02T14:23:40.532Z",
+    "generatedAt": "2026-02-05T14:07:02.907Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -95,7 +95,7 @@
       "items": [
         {
           "id": 229,
-          "name": "Hamburguesa sola",
+          "name": "Hamburguesa sola (Hamburguesa clásica con medallón de carne casera)",
           "slug": "hamburguesa-sola",
           "description": "Hamburguesa clásica con medallón de carne casera",
           "price": "$ 10.000",
@@ -169,7 +169,7 @@
         },
         {
           "id": 230,
-          "name": "Hamburguesa con jamón y queso",
+          "name": "Hamburguesa con jamón y queso (Con jamón y queso o lechuga y tomate)",
           "slug": "hamburguesa-jamon-queso",
           "description": "Con jamón y queso o lechuga y tomate",
           "price": "$ 12.000",
@@ -272,7 +272,7 @@
         },
         {
           "id": 231,
-          "name": "Hamburguesa completa",
+          "name": "Hamburguesa completa (Con lechuga, tomate, jamón y queso)",
           "slug": "hamburguesa-completa",
           "description": "Con lechuga, tomate, jamón y queso",
           "price": "$ 14.000",
@@ -366,7 +366,7 @@
       "items": [
         {
           "id": 233,
-          "name": "Sandwich de milanesa",
+          "name": "Sandwich de milanesa (Milanesa en pan)",
           "slug": "sandwich-de-milanesa",
           "description": "Milanesa en pan",
           "price": "$ 8.000",
@@ -589,7 +589,7 @@
         },
         {
           "id": 235,
-          "name": "Sandwich de milanesa completo",
+          "name": "Sandwich de milanesa completo (Con jamón, queso, lechuga, tomate y huevo duro)",
           "slug": "sandwich-de-milanesa-completo",
           "description": "Con jamón, queso, lechuga, tomate y huevo duro",
           "price": "$ 12.000",
@@ -686,7 +686,7 @@
         },
         {
           "id": 236,
-          "name": "Sandwich milanesa napolitano",
+          "name": "Sandwich milanesa napolitano (Milanesa con jamón, queso y tomate gratinado)",
           "slug": "sandwich-milanesa-napolitano",
           "description": "Milanesa con jamón, queso y tomate gratinado",
           "price": "$ 14.000",
@@ -783,7 +783,7 @@
         },
         {
           "id": 237,
-          "name": "Sandwich jamón y queso",
+          "name": "Sandwich jamón y queso (Clásico jamón y queso)",
           "slug": "sandwich-jamn-y-queso",
           "description": "Clásico jamón y queso",
           "price": "$ 10.000",
@@ -880,7 +880,7 @@
         },
         {
           "id": 238,
-          "name": "Sandwich caesar",
+          "name": "Sandwich caesar (Pollo, lechuga, queso y salsa caesar)",
           "slug": "sandwich-caesar",
           "description": "Pollo, lechuga, queso y salsa caesar",
           "price": "$ 14.000",
@@ -946,7 +946,7 @@
         },
         {
           "id": 239,
-          "name": "Sandwich vegetariano",
+          "name": "Sandwich vegetariano (Lechuga, tomate, huevo, queso y aceitunas)",
           "slug": "sandwich-vegetariano",
           "description": "Lechuga, tomate, huevo, queso y aceitunas",
           "price": "$ 12.000",
@@ -1012,7 +1012,7 @@
         },
         {
           "id": 240,
-          "name": "Sandwich de atún",
+          "name": "Sandwich de atún (Lechuga, tomate, atún y queso)",
           "slug": "sandwich-de-atn",
           "description": "Lechuga, tomate, atún y queso",
           "price": "$ 15.000",
@@ -1078,7 +1078,7 @@
         },
         {
           "id": 241,
-          "name": "Sandwich pollo trozado",
+          "name": "Sandwich pollo trozado (Lechuga, tomate, atún y queso)",
           "slug": "sandwich-pollo-trozado",
           "description": "Pollo trozado, queso y tomate",
           "price": "$ 12.000",
@@ -4179,8 +4179,8 @@
   "totalItems": 62,
   "navButtonText": "Ver productos",
   "buildInfo": {
-    "version": "20260202-112340",
-    "timestamp": "2026-02-02T14:23:40.548Z",
+    "version": "20260205-110702",
+    "timestamp": "2026-02-05T14:07:02.928Z",
     "generator": "SCG v1.0.0"
   },
   "branding": {
