@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/mN9dwKS_/mateo-todo-casero",
     "clientKey": "mN9dwKS_",
-    "generatedAt": "2026-02-05T14:07:02.907Z",
+    "generatedAt": "2026-02-05T14:22:58.422Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -1078,7 +1078,7 @@
         },
         {
           "id": 241,
-          "name": "Sandwich pollo trozado (Lechuga, tomate, atún y queso)",
+          "name": "Sandwich pollo trozado (Pollo trozado, queso y tomate)",
           "slug": "sandwich-pollo-trozado",
           "description": "Pollo trozado, queso y tomate",
           "price": "$ 12.000",
@@ -4179,8 +4179,8 @@
   "totalItems": 62,
   "navButtonText": "Ver productos",
   "buildInfo": {
-    "version": "20260205-110702",
-    "timestamp": "2026-02-05T14:07:02.928Z",
+    "version": "20260205-112258",
+    "timestamp": "2026-02-05T14:22:58.440Z",
     "generator": "SCG v1.0.0"
   },
   "branding": {
