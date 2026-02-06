@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Círculo negro de fondo -->
+  <circle cx="256" cy="256" r="256" fill="#0a0a0a"/>
+  
+  <!-- Rectángulo naranja redondeado (icono Cf) -->
+  <rect x="80" y="196" width="120" height="120" rx="24" ry="24" fill="#f97316"/>
+  
+  <!-- Texto "Cf" en el rectángulo naranja - itálica -->
+  <text x="140" y="270" font-family="Arial, sans-serif" font-size="58" font-weight="700" font-style="italic" fill="white" text-anchor="middle">Cf</text>
+  
+  <!-- Texto "CatalogForge" en blanco -->
+  <text x="320" y="270" font-family="Arial, sans-serif" font-size="48" font-weight="800" fill="white" text-anchor="middle">CatalogForge</text>
+</svg>

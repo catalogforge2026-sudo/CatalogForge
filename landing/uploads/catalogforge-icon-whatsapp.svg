@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Círculo negro de fondo -->
+  <circle cx="256" cy="256" r="256" fill="#0a0a0a"/>
+  
+  <!-- Rectángulo naranja redondeado centrado -->
+  <rect x="136" y="136" width="240" height="240" rx="48" ry="48" fill="#f97316"/>
+  
+  <!-- Texto "Cf" centrado -->
+  <text x="256" y="280" font-family="Inter, Arial, sans-serif" font-size="140" font-weight="700" fill="white" text-anchor="middle" dominant-baseline="middle">Cf</text>
+</svg>
