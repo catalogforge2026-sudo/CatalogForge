@@ -665,10 +665,41 @@
   border-color: #e5e7eb;
 }
 
-.inventory-item-info {
+.inventory-item-left {
   display: flex;
   align-items: center;
   gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.inventory-item-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: #f1f5f9;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.inventory-item-image.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e5e7eb;
+}
+
+.inventory-item-image.placeholder svg {
+  width: 24px;
+  height: 24px;
+  color: #94a3b8;
+}
+
+.inventory-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
   flex: 1;
   min-width: 0;
 }

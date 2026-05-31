@@ -431,11 +431,24 @@
 
     const html = inventory.map(item => {
       const stockClass = item.available <= 0 ? 'out-of-stock' : item.available <= 3 ? 'low-stock' : '';
+      
+      // Find the local item to get the image
+      // item.key can be "123" or "123_variant", item.itemId is the original item ID
+      const itemId = item.itemId || String(item.key).split('_')[0];
+      const localItem = localItems.find(i => String(i.id) === String(itemId));
+      const itemImage = localItem?.image_url || localItem?.image || '';
+      
       return `
         <div class="inventory-item ${stockClass}" data-key="${item.key}">
-          <div class="inventory-item-info">
-            <div class="inventory-item-name">${item.itemName || 'Sin nombre'}</div>
-            <div class="inventory-item-section">${item.sectionName || ''}</div>
+          <div class="inventory-item-left">
+            ${itemImage 
+              ? `<img src="${itemImage}" alt="${item.itemName}" class="inventory-item-image">`
+              : `<div class="inventory-item-image placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>`
+            }
+            <div class="inventory-item-info">
+              <div class="inventory-item-name">${item.itemName || 'Sin nombre'}</div>
+              <div class="inventory-item-section">${item.sectionName || ''}</div>
+            </div>
           </div>
           <div class="inventory-item-stock">
             <button class="stock-btn minus" data-key="${item.key}">−</button>
