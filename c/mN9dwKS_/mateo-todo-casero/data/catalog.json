@@ -5,7 +5,7 @@
     "image": null,
     "url": "/c/mN9dwKS_/mateo-todo-casero",
     "clientKey": "mN9dwKS_",
-    "generatedAt": "2026-06-04T21:30:03.923Z",
+    "generatedAt": "2026-06-04T21:31:14.442Z",
     "generator": "CatalogForge"
   },
   "client": {
@@ -1158,8 +1158,8 @@
           "name": "Milanesa a la napolitana con guarnición",
           "slug": "milanesa-a-la-napolitana-con-guarnicion",
           "description": "Con jamón, queso y tomate gratinado. Incluye papas fritas o ensalada 2 verduras a elección (lechuga, tomate, zanahoria)",
-          "price": "$ 16.000",
-          "priceRaw": 16000,
+          "price": "$ 15.000",
+          "priceRaw": 15000,
           "originalPrice": null,
           "originalPriceRaw": null,
           "discountPercent": null,
@@ -2944,8 +2944,8 @@
   "totalItems": 37,
   "navButtonText": "Ver productos",
   "buildInfo": {
-    "version": "20260604-183003",
-    "timestamp": "2026-06-04T21:30:03.935Z",
+    "version": "20260604-183114",
+    "timestamp": "2026-06-04T21:31:14.455Z",
     "generator": "SCG v1.0.0"
   },
   "branding": {
